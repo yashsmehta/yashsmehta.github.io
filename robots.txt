@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://yashsmehta.github.io/sitemap.xml

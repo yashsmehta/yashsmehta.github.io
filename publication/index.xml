@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications | Personal website</title>
+    <title>Publications | YM</title>
     <link>https://yashsmehta.github.io/publication/</link>
       <atom:link href="https://yashsmehta.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://yashsmehta.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Publications</title>
       <link>https://yashsmehta.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>Multitask Learning for Emotion and Personality Detection</title>
+      <link>https://yashsmehta.github.io/publication/li-2021-multitask/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://yashsmehta.github.io/publication/li-2021-multitask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the Limitations of Perturbation-Based Methods for Training Deep Networks</title>
+      <link>https://yashsmehta.github.io/publication/mehta-2021-on/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://yashsmehta.github.io/publication/mehta-2021-on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards Biologically Plausible Convolutional Networks</title>
+      <link>https://yashsmehta.github.io/publication/pogodin-2021-towards/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://yashsmehta.github.io/publication/pogodin-2021-towards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bottom-up and top-down: Predicting personality with psycholinguistic and language model features</title>
+      <link>https://yashsmehta.github.io/publication/mehta-2020-bottom/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://yashsmehta.github.io/publication/mehta-2020-bottom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personality trait detection using bagged svm over bert word embedding ensembles</title>
+      <link>https://yashsmehta.github.io/publication/kazameini-2020-personality/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://yashsmehta.github.io/publication/kazameini-2020-personality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent trends in deep learning based personality detection</title>
+      <link>https://yashsmehta.github.io/publication/mehta-2020-recent/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://yashsmehta.github.io/publication/mehta-2020-recent/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>An example conference paper</title>

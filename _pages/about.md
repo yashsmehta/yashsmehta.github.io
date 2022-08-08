@@ -13,7 +13,7 @@ profile:
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
 Hi! I'm a researcher working at the intersection of deep learning and neuroscience at the Funke Lab, [HHMI Janelia Research Campus](https://www.janelia.org/). I’m working on meta-learning biologically plausible plasticity rules in a connectome constraint neural network model. 

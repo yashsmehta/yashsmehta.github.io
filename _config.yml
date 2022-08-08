@@ -7,8 +7,8 @@ first_name: Yash
 middle_name: 
 last_name: Mehta
 email: yashsmehta95@gmail.com
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-The personal website of an INCREDIBLY talented, ABSOLUTELY legendary yet astoundingly humble, Mr. Yash Mehta 
+description: The personal website of an INCREDIBLY talented, ABSOLUTELY legendary yet astoundingly humble, Mr. Yash Mehta 
+
 footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 

@@ -2,96 +2,66 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Yash Mehta 
     - name: Date of Birth
-      value: 14th March 1879
+      value: 11th Dec 1995 
     - name: Languages
-      value: English, German
-
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+      value: English, Hindi 
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Research Engineer 2
+      institution: HHMI Janelia Research Campus
+      year: 2022 - now
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    - title: Research Engineer
+      institution: Machine Learning Lab, Albert Ludwigs Universität Freiburg
+      year: 2020-2021
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Research Intern 
+      institution: Gatsby Computational Neuroscience Unit, UCL
+      year: 2019 - 2020
       description:
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Software Development Engineer
+      institution: Amazon
+      year: 2018 - 2018 
+
+- title: Education
+  type: time_table
+  contents:
+    - title: BSc. Research Thesis
+      institution: Erik Cambria, NTU Singapore
+      year: 2018
+    - title: Btech, Computer Science
+      institution: Birla Institute of Technology and Science (BITS Pilani)
+      year: 2014 - 2018
+
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: <a href="https://github.com/automl/NASLib">NASLib & NASBench-Suite</a>
+      year: 2021-2022
+      description: NASLib is a Neural Architecture Search (NAS) library for facilitating NAS research for the community by providing interfaces to several state-of-the-art NAS search spaces and optimizers. 
+    - title: <a href="https://github.com/automl/awesome-transformer-search">Awesome Transformer Search</a>
+      year: 2021-now
+      description: A curated list of awesome resources combining Transformers with Neural Architecture Search 
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Deep Learning 
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Biologically plausible neural networks 
+        - Neural network architectures
+    - title: Computational Neuroscience 
       items:
-        - Description 1.
-        - Description 2.
+        - Connectomics 
+        - Mushroom Body, Drosophila 
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Hiking, Videography, Running, Cooking

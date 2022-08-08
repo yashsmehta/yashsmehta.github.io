@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: Attending NeurIPS
+date: 2021-12-01 16:11:00-0400
 inline: false
 ---
 

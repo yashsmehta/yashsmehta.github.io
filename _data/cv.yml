@@ -4,7 +4,7 @@
     - name: Full Name
       value: Yash Mehta 
     - name: Date of Birth
-      value: 11th Dec 1995 
+      value: Dec 1995 
     - name: Languages
       value: English, Hindi 
 
@@ -56,6 +56,7 @@
       items: 
         - Biologically plausible neural networks 
         - Neural network architectures
+        - Meta-Learning plasticity rules
     - title: Computational Neuroscience 
       items:
         - Connectomics 

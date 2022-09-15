@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Attending NeurIPS
-date: 2021-12-01 16:11:00-0400
+title: Virtually presented our paper, NAS-Bench-Suite poster at ICLR 
+date: 2022-4-25 16:11:00-0400
 inline: false
 ---
 

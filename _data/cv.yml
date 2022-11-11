@@ -14,15 +14,17 @@
     - title: Research Engineer 2
       institution: HHMI Janelia Research Campus
       year: 2022 - now
+      description: with, Jan Funke & James Fitzgerald
 
     - title: Research Engineer
       institution: Machine Learning Lab, Albert Ludwigs Universität Freiburg
       year: 2020-2021
+      description: with, Frank Hutter
 
-    - title: Research Intern 
+    - title: Research Technician
       institution: Gatsby Computational Neuroscience Unit, UCL
       year: 2019 - 2020
-      description:
+      description: with, Peter Latham & Tim Lillicrap (DeepMind)
 
     - title: Software Development Engineer
       institution: Amazon

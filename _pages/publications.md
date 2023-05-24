@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: (current) Neural Networks, Biologically Plausible Learning, Connectomics (previous) Neural Architecture Search, Automated Personality Prediction
+description: Transformers, LLMs, Neural Networks, Neuroscience, Cognition
 years: [2022, 2021, 2020, 2019]
 nav: true
 nav_order: 1

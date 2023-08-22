@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-4-14 07:59:00-0400
+date: 2023-7-20 07:59:00-0400
 inline: true
 ---
 
-Accepted PhD position in computational cognitive science at Johns Hopkins! 🎓
+Attended ICML 2023 in Hawaii! ✨🍻

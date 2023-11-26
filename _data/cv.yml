@@ -11,10 +11,15 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Researcher
+      institution: DBMI, Harvard Medical School
+      year: 2023 - now
+      description: with, Pranav Rajpurkar
+
     - title: Research Engineer 2
       institution: HHMI Janelia Research Campus
-      year: 2022 - now
-      description: with, Jan Funke & James Fitzgerald
+      year: 2022 - 2023
+      description: with, James Fitzgerald
 
     - title: Research Engineer
       institution: Machine Learning Lab, Albert Ludwigs Universität Freiburg
@@ -54,15 +59,15 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Deep Learning 
-      items: 
-        - Biologically plausible neural networks 
-        - Neural network architectures
+    - title: Deep Learning
+      items:
+        - Transformers and large language models
+        - Neural architecture search
         - Meta-Learning plasticity rules
+        - Graphs 
     - title: Computational Neuroscience 
       items:
-        - Connectomics 
-        - Mushroom Body, Drosophila 
+        - Biologically plausible learning
 
 - title: Other Interests
   type: list

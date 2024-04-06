@@ -12,35 +12,35 @@
   type: time_table
   contents:
     - title: Visiting PhD Student
-      institution: Rajpurkar Lab, Harvard Medical School
+      institution: Dept. of Biomedical Informatics, Harvard Medical School
       year: Oct 2023 - Jan 2024
       description: with, Pranav Rajpurkar
 
     - title: Research Engineer 2
       institution: HHMI Janelia Research Campus
-      year: 2022 - 2023
+      year: Jan 2022 - Sept 2023
       description: with, James Fitzgerald & Jan Funke
 
     - title: Research Engineer
       institution: Machine Learning Lab, Albert Ludwigs Universität Freiburg
-      year: 2020-2021
+      year: Aug 2020 - Dec 2021
       description: with, Frank Hutter
 
     - title: Research Technician
       institution: Gatsby Computational Neuroscience Unit, UCL
-      year: 2019 - 2020
+      year: Jan 2019 - June 2020
       description: with, Peter Latham & Tim Lillicrap (DeepMind)
 
     - title: Software Development Engineer
       institution: Amazon
-      year: 2018 - 2018 
+      year: Jul 2018 - Dec 2018 
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Cognitive Science
+    - title: PhD student, Cognitive Science
       institution: Johns Hopkins University
-      year: 2023
+      year: 2023 - 2027
     - title: BSc. Research Thesis
       institution: Erik Cambria, NTU Singapore
       year: 2018
@@ -59,18 +59,20 @@
       year: 2021-now
       description: A curated list of awesome resources combining Transformers with Neural Architecture Search 
 
-- title: Academic Interests
+- title: Research Experience Areas
   type: nested_list
   contents:
+    - title: Healthcare
+      items:
+        - Knowledge graphs for automated radiology report generation
     - title: Deep Learning
       items:
         - Transformers and large language models
         - Neural architecture search
-        - Meta-Learning plasticity rules
-        - Graphs 
     - title: Computational Neuroscience 
       items:
-        - Biologically plausible learning
+        - Biologically plausible credit assignment
+        - Local plasticity rules
 
 - title: Other Interests
   type: list

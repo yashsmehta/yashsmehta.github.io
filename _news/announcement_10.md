@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-01-22 07:59:00-0400
+date: 2023-10-15 07:59:00-0400
 inline: true
 ---
 
-Shifted to Baltimore, Cognitive Science department at Johns Hopkins!
+Joined as a visiting PhD student in Rajpurkar Lab, Harvard to work on AI+health

@@ -2,24 +2,24 @@
   type: map
   contents:
     - name: Full Name
-      value: Yash Mehta 
-    - name: Date of Birth
-      value: Dec 1995 
+      value: Yash S Mehta 
+    - name: Interests
+      value: Neuroscience, Cognitive Science, AI, Healthcare
     - name: Languages
       value: English, Hindi 
 
 - title: Experience
   type: time_table
   contents:
-    - title: Researcher
-      institution: DBMI, Harvard Medical School
-      year: 2023 - now
+    - title: Visiting PhD Student
+      institution: Rajpurkar Lab, Harvard Medical School
+      year: Oct 2023 - Jan 2024
       description: with, Pranav Rajpurkar
 
     - title: Research Engineer 2
       institution: HHMI Janelia Research Campus
       year: 2022 - 2023
-      description: with, James Fitzgerald
+      description: with, James Fitzgerald & Jan Funke
 
     - title: Research Engineer
       institution: Machine Learning Lab, Albert Ludwigs Universität Freiburg
@@ -38,6 +38,9 @@
 - title: Education
   type: time_table
   contents:
+    - title: PhD in Cognitive Science
+      institution: Johns Hopkins University
+      year: 2023
     - title: BSc. Research Thesis
       institution: Erik Cambria, NTU Singapore
       year: 2018

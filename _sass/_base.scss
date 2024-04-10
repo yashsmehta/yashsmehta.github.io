@@ -660,4 +660,34 @@ html.transition *:after {
       padding: 8px;
     }
   }
+.logo-pictures {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 90px;
+  margin: 0 25px;
+}
+
+.logo-item {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.additional-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 }

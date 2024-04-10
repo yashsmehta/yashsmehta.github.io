@@ -2,12 +2,12 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Yash Mehta's Website
+title: Yash Mehta
 first_name: Yash
 middle_name: 
 last_name: Mehta
 email: yashsmehta95@gmail.com
-description: The personal website of an INCREDIBLY talented, ABSOLUTELY legendary yet astoundingly humble, Mr. Yash Mehta 
+description: The personal website of an incredibly talented, absolutely legendary, yet astoundingly humble, Mr. Yash Mehta 
 
 footer_text: 
 
@@ -18,7 +18,7 @@ icon:  nn_logo_color.png  # the emoji used as the favicon (alternatively, provid
 
 url: https://yashsmehta.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
-last_updated: true # set to true if you want to display last updated in the footer
+last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------

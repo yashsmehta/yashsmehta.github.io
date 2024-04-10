@@ -16,8 +16,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hi! I'm excited about applications of deep learning and cognitive science in healthcare. I am currently working with Mick Bonner. I was also a visiting PhD student at **Harvard Medical School**, supervised by [Pranav Rajpurkar](https://pranavrajpurkar.com/). Throughout my academic journey, I have gained valuable experience in various domains, including <ins>transformers</ins>, <ins>LLMs</ins>, <ins>neuroscience</ins>, and <ins>cognition</ins>. 
+Welcome to my academic website! I'm an engineer at heart with a deep learning background and a computer science degree. Currently, I'm pursuing a PhD in cognitive science at **Hopkins** and am a visiting PhD student at **Harvard Medical School**. My goal is to apply ideas from cognitive science to develop more advanced and effective <ins>AI systems in healthcare</ins>. Although my journey has been unconventional, it has been incredibly rewarding. I've had the privilege of working in exceptional labs alongside inspiring mentors who have greatly influenced my approach to research. Some research areas I have worked on are <ins>transformers</ins>, <ins>LLMs</ins>, <ins>neuroscience</ins>, and <ins>cognition</ins>. Prior to my research career, I worked briefly as a developer at Amazon.
 
-Previously, I was a research engineer at the amazing **HHMI Janelia Research Campus**, working on inferring synaptic plasticity rules using deep learning with [James Fitzgerald](https://scholar.google.com/citations?hl=en&user=0G6AMtcAAAAJ&view_op=list_works) and [Jan Funke](https://scholar.google.com/citations?hl=en&user=7rqAapgAAAAJ&view_op=list_works&inst=7575085548378563675). I have worked on Neural Architecture Search in [Frank Hutter](https://scholar.google.com/citations?user=YUrxwrkAAAAJ&hl=en)'s **AutoML lab** in the picturesque town of Freiburg! Before that, I had an amazing time at the **Gatsby Computational Neuroscience Unit** at UCL, where I was working on evaluating biologically plausible perturbation-based learning algorithms to train deep networks with [Tim Lillicrap](https://scholar.google.com/citations?user=htPVdRMAAAAJ&hl) at DeepMind and [Peter Latham](https://scholar.google.com/citations?user=wmqntyEAAAAJ&hl=en). I did my undergraduate thesis at **NTU Singapore** with [Erik Cambria](https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en) on using large language models for personality prediction. I quit my job as a software developer at **Amazon** to dive into the world of research ;)
+I am passionate about mentoring and guiding students interested in research. I dedicate one hour each week to discuss research topics and provide guidance to aspiring researchers. If you are interested in having a conversation, please feel free to reach out to me directly.
 
-I thoroughly enjoy coding and working on hard algorithmic problems. Please reach out to chat, especially, if you're starting out your research journey!
+
+
+
+
+

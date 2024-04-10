@@ -4,7 +4,8 @@ github_users:
 
 github_repos:
   - automl/awesome-transformer-search
+  - countzerozzz/nodepert
+  - yashsmehta/MetaLearnPlasticity
+  - yashsmehta/archvision
   - automl/NASLib
   - yashsmehta/personality-prediction
-  - yashsmehta/MetaLearnPlasticity
-  - yashsmehta/perturbations

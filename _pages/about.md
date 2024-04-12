@@ -9,7 +9,7 @@ profile:
   image: profile_pic.jpg
   image_cicular: false # crops the image to make it circular
   address: >
-    <p>Located in Baltimore, USA</p>
+    <p>yashsmehta95[at]gmail.com</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

@@ -16,10 +16,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
+I am currently pursuing a PhD in Computational Cognitive Science at **Johns Hopkins University** and am a visiting PhD student at **Harvard Medical School**. My research aims to bridge cognitive science and artificial intelligence to improve AI applications in healthcare. 
 
-Welcome to my academic website! I'm an engineer at heart with a deep learning background and a computer science degree. Currently, I'm pursuing a PhD in computational cognitive science at **Johns Hopkins University** and am a visiting PhD student at **Harvard Medical School**. My goal is to apply ideas from cognitive science to develop more advanced and effective <ins>AI systems in healthcare</ins>. Although my journey has been unconventional, it has been extremely rewarding. I've been fortunate to work on exciting projects alongside passionate and brilliant scientists, which has inspired me and shaped my approach to research. Some of the areas I have worked on include <ins>transformers</ins>, <ins>LLMs</ins>, <ins>neuroscience</ins>, and <ins>cognition</ins>. Prior to embarking on my research career, I worked briefly as a developer at Amazon.
+Throughout my academic and professional journey, I've had the privilege of collaborating with many talented scientists and engaging in diverse research projects. My areas of interest include <ins>foundation models</ins>, <ins>cognition</ins>, and <ins>computational neuroscience</ins>. Below is the list of labs and mentors I have worked with. Prior to my research career, I gained industry experience as a developer at Amazon.
 
-I am deeply passionate about mentoring and guiding students interested in research. Each week, I set aside some time to chat with aspiring researchers. If you'd like to have a conversation, feel free to reach out to me directly.
-
-
+I have a strong commitment to mentoring and spend time engaging with students who are passionate about research. If you are interested in exploring research opportunities or seeking advice, please don’t hesitate to reach out to me directly.
 

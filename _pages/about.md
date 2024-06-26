@@ -16,9 +16,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am currently pursuing a PhD in Computational Cognitive Science at **Johns Hopkins University** and am a visiting PhD student at **Harvard Medical School**. My research aims to bridge cognitive science and artificial intelligence to improve AI applications in healthcare. 
+As a doctoral candidate in Computational Cognitive Science at **Johns Hopkins University**, I am also a visiting PhD student at **Harvard Medical School**. My research focuses on integrating cognitive science and artificial intelligence to enhance AI applications in healthcare.
 
-Throughout my academic and professional journey, I've had the privilege of collaborating with many talented scientists and engaging in diverse research projects. My areas of interest include <ins>foundation models</ins>, <ins>cognition</ins>, and <ins>computational neuroscience</ins>. Below is the list of labs and mentors I have worked with. Prior to my research career, I gained industry experience as a developer at Amazon.
+My academic and professional journey has been enriched by collaborations with numerous talented scientists across various research projects. My primary areas of interest include <ins>foundation models</ins>, <ins>cognition</ins>, and <ins>computational neuroscience</ins>. I've had the opportunity to work with several esteemed labs and mentors, details of which are provided below. Before embarking on my research career, I gained valuable industry experience as a developer at Amazon.
 
-I have a strong commitment to mentoring and spend time engaging with students who are passionate about research. If you are interested in exploring research opportunities or seeking advice, please don’t hesitate to reach out to me directly.
+I am deeply committed to mentoring and actively engage with students who are passionate about research. If you're interested in exploring research opportunities or seeking guidance, please feel free to contact me directly.
 

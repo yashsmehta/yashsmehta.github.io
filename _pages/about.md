@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-As a doctoral candidate in Computational Cognitive Science at **Johns Hopkins University**, I am also a visiting PhD student at **Harvard Medical School**. My research focuses on integrating cognitive science and artificial intelligence to enhance AI applications in healthcare.
+I am a second year PhD student in Computational Cognitive Science at **Johns Hopkins University**. While I'm still figuring out exactly what I want to do, my research will focus on integrating cognitive science and artificial intelligence.
 
 My academic and professional journey has been enriched by collaborations with numerous talented scientists across various research projects. My primary areas of interest include <ins>foundation models</ins>, <ins>cognition</ins>, and <ins>computational neuroscience</ins>. I've had the opportunity to work with several esteemed labs and mentors, details of which are provided below. Before embarking on my research career, I gained valuable industry experience as a developer at Amazon.
 

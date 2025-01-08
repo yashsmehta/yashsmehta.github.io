@@ -16,9 +16,32 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am a second year PhD student in Computational Cognitive Science at **Johns Hopkins University**. While I'm still figuring out exactly what I want to do, my research will focus on integrating cognitive science and artificial intelligence.
+<style>
+.conf-badge {
+  background-color: rgba(135, 206, 250, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #333;
+  margin-right: 6px;
+}
+.badge-container {
+  margin-top: 2px;
+  margin-left: 20px;
+}
+</style>
 
-My academic and professional journey has been enriched by collaborations with numerous talented scientists across various research projects. My primary areas of interest include <ins>foundation models</ins>, <ins>cognition</ins>, and <ins>computational neuroscience</ins>. I've had the opportunity to work with several esteemed labs and mentors, details of which are provided below. Before embarking on my research career, I gained valuable industry experience as a developer at Amazon.
+I'm a second-year PhD student in Computational Cognitive Science, with a background in computer science. My research sits at the intersection of <u>cognitive science</u>, <u>multimodality</u>, and <u>deep learning</u>. I'm also drawn to robotics and am curious about ways to boost research productivity—whether through tools, habits, or fresh ideas.
+### Research experience
+My path to research has been anything but traditional. Along the way, I've explored topics like:
+- **Biologically inspired learning algorithms** 🧠  
+    [<span class="conf-badge">NeurIPS'24</span>](https://yashsmehta.com/plasticity-paper-website/) [<span class="conf-badge">NeurIPS'22</span>](https://papers.nips.cc/paper_files/paper/2022/hash/cf38eb1549024cce4b3d2c1bb87a6c27-Abstract-Conference.html) [<span class="conf-badge">NeurIPS'21</span>](https://arxiv.org/abs/2106.13031)
+- **Neural architecture search** 🔍  
+    [<span class="conf-badge">ICLR'22</span>](https://arxiv.org/abs/2201.13396)
+- **Large language models for personality trait prediction** 🤖  
+    [<span class="conf-badge">IEEE ICDM'20</span>](https://ieeexplore.ieee.org/abstract/document/9338428) [<span class="conf-badge">AI Review'20</span>](https://link.springer.com/article/10.1007/s10462-019-09770-z) [<span class="conf-badge">FGCS'22</span>](https://www.sciencedirect.com/science/article/pii/S0167739X22002229)
 
-I am deeply committed to mentoring and actively engage with students who are passionate about research. If you're interested in exploring research opportunities or seeking guidance, please feel free to contact me directly.
+Recently, I worked on a rotation project at *Harvard Medical School*, focusing on knowledge graphs for automating radiology report generation. Before diving into academia, I briefly worked as a software developer at *Amazon*, but left to pursue research.
+
+If any of this resonates with your interests, I'd love to connect—feel free to reach out!
 

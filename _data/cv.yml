@@ -1,19 +1,9 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Yash Mehta 
-    - name: Interests
-      value: AI, Healthcare, Neuroscience, Cognitive Science
-    - name: Languages
-      value: English, Hindi 
-
 - title: Experience
   type: time_table
   contents:
     - title: Visiting PhD Student
       institution: Dept. of Biomedical Informatics, Harvard Medical School
-      year: Oct 2023 - Present
+      year: Oct 2023 - Jan 2024
       description: with, Pranav Rajpurkar
 
     - title: Research Engineer 2
@@ -38,7 +28,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD student, Cognitive Science
+    - title: PhD student, Computational Cognitive Science
       institution: Johns Hopkins University
       year: 2023 - 2027
     - title: BSc. Research Thesis
@@ -59,20 +49,6 @@
       year: 2021-now
       description: A curated list of awesome resources combining Transformers with Neural Architecture Search 
 
-- title: Research Experience Areas
-  type: nested_list
-  contents:
-    - title: Healthcare
-      items:
-        - Knowledge graphs for automated radiology report generation
-    - title: Deep Learning
-      items:
-        - Transformers and large language models
-        - Neural architecture search
-    - title: Computational Neuroscience 
-      items:
-        - Biologically plausible credit assignment
-        - Local plasticity rules
 
 - title: Other Interests
   type: list

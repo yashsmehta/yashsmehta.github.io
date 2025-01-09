@@ -7,10 +7,52 @@
     <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
   {%- endif -%}
   {% include head.html %}
+  <style>
+    #network-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0.6;
+      background: white;
+      pointer-events: none;
+    }
+    
+    body {
+      position: relative;
+      min-height: 100vh;
+      background: transparent !important;
+    }
+
+    .container.mt-5 {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style header and footer to match */
+    header.fixed-top {
+      background: rgba(255, 255, 255, 0.6) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.6) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  </style>
   </head>
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <canvas id="network-animation"></canvas>
 
     <!-- Header -->
     {%- include header.html %}
@@ -30,5 +72,144 @@
     {% include scripts/misc.html %}
     {% include scripts/mathjax.html %}
     {% include scripts/analytics.html %}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('network-animation');
+        const ctx = canvas.getContext('2d');
+        
+        // Mouse position
+        let mouse = {
+          x: undefined,
+          y: undefined
+        };
+
+        // Track mouse position
+        document.addEventListener('mousemove', function(event) {
+          mouse.x = event.clientX;
+          mouse.y = event.clientY;
+        });
+        
+        // Set canvas size to window size
+        function resizeCanvas() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Node class for particles
+        class Node {
+          constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.8;
+            this.vy = (Math.random() - 0.5) * 0.8;
+            this.baseRadius = 3;
+            this.radius = this.baseRadius;
+            this.color = 'rgba(104, 172, 229, 0.75)';      // JHU Spirit Blue
+            this.highlightColor = 'rgba(0, 45, 114, 0.9)';  // JHU Heritage Blue
+          }
+
+          update() {
+            // Move
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Bounce off walls
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+            // Interactive radius and color based on mouse proximity
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const mouseRadius = 120;
+
+            if (distance < mouseRadius) {
+              const scale = 1 - (distance / mouseRadius);
+              this.radius = this.baseRadius + (scale * 2);
+              this.currentColor = this.highlightColor;
+              // Add slight speed increase near mouse
+              this.vx += (dx / distance) * 0.02;
+              this.vy += (dy / distance) * 0.02;
+            } else {
+              this.radius = this.baseRadius;
+              this.currentColor = this.color;
+            }
+
+            // Limit max speed
+            const maxSpeed = 1.5;
+            const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+            if (speed > maxSpeed) {
+              this.vx = (this.vx / speed) * maxSpeed;
+              this.vy = (this.vy / speed) * maxSpeed;
+            }
+          }
+
+          draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.currentColor;
+            ctx.fill();
+            
+            // Add subtle glow effect
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius + 2, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(104, 172, 229, ${this.currentColor === this.highlightColor ? 0.1 : 0.05})`;
+            ctx.fill();
+          }
+        }
+
+        // Create nodes
+        const nodes = Array(100).fill().map(() => new Node());
+        const connectionDistance = 150;  // Back to 150
+
+        // Animation loop
+        function animate() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Update and draw nodes
+          nodes.forEach(node => {
+            node.update();
+            node.draw();
+          });
+
+          // Draw connections
+          for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+              const dx = nodes[i].x - nodes[j].x;
+              const dy = nodes[i].y - nodes[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+
+              if (distance < connectionDistance) {
+                const opacity = 1 - (distance / connectionDistance);
+                
+                // Check if either node is near mouse
+                const mouseNearNode1 = Math.sqrt(Math.pow(mouse.x - nodes[i].x, 2) + Math.pow(mouse.y - nodes[i].y, 2)) < 120;
+                const mouseNearNode2 = Math.sqrt(Math.pow(mouse.x - nodes[j].x, 2) + Math.pow(mouse.y - nodes[j].y, 2)) < 120;
+                
+                // Use highlight color if either node is near mouse
+                const connectionColor = (mouseNearNode1 || mouseNearNode2) ? 
+                  `rgba(0, 45, 114, ${opacity * 0.5})` :   // Heritage Blue for highlighted
+                  `rgba(104, 172, 229, ${opacity * 0.35})`;    // Spirit Blue for normal
+                
+                ctx.strokeStyle = connectionColor;
+                ctx.lineWidth = mouseNearNode1 || mouseNearNode2 ? 1.5 : 1;
+                ctx.beginPath();
+                ctx.moveTo(nodes[i].x, nodes[i].y);
+                ctx.lineTo(nodes[j].x, nodes[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          requestAnimationFrame(animate);
+        }
+
+        // Start animation
+        animate();
+      });
+    </script>
   </body>
 </html>

@@ -7,6 +7,7 @@
     <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
   {%- endif -%}
   {% include head.html %}
+  <link rel="stylesheet" href="https://use.typekit.net/vxy8tas.css">
   <style>
     #network-animation {
       position: fixed;
@@ -24,6 +25,47 @@
       position: relative;
       min-height: 100vh;
       background: transparent !important;
+      font-family: "proxima-nova", sans-serif;
+      font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "factoria", sans-serif;
+      font-weight: 700;
+    }
+
+    strong, b {
+      font-weight: 700;
+    }
+
+    em, i {
+      font-style: italic;
+    }
+
+    /* Navigation styles */
+    .navbar-nav .nav-link {
+      font-family: "factoria", sans-serif;
+      font-weight: 300;
+      color: #002D72 !important;
+    }
+
+    .navbar-brand {
+      font-family: "factoria", sans-serif;
+      font-weight: 300;
+    }
+
+    .dropdown-item {
+      font-family: "factoria", sans-serif;
+      font-weight: 300;
+    }
+
+    /* Center and constrain width for both header content and main container */
+    .container.mt-5,
+    header .container {
+      max-width: 750px !important;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .container.mt-5 {
@@ -77,17 +119,31 @@
       document.addEventListener('DOMContentLoaded', function() {
         const canvas = document.getElementById('network-animation');
         const ctx = canvas.getContext('2d');
+        const contentContainer = document.querySelector('.container.mt-5');
         
         // Mouse position
         let mouse = {
           x: undefined,
-          y: undefined
+          y: undefined,
+          isOverContent: false
         };
 
-        // Track mouse position
+        // Track mouse position and content hover state
         document.addEventListener('mousemove', function(event) {
           mouse.x = event.clientX;
           mouse.y = event.clientY;
+          
+          // Check if mouse is over content container
+          const containerRect = contentContainer.getBoundingClientRect();
+          const scrollY = window.scrollY;
+          
+          // Account for scroll position when checking bounds
+          mouse.isOverContent = (
+            event.clientX >= containerRect.left &&
+            event.clientX <= containerRect.right &&
+            (event.clientY + scrollY) >= (containerRect.top + scrollY) &&
+            (event.clientY + scrollY) <= (containerRect.bottom + scrollY)
+          );
         });
         
         // Set canvas size to window size
@@ -109,6 +165,7 @@
             this.radius = this.baseRadius;
             this.color = 'rgba(104, 172, 229, 0.75)';      // JHU Spirit Blue
             this.highlightColor = 'rgba(0, 45, 114, 0.9)';  // JHU Heritage Blue
+            this.currentColor = this.color;  // Initialize currentColor
           }
 
           update() {
@@ -119,6 +176,13 @@
             // Bounce off walls
             if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
             if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+            // Reset to default state when over content
+            if (mouse.isOverContent) {
+              this.radius = this.baseRadius;
+              this.currentColor = this.color;
+              return;  // Skip all mouse interactions
+            }
 
             // Interactive radius and color based on mouse proximity
             const dx = mouse.x - this.x;
@@ -163,7 +227,7 @@
 
         // Create nodes
         const nodes = Array(100).fill().map(() => new Node());
-        const connectionDistance = 150;  // Back to 150
+        const connectionDistance = 150;
 
         // Animation loop
         function animate() {
@@ -185,14 +249,13 @@
               if (distance < connectionDistance) {
                 const opacity = 1 - (distance / connectionDistance);
                 
-                // Check if either node is near mouse
-                const mouseNearNode1 = Math.sqrt(Math.pow(mouse.x - nodes[i].x, 2) + Math.pow(mouse.y - nodes[i].y, 2)) < 120;
-                const mouseNearNode2 = Math.sqrt(Math.pow(mouse.x - nodes[j].x, 2) + Math.pow(mouse.y - nodes[j].y, 2)) < 120;
+                // Skip mouse interactions if over content
+                const mouseNearNode1 = !mouse.isOverContent && Math.sqrt(Math.pow(mouse.x - nodes[i].x, 2) + Math.pow(mouse.y - nodes[i].y, 2)) < 120;
+                const mouseNearNode2 = !mouse.isOverContent && Math.sqrt(Math.pow(mouse.x - nodes[j].x, 2) + Math.pow(mouse.y - nodes[j].y, 2)) < 120;
                 
-                // Use highlight color if either node is near mouse
                 const connectionColor = (mouseNearNode1 || mouseNearNode2) ? 
-                  `rgba(0, 45, 114, ${opacity * 0.5})` :   // Heritage Blue for highlighted
-                  `rgba(104, 172, 229, ${opacity * 0.35})`;    // Spirit Blue for normal
+                  `rgba(0, 45, 114, ${opacity * 0.5})` :
+                  `rgba(104, 172, 229, ${opacity * 0.35})`;
                 
                 ctx.strokeStyle = connectionColor;
                 ctx.lineWidth = mouseNearNode1 || mouseNearNode2 ? 1.5 : 1;

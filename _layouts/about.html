@@ -9,38 +9,251 @@ layout: default
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+          }
+          .top-container {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
           }
           .profile {
-            margin-left: 2em;
-            margin-bottom: 1em;
-            max-width: 270px;
+            width: 202.5px;
+            flex-shrink: 0;
+            padding-top: 5pt;
+          }
+          .profile figure {
+            margin: 0;
+            padding: 0;
+          }
+          .profile figure img {
+            margin: 0;
+            padding: 0;
+            display: block;
+            border-radius: 4px;
           }
           .profile .address {
             margin-top: 0.8em;
             text-align: center;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            letter-spacing: 0;
           }
-          .clearfix {
-            margin-top: 1em;
+          .right-content {
+            flex: 1;
+            min-width: 0;
+          }
+          .post-header {
+            margin-bottom: 0.5rem;
+          }
+          .post-title {
+            font-family: "factoria", sans-serif;
+            color: #002D72;  /* JHU Heritage Blue */
+            margin-bottom: 0em;
+          }
+          .post-title span.first-name {
+            font-family: "factoria", sans-serif;
+            font-weight: 300;  /* Factoria Light */
+          }
+          .post-title span.last-name {
+            font-family: "factoria", sans-serif;
+            font-weight: 900;  /* Ultra */
+          }
+          .desc {
+            font-family: "factoria", sans-serif;
+            font-weight: 300;  /* Changed to Factoria Light */
+            letter-spacing: 0;
+            color: #68ACE5;  /* JHU Spirit Blue */
+            margin: 0;
+          }
+          .desc a {
+            color: inherit;
+            text-decoration: none;
+          }
+          .desc a:hover {
+            text-decoration: underline;
+          }
+          .intro-text {
+            font-family: "proxima-nova", sans-serif;
+            font-size: 1em;
             text-align: justify;
+            font-weight: 300;
+            line-height: 1.6;
+          }
+          .intro-text em {
+            font-style: italic;
+          }
+          .intro-text strong {
+            font-weight: 700;
+          }
+          .intro-text > p:first-child {
+            margin-top: 0;
+          }
+          .research-content {
+            width: 100%;
+            font-size: 1em;
+            margin-top: 0;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+          }
+          .research-section {
+            margin-left: 7pt;
+          }
+          .research-content h3 {
+            font-family: factoria, serif;
+            font-weight: 500 !important;
+            font-style: normal !important;
+            letter-spacing: -0.01em;
+            margin-top: 0;
+            color: #002D72;  /* JHU Heritage Blue */
+          }
+          .research-content h3:first-child {
+            margin-top: 0;
+          }
+          .logo-pictures {
+            margin-top: 2rem;
+          }
+          .logo-pictures .logo {
+            transform: scale(0.9);
+            transform-origin: left center;
+          }
+          .logo-pictures .logo-text {
+            font-family: "factoria", sans-serif;
+            font-weight: 300;
+            color: #2c3e50;  /* Dark color for 'w/' */
+            margin: 0.5em 0;
+          }
+          .logo-pictures .logo-text a {
+            font-family: "factoria", sans-serif;
+            font-weight: 300;
+            color: #68ACE5;  /* JHU Spirit Blue for names */
+            text-decoration: none;
+          }
+          .logo-pictures .logo-text a:hover {
+            text-decoration: underline;
+          }
+          /* Conference badge styles */
+          .conf-badge {
+            background-color: rgba(135, 206, 250, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #333;
+            margin-right: 6px;
+            display: inline-block;
+            text-decoration: none;
+          }
+          .conf-badge:hover {
+            background-color: rgba(135, 206, 250, 0.3);
+            text-decoration: none;
+          }
+          .badge-container {
+            margin-top: 2px;
+            margin-left: 20px;
+          }
+          
+          /* News section styling */
+          .news h2 {
+            font-family: "factoria", sans-serif;
+            font-weight: 700;
+            color: #002D72;  /* JHU Heritage Blue */
+            margin-bottom: 1rem;
+          }
+          .news table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.5rem;
+          }
+          .news td {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #2c3e50;  /* Darker text for better readability */
+            padding: 0;
+            vertical-align: top;
+          }
+          .news td strong {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+          }
+          .news td em {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+          }
+          .news td a {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 500;
+            color: #2c3e50;
+            text-decoration: none;
+          }
+          .news td a:hover {
+            text-decoration: underline;
+          }
+          .news th {
+            font-family: "factoria", sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            color: #68ACE5;  /* JHU Spirit Blue */
+            padding: 2pt 1.5rem 0 0;
+            vertical-align: top;
+            white-space: nowrap;
+            width: 1%;  /* Forces the date column to be as narrow as possible */
+          }
+          
+          /* News type tags */
+          .news-type {
+            font-family: "proxima-nova", sans-serif;
+            font-size: 0.75em;
+            font-weight: 500;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 4px;
+            text-transform: capitalize;
+            display: inline-block;
+            white-space: nowrap;
+          }
+          
+          .news-type.conference {
+            background-color: #e3f2fd;
+            color: #1976d2;
+          }
+          
+          .news-type.talk {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+          }
+          
+          .news-type.update {
+            background-color: #e8f5e9;
+            color: #388e3c;
+          }
+          
+          .news-type.general {
+            background-color: #fff3e0;
+            color: #f57c00;
+          }
+          .research-section strong {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 700 !important;
+            font-style: normal !important;
+            color: #2c3e50;
           }
         </style>
-        <header class="post-header">
-          <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
 
-        <article>
+        <div class="top-container">
           {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
+          <div class="profile">
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
               {% if page.profile.image_cicular %}
                 {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
               {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+                {%- assign profile_image_class = "img-fluid z-depth-1" -%}
               {% endif %}
 
               {% include figure.html 
@@ -56,52 +269,74 @@ layout: default
           </div>
           {%- endif %}
 
-          <div class="clearfix" style="font-size: 0.95em;">
-            {{ content }}
+          <div class="right-content">
+            <header class="post-header">
+              <h1 class="post-title">
+               {% if site.title == "blank" -%}
+                 <span class="first-name">{{ site.first_name }}</span>
+                 {% if site.middle_name %} {{ site.middle_name }} {% endif %}
+                 <span class="last-name">{{ site.last_name }}</span>
+               {%- else -%}
+                 {{ site.title }}
+               {%- endif %}
+              </h1>
+              <p class="desc">{{ page.subtitle }}</p>
+            </header>
+            <div class="intro-text">
+              <div class="intro-section">
+                {{ page.content | split: '<div class="intro-section">' | last | split: '</div>' | first | markdownify }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-content">
+          <div class="research-section">
+            {{ page.content | split: '<div class="research-section">' | last | split: '</div>' | first | markdownify | replace: '&lt;span', '<span' | replace: '&lt;/span&gt;', '</span>' | replace: '&gt;', '>' }}
           </div>
 
-        <!-- Logo pictures -->
-      <div class="logo-pictures">
-        <div class="logo-item">
-          <img src="assets/img/jhu.png" alt="JHU" class="logo">
-          <p class="logo-text">
-            w/ <a href="https://bonnerlab.org/">Mick Bonner</a><br>
-          </p>
-        </div>
-        <div class="logo-item">
-          <img src="assets/img/harvard.jpeg" alt="Harvard" class="logo">
-          <p class="logo-text">
-            w/ <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a><br>
-          </p>
-        </div>
-        <div class="logo-item">
-          <img src="assets/img/janelia.png" alt="Janelia" class="logo">
-          <p class="logo-text">
-            w/ <a href="https://shorturl.at/lyzFR">James Fitzgerald</a><br>
-            <a href="https://shorturl.at/dfuyQ">Jan Funke</a>
-          </p>
-        </div>
-        <div class="logo-item">
-          <img src="assets/img/uni_freiburg.png" alt="Gatsby" class="logo">
-          <p class="logo-text">
-            w/ <a href="https://shorturl.at/nrBEJ">Frank Hutter</a>
-          </p>
-        </div>
-        <div class="logo-item">
-          <img src="assets/img/gatsby.jpeg" alt="Gatsby" class="logo">
-          <p class="logo-text">
-            w/ <a href="https://shorturl.at/uDHLX">Tim Lillicrap, </a>
-            <a href="https://www.gatsby.ucl.ac.uk/~pel/">Peter Latham</a>
-          </p>
-        </div>
-        <div class="logo-item">
-          <img src="assets/img/ntu_singapore.png" alt="NTU" class="logo">
-          <p class="logo-text">
-            w/ <a href="https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en&inst=7575085548378563675">Erik Cambria</a>
-          </p>
-        </div>
-      </div>
-        
+          <!-- Logo pictures -->
+          <div class="logo-pictures">
+            <div class="logo-item">
+              <img src="assets/img/jhu.png" alt="JHU" class="logo">
+              <p class="logo-text">
+                w/ <a href="https://bonnerlab.org/">Mick Bonner</a><br>
+              </p>
+            </div>
+            <div class="logo-item">
+              <img src="assets/img/harvard.jpeg" alt="Harvard" class="logo">
+              <p class="logo-text">
+                w/ <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a><br>
+              </p>
+            </div>
+            <div class="logo-item">
+              <img src="assets/img/janelia.png" alt="Janelia" class="logo">
+              <p class="logo-text">
+                w/ <a href="https://shorturl.at/lyzFR">James Fitzgerald</a><br>
+                <a href="https://shorturl.at/dfuyQ">Jan Funke</a>
+              </p>
+            </div>
+            <div class="logo-item">
+              <img src="assets/img/uni_freiburg.png" alt="Gatsby" class="logo">
+              <p class="logo-text">
+                w/ <a href="https://shorturl.at/nrBEJ">Frank Hutter</a>
+              </p>
+            </div>
+            <div class="logo-item">
+              <img src="assets/img/gatsby.jpeg" alt="Gatsby" class="logo">
+              <p class="logo-text">
+                w/ <a href="https://shorturl.at/uDHLX">Tim Lillicrap, </a>
+                <a href="https://www.gatsby.ucl.ac.uk/~pel/">Peter Latham</a>
+              </p>
+            </div>
+            <div class="logo-item">
+              <img src="assets/img/ntu_singapore.png" alt="NTU" class="logo">
+              <p class="logo-text">
+                w/ <a href="https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en&inst=7575085548378563675">Erik Cambria</a>
+              </p>
+            </div>
+          </div>
+          
 
           {% if page.news -%}
           <!-- News -->
@@ -124,6 +359,5 @@ layout: default
             
           </div>
           {%- endif %}
-        </article>
-
-</div>
+        </div>
+      </div>

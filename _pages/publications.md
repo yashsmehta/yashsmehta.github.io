@@ -77,7 +77,8 @@ nav_order: 1
 }
 
 .title-row .title {
-  font-weight: 600;
+  font-family: "factoria", sans-serif;
+  font-weight: 500;
   color: #2c3e50;
   font-size: 1rem;
   line-height: 1.2;
@@ -96,6 +97,8 @@ nav_order: 1
 }
 
 .pub-content .author {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
   color: #666;
   margin-bottom: 0.3rem;
   font-size: 0.9rem;
@@ -103,6 +106,8 @@ nav_order: 1
 }
 
 .pub-content .periodical {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
   margin-top: 0.1rem;
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
@@ -114,10 +119,11 @@ nav_order: 1
 }
 
 .pub-content .periodical .venue {
-  color: #0366d6;
+  color: #68ACE5;  /* JHU Spirit Blue */
 }
 
 .pub-content .periodical .venue em {
+  font-family: "proxima-nova", sans-serif;
   font-style: normal;
   font-weight: 500;
 }
@@ -136,6 +142,8 @@ nav_order: 1
 }
 
 .pub-links a, .abstract-toggle {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.6rem;
@@ -191,6 +199,11 @@ body.modal-open {
   transition: all 0.2s ease;
   border: 2px solid transparent;
   user-select: none;
+}
+
+.topic-filter span {
+  font-family: "factoria", sans-serif;
+  font-weight: 500;
 }
 
 .topic-filter i {
@@ -349,6 +362,8 @@ body.modal-open {
 }
 
 .modal-body {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
   font-size: 0.9rem;
   line-height: 1.5;
   color: #4a5568;

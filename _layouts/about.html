@@ -17,6 +17,38 @@ layout: default
             gap: 2rem;
             margin-bottom: 1rem;
           }
+
+          /* Mobile responsiveness */
+          @media screen and (max-width: 768px) {
+            .post {
+              max-width: 100%;
+              padding: 0 5px;
+              margin: 0;
+            }
+            .top-container {
+              flex-direction: column;
+              align-items: center;
+              gap: 1rem;
+              width: 100%;
+            }
+            .profile {
+              width: 180px !important;
+              margin: 0 auto;
+            }
+            .right-content {
+              width: 100%;
+            }
+            .logo-pictures .logo {
+              transform: scale(0.8);
+            }
+            .news th {
+              padding-right: 0.75rem;
+            }
+            .badge-container {
+              margin-left: 10px;
+            }
+          }
+
           .profile {
             width: 202.5px;
             flex-shrink: 0;

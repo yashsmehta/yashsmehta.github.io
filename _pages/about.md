@@ -30,12 +30,13 @@ social: false  # includes social icons at the bottom of the page
 </style>
 
 <div class="intro-section">
-I'm a second-year PhD student in Computational Cognitive Science, with a background in computer science. My research is at the intersection of <u>deep learning</u>, <u>multimodality</u>, and <u>cognitive science</u>. I'm also drawn to robotics and am curious about ways to boost research productivity—whether through tools, habits, or fresh ideas. A long time ago, I worked as a software developer at *Amazon*, but left to pursue research.
+I'm a second-year PhD student in Computational Cognitive Science, with a background in computer science. My research lies at the intersection of <u>AI</u> and <u>cognitive science</u>. I'm also drawn to robotics and have a keen interest in enhancing research productivity through tools, habits, and innovative approaches. Prior to academia, I worked as a software developer at *Amazon* before transitioning to pursue research.
 </div>
 
 <div class="research-section">
 ### Research experience
-My path to research has been anything but traditional. Along the way, I've explored topics like:
+I've had the opportunity to explore several research areas and work in different labs in 🇺🇸, 🇩🇪, 🇬🇧, 🇸🇬, and 🇮🇳. Here are some of the topics I've worked on:
+
 - **Biologically inspired learning algorithms** 🧠  
     [<span class="conf-badge">NeurIPS'24</span>](https://yashsmehta.com/plasticity-paper-website/) [<span class="conf-badge">NeurIPS'22</span>](https://papers.nips.cc/paper_files/paper/2022/hash/cf38eb1549024cce4b3d2c1bb87a6c27-Abstract-Conference.html) [<span class="conf-badge">NeurIPS'21</span>](https://arxiv.org/abs/2106.13031)
 - **Neural architecture search** 🔍  

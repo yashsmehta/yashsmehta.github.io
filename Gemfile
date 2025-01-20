@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'uri', '0.10.1'
 gem 'activesupport', '7.0.4'
 group :jekyll_plugins do
     gem 'jekyll'

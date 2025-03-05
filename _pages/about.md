@@ -30,7 +30,7 @@ social: false  # includes social icons at the bottom of the page
 </style>
 
 <div class="intro-section">
-I'm a second-year PhD student in Computational Cognitive Science, with a background in computer science. My research lies at the intersection of <u>AI</u> and <u>cognitive science</u>. I'm also drawn to robotics and have a keen interest in enhancing research productivity through tools, habits, and innovative approaches. Prior to academia, I worked as a software developer at *Amazon* before transitioning to pursue research.
+I'm currently pursuing a PhD in Computational Cognitive Science, drawing from my background in computer science. My research lies at the intersection of <u>AI</u> and <u>cognitive science</u>. I'm also working on AI agents for supporting/expediting scientific discovery. I serve as the CTO of EduGoals.ai, a non-profit focused on developing AI agents for goal-directed learning. Prior to academia, I worked as a software developer at *Amazon*.
 </div>
 
 <div class="research-section">

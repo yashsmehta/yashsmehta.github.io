@@ -30,7 +30,7 @@ social: false  # includes social icons at the bottom of the page
 </style>
 
 <div class="intro-section">
-I'm currently pursuing a PhD in Computational Cognitive Science, drawing from my background in computer science. My research lies at the intersection of <u>AI</u> and <u>cognitive science</u>. I'm also working on AI agents for supporting/expediting scientific discovery. I serve as the CTO of EduGoals.ai, a non-profit focused on developing AI agents for goal-directed learning. Prior to academia, I worked as a software developer at *Amazon*.
+I'm a PhD student in Computational Cognitive Science at Johns Hopkins University, researching at the intersection of **AI** and **human cognition**. My current projects involve modeling human vision with neural networks and creating AI agents to accelerate scientific discovery. From summer 2025, I'll be a research scientist intern at [Sakana AI](https://sakana.ai/), developing agents designed to enhance scientific research workflows. I'm also co-founder of an early-stage AI startup. Previously, I worked as a software developer at Amazon.
 </div>
 
 <div class="research-section">

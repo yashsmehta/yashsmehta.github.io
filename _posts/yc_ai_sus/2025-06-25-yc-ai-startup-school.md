@@ -2,7 +2,7 @@
 layout: post
 title: "Y Combinator AI Startup School"
 date: 2025-06-25 10:00:00
-description: "My key takeaways from talks by Gary Tan and Sam Altman at YC's AI Startup School, on topics like agency, team building, and the future of AI."
+description: "My learnings from 2 days in the Bay area for YC's AI Startup School, on topics like agency, team building, and the future of AI."
 tags: [AI, startups]
 categories: general
 ---

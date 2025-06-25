@@ -2,6 +2,8 @@
  * Content
  ******************************************************************************/
 
+@use 'variables' as *;
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -48,3 +50,12 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+.post {
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+}

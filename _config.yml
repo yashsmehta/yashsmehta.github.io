@@ -99,14 +99,14 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-# blog_name: al-folio # blog_name will be displayed in your blog page
-# blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-# blog_description: a simple whitespace theme for academics
-# permalink: /blog/:year/:title/
+blog_name: Yash's Blog # blog_name will be displayed in your blog page
+blog_nav_title: Blog # your blog must have a title for it to be displayed in the nav bar
+blog_description: Thoughts on AI research and startups
+permalink: /blog/:year/:title/
 
 # Pagination
-# pagination:
-#   enabled: true
+pagination:
+  enabled: true
 
 # Comments
 # disqus_shortname: # put your disqus shortname
@@ -139,6 +139,8 @@ news_limit:
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
+
+future: true
 
 # Markdown and syntax highlight
 markdown: kramdown
@@ -211,7 +213,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
+display_tags: ['AI', 'startups'] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

@@ -21,6 +21,36 @@
       pointer-events: none;
     }
     
+    /* Hide animation on blog pages */
+    {% if page.url contains '/blog/' or page.layout == 'post' or page.title == 'blog' %}
+    #network-animation {
+      display: none !important;
+    }
+    
+    body {
+      background: white !important;
+    }
+    
+    .container.mt-5 {
+      background: white !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: none !important;
+    }
+    
+    header.fixed-top {
+      background: white !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+    
+    footer {
+      background: white !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+    {% endif %}
+    
     body {
       position: relative;
       min-height: 100vh;
@@ -94,7 +124,9 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    {% unless page.url contains '/blog/' or page.layout == 'post' or page.title == 'blog' %}
     <canvas id="network-animation"></canvas>
+    {% endunless %}
 
     <!-- Header -->
     {%- include header.html %}
@@ -117,6 +149,11 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Skip animation on blog pages
+        {% if page.url contains '/blog/' or page.layout == 'post' or page.title == 'blog' %}
+        return;
+        {% endif %}
+        
         const canvas = document.getElementById('network-animation');
         const ctx = canvas.getContext('2d');
         const contentContainer = document.querySelector('.container.mt-5');

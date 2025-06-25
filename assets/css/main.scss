@@ -3,13 +3,7 @@
 ---
 @charset "utf-8";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
-
-@import
-  "variables",
-  "themes",
-  "layout",
-  "base",
-  "distill"
-;
+// Use the index file which forwards all modules
+@use "../../_sass/index" as * with (
+  $max-content-width: {{ site.max_width }}
+);

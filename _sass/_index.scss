@@ -1,0 +1,10 @@
+// This is the main entry point that forwards all variables and modules
+// It allows other files to @use this single file to access all shared resources
+
+@forward 'variables' with (
+  $max-content-width: 800px !default
+);
+@forward 'themes';
+@forward 'base';
+@forward 'layout';
+@forward 'distill';

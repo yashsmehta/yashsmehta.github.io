@@ -4,99 +4,72 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based academic portfolio website using the al-folio theme. The site showcases academic work including publications, projects, teaching experience, and research.
-
-## Key Technologies
-
-- **Jekyll** - Static site generator (Ruby-based)
-- **Jekyll Scholar** - For managing academic publications with BibTeX
-- **Bootstrap 4.6.1** - CSS framework
-- **GitHub Pages** - Hosting platform with automated deployment
+Jekyll-based academic portfolio site (al-folio theme) for a JHU PhD student. Deployed to GitHub Pages. Also hosts a standalone React/Vite SPA at `/scholarboard/`.
 
 ## Development Commands
 
 ```bash
-# Install dependencies (run first)
-bundle install
-
-# Development server with live reload
-bundle exec jekyll serve --livereload
-
-# Build for production
-JEKYLL_ENV=production bundle exec jekyll build
-
-# Clean build artifacts
-bundle exec jekyll clean
-
-# Alternative: Use Docker
-./bin/docker_run.sh  # Serves on port 8080
+bundle install                              # Install Ruby dependencies
+bundle exec jekyll serve --livereload       # Dev server at localhost:4000
+JEKYLL_ENV=production bundle exec jekyll build  # Production build
+bundle exec jekyll clean                    # Clean _site/ artifacts
 ```
-
-## Project Structure
-
-### Content Directories
-- `_pages/` - Main website pages (about.md, publications.md, projects.md, teaching.md, cv.md)
-- `_news/` - News/announcement items (markdown files with dates)
-- `_projects/` - Individual project descriptions
-- `_bibliography/papers.bib` - BibTeX file for all publications
-
-### Theme Structure
-- `_layouts/` - Page templates (about.html, bib.html, page.html, post.html)
-- `_includes/` - Reusable components (header.html, footer.html, news.html, projects.html)
-- `_sass/` - SCSS stylesheets with custom variables and themes
-- `assets/` - Images, PDFs, JavaScript, and compiled CSS
-
-## Key Customizations
-
-### About Page
-- Custom JHU color scheme (Heritage Blue #002D72, Spirit Blue #68ACE5)
-- Animated network background on all pages
-- Institution logos section
-- Integrated news feed
-
-### Publications Page
-- Topic-based filtering system (bio-learning, NAS, personality)
-- Interactive abstract popups
-- Publication preview images
-- Custom bibliography formatting
-
-### Styling
-- Custom fonts: Factoria and Proxima Nova
-- Glassmorphism effects with backdrop blur
-- Mobile-responsive design
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when pushing to the `master` branch via GitHub Actions. Manual deployment is available with `./bin/deploy`.
+Two-branch strategy: source on `master`, built site on `gh-pages`. The `bin/deploy` script builds, wipes everything except `_site/`, `.git/`, `CNAME`, and `scholarboard/`, then force-pushes to `gh-pages`. Also triggered via GitHub Actions on push to `master`.
+
+## Architecture
+
+### Layout Inheritance
+```
+default.html → about.html (homepage)
+             → page.html  (publications, cv, projects, teaching)
+             → post.html  (blog posts, news)
+```
+
+### Inline Style Override Pattern (critical)
+Most visual customizations are NOT in SCSS. Instead, they live in inline `<style>` blocks:
+- `_layouts/default.html` — glassmorphism, typography (Factoria/Proxima Nova), navbar colors, mobile overrides, **and the entire network animation JS** (inline `<script>`)
+- `_layouts/about.html` — all homepage-specific styles (profile layout, institution logos, ScholarBoard card)
+- `_pages/publications.md` — all publication page styles, topic filter system, abstract popup modal JS
+
+The SCSS files (`_sass/`) remain close to upstream al-folio defaults. Custom JHU colors (#002D72, #68ACE5) are hardcoded as hex literals in the inline styles, not defined in `_variables.scss`.
+
+### About Page Content Parsing
+`about.html` extracts sections from `about.md` using Liquid `split` filters on `<div class="intro-section">` and `<div class="research-section">` markers. The markdown file must contain those exact div wrappers as raw HTML — changing them breaks the layout.
+
+### Publications System
+- BibTeX source: `_bibliography/papers.bib`
+- Entry template: `_layouts/bib.html` (renders preview image, authors, links, topic icon)
+- Custom BibTeX fields beyond standard al-folio: `topic` (drives filtering), `abstract` (shown in popup modal)
+- **Topic filtering** (in `publications.md`): Vanilla JS using `data-topic` attributes and a `Set` of active filters. OR logic — papers matching any active filter show.
+- **Abstract popup** (in `publications.md`): Dynamic modal positioned at click coordinates with spring animation. Reads from hidden `.abstract-content` divs in `bib.html`. Note: the old al-folio abstract toggle system (`common.js` + `_base.scss`) still exists in code but is inert.
+
+### ScholarBoard — Embedded React App
+A separate React/Vite SPA at `/scholarboard/` with its own HTML, JS bundle, CSS, and data files. Three mechanisms protect it:
+1. `_config.yml`: `exclude: [scholarboard]` (skip Jekyll processing) + `keep_files: [scholarboard]` (survive `jekyll clean`)
+2. `bin/deploy`: explicit `! -name 'scholarboard'` in the `find`/`rm` cleanup
+3. Hardcoded nav link in `_includes/header.html` and feature card in `about.html`
+
+Any new deploy script or build process must preserve the `scholarboard/` directory.
+
+### Network Animation
+Inline in `default.html` (not a separate JS file). 100 nodes with JHU color palette, connection lines within 150px, mouse interaction within 120px. Disabled on mobile via CSS `display: none` at `max-width: 768px` and conditionally excluded on blog pages via Liquid.
+
+### Font Loading
+- Body fonts (Factoria, Proxima Nova): Adobe Typekit CDN loaded in `default.html`
+- Icon fonts: FontAwesome 5.15.4 loaded in `_includes/head.html`; publications page additionally loads FontAwesome 6.0 from a separate CDN (two FA versions coexist on that page)
+
+### Navigation
+`_includes/header.html` iterates `site.pages | sort: "nav_order"` for pages with `nav: true`. The ScholarBoard link is hardcoded after the loop, outside the normal page system.
 
 ## Adding Content
 
 ### New Publication
-1. Add BibTeX entry to `_bibliography/papers.bib`
-2. Add preview image to `assets/img/publication_preview/[paper-key].jpg`
-3. Include `selected={true}` in BibTeX for featured papers
-
-### New Project
-Create a markdown file in `_projects/` with frontmatter:
-```yaml
----
-layout: page
-title: Project Title
-description: Brief description
-img: assets/img/project-thumbnail.jpg
-importance: 1
-category: research
----
-```
+1. Add BibTeX entry to `_bibliography/papers.bib` with custom fields: `topic`, `abstract`, `preview`, `selected={true}` for featured
+2. Add preview image to `assets/img/publication_preview/[key].jpg`
+3. Valid topic values: `bio-learning`, `nas`, `personality`
 
 ### New News Item
-Create a markdown file in `_news/` with the filename format `YYYY-MM-DD-announcement.md`.
-
-## Configuration
-
-Main settings are in `_config.yml`:
-- Site metadata and URLs
-- Social media profiles
-- Theme colors and settings
-- Plugin configurations
-- Jekyll Scholar settings
+Create markdown in `_news/` with format `announcement_N.md`. Use `inline: true` in frontmatter for items that render directly in the news feed.

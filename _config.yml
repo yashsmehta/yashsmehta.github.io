@@ -162,10 +162,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - scholarboard
 keep_files:
   - CNAME
   - .nojekyll
   - .git
+  - scholarboard
 
 # Plug-ins
 plugins:

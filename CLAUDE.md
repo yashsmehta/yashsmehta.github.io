@@ -47,7 +47,17 @@ The SCSS files (`_sass/`) remain close to upstream al-folio defaults. Custom JHU
 - **Abstract popup** (in `publications.md`): Dynamic modal positioned at click coordinates with spring animation. Reads from hidden `.abstract-content` divs in `bib.html`. Note: the old al-folio abstract toggle system (`common.js` + `_base.scss`) still exists in code but is inert.
 
 ### ScholarBoard — Embedded React App
-A separate React/Vite SPA at `/scholarboard/` with its own HTML, JS bundle, CSS, and data files. Three mechanisms protect it:
+A separate React/Vite SPA at `/scholarboard/` with its own HTML, JS bundle, CSS, and data files.
+
+**Source repo:** `/Users/mehtay/Research/scienta-ai/ScholarBoard-ai/`
+**Sync workflow:**
+1. Make changes in the source repo (frontend code, data, etc.)
+2. Run `./bin/sync-scholarboard` from this website repo — builds with `VITE_BASE=/scholarboard/`, copies dist + data files, injects beta banner
+3. Commit & push from this repo to deploy
+
+**Important:** Never edit `scholarboard/` files directly in this repo — they get overwritten on next sync. All changes (including onboarding text in `Onboarding.tsx`) must go in the source repo. The only website-repo-side customization is the beta banner template at `bin/scholarboard-banner.html`, which gets injected into `index.html` during sync.
+
+**Protection mechanisms:**
 1. `_config.yml`: `exclude: [scholarboard]` (skip Jekyll processing) + `keep_files: [scholarboard]` (survive `jekyll clean`)
 2. `bin/deploy`: explicit `! -name 'scholarboard'` in the `find`/`rm` cleanup
 3. Hardcoded nav link in `_includes/header.html` and feature card in `about.html`

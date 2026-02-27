@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -e
+
+# Sync ScholarBoard build into the website repo
+# Usage: ./bin/sync-scholarboard
+#
+# This script:
+# 1. Builds the ScholarBoard frontend with /scholarboard/ base path
+# 2. Copies the build output + data files into scholarboard/
+# 3. Injects the beta feedback banner into index.html
+
+SCHOLARBOARD_REPO="/Users/mehtay/Research/scienta-ai/ScholarBoard-ai"
+WEBSITE_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+TARGET="$WEBSITE_DIR/scholarboard"
+BANNER_FILE="$WEBSITE_DIR/bin/scholarboard-banner.html"
+
+# Verify source repo exists
+if [ ! -d "$SCHOLARBOARD_REPO/frontend" ]; then
+  echo "Error: ScholarBoard repo not found at $SCHOLARBOARD_REPO"
+  exit 1
+fi
+
+echo "Building ScholarBoard frontend..."
+cd "$SCHOLARBOARD_REPO/frontend"
+VITE_BASE=/scholarboard/ npm run build
+
+echo "Syncing build output..."
+# Clean old assets (preserve data/ to avoid re-copying ~19MB of profile pics if unchanged)
+rm -rf "$TARGET/assets"
+rm -f "$TARGET/index.html"
+rm -f "$TARGET/embedded-scholars.json"
+
+# Copy dist
+cp -r "$SCHOLARBOARD_REPO/frontend/dist/assets" "$TARGET/assets"
+cp "$SCHOLARBOARD_REPO/frontend/dist/index.html" "$TARGET/index.html"
+[ -f "$SCHOLARBOARD_REPO/frontend/dist/embedded-scholars.json" ] && \
+  cp "$SCHOLARBOARD_REPO/frontend/dist/embedded-scholars.json" "$TARGET/embedded-scholars.json"
+
+echo "Syncing data files..."
+mkdir -p "$TARGET/data/build"
+rsync -a --delete "$SCHOLARBOARD_REPO/data/build/scholars.json" "$TARGET/data/build/"
+rsync -a --delete "$SCHOLARBOARD_REPO/data/build/field_directions.json" "$TARGET/data/build/"
+rsync -a --delete "$SCHOLARBOARD_REPO/data/build/profile_pics/" "$TARGET/data/build/profile_pics/"
+
+echo "Injecting beta banner..."
+python3 -c "
+with open('$TARGET/index.html') as f:
+    html = f.read()
+with open('$BANNER_FILE') as f:
+    banner = f.read()
+html = html.replace('</body>', banner + '\n  </body>')
+with open('$TARGET/index.html', 'w') as f:
+    f.write(html)
+"
+
+echo ""
+echo "Done! ScholarBoard synced to $TARGET"
+echo "Review changes with: git diff --stat"
+echo "Then commit and push to deploy."

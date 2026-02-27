@@ -370,6 +370,33 @@ layout: default
           </div>
           
 
+          <!-- ScholarBoard Feature Card -->
+          <div class="scholarboard-feature" style="margin: 2rem 0;">
+            <a href="{{ '/scholarboard/' | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
+              <div style="
+                background: linear-gradient(135deg, #0d5c63 0%, #14919b 100%);
+                border-radius: 12px;
+                padding: 1.5rem 2rem;
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+              " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(13,92,99,0.3)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                <div style="font-size: 2.5rem; flex-shrink: 0;">🗺️</div>
+                <div>
+                  <div style="font-family: 'factoria', sans-serif; font-weight: 700; font-size: 1.3em; margin-bottom: 0.25rem;">
+                    ScholarBoard<span style="font-weight: 300; opacity: 0.85;">.ai</span>
+                  </div>
+                  <div style="font-family: 'proxima-nova', sans-serif; font-weight: 300; font-size: 0.95em; opacity: 0.9; line-height: 1.4;">
+                    An interactive 2D map of researchers arranged by research similarity. Explore the landscape of science.
+                  </div>
+                </div>
+                <div style="flex-shrink: 0; font-size: 1.5rem; opacity: 0.7;">→</div>
+              </div>
+            </a>
+          </div>
+
           {% if page.news -%}
           <!-- News -->
           {%- include news.html %}

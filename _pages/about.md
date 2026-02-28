@@ -8,6 +8,8 @@ profile:
   align: right
   image: profile_pic.jpg
   image_cicular: false # crops the image to make it circular
+  address: >
+    <i class="fas fa-map-marker-alt"></i> Baltimore, USA
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -45,7 +47,5 @@ I've had the opportunity to explore several research areas and work in different
     [<span class="conf-badge">IEEE ICDM'20</span>](https://ieeexplore.ieee.org/abstract/document/9338428) [<span class="conf-badge">AI Review'20</span>](https://link.springer.com/article/10.1007/s10462-019-09770-z) [<span class="conf-badge">FGCS'22</span>](https://www.sciencedirect.com/science/article/pii/S0167739X22002229)
 
 I also completed a short PhD rotation project at *Harvard Medical School* with [Pranav Rajpurkar](https://pranavrajpurkar.com/), focusing on knowledge graphs for automating radiology report generation.
-
-If any of this resonates with your interests, I'd love to connect—feel free to reach out!
 </div>
 

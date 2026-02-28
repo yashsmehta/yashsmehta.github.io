@@ -13,266 +13,401 @@ layout: default
             flex-direction: column;
           }
           .top-container {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
           }
-
-          /* Mobile responsiveness */
-          @media screen and (max-width: 768px) {
-            .post {
-              max-width: 100%;
-              padding: 0 5px;
-              margin: 0;
-            }
-            .top-container {
-              flex-direction: column;
-              align-items: center;
-              gap: 1rem;
-              width: 100%;
-            }
-            .profile {
-              width: 180px !important;
-              margin: 0 auto;
-            }
-            .right-content {
-              width: 100%;
-            }
-            .logo-pictures .logo {
-              transform: scale(0.8);
-            }
-            .news th {
-              padding-right: 0.75rem;
-            }
-            .badge-container {
-              margin-left: 10px;
-            }
-          }
-
           .profile {
-            width: 202.5px;
-            flex-shrink: 0;
-            padding-top: 5pt;
+            float: right;
+            width: 150px;
+            margin: 0.2rem 0 0.2rem 1.25rem;
           }
-          .profile figure {
-            margin: 0;
-            padding: 0;
-          }
+          .profile figure { margin: 0; padding: 0; }
           .profile figure img {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             display: block;
-            border-radius: 4px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            box-shadow: 0 3px 14px rgba(0, 45, 114, 0.1);
           }
           .profile .address {
             margin-top: 0.8em;
             text-align: center;
             font-family: "proxima-nova", sans-serif;
             font-weight: 300;
-            letter-spacing: 0;
           }
-          .right-content {
-            flex: 1;
-            min-width: 0;
-          }
-          .post-header {
-            margin-bottom: 0.5rem;
-          }
+          .right-content { }
+          .post-header { margin-bottom: 0.3rem; }
           .post-title {
             font-family: "factoria", sans-serif;
-            color: #002D72;  /* JHU Heritage Blue */
-            margin-bottom: 0em;
+            color: #002D72;
+            margin-bottom: 0;
           }
-          .post-title span.first-name {
-            font-family: "factoria", sans-serif;
-            font-weight: 300;  /* Factoria Light */
-          }
-          .post-title span.last-name {
-            font-family: "factoria", sans-serif;
-            font-weight: 900;  /* Ultra */
-          }
+          .post-title span.first-name { font-weight: 300; }
+          .post-title span.last-name { font-weight: 900; }
           .desc {
             font-family: "factoria", sans-serif;
-            font-weight: 300;  /* Changed to Factoria Light */
-            letter-spacing: 0;
-            color: #68ACE5;  /* JHU Spirit Blue */
+            font-weight: 300;
+            color: #68ACE5;
             margin: 0;
           }
-          .desc a {
-            color: inherit;
-            text-decoration: none;
-          }
-          .desc a:hover {
-            text-decoration: underline;
-          }
+          .desc a { color: inherit; text-decoration: none; }
+          .desc a:hover { text-decoration: underline; }
           .intro-text {
             font-family: "proxima-nova", sans-serif;
-            font-size: 1em;
+            font-size: 0.95em;
             text-align: justify;
             font-weight: 300;
             line-height: 1.6;
           }
-          .intro-text em {
-            font-style: italic;
+          .intro-text em { font-style: italic; }
+          .intro-text strong { font-weight: 700; }
+          .intro-text > p:first-child { margin-top: 0; }
+
+          /* ── Featured project cards ── */
+          .featured-projects {
+            clear: both;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 0.5rem 0 1rem 0;
           }
-          .intro-text strong {
+          .featured-project-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(104, 172, 229, 0.18);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+          }
+          .featured-project-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            border-radius: 0 3px 3px 0;
+          }
+          .card-scholarboard::before { background: linear-gradient(180deg, #002D72, #1a5ab8); }
+          .card-edugoals::before { background: linear-gradient(180deg, #1b6ca8, #68ACE5); }
+          .featured-project-card:hover {
+            text-decoration: none;
+            color: #2c3e50;
+            transform: translateY(-1px);
+            border-color: rgba(104, 172, 229, 0.35);
+            box-shadow: 0 4px 16px rgba(0, 45, 114, 0.07);
+            background: rgba(255, 255, 255, 0.7);
+          }
+          .featured-project-card .card-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
+          .featured-project-card .card-text { flex: 1; min-width: 0; }
+          .featured-project-card .card-title {
+            font-family: 'factoria', sans-serif;
             font-weight: 700;
+            font-size: 0.95em;
+            color: #002D72;
+            line-height: 1.2;
+            margin-bottom: 0.15rem;
           }
-          .intro-text > p:first-child {
+          .featured-project-card .card-title .light { font-weight: 300; color: #68ACE5; }
+          .featured-project-card .card-desc {
+            font-family: 'proxima-nova', sans-serif;
+            font-weight: 300;
+            font-size: 0.78em;
+            color: #6b7c8d;
+            line-height: 1.35;
+          }
+          .featured-project-card .card-arrow {
+            flex-shrink: 0;
+            font-size: 0.9rem;
+            color: #68ACE5;
+            opacity: 0;
+            transform: translateX(-4px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+          }
+          .featured-project-card:hover .card-arrow {
+            opacity: 1;
+            transform: translateX(0);
+          }
+
+          /* ── Section headings ── */
+          .section-heading {
+            font-family: factoria, serif;
+            font-weight: 500 !important;
+            font-style: normal !important;
+            font-size: 1.15em;
+            letter-spacing: -0.01em;
             margin-top: 0;
+            margin-bottom: 0.15rem;
+            padding-bottom: 0.3rem;
+            color: #002D72;
+            border-bottom: 1.5px solid rgba(104, 172, 229, 0.2);
+            display: inline-block;
           }
+
+          /* ── Research & experience sections ── */
           .research-content {
             width: 100%;
             font-size: 1em;
             margin-top: 0;
             font-family: "proxima-nova", sans-serif;
             font-weight: 300;
+            line-height: 1.6;
           }
           .research-section {
-            margin-left: 7pt;
-          }
-          .research-content h3 {
-            font-family: factoria, serif;
-            font-weight: 500 !important;
-            font-style: normal !important;
-            letter-spacing: -0.01em;
-            margin-top: 0;
-            color: #002D72;  /* JHU Heritage Blue */
-          }
-          .research-content h3:first-child {
-            margin-top: 0;
-          }
-          .logo-pictures {
-            margin-top: 2rem;
-          }
-          .logo-pictures .logo {
-            transform: scale(0.9);
-            transform-origin: left center;
-          }
-          .logo-pictures .logo-text {
-            font-family: "factoria", sans-serif;
-            font-weight: 300;
-            color: #2c3e50;  /* Dark color for 'w/' */
-            margin: 0.5em 0;
-          }
-          .logo-pictures .logo-text a {
-            font-family: "factoria", sans-serif;
-            font-weight: 300;
-            color: #68ACE5;  /* JHU Spirit Blue for names */
-            text-decoration: none;
-          }
-          .logo-pictures .logo-text a:hover {
-            text-decoration: underline;
-          }
-          /* Conference badge styles */
-          .conf-badge {
-            background-color: rgba(135, 206, 250, 0.2);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            font-weight: 500;
-            color: #333;
-            margin-right: 6px;
-            display: inline-block;
-            text-decoration: none;
-          }
-          .conf-badge:hover {
-            background-color: rgba(135, 206, 250, 0.3);
-            text-decoration: none;
-          }
-          .badge-container {
-            margin-top: 2px;
-            margin-left: 20px;
-          }
-          
-          /* News section styling */
-          .news h2 {
-            font-family: "factoria", sans-serif;
-            font-weight: 700;
-            color: #002D72;  /* JHU Heritage Blue */
-            margin-bottom: 1rem;
-          }
-          .news table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 0.5rem;
-          }
-          .news td {
-            font-family: "proxima-nova", sans-serif;
-            font-weight: 300;
-            font-size: 1em;
-            line-height: 1.6;
-            color: #2c3e50;  /* Darker text for better readability */
-            padding: 0;
-            vertical-align: top;
-          }
-          .news td strong {
-            font-family: "proxima-nova", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-          }
-          .news td em {
-            font-family: "proxima-nova", sans-serif;
-            font-weight: 300;
-            font-style: italic;
-          }
-          .news td a {
-            font-family: "proxima-nova", sans-serif;
-            font-weight: 500;
-            color: #2c3e50;
-            text-decoration: none;
-          }
-          .news td a:hover {
-            text-decoration: underline;
-          }
-          .news th {
-            font-family: "factoria", sans-serif;
-            font-weight: 300;
-            font-size: 1em;
-            color: #68ACE5;  /* JHU Spirit Blue */
-            padding: 2pt 1.5rem 0 0;
-            vertical-align: top;
-            white-space: nowrap;
-            width: 1%;  /* Forces the date column to be as narrow as possible */
-          }
-          
-          /* News type tags */
-          .news-type {
-            font-family: "proxima-nova", sans-serif;
-            font-size: 0.75em;
-            font-weight: 500;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-top: 4px;
-            text-transform: capitalize;
-            display: inline-block;
-            white-space: nowrap;
-          }
-          
-          .news-type.conference {
-            background-color: #e3f2fd;
-            color: #1976d2;
-          }
-          
-          .news-type.talk {
-            background-color: #f3e5f5;
-            color: #7b1fa2;
-          }
-          
-          .news-type.update {
-            background-color: #e8f5e9;
-            color: #388e3c;
-          }
-          
-          .news-type.general {
-            background-color: #fff3e0;
-            color: #f57c00;
+            margin-left: 0;
+            margin-top: 0.4rem;
           }
           .research-section strong {
             font-family: "proxima-nova", sans-serif;
             font-weight: 700 !important;
             font-style: normal !important;
             color: #2c3e50;
+          }
+          .research-section ul { padding-left: 1.2em; margin-bottom: 0.5rem; }
+          .research-section li { margin-bottom: 0.1rem; }
+
+          /* ── Logo strips (shared) ── */
+          .logo-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.3rem 0 0.2rem 0;
+            flex-wrap: nowrap;
+          }
+          .industry-strip {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            padding: 0.3rem 0 0.2rem 0;
+            flex-wrap: wrap;
+          }
+          .logo-chip, .industry-chip {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.2rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+          }
+          .logo-chip:hover, .industry-chip:hover {
+            background: rgba(104, 172, 229, 0.06);
+          }
+          .logo-chip img, .industry-chip img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.82;
+            transition: opacity 0.2s ease;
+          }
+          .logo-chip:hover img, .industry-chip:hover img { opacity: 1; }
+          .chip-label, .ind-label {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-size: 0.72em;
+            color: #8a9bac;
+            line-height: 1.2;
+          }
+          .chip-label a {
+            color: #68ACE5;
+            font-weight: 400;
+            text-decoration: none;
+          }
+          .chip-label a:hover { text-decoration: underline; }
+
+          /* Industry: equal-sized card layout */
+          .industry-strip {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            align-items: stretch;
+          }
+          .industry-chip {
+            padding: 0.6rem 1rem;
+            background: rgba(255, 255, 255, 0.35);
+            border: 1px solid rgba(104, 172, 229, 0.1);
+            border-radius: 8px;
+            justify-content: center;
+          }
+          .industry-chip .logo-container {
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .industry-chip img {
+            max-height: 100%;
+            width: auto;
+            max-width: 130px;
+            object-fit: contain;
+          }
+
+          /* ── Conference badges ── */
+          .conf-badge {
+            background-color: rgba(135, 206, 250, 0.15);
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: #333;
+            margin-right: 3px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.15s ease;
+          }
+          .conf-badge:hover {
+            background-color: rgba(135, 206, 250, 0.3);
+            text-decoration: none;
+          }
+
+          /* ── Section dividers ── */
+          .section-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(104, 172, 229, 0.18), transparent);
+            margin: 1rem 0;
+          }
+
+          /* ── Industry section ── */
+          .industry-section { margin-top: 1rem; }
+
+          /* ── News section ── */
+          .news h2 {
+            font-family: "factoria", sans-serif;
+            font-weight: 700;
+            font-size: 1.05em;
+            color: #002D72;
+            margin-bottom: 0.5rem;
+          }
+          .news table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.3rem;
+          }
+          .news td {
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #2c3e50;
+            padding: 0;
+            vertical-align: top;
+          }
+          .news td strong { font-weight: 700; font-style: normal; }
+          .news td em { font-weight: 300; font-style: italic; }
+          .news td a { font-weight: 500; color: #2c3e50; text-decoration: none; }
+          .news td a:hover { text-decoration: underline; }
+          .news th {
+            font-family: "factoria", sans-serif;
+            font-weight: 300;
+            font-size: 0.85em;
+            color: #68ACE5;
+            padding: 2pt 1rem 0 0;
+            vertical-align: top;
+            white-space: nowrap;
+            width: 1%;
+          }
+
+          /* ── Mobile ── */
+          @media screen and (max-width: 768px) {
+            /* Prevent horizontal overflow */
+            .post {
+              width: 100% !important;
+              max-width: 100% !important;
+              padding: 0 !important;
+              margin: 0 !important;
+              box-sizing: border-box !important;
+              overflow-x: hidden;
+              overflow-wrap: break-word;
+              word-wrap: break-word;
+            }
+
+            /* Profile pic: centered above text on mobile */
+            .profile {
+              float: none !important;
+              width: 120px !important;
+              margin: 0 auto 0.6rem auto;
+              display: block;
+            }
+            .profile figure img {
+              width: 120px;
+              height: 120px;
+            }
+
+            /* Text */
+            .post-header { margin-bottom: 0.2rem; }
+            .post-title { font-size: 1.8rem; }
+            .desc { font-size: 0.85em; }
+            .intro-text { font-size: 0.9em; text-align: left; }
+
+            /* Featured cards — single column */
+            .featured-projects {
+              grid-template-columns: 1fr;
+              gap: 0.5rem;
+              margin: 0.4rem 0 0.8rem 0;
+            }
+
+            /* Research logos — grid on mobile to prevent overflow */
+            .logo-strip {
+              display: grid !important;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 0.3rem;
+              justify-items: center;
+              padding: 0.2rem 0;
+              max-width: 100%;
+            }
+            .logo-chip {
+              padding: 0.25rem 0.3rem;
+              width: 100%;
+            }
+            .logo-chip img { height: 30px; }
+            .chip-label { font-size: 0.58em; }
+
+            /* Research text */
+            .research-content { font-size: 0.93em; }
+            .research-section ul { padding-left: 1em; }
+            .section-heading { font-size: 1.05em; }
+
+            /* Conference badges */
+            .conf-badge { font-size: 0.78em; padding: 1px 4px; margin-right: 2px; }
+
+            /* Industry cards — stack vertically on mobile */
+            .industry-strip {
+              grid-template-columns: 1fr;
+              gap: 0.4rem;
+              width: 100%;
+            }
+            .industry-chip {
+              flex-direction: row;
+              align-items: center;
+              gap: 0.6rem;
+              padding: 0.5rem 0.8rem;
+            }
+            .industry-chip .logo-container {
+              height: 32px;
+              width: 100px;
+              flex-shrink: 0;
+            }
+            .industry-chip img { max-height: 100%; max-width: 100px; }
+            .ind-label { font-size: 0.72em; }
+
+            /* News table */
+            .news th {
+              padding-right: 0.4rem;
+              font-size: 0.75em;
+            }
+            .news td { font-size: 0.84em; }
           }
         </style>
 
@@ -281,22 +416,18 @@ layout: default
           <div class="profile">
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
-
               {% if page.profile.image_cicular %}
                 {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
               {% else %}
                 {%- assign profile_image_class = "img-fluid z-depth-1" -%}
               {% endif %}
-
-              {% include figure.html 
-              path=profile_image_path 
+              {% include figure.html
+              path=profile_image_path
               class=profile_image_class
               alt=page.profile.image -%}
             {% endif -%}
             {%- if page.profile.address %}
-            <div class="address">
-              {{ page.profile.address }}
-            </div>
+            <div class="address">{{ page.profile.address }}</div>
             {%- endif %}
           </div>
           {%- endif %}
@@ -322,100 +453,89 @@ layout: default
           </div>
         </div>
 
+        <!-- Featured Project Cards -->
+        <div class="featured-projects">
+          <a href="{{ '/scholarboard/' | relative_url }}" class="featured-project-card card-scholarboard">
+            <div class="card-icon">🗺️</div>
+            <div class="card-text">
+              <div class="card-title">ScholarBoard<span class="light">.ai</span></div>
+              <div class="card-desc">Interactive map of researchers by research similarity</div>
+            </div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a href="#" class="featured-project-card card-edugoals">
+            <div class="card-icon">🎓</div>
+            <div class="card-text">
+              <div class="card-title">EduGoals<span class="light">.ai</span></div>
+              <div class="card-desc">Free tool to help students in rural India prepare for competitive entrance exams</div>
+            </div>
+            <span class="card-arrow">→</span>
+          </a>
+        </div>
+
         <div class="research-content">
+          <h3 class="section-heading">Research experience</h3>
+
+          <!-- Research logos -->
+          <div class="logo-strip">
+            <div class="logo-chip">
+              <img src="assets/img/jhu.png" alt="JHU">
+              <span class="chip-label"><a href="https://bonnerlab.org/">M. Bonner</a></span>
+            </div>
+            <div class="logo-chip">
+              <img src="assets/img/janelia.png" alt="Janelia">
+              <span class="chip-label"><a href="https://shorturl.at/lyzFR">J. Fitzgerald</a>, <a href="https://shorturl.at/dfuyQ">J. Funke</a></span>
+            </div>
+            <div class="logo-chip">
+              <img src="assets/img/uni_freiburg.png" alt="Freiburg">
+              <span class="chip-label"><a href="https://shorturl.at/nrBEJ">F. Hutter</a></span>
+            </div>
+            <div class="logo-chip">
+              <img src="assets/img/gatsby.jpeg" alt="Gatsby UCL">
+              <span class="chip-label"><a href="https://shorturl.at/uDHLX">T. Lillicrap</a>, <a href="https://www.gatsby.ucl.ac.uk/~pel/">P. Latham</a></span>
+            </div>
+            <div class="logo-chip">
+              <img src="assets/img/ntu_singapore.png" alt="NTU">
+              <span class="chip-label"><a href="https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en&inst=7575085548378563675">E. Cambria</a></span>
+            </div>
+          </div>
+
+          <!-- Research text content -->
           <div class="research-section">
             {{ page.content | split: '<div class="research-section">' | last | split: '</div>' | first | markdownify | replace: '&lt;span', '<span' | replace: '&lt;/span&gt;', '</span>' | replace: '&gt;', '>' }}
           </div>
 
-          <!-- Logo pictures -->
-          <div class="logo-pictures">
-            <div class="logo-item">
-              <img src="assets/img/jhu.png" alt="JHU" class="logo">
-              <p class="logo-text">
-                w/ <a href="https://bonnerlab.org/">Mick Bonner</a><br>
-              </p>
-            </div>
-            <div class="logo-item">
-              <img src="assets/img/harvard.jpeg" alt="Harvard" class="logo">
-              <p class="logo-text">
-                w/ <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a><br>
-              </p>
-            </div>
-            <div class="logo-item">
-              <img src="assets/img/janelia.png" alt="Janelia" class="logo">
-              <p class="logo-text">
-                w/ <a href="https://shorturl.at/lyzFR">James Fitzgerald</a><br>
-                <a href="https://shorturl.at/dfuyQ">Jan Funke</a>
-              </p>
-            </div>
-            <div class="logo-item">
-              <img src="assets/img/uni_freiburg.png" alt="Gatsby" class="logo">
-              <p class="logo-text">
-                w/ <a href="https://shorturl.at/nrBEJ">Frank Hutter</a>
-              </p>
-            </div>
-            <div class="logo-item">
-              <img src="assets/img/gatsby.jpeg" alt="Gatsby" class="logo">
-              <p class="logo-text">
-                w/ <a href="https://shorturl.at/uDHLX">Tim Lillicrap, </a>
-                <a href="https://www.gatsby.ucl.ac.uk/~pel/">Peter Latham</a>
-              </p>
-            </div>
-            <div class="logo-item">
-              <img src="assets/img/ntu_singapore.png" alt="NTU" class="logo">
-              <p class="logo-text">
-                w/ <a href="https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en&inst=7575085548378563675">Erik Cambria</a>
-              </p>
-            </div>
-          </div>
-          
-
-          <!-- ScholarBoard Feature Card -->
-          <div class="scholarboard-feature" style="margin: 2rem 0;">
-            <a href="{{ '/scholarboard/' | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
-              <div style="
-                background: linear-gradient(135deg, #0d5c63 0%, #14919b 100%);
-                border-radius: 12px;
-                padding: 1.5rem 2rem;
-                color: white;
-                display: flex;
-                align-items: center;
-                gap: 1.5rem;
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
-              " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(13,92,99,0.3)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
-                <div style="font-size: 2.5rem; flex-shrink: 0;">🗺️</div>
-                <div>
-                  <div style="font-family: 'factoria', sans-serif; font-weight: 700; font-size: 1.3em; margin-bottom: 0.25rem;">
-                    ScholarBoard<span style="font-weight: 300; opacity: 0.85;">.ai</span>
-                  </div>
-                  <div style="font-family: 'proxima-nova', sans-serif; font-weight: 300; font-size: 0.95em; opacity: 0.9; line-height: 1.4;">
-                    An interactive 2D map of researchers arranged by research similarity. Explore the landscape of science.
-                  </div>
+          <!-- Industry Experience -->
+          <div class="industry-section">
+            <h3 class="section-heading">Industry experience</h3>
+            <div class="industry-strip">
+              <div class="industry-chip">
+                <div class="logo-container">
+                  <img src="assets/img/sakana.png" alt="Sakana AI">
                 </div>
-                <div style="flex-shrink: 0; font-size: 1.5rem; opacity: 0.7;">→</div>
+                <span class="ind-label">Research Scientist Intern</span>
               </div>
-            </a>
+              <div class="industry-chip">
+                <div class="logo-container">
+                  <img src="assets/img/amazon.png" alt="Amazon">
+                </div>
+                <span class="ind-label">Software Developer</span>
+              </div>
+            </div>
           </div>
+
+          <hr class="section-divider">
 
           {% if page.news -%}
-          <!-- News -->
           {%- include news.html %}
           {%- endif %}
           {% if page.selected_papers -%}
-            <!-- Selected papers -->
             {%- include selected_papers.html %}
           {%- endif %}
           {%- if page.social %}
-          <!-- Social -->
           <div class="social">
-            <div class="contact-icons">
-            {% include social.html %}
-            </div>
-
-            <div class="contact-note">
-              {{ site.contact_note }}
-            </div>
-            
+            <div class="contact-icons">{% include social.html %}</div>
+            <div class="contact-note">{{ site.contact_note }}</div>
           </div>
           {%- endif %}
         </div>

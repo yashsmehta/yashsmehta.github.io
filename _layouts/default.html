@@ -103,8 +103,9 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-radius: 10px;
-      padding: 2rem;
+      padding: 1.5rem 2rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 1.5rem !important;
     }
 
     /* Style header and footer to match */
@@ -122,6 +123,12 @@
     
     /* Mobile styles */
     @media (max-width: 768px) {
+      /* Prevent horizontal scroll on mobile */
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+      }
+
       /* Hide animation on mobile */
       #network-animation {
         display: none !important;
@@ -132,7 +139,12 @@
       header .container {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 1rem !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        box-sizing: border-box !important;
+      }
+      .container.mt-5 {
+        margin-top: 0.75rem !important;
       }
       
       /* Remove glassmorphism effects for better performance */

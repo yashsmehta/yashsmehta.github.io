@@ -15,6 +15,16 @@ footer .container {
   font-size: 1.2rem;
   color: #666;
 }
+@media (max-width: 768px) {
+  .footer-quote {
+    font-size: 0.95rem;
+  }
+  footer .container {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+  }
+}
 </style>
 
     {% if site.footer_fixed %}

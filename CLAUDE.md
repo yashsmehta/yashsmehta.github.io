@@ -50,12 +50,17 @@ The SCSS files (`_sass/`) remain close to upstream al-folio defaults. Custom JHU
 A separate React/Vite SPA at `/scholarboard/` with its own HTML, JS bundle, CSS, and data files.
 
 **Source repo:** `/Users/mehtay/Research/scienta-ai/ScholarBoard-ai/`
-**Sync workflow:**
+**Sync workflow (automatic):**
 1. Make changes in the source repo (frontend code, data, etc.)
-2. Run `./bin/sync-scholarboard` from this website repo — builds with `VITE_BASE=/scholarboard/`, copies dist + data files, injects beta banner
-3. Commit & push from this repo to deploy
+2. Commit in the source repo — a **post-commit hook** (`.git/hooks/post-commit`) automatically runs `./bin/sync-scholarboard`, which builds with `VITE_BASE=/scholarboard/` and copies dist + data files to this repo
+3. Commit & push from this website repo to deploy
+
+**Sync workflow (manual):**
+Run `./bin/sync-scholarboard` from this website repo, then commit & push.
 
 **Important:** Never edit `scholarboard/` files directly in this repo — they get overwritten on next sync. All changes (including onboarding text in `Onboarding.tsx` and the beta banner in `frontend/index.html`) must go in the source repo.
+
+**Note:** The post-commit hook is local to the source repo's `.git/hooks/` — it won't survive a re-clone. See the source repo's CLAUDE.md for re-installation instructions.
 
 **Protection mechanisms:**
 1. `_config.yml`: `exclude: [scholarboard]` (skip Jekyll processing) + `keep_files: [scholarboard]` (survive `jekyll clean`)

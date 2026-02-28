@@ -44,6 +44,7 @@ mkdir -p "$TARGET/data/build"
 rsync -a --delete "$SCHOLARBOARD_REPO/data/build/scholars.json" "$TARGET/data/build/"
 rsync -a --delete "$SCHOLARBOARD_REPO/data/build/field_directions.json" "$TARGET/data/build/"
 rsync -a --delete "$SCHOLARBOARD_REPO/data/build/profile_pics/" "$TARGET/data/build/profile_pics/"
+rsync -a --delete "$SCHOLARBOARD_REPO/data/build/field_images/" "$TARGET/data/build/field_images/"
 
 echo ""
 echo "Done! ScholarBoard synced to $TARGET"

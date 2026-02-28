@@ -34,6 +34,11 @@ cp "$SCHOLARBOARD_REPO/frontend/dist/index.html" "$TARGET/index.html"
 [ -f "$SCHOLARBOARD_REPO/frontend/dist/embedded-scholars.json" ] && \
   cp "$SCHOLARBOARD_REPO/frontend/dist/embedded-scholars.json" "$TARGET/embedded-scholars.json"
 
+# Copy public/ files (e.g. creator-avatar.jpg) that Vite places at dist/ root
+find "$SCHOLARBOARD_REPO/frontend/dist" -maxdepth 1 -type f \
+  ! -name 'index.html' ! -name 'embedded-scholars.json' \
+  -exec cp {} "$TARGET/" \;
+
 echo "Syncing data files..."
 mkdir -p "$TARGET/data/build"
 rsync -a --delete "$SCHOLARBOARD_REPO/data/build/scholars.json" "$TARGET/data/build/"

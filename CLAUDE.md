@@ -55,7 +55,7 @@ A separate React/Vite SPA at `/scholarboard/` with its own HTML, JS bundle, CSS,
 2. Run `./bin/sync-scholarboard` from this website repo — builds with `VITE_BASE=/scholarboard/`, copies dist + data files, injects beta banner
 3. Commit & push from this repo to deploy
 
-**Important:** Never edit `scholarboard/` files directly in this repo — they get overwritten on next sync. All changes (including onboarding text in `Onboarding.tsx`) must go in the source repo. The only website-repo-side customization is the beta banner template at `bin/scholarboard-banner.html`, which gets injected into `index.html` during sync.
+**Important:** Never edit `scholarboard/` files directly in this repo — they get overwritten on next sync. All changes (including onboarding text in `Onboarding.tsx` and the beta banner in `frontend/index.html`) must go in the source repo.
 
 **Protection mechanisms:**
 1. `_config.yml`: `exclude: [scholarboard]` (skip Jekyll processing) + `keep_files: [scholarboard]` (survive `jekyll clean`)

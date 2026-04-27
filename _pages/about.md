@@ -32,7 +32,7 @@ social: false  # includes social icons at the bottom of the page
 </style>
 
 <div class="intro-section">
-I'm a third-year grad student in Computational Cognitive Science, working with [Mick Bonner](https://bonnerlab.org/), studying representations in biological and artificial neural networks. My research investigates how brains and AI systems learn to internally represent information. My background is in CS, and I've also worked as a software engineer. I'm doing research on AI agents for neuroscientific discovery, helping us understand the computational principles in visual processing. I'm excited about startups, AI (no shit!), traveling (experiences!), swim/bike training (david goggins 🙏🏻), and coffee ☕ I have also built the following tools:
+I'm a grad student in Computational Cognitive Science, working with [Mick Bonner](https://bonnerlab.org/), studying representations in biological and artificial neural networks. My research investigates how brains and AI systems learn to internally represent information. More recently, my research has been focused on AI agents for neuroscientific discovery from large datasets (e.g. research internships at Microsoft Research and Sakana AI). My background is in CS, and I previously wrote code as a developer at Amazon. I'm excited about open-ended research, AI (and what aspects of work to offload to it without losing your core cognitive abilities like thinking or curiosity), traveling (experiences!), swim/bike training (david goggins 🙏🏻), and coffee ☕ I have also built the following tools:
 </div>
 
 <div class="research-section">

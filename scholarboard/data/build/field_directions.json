@@ -970,75 +970,6 @@
     "subfield": "Multisensory Integration",
     "n_researchers": 19
   },
-  "Perceptual Decision-Making": {
-    "overview": "Perceptual decision-making investigates how biological systems sample, evaluate, and accumulate noisy sensory evidence to form coherent visual judgments and guide behavior. By mathematically formalizing the interactions between objective sensory inputs, internal neural noise, and top-down cognitive priors, this subfield bridges early sensory processing and high-level cognition. Its insights are increasingly critical for understanding the fundamental neurocomputational architectures of the brain and defining the limits of human perception in complex, dynamic, and uncertain environments.",
-    "active_research_themes": [
-      {
-        "theme": "Metacognition and Perceptual Confidence",
-        "description": "Researchers are investigating how the brain monitors its own sensory processing to generate subjective feelings of confidence or uncertainty. This work utilizes formal frameworks like Introspective Signal Detection Theory to disentangle genuine metacognitive sensitivity from broader cognitive and response biases."
-      },
-      {
-        "theme": "Temporal Dynamics of Evidence Accumulation",
-        "description": "This theme explores how sensory evidence is integrated over time to drive categorical choices and dictate speed-accuracy tradeoffs. Studies rely heavily on drift-diffusion models and large-scale neural recordings to track stochastic accumulation processes and the physiological implementation of decision thresholds."
-      },
-      {
-        "theme": "History Biases and Serial Dependence",
-        "description": "A growing body of work examines how immediate past experiences, prior decisions, and contextual statistics systematically bias current perceptual judgments. Researchers are charting how the visual system balances the need for perceptual stability against the necessity for sensitivity in rapidly changing environments."
-      },
-      {
-        "theme": "Bayesian Inference and Predictive Priors",
-        "description": "This area maps how the visual system integrates inherently noisy or ambiguous sensory inputs with learned structural priors and internal mental models. Scientists are formulating ideal observer models to test whether human perception optimally weights spatial, temporal, and multisensory information according to Bayesian principles."
-      },
-      {
-        "theme": "Neural Population Geometry and Correlated Noise",
-        "description": "Moving beyond single-neuron analysis, researchers are studying how perceptual decisions are encoded in the high-dimensional activity of neural populations. A major focus is determining whether correlated neural variability acts primarily as an information-limiting noise source or serves as a functional communication channel across cortical hierarchies."
-      }
-    ],
-    "open_questions": [
-      "To what extent are metacognitive evaluations of confidence derived from the exact same accumulated sensory evidence as the primary perceptual decision, rather than relying on parallel or higher-order monitoring circuits?",
-      "How do uninstructed, spontaneous motor behaviors and fluctuations in baseline physiological arousal shape or confound the neural representations of evidence accumulation during perceptual tasks?",
-      "Does correlated neural variability primarily act as an information-limiting noise source that degrades sensory fidelity, or does it serve a functional role in routing information and enabling cognitive flexibility?",
-      "Are phenomena like serial dependence and sensory adaptation mediated by low-level shifts in early sensory tuning, or do they reflect higher-level decisional heuristics and post-perceptual memory distortions?"
-    ],
-    "methods_and_approaches": [
-      {
-        "method": "Drift-Diffusion Modeling (DDM)",
-        "description": "A mathematical framework used to model the temporal dynamics of two-choice decisions, separating the rate of sensory evidence accumulation from baseline biases and decision thresholds."
-      },
-      {
-        "method": "Multidimensional Signal Detection Theory",
-        "description": "Advanced psychophysical frameworks, such as General Recognition Theory, used to mathematically untangle perceptual sensitivity from explicit decisional criteria across complex, multi-feature stimuli."
-      },
-      {
-        "method": "Reverse Correlation and Classification Images",
-        "description": "A psychophysical technique that embeds stimuli in varying patterns of noise to map the specific spatial and temporal templates observers internally use to make perceptual categorizations."
-      },
-      {
-        "method": "Large-Scale Electrophysiology",
-        "description": "Using tools like Neuropixels, widefield calcium imaging, and MEG to simultaneously record vast populations of neurons, allowing for the state-space analysis of internal decision variables."
-      },
-      {
-        "method": "Bayesian Ideal Observer Models",
-        "description": "Computational modeling that defines the theoretically optimal performance for a given perceptual task, providing a normative baseline to measure how human observers handle uncertainty."
-      }
-    ],
-    "emerging_directions": [
-      {
-        "direction": "Benchmarking Artificial and Biological Vision",
-        "description": "Comparing the perceptual architectures, error patterns, and metacognitive capacities of Large Language Models and Deep Neural Networks against human psychophysical benchmarks to identify divergent computational strategies."
-      },
-      {
-        "direction": "Translating Introspection to Neurocomputation",
-        "description": "Formalizing subjective states—like vividness, mental fatigue, and tip-of-the-tongue phenomena—into mathematically rigorous models that can be mapped onto specific neural geometries and decision variables."
-      },
-      {
-        "direction": "Applied Perceptual Psychophysics",
-        "description": "Adapting rigorous psychophysical paradigms and signal detection theory to real-world domains, evaluating everything from medical and legal decision-making to the visual detection of deepfakes and AI-generated media."
-      }
-    ],
-    "subfield": "Perceptual Decision-Making",
-    "n_researchers": 56
-  },
   "Visual Development": {
     "overview": "Visual Development investigates the maturation of the human visual system, spanning from low-level sensory-motor coordination to high-level visual cognition and social perception. By integrating naturalistic observation, digital therapeutics, and advanced neuroimaging, this subfield strives to understand how early sensory inputs, optical anomalies, and social experiences interact to shape the adult brain. This work is critical in vision science because it not only informs targeted interventions for developmental disorders like amblyopia but also illuminates the foundational principles of neural plasticity and experience-dependent learning.",
     "active_research_themes": [
@@ -1172,75 +1103,6 @@
     ],
     "subfield": "Neural Decoding & Neuroimaging Methods",
     "n_researchers": 81
-  },
-  "Comparative & Animal Vision": {
-    "overview": "The subfield of comparative and animal vision investigates the neural computations, developmental trajectories, and evolutionary architectures underlying visual processing and behavior across diverse species, predominantly using non-human primates and rodent models. By integrating invasive physiological techniques, targeted genetic manipulations, and advanced computational modeling, this field bridges the gap between single-neuron circuit dynamics and complex, naturalistic perception, providing an essential mechanistic foundation for understanding human vision.",
-    "active_research_themes": [
-      {
-        "theme": "Naturalistic Active Vision",
-        "description": "Researchers are moving beyond static, head-fixed paradigms to study freely moving subjects, integrating wireless electrophysiology, eye-tracking, and free-viewing tasks to understand how natural locomotion, gaze shifts, and behavioral states shape sensory encoding."
-      },
-      {
-        "theme": "High-Level Object and Face Processing",
-        "description": "Investigators are deconstructing the primate ventral visual stream, particularly the inferotemporal cortex and face patches, to determine how neural populations hierarchically multiplex complex features, categorize objects, and support mental imagery."
-      },
-      {
-        "theme": "Subcortical Scaffolding and Control",
-        "description": "There is a strong focus on structures outside the visual cortex—such as the superior colliculus, pulvinar, and basal ganglia—to elucidate their causal roles in visual attention, oculomotor decision-making, and the developmental routing of sensory information."
-      },
-      {
-        "theme": "Cross-Species Homology and Evolution",
-        "description": "Multiple researchers are directly aligning non-human primate electrophysiology and imaging with human fMRI, or studying divergent species like teleosts and cephalopods, to map the evolutionary conservation and expansion of specific visual functional topographies."
-      },
-      {
-        "theme": "Neuromodulation and Brain State",
-        "description": "The field is actively examining how early sensory representations are dynamically reconfigured by non-visual signals, including spontaneous body movements, top-down attention networks, and systemic neuromodulators like serotonin and dopamine."
-      }
-    ],
-    "open_questions": [
-      "How do structural micro-architectures, such as specific inhibitory interneuron distributions and myelin density, causally dictate the functional boundaries of high-level visual modules?",
-      "Do human-specific visual and cognitive capabilities arise from the expansion of evolutionarily conserved cortical architectures or the emergence of genuinely novel neural pathways?",
-      "How are diverse visual dimensions—such as identity, expression, and objective image memorability—multiplexed within shared neural subspaces without catastrophic interference?",
-      "What are the precise mechanisms by which predictive internal models and motor efference copies are integrated into early sensory areas during active, naturalistic navigation?"
-    ],
-    "methods_and_approaches": [
-      {
-        "method": "High-Density Electrophysiology",
-        "description": "Widespread use of multi-electrode arrays, such as Neuropixels, in awake and behaving animals to simultaneously capture laminar-resolved neural population dynamics."
-      },
-      {
-        "method": "Targeted Optogenetics and Viral Tracing",
-        "description": "Deployment of customized viral vectors (e.g., specialized AAVs) and pathway-selective optogenetics to causally manipulate specific cell types, such as GABAergic interneurons, within primate and rodent circuits."
-      },
-      {
-        "method": "Deep Neural Network (DNN) Modeling",
-        "description": "Utilizing artificial neural networks as normative 'digital twins' to benchmark against biological visual hierarchies and test theories of representation and stimulus invariance."
-      },
-      {
-        "method": "Automated High-Throughput Behavior",
-        "description": "Implementation of customized, open-source home-cage testing kiosks and markerless pose estimation to continuously assess complex animal psychophysics and cognitive flexibility in low-stress environments."
-      },
-      {
-        "method": "Cellular-Resolution Optical Imaging",
-        "description": "Application of two-photon calcium imaging and widefield voltage sensing, often facilitated by novel microprism interfaces, to map continuous representational geometries in vivo."
-      }
-    ],
-    "emerging_directions": [
-      {
-        "direction": "In-Cage Wireless Neurophysiology",
-        "description": "Transitioning physiological recordings entirely into unrestrained environments by pairing wireless implants with automated behavioral assays to study ethologically valid social and active sensory behaviors."
-      },
-      {
-        "direction": "Primate Cell-Type Specificity",
-        "description": "Adapting advanced genetic tools traditionally restricted to rodents, such as viral-mediated cell-type targeting, to isolate and manipulate specific microcircuits in macaques and marmosets."
-      },
-      {
-        "direction": "Parallel Evolutionary Models",
-        "description": "Expanding the traditional comparative framework to deeply investigate complex visual processing and lateral inhibition in cephalopods, offering insights into the independent evolution of high-acuity vision."
-      }
-    ],
-    "subfield": "Comparative & Animal Vision",
-    "n_researchers": 34
   },
   "Color Vision & Appearance": {
     "overview": "The subfield of Color Vision and Appearance investigates how the human visual system encodes, processes, and interprets chromatic information to make sense of the visual world. In contemporary vision science, this domain bridges foundational research on photoreceptor physiology and cortical opponent pathways with applied and ecological studies, exploring how color constancy, individual differences, and semantic associations shape our interaction with complex natural scenes and artificial displays.",
@@ -1445,5 +1307,143 @@
     ],
     "subfield": "Reading & Word Recognition",
     "n_researchers": 18
+  },
+  "Animal Vision": {
+    "overview": "The subfield of comparative and animal vision investigates the neural computations, developmental trajectories, and evolutionary architectures underlying visual processing and behavior across diverse species, predominantly using non-human primates and rodent models. By integrating invasive physiological techniques, targeted genetic manipulations, and advanced computational modeling, this field bridges the gap between single-neuron circuit dynamics and complex, naturalistic perception, providing an essential mechanistic foundation for understanding human vision.",
+    "active_research_themes": [
+      {
+        "theme": "Naturalistic Active Vision",
+        "description": "Researchers are moving beyond static, head-fixed paradigms to study freely moving subjects, integrating wireless electrophysiology, eye-tracking, and free-viewing tasks to understand how natural locomotion, gaze shifts, and behavioral states shape sensory encoding."
+      },
+      {
+        "theme": "High-Level Object and Face Processing",
+        "description": "Investigators are deconstructing the primate ventral visual stream, particularly the inferotemporal cortex and face patches, to determine how neural populations hierarchically multiplex complex features, categorize objects, and support mental imagery."
+      },
+      {
+        "theme": "Subcortical Scaffolding and Control",
+        "description": "There is a strong focus on structures outside the visual cortex—such as the superior colliculus, pulvinar, and basal ganglia—to elucidate their causal roles in visual attention, oculomotor decision-making, and the developmental routing of sensory information."
+      },
+      {
+        "theme": "Cross-Species Homology and Evolution",
+        "description": "Multiple researchers are directly aligning non-human primate electrophysiology and imaging with human fMRI, or studying divergent species like teleosts and cephalopods, to map the evolutionary conservation and expansion of specific visual functional topographies."
+      },
+      {
+        "theme": "Neuromodulation and Brain State",
+        "description": "The field is actively examining how early sensory representations are dynamically reconfigured by non-visual signals, including spontaneous body movements, top-down attention networks, and systemic neuromodulators like serotonin and dopamine."
+      }
+    ],
+    "open_questions": [
+      "How do structural micro-architectures, such as specific inhibitory interneuron distributions and myelin density, causally dictate the functional boundaries of high-level visual modules?",
+      "Do human-specific visual and cognitive capabilities arise from the expansion of evolutionarily conserved cortical architectures or the emergence of genuinely novel neural pathways?",
+      "How are diverse visual dimensions—such as identity, expression, and objective image memorability—multiplexed within shared neural subspaces without catastrophic interference?",
+      "What are the precise mechanisms by which predictive internal models and motor efference copies are integrated into early sensory areas during active, naturalistic navigation?"
+    ],
+    "methods_and_approaches": [
+      {
+        "method": "High-Density Electrophysiology",
+        "description": "Widespread use of multi-electrode arrays, such as Neuropixels, in awake and behaving animals to simultaneously capture laminar-resolved neural population dynamics."
+      },
+      {
+        "method": "Targeted Optogenetics and Viral Tracing",
+        "description": "Deployment of customized viral vectors (e.g., specialized AAVs) and pathway-selective optogenetics to causally manipulate specific cell types, such as GABAergic interneurons, within primate and rodent circuits."
+      },
+      {
+        "method": "Deep Neural Network (DNN) Modeling",
+        "description": "Utilizing artificial neural networks as normative 'digital twins' to benchmark against biological visual hierarchies and test theories of representation and stimulus invariance."
+      },
+      {
+        "method": "Automated High-Throughput Behavior",
+        "description": "Implementation of customized, open-source home-cage testing kiosks and markerless pose estimation to continuously assess complex animal psychophysics and cognitive flexibility in low-stress environments."
+      },
+      {
+        "method": "Cellular-Resolution Optical Imaging",
+        "description": "Application of two-photon calcium imaging and widefield voltage sensing, often facilitated by novel microprism interfaces, to map continuous representational geometries in vivo."
+      }
+    ],
+    "emerging_directions": [
+      {
+        "direction": "In-Cage Wireless Neurophysiology",
+        "description": "Transitioning physiological recordings entirely into unrestrained environments by pairing wireless implants with automated behavioral assays to study ethologically valid social and active sensory behaviors."
+      },
+      {
+        "direction": "Primate Cell-Type Specificity",
+        "description": "Adapting advanced genetic tools traditionally restricted to rodents, such as viral-mediated cell-type targeting, to isolate and manipulate specific microcircuits in macaques and marmosets."
+      },
+      {
+        "direction": "Parallel Evolutionary Models",
+        "description": "Expanding the traditional comparative framework to deeply investigate complex visual processing and lateral inhibition in cephalopods, offering insights into the independent evolution of high-acuity vision."
+      }
+    ],
+    "subfield": "Comparative & Animal Vision",
+    "n_researchers": 34
+  },
+  "Visual Perception & Cognition": {
+    "overview": "Perceptual decision-making investigates how biological systems sample, evaluate, and accumulate noisy sensory evidence to form coherent visual judgments and guide behavior. By mathematically formalizing the interactions between objective sensory inputs, internal neural noise, and top-down cognitive priors, this subfield bridges early sensory processing and high-level cognition. Its insights are increasingly critical for understanding the fundamental neurocomputational architectures of the brain and defining the limits of human perception in complex, dynamic, and uncertain environments.",
+    "active_research_themes": [
+      {
+        "theme": "Metacognition and Perceptual Confidence",
+        "description": "Researchers are investigating how the brain monitors its own sensory processing to generate subjective feelings of confidence or uncertainty. This work utilizes formal frameworks like Introspective Signal Detection Theory to disentangle genuine metacognitive sensitivity from broader cognitive and response biases."
+      },
+      {
+        "theme": "Temporal Dynamics of Evidence Accumulation",
+        "description": "This theme explores how sensory evidence is integrated over time to drive categorical choices and dictate speed-accuracy tradeoffs. Studies rely heavily on drift-diffusion models and large-scale neural recordings to track stochastic accumulation processes and the physiological implementation of decision thresholds."
+      },
+      {
+        "theme": "History Biases and Serial Dependence",
+        "description": "A growing body of work examines how immediate past experiences, prior decisions, and contextual statistics systematically bias current perceptual judgments. Researchers are charting how the visual system balances the need for perceptual stability against the necessity for sensitivity in rapidly changing environments."
+      },
+      {
+        "theme": "Bayesian Inference and Predictive Priors",
+        "description": "This area maps how the visual system integrates inherently noisy or ambiguous sensory inputs with learned structural priors and internal mental models. Scientists are formulating ideal observer models to test whether human perception optimally weights spatial, temporal, and multisensory information according to Bayesian principles."
+      },
+      {
+        "theme": "Neural Population Geometry and Correlated Noise",
+        "description": "Moving beyond single-neuron analysis, researchers are studying how perceptual decisions are encoded in the high-dimensional activity of neural populations. A major focus is determining whether correlated neural variability acts primarily as an information-limiting noise source or serves as a functional communication channel across cortical hierarchies."
+      }
+    ],
+    "open_questions": [
+      "To what extent are metacognitive evaluations of confidence derived from the exact same accumulated sensory evidence as the primary perceptual decision, rather than relying on parallel or higher-order monitoring circuits?",
+      "How do uninstructed, spontaneous motor behaviors and fluctuations in baseline physiological arousal shape or confound the neural representations of evidence accumulation during perceptual tasks?",
+      "Does correlated neural variability primarily act as an information-limiting noise source that degrades sensory fidelity, or does it serve a functional role in routing information and enabling cognitive flexibility?",
+      "Are phenomena like serial dependence and sensory adaptation mediated by low-level shifts in early sensory tuning, or do they reflect higher-level decisional heuristics and post-perceptual memory distortions?"
+    ],
+    "methods_and_approaches": [
+      {
+        "method": "Drift-Diffusion Modeling (DDM)",
+        "description": "A mathematical framework used to model the temporal dynamics of two-choice decisions, separating the rate of sensory evidence accumulation from baseline biases and decision thresholds."
+      },
+      {
+        "method": "Multidimensional Signal Detection Theory",
+        "description": "Advanced psychophysical frameworks, such as General Recognition Theory, used to mathematically untangle perceptual sensitivity from explicit decisional criteria across complex, multi-feature stimuli."
+      },
+      {
+        "method": "Reverse Correlation and Classification Images",
+        "description": "A psychophysical technique that embeds stimuli in varying patterns of noise to map the specific spatial and temporal templates observers internally use to make perceptual categorizations."
+      },
+      {
+        "method": "Large-Scale Electrophysiology",
+        "description": "Using tools like Neuropixels, widefield calcium imaging, and MEG to simultaneously record vast populations of neurons, allowing for the state-space analysis of internal decision variables."
+      },
+      {
+        "method": "Bayesian Ideal Observer Models",
+        "description": "Computational modeling that defines the theoretically optimal performance for a given perceptual task, providing a normative baseline to measure how human observers handle uncertainty."
+      }
+    ],
+    "emerging_directions": [
+      {
+        "direction": "Benchmarking Artificial and Biological Vision",
+        "description": "Comparing the perceptual architectures, error patterns, and metacognitive capacities of Large Language Models and Deep Neural Networks against human psychophysical benchmarks to identify divergent computational strategies."
+      },
+      {
+        "direction": "Translating Introspection to Neurocomputation",
+        "description": "Formalizing subjective states—like vividness, mental fatigue, and tip-of-the-tongue phenomena—into mathematically rigorous models that can be mapped onto specific neural geometries and decision variables."
+      },
+      {
+        "direction": "Applied Perceptual Psychophysics",
+        "description": "Adapting rigorous psychophysical paradigms and signal detection theory to real-world domains, evaluating everything from medical and legal decision-making to the visual detection of deepfakes and AI-generated media."
+      }
+    ],
+    "subfield": "Perceptual Decision-Making",
+    "n_researchers": 56
   }
 }

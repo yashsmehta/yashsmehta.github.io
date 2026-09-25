@@ -22186,87 +22186,6 @@
     "total_citations": 15272,
     "h_index": 54
   },
-  "0360": {
-    "id": "0360",
-    "name": "Keiko Tsuchiya",
-    "institution": "Yokohama City University",
-    "department": "Graduate School of Urban Social and Cultural Studies",
-    "lab_name": "Keiko Tsuchiya Lab",
-    "lab_url": "http://www-user.yokohama-cu.ac.jp/~ktsuchiy/wp/",
-    "main_research_area": "Multimodal interaction and visual attention",
-    "bio": "Tsuchiya is a Professor at Yokohama City University whose research integrates applied linguistics, cognitive science, and neuroscience. Their work utilizes eye-tracking and multimodal corpus analysis to examine gaze behaviors and joint visual attention during social interactions, specifically in healthcare settings. Tsuchiya investigates the function of visual cues in team coordination, leadership, and medical simulation, using AI-driven tools to measure attentional engagement. Tsuchiya is also a visiting researcher at the Donders Institute for Brain, Cognition, and Behaviour, where they examine the intersections of language, vision, and cognitive processing.",
-    "research_direction": "Dr. Tsuchiya has recently been investigating the dynamics of multimodal communication and team coordination in high-stakes healthcare environments. Their recent work explores how clinical teams in Japan and the UK negotiate authority and establish common ground during emergency simulations through mutual gaze, gestures, and spoken interactions. To capture these complex social dynamics, they integrate qualitative conversation analysis with sensor-based computational methods, utilizing wearable eye-tracking and AI-assisted algorithms to quantify joint visual attention and verbal engagement across varying levels of medical expertise. Alongside this applied clinical research, they are also examining foundational theories in systemic functional linguistics to better understand how language and contextual cues mediate broader social relations and cultural institutions.",
-    "papers": [
-      {
-        "title": "Aspects of English Studies: Ruqaiya Hasan's Critique on Malinowski's Language Theory",
-        "abstract": "Investigating the foundational concepts of systemic functional linguistics and sociosemiotics, this study re-evaluates Ruqaiya Hasan's critical appraisal of Bronislaw Malinowski's anthropological theory of language. Hasan interrogates Malinowski's ethnographic formulations—specifically the notions of the 'context of situation' and 'context of culture'—evaluating their analytical adequacy for modeling text structure, semantic variation, and social relations. The paper examines the conceptual transitions through which Malinowski's early contextual functionalism was systematized into contemporary systemic functional linguistic frameworks, clarifying how language functions as a primary semiotic mediator of cultural institutions and human social action.",
-        "year": "2026",
-        "venue": "The Bulletin of Yokohama City University (Humanities)",
-        "citations": "0",
-        "authors": "Keiko Tsuchiya",
-        "url": "https://jglobal.jst.go.jp/en/detail?data_id=201301068740275598"
-      },
-      {
-        "title": "Developing an AI-driven multimodal approach to visualising resilient team performance: joint attentional engagement with gaze and speech in simulated emergency scenarios",
-        "abstract": "Evaluating real-time team performance in high-stakes clinical emergencies requires objective methods to quantify coordinated actions across disciplines. This study presents an AI-assisted multimodal framework that integrates wearable eye-tracking glasses (Tobii Pro Glasses 2 and Pupil Invisible) with automated gaze-annotation algorithms and speech analytics to examine joint visual attention and verbal engagement across varying expertise levels. Using video recordings of simulated acute emergencies—difficult airway intubation in Japan and pediatric sepsis in the UK—clinician–nurse dyads with experienced (Ex) and less-experienced (LessEx) backgrounds were evaluated. Time-series cross-correlation analysis over 15-second windows demonstrated that experienced dyads engaged in joint attention significantly more frequently and with longer duration, accompanied by approximately doubled total speech durations compared to LessEx counterparts. Furthermore, distinct organizational coupling was observed: Japanese experienced pairs exhibited a strong positive correlation between joint attention counts and speech duration (r = 0.81), representing coregulative attentional engagement, whereas UK experienced pairs exhibited a negative correlation (r = −0.70), indicative of coinfluential attentional engagement during bedside communication.",
-        "year": "2025",
-        "venue": "BMJ Open Quality",
-        "citations": "0",
-        "authors": "Atsushi Miyazaki, Frank Coffey, Hitoshi Sato, Andrew K Mackenzie, Kyota Nakamura, Kazuya Bise, Takeshi Saitoh, Takeru Abe, Miharu Fuyuno, Stephen Timmons, Keiko Tsuchiya",
-        "url": "https://doi.org/10.1136/bmjoq-2025-003658"
-      },
-      {
-        "title": "Culture and Multimodality in Healthcare Communication: Future Directions",
-        "abstract": "This synthesis chapter addresses emerging methodologies and empirical frontiers in healthcare communication research within East Asian settings, centering on the dual axes of multiculturality and multimodality. Reviewing empirical findings from clinical simulations, atypical adult interactions (such as autism spectrum and hearing impairment), and interprofessional medical teamwork in Japan and the UK, the chapter evaluates how participants recruit embodied semiotic resources—including mutual gaze, pointing gestures, body alignment, and material artifacts—to co-construct common ground and institutional resilience. The discussion sets forth a methodological agenda combining video-ethnography, multimodal conversation analysis, and sensor-based computational tracking (e.g., automated gaze and head-pose estimation) to advance cross-cultural interaction studies in clinical and well-being environments.",
-        "year": "2025",
-        "venue": "Exploring Health and Well-Being Communication in Japanese Context: Culture, Language and Multimodality",
-        "citations": "0",
-        "authors": "Keiko Tsuchiya",
-        "url": "https://doi.org/10.1007/978-981-97-9338-9_8"
-      },
-      {
-        "title": "When a Proposal Is Rejected: Distributing Deontic Rights in Emergency Care Team Interactions in Japan and the UK",
-        "abstract": "In interprofessional acute care teams, joint decision-making requires fluid negotiation of authority, particularly when an interlocutor's proposal regarding impending clinical action is declined. Combining conversation analysis and interactional linguistics with synchronized leader eye-tracking and video data, this study examines proposal-rejection sequences during trauma resuscitation simulations conducted in Japan and the UK. Across roughly 50 observed proposal episodes, rejections were consistently mitigated through verbal accounting in which team leaders indexed epistemic primacy and provided deontic reasoning. Cross-cultural analysis revealed divergent team dynamics: Japanese teams interactionally recognized and preserved the proposer's deontic rights despite the rejection, whereas British teams relied on the trauma leader to actively arbitrate and redistribute deontic status across the team.",
-        "year": "2025",
-        "venue": "Exploring Health and Well-Being Communication in Japanese Context: Culture, Language and Multimodality",
-        "citations": "0",
-        "authors": "Keiko Tsuchiya, Kyota Nakamura, Frank Coffey",
-        "url": "https://doi.org/10.1007/978-981-97-9338-9_7"
-      },
-      {
-        "title": "Healthcare Communication Research in Japan",
-        "abstract": "This introductory chapter presents an epistemological and methodological overview of healthcare communication research in Japan, comparing its evolution with Western traditions. It contextualizes how institutional hierarchy, cultural notions of shared space ('ba'), and shifting norms toward patient-centered care influence professional interactions across primary, specialized, and simulation-based clinical environments. The author argues for an integrated applied linguistic approach that marries conversation analysis, discourse pragmatics, and multimodal data collection to capture the nuances of embodied joint actions and interprofessional collaboration in Japanese healthcare delivery.",
-        "year": "2025",
-        "venue": "Exploring Health and Well-Being Communication in Japanese Context: Culture, Language and Multimodality",
-        "citations": "0",
-        "authors": "Keiko Tsuchiya",
-        "url": "https://doi.org/10.1007/978-981-97-9338-9_1"
-      }
-    ],
-    "primary_subfield": "Social Perception",
-    "subfields": [
-      {
-        "subfield": "Social Perception",
-        "score": 1.0
-      },
-      {
-        "subfield": "Eye Movements",
-        "score": 0.5
-      },
-      {
-        "subfield": "Attention",
-        "score": 0.5
-      }
-    ],
-    "profile_pic": "keiko_tsuchiya_0360.jpg",
-    "umap_projection": {
-      "x": 2.44106388092041,
-      "y": -1.2299258708953857
-    },
-    "cluster": 0,
-    "total_citations": 11511,
-    "h_index": 59
-  },
   "0361": {
     "id": "0361",
     "name": "Keisuke Fukuda",
@@ -41413,14 +41332,14 @@
         "url": "https://doi.org/10.1117/12.2663040"
       }
     ],
-    "primary_subfield": "3D Perception",
+    "primary_subfield": "Eye Movements",
     "subfields": [
       {
-        "subfield": "3D Perception",
+        "subfield": "Eye Movements",
         "score": 1.0
       },
       {
-        "subfield": "Eye Movements",
+        "subfield": "3D Perception",
         "score": 0.5
       }
     ],

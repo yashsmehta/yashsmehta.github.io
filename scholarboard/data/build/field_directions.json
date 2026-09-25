@@ -1,68 +1,68 @@
 {
   "3D Perception": {
-    "overview": "The subfield of 3D perception investigates how the biological visual system extracts, integrates, and interprets cues such as binocular disparity, optic flow, and texture to construct stable representations of three-dimensional space. By bridging classical psychophysics and neurophysiology with natural scene statistics and advanced computational models, this area of research is critical not only for understanding fundamental sensorimotor integration but also for driving innovations in clinical rehabilitation, artificial vision, and extended reality (XR) technologies.",
+    "overview": "The subfield of 3D perception investigates how the biological visual system extracts depth, three-dimensional structure, and spatial layout from two-dimensional retinal inputs. Understanding these mechanisms is increasingly critical in modern vision science as researchers seek to bridge the gap between ecological behavior, clinical visual rehabilitation, and the design of immersive augmented and virtual reality systems.",
     "active_research_themes": [
       {
-        "theme": "Spatial Perception in Extended Reality",
-        "description": "Researchers are systematically evaluating how technological constraints in virtual and augmented reality—such as camera-eye misalignments, rendering latencies, and vergence-accommodation conflicts—disrupt spatial vision. This work aims to understand how the visual system weighs metric binocular cues against ordinal monocular cues in artificial environments, ultimately informing display optimization and mitigating visually induced motion sickness."
+        "theme": "Natural Scene Statistics and Priors",
+        "description": "Researchers are increasingly utilizing the statistical regularities of real-world environments to explain perceptual biases. By integrating these statistics into Bayesian models, they aim to understand how the visual system optimizes depth and motion encoding based on ecological priors like the ground plane and gravity."
       },
       {
-        "theme": "Ecological Scene Statistics",
-        "description": "Moving beyond simplified, abstract stimuli, the field is increasingly focused on how the visual system adapts to the statistical regularities of natural environments. Investigators are using egocentric video and high-fidelity real-world image datasets to determine how environmental factors like spatial clutter, background luminance, and natural nuisance variability constrain depth and motion discrimination."
+        "theme": "Spatial Perception in Immersive Displays",
+        "description": "The proliferation of AR and VR technologies has driven intense investigation into how hardware limitations impact depth perception. Studies focus on cue conflicts, geometric distortions, and system latencies to understand their effects on egocentric distance estimates and visual comfort."
       },
       {
-        "theme": "Spatial Updating and Self-Motion",
-        "description": "This theme explores how humans maintain a stable, continuous representation of the 3D world during active locomotion. Studies are examining the integration of optic flow, vestibular signals, and intrinsic ground-plane biases to understand how the brain transitions between egocentric and allocentric spatial reference frames."
+        "theme": "Comparing Biological and Artificial Vision",
+        "description": "A prominent theme involves benchmarking computational architectures, particularly deep neural networks, against human visual processing. By comparing errors in 3D shape extraction and depth estimation, researchers are identifying the fundamental algorithmic differences between biological and artificial systems."
       },
       {
-        "theme": "Cortical Plasticity in Impaired Vision",
-        "description": "A significant subset of researchers is applying Bayesian frameworks and neuroimaging to study spatial perception in clinical populations, such as those with amblyopia, maculopathy, or monovision. This includes mapping functional reorganization in motion-processing areas like hMT+ and modeling how internal sensory noise leads to idiosyncratic motion misperceptions or hallucinatory phantom forms."
+        "theme": "Binocular Vision and Interocular Differences",
+        "description": "Investigators are probing the limits of stereopsis and binocular summation under both natural and anomalous conditions. This includes understanding how the brain processes disparities in contrast, blur, and temporal frequency between the eyes."
       },
       {
-        "theme": "Hierarchical Neural and Computational Models",
-        "description": "Researchers are striving to map the computational architecture of the dorsal stream by combining macaque electrophysiology, fMRI, and image-computable ideal observer models. A major focus involves comparing human 3D perceptual biases against the functional layers of contemporary deep neural networks to test their validity as models for biological spatial vision."
+        "theme": "Visuomotor Integration in 3D Space",
+        "description": "Research is tightly linking depth perception to visually guided action and locomotion. This work explores how optic flow, stereomotion, and physical priors dynamically update spatial reference frames to support anticipatory motor planning."
       }
     ],
     "open_questions": [
-      "How does the visual system optimally resolve conflicts between bottom-up sensory signals, such as binocular disparity, and top-down cognitive or physical priors, such as internalized gravity and familiar size?",
-      "To what extent do the hierarchical processing layers of modern deep neural networks accurately mirror the biological dorsal stream's extraction of 3D structure and motion from 2D inputs?",
-      "What are the precise neural and computational mechanisms underlying interocular gain control, and how do disruptions in this process lead to real-world perceptual distortions like the reverse Pulfrich effect?",
-      "How do specific cortical subnetworks multiplex local 3D visual features, such as surface tilt and depth, with global anticipatory motor plans and decision-related activity during visually guided actions?"
+      "How does the visual system optimally weight and integrate metric cues, like binocular disparity, against ordinal cues and high-level semantic priors in dynamic, heavily cluttered real-world environments?",
+      "What are the precise neural mechanisms and cortical hierarchies in the dorsal stream that transform 2D retinal velocities into invariant, unified representations of 3D motion and object pose?",
+      "To what extent do persistent sensory anomalies in head-mounted displays—such as visual-vestibular lag or camera-eye misalignments—drive long-term sensorimotor recalibration versus visually induced motion sickness?",
+      "How are implicit physical priors, such as Earth's gravity and ground-plane geometry, computationally instantiated in the visual system to anchor allocentric and egocentric spatial maps during self-motion?"
     ],
     "methods_and_approaches": [
       {
-        "method": "XR and Visuomotor Psychophysics",
-        "description": "Utilizing custom-rendered virtual and augmented reality environments to systematically introduce perceptual conflicts—such as altered geometric perspective or temporal lag—and measure their effects on distance judgments, postural stability, and motor planning."
+        "method": "Virtual and Augmented Reality Psychophysics",
+        "description": "Utilizing immersive head-mounted displays to precisely manipulate depth cues, introduce controlled geometric or temporal distortions, and measure naturalistic human behavior."
       },
       {
-        "method": "Image-Computable Modeling",
-        "description": "Developing mathematical and computational ideal observer models that process the exact same naturalistic image inputs as human observers, allowing researchers to isolate normative principles and the impacts of early visual noise on depth estimation."
+        "method": "Image-Computable Ideal Observer Models",
+        "description": "Developing rigorous mathematical frameworks that take natural images as input to predict the theoretical limits of 3D depth and motion discrimination, providing a normative baseline for human performance."
       },
       {
-        "method": "Naturalistic Oculomotor Tracking",
-        "description": "Collecting high-precision gaze, fixation, and vergence data in complex, dynamic 3D environments to map the active allocation of visual attention and compare human visual search strategies against resource-rational reinforcement learning models."
+        "method": "Dichoptic Display Paradigms",
+        "description": "Presenting independent, systematically manipulated visual streams to each eye to test mechanisms of interocular gain control, binocular fusion, and stereoscopic depth perception."
       },
       {
-        "method": "Multi-Area Neurophysiology",
-        "description": "Employing multi-electrode recordings in behaving non-human primates or high-resolution human fMRI to track how 3D spatial features are transformed and multiplexed across visual cortical hierarchies like V1, V3A, and MT/hMT+."
+        "method": "In Vivo Electrophysiology and Neuroimaging",
+        "description": "Combining multi-area recordings in behaving non-human primates and functional MRI in humans to map the spatial organization and cross-modal plasticity of the cortical 3D processing hierarchy."
       }
     ],
     "emerging_directions": [
       {
-        "direction": "Neuromorphic Event-Based Vision",
-        "description": "Shifting from traditional frame-based cameras to asynchronous, single-photon event sensors combined with laser triangulation to achieve ultra-low-latency 3D spatial sensing under strict power constraints."
+        "direction": "Translational Models of Clinical Vision",
+        "description": "Applying Bayesian and generative spatial perception frameworks to quantitatively map and potentially rehabilitate visual artifacts, such as hallucinatory phantom forms and gaze instability, in amblyopia and low vision."
       },
       {
-        "direction": "Gaze-Contingent Perceptual Rendering",
-        "description": "Exploiting biological visual limits, such as saccadic suppression and peripheral contrast sensitivity, to develop highly efficient rendering algorithms for head-mounted displays that reduce computational load without compromising perceived visual fidelity."
+        "direction": "Gaze-Contingent and Event-Based Rendering",
+        "description": "Exploiting biological processing limits—such as saccadic suppression and spatial frequency falloffs—to dramatically reduce computational workloads and latency in rendering engines and event-based cameras."
       },
       {
-        "direction": "Integration of Intuitive Physics",
-        "description": "Expanding models of 3D depth and shape perception to include internalized Newtonian priors, investigating how expectations of gravity and momentum directly constrain sensory integration and anticipatory motor control."
+        "direction": "Cross-Domain Generalization of Spatial Priors",
+        "description": "Investigating how fundamental sensorimotor mechanisms of 3D perception and physical object interaction scale up to influence higher-level cognition, including mathematical embodiment and linguistic conceptualization."
       }
     ],
     "subfield": "3D Perception",
-    "n_researchers": 20
+    "n_researchers": 19
   },
   "Perception & Action": {
     "overview": "The subfield of Perception and Action investigates the bidirectional, highly dynamic relationship between sensory processing and motor behavior. It explores how visual and multisensory information is rapidly transformed to guide complex movements, and conversely, how the preparation and execution of actions shape perceptual representations. By integrating neural, computational, and behavioral approaches, this area is critical for understanding naturalistic human behavior and is driving advances in neurorehabilitation, robotics, and brain-computer interfaces.",
@@ -472,73 +472,69 @@
     "n_researchers": 40
   },
   "Eye Movements": {
-    "overview": "The subfield of Eye Movements investigates the behavioral, cognitive, and neural mechanisms underlying active visual sampling, including saccades, fixations, smooth pursuit, and fixational drift. By exploring how the brain plans, executes, and integrates information across rapid gaze shifts, this research is crucial for understanding how the visual system constructs a stable, continuous representation of the world despite constant sensory disruptions on the retina.",
+    "overview": "The subfield of eye movements investigates the oculomotor behaviors—ranging from microscopic fixational drifts to large-scale saccades—that actively sample and structure visual input. Understanding active vision is critical because it bridges low-level sensorimotor control with high-level cognitive processes like memory, attention, and language, revealing how the brain constructs a continuous, stable representation of a dynamic world.",
     "active_research_themes": [
       {
-        "theme": "Transsaccadic Integration and Stability",
-        "description": "Researchers are investigating how the visual system maintains spatial and perceptual stability across eye movements. This work focuses on mechanisms like corollary discharge, spatial remapping, and the continuous integration of pre-saccadic predictions with post-saccadic foveal input."
+        "theme": "Transsaccadic Integration and Perceptual Stability",
+        "description": "Researchers are investigating how the visual system maintains stability despite the massive sensory disruptions caused by saccades. This includes studying corollary discharge, presaccadic foveal prediction, and the functional role of intra-saccadic visual signals in bridging pre- and post-saccadic input."
       },
       {
-        "theme": "Fixational Dynamics and Foveal Vision",
-        "description": "A major theme involves exploring how miniature eye movements, such as microsaccades and slow ocular drift, actively format early visual processing. Studies are probing how these movements maintain high-acuity foveal vision and index covert cognitive states like spatial attention."
+        "theme": "Fixational Dynamics and High-Acuity Vision",
+        "description": "Multiple labs are focusing on the microscopic scale of active vision, exploring how ocular drift and microsaccades actively reformat retinal input. These miniature movements are being studied to understand their role in shaping spatial-frequency sensitivity, preventing perceptual fading, and modulating covert attention."
       },
       {
-        "theme": "Oculomotor Mechanisms of Reading",
-        "description": "Multiple labs are studying the temporal and spatial dynamics of eye movements during natural reading across diverse populations and writing systems. This involves evaluating how parafoveal preview, orthographic cues, and top-down linguistic expectations drive word-skipping and fixation durations."
+        "theme": "Oculomotor Biomarkers in Clinical Populations",
+        "description": "There is a concerted effort to translate foundational oculomotor metrics—such as pupil dynamics, blink rates, and saccadic kinematics—into diagnostic clinical tools. Researchers are using these biomarkers to detect prodromal neurodegenerative diseases like Parkinson's, assess operational fatigue, and evaluate neurodevelopmental conditions."
       },
       {
-        "theme": "Neural Architecture of Gaze Control",
-        "description": "Researchers are mapping the cortical and subcortical circuits that govern saccade generation, proactive inhibition, and value-based oculomotor decision-making. This theme bridges human ultra-high-field neuroimaging with non-human primate single-unit electrophysiology."
+        "theme": "Cognitive Control of Reading Behavior",
+        "description": "A major theme involves using eye movements to unpack the temporal dynamics of language processing and reading acquisition. This work explores how top-down semantic expectations interact with low-level parafoveal visual cues to guide word-skipping and fixation durations across diverse scripts and languages."
       },
       {
-        "theme": "Naturalistic and Free-Viewing Behavior",
-        "description": "The field is moving beyond simplified lab stimuli to understand how active vision operates in complex, real-world environments. This includes assessing how idiosyncratic gaze biases, dynamic scene content, and unconstrained locomotion shape free-viewing behavior."
+        "theme": "Binocular Coordination and 3D Vision",
+        "description": "The mechanisms governing binocular eye movements are being heavily scrutinized, with researchers challenging classical conjugate models like Hering's Law. This includes investigating independent monocular control pathways during asymmetric vergence and how the oculomotor system integrates depth and self-motion cues during navigation."
       }
     ],
     "open_questions": [
-      "To what extent are binocular eye movements governed by a unitary conjugate command (Hering's Law) versus independently controlled monocular pathways during complex gaze behaviors like asymmetric vergence?",
-      "How precisely does the visual system seamlessly bind pre-saccadic feature predictions with post-saccadic foveal input to resolve object correspondence despite intra-saccadic smear and high-speed retinal motion?",
-      "Do macro-saccades and micro-saccades share a strictly unified neural control mechanism, or are they distinct oculomotor processes adapted for fundamentally different scales of visual sampling?",
-      "Can the strict premotor theory of attention fully account for the deployment of covert spatial attention, particularly in clinical populations where overt eye movements are physically restricted?"
+      "To what extent are covert spatial attention and oculomotor programming governed by shared versus independent neural architectures, especially in clinical cases where physical eye movements are restricted?",
+      "How does the brain precisely distinguish between self-generated retinal motion during active gaze shifts and objective environmental motion to maintain visuospatial constancy?",
+      "Are complex binocular behaviors, such as asymmetric vergence and remarkable saccades, driven by a unified conjugate motor command or by fundamentally independent monocular control pathways?",
+      "How do high-level contextual priors and statistical regularities, such as semantic predictability and serial dependence, dynamically interface with low-level oculomotor kinematics in real-time?"
     ],
     "methods_and_approaches": [
       {
-        "method": "High-Resolution Binocular Eye Tracking",
-        "description": "Utilizing high-frequency optical tracking and adaptive optics to precisely capture micro-saccades, ocular drift, and subtle monocular asymmetries during fixation and pursuit."
+        "method": "High-Resolution Gaze-Contingent Tracking",
+        "description": "Utilizing ultra-precise optical trackers and adaptive optics to manipulate visual input in real-time based on microscopic shifts in foveal position or microsaccade onset."
       },
       {
-        "method": "Gaze-Contingent Display Paradigms",
-        "description": "Modifying visual displays in real-time based on the observer's gaze position to isolate the distinct roles of central and parafoveal vision in reading, scene perception, and transsaccadic memory."
+        "method": "High-Field Neurophysiology and Neuroimaging",
+        "description": "Combining 7T fMRI, EEG/MEG, and single-unit recordings in primate models to map the functional topography and temporal dynamics of oculomotor circuitry."
       },
       {
-        "method": "Computational Modeling of Gaze",
-        "description": "Developing mathematical and algorithmic frameworks, including time-varying generalized linear models and saliency maps, to simulate saccade timing, sensorimotor adaptation, and transsaccadic integration."
+        "method": "Naturalistic and Free-Viewing Paradigms",
+        "description": "Moving beyond simplified laboratory stimuli by capturing active visual sampling in freely moving animals, immersive virtual reality environments, and applied tasks like driving."
       },
       {
-        "method": "Advanced Neurophysiology and Imaging",
-        "description": "Combining ultra-high-field 7T fMRI, dense-array EEG, and multi-electrode arrays to map the precise functional topography of the oculomotor system and track real-time visual processing."
+        "method": "Computational Modeling of Active Vision",
+        "description": "Developing algorithmic frameworks to simulate how sensorimotor loops, corollary discharge, and reinforcement contingencies shape saccadic decision-making and retinal image formatting."
       }
     ],
     "emerging_directions": [
       {
-        "direction": "Oculomotor Biomarkers for Clinical Diagnostics",
-        "description": "Leveraging multimodal gaze metrics, such as pupillometry and anti-saccade kinematics, as non-invasive early indicators for neurodegenerative diseases and cognitive decline."
+        "direction": "Display Optimization for Extended Reality",
+        "description": "Leveraging physiological visual constraints, such as peripheral contrast roll-off, to design power-efficient and low-latency rendering architectures for AR and VR headsets."
       },
       {
-        "direction": "Decoding Gaze from Neural Signals",
-        "description": "Applying deep learning frameworks to directly reconstruct gaze position and oculomotor intent from cortical BOLD activity or EEG, enabling eye-tracking without optical sensors."
+        "direction": "Deep Learning for Gaze Decoding",
+        "description": "Training advanced neural networks to infer precise eye position directly from neuroimaging data (like BOLD signals) or novel single-photon sensors, bypassing traditional optical tracking."
       },
       {
-        "direction": "Optimizing Augmented Reality Displays",
-        "description": "Utilizing the physiological limits of peripheral vision and transsaccadic suppression to optimize rendering pipelines, gaze-contingent foveation, and power consumption in head-mounted extended reality architectures."
-      },
-      {
-        "direction": "Unrestrained Ethological Tracking",
-        "description": "Combining wireless electrophysiology with head-mounted eye-tracking in freely moving animal models to study gaze dynamics during natural locomotion and complex social interactions."
+        "direction": "Massive Multilingual Gaze Corpora",
+        "description": "Building large-scale, cross-cultural datasets of reading and natural viewing behavior to capture how diverse writing systems and digital formats universally and uniquely shape oculomotor strategies."
       }
     ],
     "subfield": "Eye Movements",
-    "n_researchers": 38
+    "n_researchers": 39
   },
   "Face & Body Perception": {
     "overview": "This subfield investigates the perceptual, computational, and neural architectures that allow humans and other primates to detect, identify, and derive expression information from faces and bodies. It represents a critical frontier in vision science, leveraging the visual system's extreme expertise with faces to uncover broader principles of category-selective processing, holistic integration, and the mapping of high-dimensional sensory inputs onto stable cognitive representations.",
@@ -1004,77 +1000,69 @@
     "n_researchers": 19
   },
   "Social Perception": {
-    "overview": "Social Perception investigates how the visual system extracts complex social meaning—such as intentions, emotions, traits, and interpersonal dynamics—from visual inputs. By bridging core low-level visual processing with higher-order cognitive domains like theory of mind and person perception, this subfield provides critical insights into how humans fluidly navigate dynamic, interactive, and socially dense environments.",
+    "overview": "The subfield of Social Perception investigates how the human visual system extracts rich, high-level social information—such as emotions, intentions, and traits—from dynamic facial expressions, biological motion, and interactive dyads. By bridging low-level perceptual mechanics with complex social cognition, this area is critical for understanding how humans seamlessly navigate a highly interactive world, how these abilities develop and diverge in neurodivergent populations, and how we can engineer more socially intelligent artificial agents.",
     "active_research_themes": [
       {
+        "theme": "Dynamic and Naturalistic Social Vision",
+        "description": "Researchers are increasingly moving beyond static stimuli to study continuous, real-world social processing. Utilizing rich video datasets, mobile eye-tracking, and interactive VR paradigms, they aim to capture the temporal dynamics of emotion recognition, mutual gaze, and joint attention in ecologically valid contexts."
+      },
+      {
+        "theme": "Computational Modeling of Social Inferences",
+        "description": "The field is leveraging deep neural networks, generative models, and Bayesian frameworks to formalize the computational architecture of social perception. This includes mapping how abstract traits, stereotypes, and emotions are decoded from high-dimensional visual inputs and benchmarking these AI systems against human neural data."
+      },
+      {
         "theme": "Biological Motion and Animacy Processing",
-        "description": "Researchers are heavily utilizing point-light displays and kinematic models to isolate the spatiotemporal cues that signal humanness and animacy. This work investigates how the brain extracts complex information, such as actor intent, affective state, and motor preactivation, solely from isolated joint movements."
+        "description": "A major focus remains on how the visual system decodes intent, humanness, and underlying physics from kinematics. Researchers actively investigate how complex social states, predictive motor mechanics, and even self-recognition are extracted from sparse motion cues like point-light displays."
       },
       {
-        "theme": "Contextual Integration in Emotion Perception",
-        "description": "Moving beyond isolated, static faces, the field is examining how dynamic affective signals are interpreted in context. This includes studying how body posture, environmental scenes, and continuous temporal history modulate a perceiver's ability to decode ambiguous facial expressions."
+        "theme": "Social Ensemble and Group Perception",
+        "description": "Understanding how humans perceive collectives rather than just isolated individuals is a growing priority. This theme explores the perceptual grouping of interacting dyads, facing crowds, and social networks to rapidly extract summary statistics like group cohesion, emotional tone, and collective intent."
       },
       {
-        "theme": "Visual Extraction of Social Traits",
-        "description": "A major theme involves understanding how physical features interface with cultural statistics and observer biases to generate rapid social impressions. Researchers are mapping the high-dimensional visual inputs that drive stereotypes, trait inferences, and judgments of social categories."
-      },
-      {
-        "theme": "Neural Networks of Dynamic Interactions",
-        "description": "Neuroimaging research is mapping the functional architecture of regions like the superior temporal sulcus and the Default Mode Network during naturalistic observation. The focus is shifting from viewing single agents to understanding how the brain encodes dyads, relational actions, and complex multi-agent narratives."
-      },
-      {
-        "theme": "Ensemble Perception of Social Groups",
-        "description": "Researchers are adapting classical visual ensemble paradigms to high-level social stimuli. This explores how observers rapidly extract summary statistics from crowds—such as average emotional valence, common visual attention, and overall group cohesion—without needing to fixate on individual members."
+        "theme": "Atypical and Developmental Social Vision",
+        "description": "Researchers are mapping the ontogeny and neurodivergent trajectories of social perceptual skills across the lifespan. This includes studying how infants acquire social rules, how atypical gaze and spatial integration manifest in autism, and how early perceptual differences shape downstream theory of mind."
       }
     ],
     "open_questions": [
-      "How does the visual system integrate precise local features (e.g., facial action units) with global contextual priors (e.g., scene history, body posture) to resolve affective ambiguities in real time?",
-      "To what extent are high-level trait impressions and social stereotypes driven by intrinsic, low-level structural regularities of the stimulus versus top-down observer biases and semantic expectations?",
-      "Do artificial agents, robots, and avatars trigger the same holistic and social-perceptual processing mechanisms as human faces and bodies, or do they rely on fundamentally different computational pathways?",
-      "How do neural representations transition from encoding basic kinematic variables in the visual cortex to abstract, action-level goals and hidden intentions in theory-of-mind networks?"
+      "Do human brains process complex multi-agent social interactions utilizing specialized relational computations (such as graph-based representations), or do these abilities emerge from the domain-general scaling of core visuospatial processing?",
+      "How does the visual system continuously integrate temporal history and predictive physical models to accurately forecast the real-time, goal-directed actions of other agents?",
+      "To what extent are high-level social trait inferences and stereotypes extracted directly from bottom-up morphological features versus being constructed top-down by contextual cues and perceiver-specific biases?",
+      "What are the precise computational and representational gaps that prevent current state-of-the-art artificial intelligence models from matching human proficiency in decoding rich, multi-layered dynamic social scenes?"
     ],
     "methods_and_approaches": [
       {
-        "method": "Generative AI and Deep Learning",
-        "description": "Leveraging Generative Adversarial Networks (GANs), Vision Transformers (ViTs), and Large Language Models to synthesize highly controlled, high-dimensional social stimuli and benchmark machine representations against human vision."
+        "method": "Representational Similarity Analysis (RSA)",
+        "description": "A multivariate computational technique used to compare representations of complex social stimuli across human behavior, neural activity, and artificial neural networks."
       },
       {
-        "method": "Point-Light and Kinematic Rendering",
-        "description": "Using isolated joint trajectories generated via motion capture to strip away structural form, allowing researchers to study the visual processing of pure biological motion and intention."
+        "method": "Deep Generative Modeling",
+        "description": "The use of architectures like GANs and Vision Transformers to synthesize highly controlled, realistic visual stimuli, allowing researchers to independently manipulate specific morphological, demographic, or emotional dimensions."
       },
       {
-        "method": "Representational Similarity Analysis",
-        "description": "Employing multivariate fMRI, EEG, and behavioral paradigms to map the high-dimensional representational geometry of how social categories, traits, and actions are structured in the human brain."
+        "method": "Naturalistic Neuroimaging",
+        "description": "Measuring neural activity (via fMRI, MEG, or iEEG) while subjects view rich, continuous video sequences or movies to map the dynamic spatiotemporal hierarchies of the social brain."
       },
       {
-        "method": "Dual and Mobile Eye-Tracking",
-        "description": "Utilizing wearable and simultaneous eye-tracking setups to capture spontaneous mutual gaze, joint attention, and interaction dynamics in unconstrained, real-world multi-agent environments."
-      },
-      {
-        "method": "Reverse Correlation Paradigms",
-        "description": "Using data-driven psychophysical techniques where observers classify noisy stimuli to visualize internal visual templates of social categories, traits, and stereotypes without predefined stimulus biases."
+        "method": "Data-Driven Reverse Correlation",
+        "description": "A psychophysical method that uses visual noise and iterative subject classification to extract and visualize the idiosyncratic internal templates underlying an observer's social judgments and stereotypes."
       }
     ],
     "emerging_directions": [
       {
-        "direction": "Benchmarking AI Social Vision",
-        "description": "Systematically comparing how deep neural networks process complex interactive scenes against human behavioral and neuroimaging data to identify gaps in capturing relational or intentional semantics."
+        "direction": "LLMs in Visual Social Cognition",
+        "description": "Integrating Large Language Models with visual paradigms to evaluate complex social reasoning, track stereotype evolution, and guide artificial agents in shared environments."
       },
       {
-        "direction": "Human-Agent and Robot Interaction",
-        "description": "Expanding foundational social perception paradigms to study how human observers allocate spatial attention, attribute minds, and process the 'humanness' of avatars and collaborative robotic systems."
+        "direction": "Perception of Artificial Agents",
+        "description": "Expanding social vision into human-robot interaction by testing the boundary conditions under which robots, avatars, and artificial agents trigger specialized holistic processing and joint attention."
       },
       {
-        "direction": "Serial Dependence in Social Judgments",
-        "description": "Examining how rapid temporal sequences, visual history, and trial-by-trial feedback dynamically warp immediate social and affective judgments through assimilative or repulsive biases."
-      },
-      {
-        "direction": "Applied Dyadic and Team Dynamics",
-        "description": "Translating basic gaze and emotion research into high-stakes, interactive environments—such as measuring team coordination in clinical settings or decoding interpersonal communication gaps in autism."
+        "direction": "Socio-Cultural Visual Ecology",
+        "description": "Quantifying the statistical regularities of subtle social cues in mass media and natural environments to understand how cultural visual diets causally shape intergroup biases and moral judgments."
       }
     ],
     "subfield": "Social Perception",
-    "n_researchers": 27
+    "n_researchers": 26
   },
   "Spatial Vision": {
     "overview": "The subfield of spatial vision investigates how the visual system encodes, transforms, and limits the perception of spatial patterns, encompassing fundamental processes like contrast sensitivity, spatial summation, and peripheral crowding. Today, bridging classical psychophysics with ultra-high-resolution neuroimaging, computational modeling, and naturalistic task paradigms is crucial for uncovering the physiological mechanisms of pattern vision and translating these insights into diagnostics for diverse clinical visual disorders.",

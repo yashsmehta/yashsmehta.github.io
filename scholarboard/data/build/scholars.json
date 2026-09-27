@@ -12054,12 +12054,12 @@
   "0201": {
     "id": "0201",
     "name": "Emily A Cooper",
-    "institution": "University of California, Berkeley",
-    "department": "School of Optometry & Vision Science",
+    "institution": "Dartmouth College",
+    "department": "Cognitive Science and Computer Science",
     "lab_name": "Perceptual Reality Lab",
     "lab_url": "http://www.emilyacooper.org/",
     "main_research_area": "3D vision and perceptual graphics",
-    "bio": "Emily A. Cooper is an Associate Professor at the University of California, Berkeley, where they direct the Perceptual Reality Lab and hold a membership in the Helen Wills Neuroscience Institute. Cooper’s research investigates the computational mechanisms of human visual perception, with an emphasis on how the brain processes three-dimensional information and depth cues in natural environments. By combining psychophysical experiments with computational modeling and natural scene statistics, Cooper examines the principles of visual encoding to inform the design of augmented reality, virtual reality, and assistive vision technologies. Their work focuses on the intersection of biological vision and digital display engineering for applications in clinical vision care and immersive graphics.",
+    "bio": "Emily A. Cooper is an Associate Professor of Cognitive Science and Computer Science at Dartmouth College, where they direct the Perceptual Reality Lab. Cooper’s research investigates the computational mechanisms of human visual perception, with an emphasis on how the brain processes three-dimensional information and depth cues in natural environments. By combining psychophysical experiments with computational modeling and natural scene statistics, Cooper examines the principles of visual encoding to inform the design of augmented reality, virtual reality, and assistive vision technologies. Their work focuses on the intersection of biological vision and digital display engineering for applications in clinical vision care and immersive graphics.",
     "research_direction": "Dr. Cooper has recently been investigating how the visual system encodes 3D space and motion, using computational modeling to explore how neural tuning for disparity and speed in the dorsal stream adapts to the statistical regularities of natural scenes. Their recent work also explores the psychophysics of binocular vision, examining how low-level depth cues compete with higher-level cognitive priors about familiar object shapes when observers are subjected to interocular retinal distortions. In clinical domains, they are studying the interplay of sensory noise and perceptual priors in impaired visual systems, utilizing Bayesian frameworks to characterize idiosyncratic motion misperceptions in individuals with low vision. Furthermore, Dr. Cooper investigates the applied perceptual consequences of dichoptic viewing, measuring how interocular contrast differences in augmented reality displays influence visual appearance and drive artifacts like luster and binocular rivalry.",
     "papers": [
       {

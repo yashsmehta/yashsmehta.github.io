@@ -59635,5 +59635,81 @@
     "cluster": 0,
     "total_citations": 9213,
     "h_index": 38
+  },
+  "E367": {
+    "id": "E367",
+    "name": "Binxu Wang",
+    "institution": "Harvard University",
+    "department": "Kempner Institute for the Study of Natural and Artificial Intelligence",
+    "lab_url": "https://animadversio.github.io",
+    "main_research_area": "visual neuroscience and generative models",
+    "bio": "Binxu Wang investigates neural representation along the primate ventral visual stream and the computational mechanisms governing deep generative architectures. By combining closed-loop electrophysiology with generative models and differential geometry, Wang developed optimization frameworks to synthesize maximally activating stimuli and map tuning manifolds across the visual hierarchy. Their ongoing research focuses on mechanistic interpretability and the theoretical physics of learning dynamics in diffusion models and vision transformers. Through these approaches, their work bridges systems neuroscience and machine learning to examine shared principles of biological perception and artificial generation.",
+    "research_direction": "Dr. Wang studies how visual representations are built in both the primate ventral stream and generative image models, using each to explain the other. Letting neurons in macaque V1, V4 and inferotemporal cortex steer generative networks in closed loop, they found that early areas align with texture-like image spaces, while inferotemporal neurons favor shared local motifs over whole-object templates, with object alignment emerging later in the response. With collaborators, they convert model encoding axes into graded \"feature accentuation\" stimuli to test which deep networks can causally control visual neurons, revealing that models with equal predictive accuracy differ sharply in control. On the theory side, they derive analytical accounts of diffusion models (why coarse structure is learned before fine detail, and why models trained on disjoint data produce near-identical images from the same noise) and use mechanistic interpretability to trace the attention circuits diffusion transformers use to place objects in spatial relation.",
+    "papers": [
+      {
+        "title": "Neuronal tuning aligns dynamically with object and texture manifolds across the visual hierarchy",
+        "abstract": "Generative image models were placed in closed-loop with neurons in macaque V1, V4 and posterior inferotemporal cortex (PIT), letting each site steer image synthesis toward its preferred features. Comparing a texture-oriented generator with an object-oriented one showed that V1 and V4 align more closely with texture-based image spaces, whereas many PIT neurons respond equally well to images from both, favouring shared local motifs over whole-object templates. Alignment with object structure emerges later in the PIT response, clarifying coding principles along the ventral stream and the limits of current vision models.",
+        "year": "2026",
+        "venue": "Nature Neuroscience",
+        "citations": "0",
+        "authors": "Binxu Wang, Carlos R. Ponce",
+        "url": "https://doi.org/10.1038/s41593-026-02207-1"
+      },
+      {
+        "title": "Parametric neural control differentiates top neural network models of primate visual cortex",
+        "abstract": "Leading deep-network encoding models predict visual cortical responses almost equally well, but this study shows they have not converged on the same brain-aligned description of image space. Axis-aligned feature accentuation turns each model's fitted encoding axis into graded image perturbations predicted to drive neural firing up or down, including beyond the natural-image range. Over 27,500 such stimuli from ten vision models were tested in closed-loop recordings from early, mid- and high-level visual areas in five macaques. Models with matched natural-image predictivity differed sharply in their ability to control neurons; adversarially trained models did best, and control was best predicted by the spatial-frequency structure of each model's input gradient. Neural control is proposed as a causal test of model-brain alignment.",
+        "year": "2026",
+        "venue": "bioRxiv (preprint)",
+        "citations": "0",
+        "authors": "Jacob S. Prince, Binxu Wang, Thomas Fel, Akshay V. Jagadeesh, Parisa A. Vaziri, George A. Alvarez, Margaret S. Livingstone, Talia Konkle",
+        "url": "https://doi.org/10.64898/2026.08.16.745063"
+      },
+      {
+        "title": "A Random Matrix Theory Perspective on the Consistency of Diffusion Models",
+        "abstract": "Diffusion models trained on separate, non-overlapping splits of a dataset often produce strikingly similar images from the same noise seed. This work traces that consistency largely to Gaussian statistics shared across the splits and develops a random-matrix-theory framework for how finite training sets shape the mean and variance of the learned denoiser and sampling map in the linear setting. Sampling variability acts as a self-consistent renormalization of the noise level, explaining why limited data over-shrinks low-variance directions toward the dataset mean, while cross-split disagreement is driven by anisotropy across eigenmodes, inhomogeneity across inputs and dataset size. Predictions hold for linear models and are validated on UNet and DiT architectures outside the memorization regime, giving a principled baseline for reproducibility in diffusion training.",
+        "year": "2026",
+        "venue": "ICML 2026 (Oral; Outstanding Paper Honorable Mention)",
+        "citations": "0",
+        "authors": "Binxu Wang, Jacob Zavatone-Veth, Cengiz Pehlevan",
+        "url": "https://arxiv.org/abs/2602.02908"
+      },
+      {
+        "title": "Circuit Mechanisms for Spatial Relation Generation in Diffusion Transformers",
+        "abstract": "Mechanistic interpretability is used to study how text-to-image diffusion transformers (DiTs) generate correct spatial relations between two objects. DiTs of several sizes are trained from scratch with different text encoders; all reach near-perfect accuracy, but through different circuits. With random text embeddings, a two-stage circuit of cross-attention heads separately reads the spatial relation and each object's attributes, whereas with a pretrained T5 encoder the model reads fused relation and object information from a single text token. The two solutions differ in robustness to out-of-domain perturbations.",
+        "year": "2026",
+        "venue": "CVPR 2026",
+        "citations": "0",
+        "authors": "Binxu Wang, Jingxuan Fan, Xu Pan",
+        "url": "https://arxiv.org/abs/2601.06338"
+      },
+      {
+        "title": "An Analytical Theory of Spectral Bias in the Learning Dynamics of Diffusion Models",
+        "abstract": "An analytical framework describes how the distribution generated by a diffusion model evolves during training. Solving the gradient-flow dynamics of linear and convolutional denoisers under a Gaussian-equivalence principle reveals an inverse-variance spectral law: coarse, high-variance image structure is learned orders of magnitude sooner than fine detail. Weight sharing speeds learning without removing this bias, while local convolution changes it qualitatively; experiments with MLP-based and convolutional U-Nets on natural images support the theory.",
+        "year": "2025",
+        "venue": "NeurIPS 2025",
+        "citations": "0",
+        "authors": "Binxu Wang, Cengiz Pehlevan",
+        "url": "https://arxiv.org/abs/2503.03206"
+      }
+    ],
+    "primary_subfield": "Theory & Computation",
+    "subfields": [
+      {
+        "subfield": "Theory & Computation",
+        "score": 1.0
+      },
+      {
+        "subfield": "Object Recognition",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "binxu_wang_E367.jpg",
+    "umap_projection": {
+      "x": -3.604780673980713,
+      "y": 3.041543960571289
+    },
+    "cluster": 0,
+    "total_citations": 487,
+    "h_index": 9
   }
 }

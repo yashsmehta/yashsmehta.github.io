@@ -5812,7 +5812,7 @@
     "lab_name": "Ponce Lab",
     "lab_url": "https://ponce.hms.harvard.edu/",
     "main_research_area": "visual information processing",
-    "bio": "Carlos Ponce is an Assistant Professor of Neurobiology who investigates the neural mechanisms of visual recognition and perception. Ponce's laboratory uses electrophysiological recordings in rhesus macaques and deep learning frameworks, including generative adversarial networks and convolutional neural networks, to identify visual features encoded by neurons in the cortical hierarchy. Through closed-loop experimental designs, Ponce extracts data from the brain to characterize the internal models the primate visual system uses to interpret complex, naturalistic scenes. This approach links biological vision and artificial intelligence to refine automated recognition technologies and determine how sensory signals become cognitive representations.",
+    "bio": "Carlos Ponce is an Assistant Professor of Neurobiology at Harvard Medical School whose lab studies how neurons across brain areas interact to support vision and natural behavior. Working in rhesus macaques, the lab combines large-scale neural recordings, behavioral experiments, and deep-network-guided stimulus generation to explore visual responses across a broad range of images and motion, pairing exploratory discovery with targeted experiments. Current work examines how drugs of abuse alter visual processing, how neural activity relates to spontaneous looking, and how specific cell types and pathways, including parvalbumin-expressing neurons, contribute to visual computation.",
     "research_direction": "The Ponce Lab investigates how neurons across brain areas interact to support vision and natural behavior. Working in rhesus macaques, the lab combines large-scale neural recordings, behavioral experiments, and deep-network-guided stimulus generation to explore visual responses across a broad range of images and motion. Its approach connects exploratory discovery with targeted experiments that test how visual circuits work. Current projects examine how drugs of abuse alter visual processing and behavior, how neural activity relates to spontaneous looking and other natural behaviors, and how specific cell types and pathways contribute to visual computation. Current directions include investigating parvalbumin-expressing (PV) neurons and using intersectional AAV strategies to target defined neural projections. Computational models guide these experiments, with biological measurements and causal manipulations central to understanding the mechanisms.",
     "papers": [
       {
@@ -5834,13 +5834,13 @@
         "url": "https://doi.org/10.1038/s42256-025-01155-y"
       },
       {
-        "title": "Functional segregation of inputs in artificial neural networks for vision",
-        "abstract": "Biological and artificial intelligence systems both utilize signed inputs, yet the role of inhibitory signals in high-level visual representations like the inferotemporal (IT) cortex is poorly understood. This study investigated how ImageNet-trained artificial neural networks (ANNs) and macaque IT neurons segregate learned representations into positive and negative weights. By employing gradient-based feature visualization and ablation of weight polarities, we found that ReLU-based ANNs segregate object and foreground information into positive weights, while background and contextual information are primarily encoded in negative weights. This segregation was found to be dependent on signal rectification, as Tanh-based networks failed to maintain this distinction. Similar results obtained when modeling primate neuronal responses suggest that signal rectification and inhibitory mechanisms are critical for shaping feature selectivity in the primate ventral stream.",
-        "year": "2024",
-        "venue": "ICLR 2025 (OpenReview Preprint)",
+        "title": "Macaques recognize features in synthetic images derived from ventral stream neurons",
+        "abstract": "Neurons in the primate ventral stream can guide generative networks to synthesize images that strongly drive them, but it was unclear whether the features in these images carry meaning for the animal. The authors trained rhesus macaques on a recognition task and then tested them with synthetic images evolved by inferotemporal neurons. Monkeys treated many of these images as containing recognizable features, such as parts of faces and bodies, linking the tuning of individual ventral stream neurons to the animal's own perception.",
+        "year": "2023",
+        "venue": "Proceedings of the National Academy of Sciences",
         "citations": "0",
-        "authors": "Giordano Ramos-Traslosheros, Carlos R. Ponce",
-        "url": "https://openreview.net/forum?id=lytFNoFqLJ"
+        "authors": "Katherine N. Mueller, Mary C. Carter, Jeevun A. Kansupada, Carlos R. Ponce",
+        "url": "https://doi.org/10.1073/pnas.2213034120"
       },
       {
         "title": "A concentration of visual cortex-like neurons in prefrontal cortex",

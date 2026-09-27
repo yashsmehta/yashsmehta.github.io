@@ -5811,9 +5811,9 @@
     "department": "Department of Neurobiology, Harvard Medical School",
     "lab_name": "Ponce Lab",
     "lab_url": "https://poncelab.hms.harvard.edu",
-    "main_research_area": "Visual neuroscience and machine learning",
+    "main_research_area": "visual information processing",
     "bio": "Carlos Ponce is an Assistant Professor of Neurobiology who investigates the neural mechanisms of visual recognition and perception. Ponce's laboratory uses electrophysiological recordings in rhesus macaques and deep learning frameworks, including generative adversarial networks and convolutional neural networks, to identify visual features encoded by neurons in the cortical hierarchy. Through closed-loop experimental designs, Ponce extracts data from the brain to characterize the internal models the primate visual system uses to interpret complex, naturalistic scenes. This approach links biological vision and artificial intelligence to refine automated recognition technologies and determine how sensory signals become cognitive representations.",
-    "research_direction": "Dr. Ponce has recently been investigating the computational principles and feature selectivity that govern primate visual recognition across the cortical hierarchy. Their recent work explores how neurons spanning the ventral stream and prefrontal cortex encode complex natural scenes, using multi-electrode arrays paired with closed-loop generative networks to map whether specific brain regions prioritize local textures, ethologically relevant animal features, or global object configurations. Additionally, they are extensively probing the alignment between the biological visual system and artificial neural networks (ANNs). In this computational domain, they are examining how structural inductive biases and the functional segregation of positive and negative signals shape feature representations, and evaluating whether current deep learning models adequately capture the dynamic representational landscape of the macaque brain.",
+    "research_direction": "The Ponce Lab investigates how neurons across brain areas interact to support vision and natural behavior. Working in rhesus macaques, the lab combines large-scale neural recordings, behavioral experiments, and deep-network-guided stimulus generation to explore visual responses across a broad range of images and motion. Its approach connects exploratory discovery with targeted experiments that test how visual circuits work. Current projects examine how drugs of abuse alter visual processing and behavior, how neural activity relates to spontaneous looking and other natural behaviors, and how specific cell types and pathways contribute to visual computation. Current directions include investigating parvalbumin-expressing (PV) neurons and using intersectional AAV strategies to target defined neural projections. Computational models guide these experiments, with biological measurements and causal manipulations central to understanding the mechanisms.",
     "papers": [
       {
         "title": "Brain feature maps reveal progressive animal-feature representations in the ventral stream",
@@ -5852,23 +5852,27 @@
         "url": "https://doi.org/10.1038/s41467-024-51441-3"
       },
       {
-        "title": "Neural Dynamics of Object Manifold Alignment in the Ventral Stream",
-        "abstract": "Primate ventral stream neurons respond to an immense landscape of natural images, yet the principles governing their alignment with generative image manifolds are unclear. This study used a closed-loop evolutionary algorithm to optimize stimuli from two generative networks: DeePSim, which parameterizes local image patterns, and BigGAN, which emphasizes object identity and configurational nuisance variables. We recorded from multi-electrode arrays in V1, V4, and posterior IT (PIT) of macaque monkeys. While V1 and V4 neurons showed stronger alignment with the local pattern-based DeePSim manifold, PIT neurons demonstrated comparable alignment to both textural and object-centric manifolds. Crucially, object-like responses in PIT emerged later than texture-driven responses, suggesting that global configurational selectivity requires additional processing. These results indicate that the primate visual system aligns to a representational space that current artificial models do not fully capture.",
-        "year": "2024",
-        "venue": "bioRxiv (Preprint)",
-        "citations": "0",
+        "title": "Neuronal tuning aligns dynamically with object and texture manifolds across the visual hierarchy",
+        "abstract": "Visual neurons respond to a vast range of images, from textures to objects, but the rules linking these responses remain unclear. Although tuning to simple features is well established in the primary visual cortex, this framework breaks down in higher areas, where neurons encode diverse and unpredictable features. To ask what features neurons prioritize, we used generative models (deep networks that synthesize new images from a learned latent space), allowing neurons in V1, V4 and the posterior inferotemporal cortex (PIT) to guide image synthesis through closed-loop optimization. We compared models that emphasize texture versus those that emphasize object structure. Although V1 and V4 aligned more strongly with texture-based spaces, many PIT neurons responded equally well to both types of optimized images, revealing a focus on shared local motifs rather than whole-object templates, and this alignment to objects emerged later in their response. These findings reveal coding principles across the ventral stream and clarify the limits of current vision models.",
+        "year": "2026",
+        "venue": "Nature Neuroscience",
+        "citations": "2",
         "authors": "Binxu Wang, Carlos R. Ponce",
-        "url": "https://doi.org/10.1101/2024.06.20.596072"
+        "url": "https://doi.org/10.1038/s41593-026-02207-1"
       }
     ],
     "primary_subfield": "Object Recognition",
     "subfields": [
       {
-        "subfield": "Object Recognition",
+        "subfield": "Theory & Computation",
         "score": 1.0
       },
       {
-        "subfield": "Theory & Computation",
+        "subfield": "Motion",
+        "score": 0.5
+      },
+      {
+        "subfield": "Eye Movements",
         "score": 0.5
       }
     ],
@@ -14595,22 +14599,12 @@
     "id": "0241",
     "name": "Giovanni Federico",
     "institution": "Suor Orsola Benincasa University",
-    "department": "Department of Education, Psychology and Communication Sciences",
-    "lab_name": "Laboratory of Experimental Psychology and Cognitive Neuroscience",
+    "department": "Department of Education, Psychology and Communication",
     "lab_url": "https://giovannifederico.net",
-    "main_research_area": "cognitive neuroscience of tool use",
-    "bio": "Giovanni Federico is a cognitive neuroscientist and tenure-track Assistant Professor researching the neurocognitive foundations of physical reasoning and technological culture. Federico's work examines how the human brain processes tool affordances, distinguishing between semantic and sensorimotor pathways and exploring the cognitive mechanisms of technical reasoning. They utilize a methodology that integrates behavioral paradigms, eye-tracking, and neuroimaging techniques such as functional MRI and EEG. Federico’s current research investigates the evolution of technical abilities and the interaction between human cognition and technological change.",
-    "research_direction": "Dr. Federico has recently been investigating the cognitive neuroscience of technology, combining theoretical modeling and structural MRI to map the neural networks that support human technical reasoning and tool use. Their recent work explores how our cognitive strategies dynamically shift between mechanical and social brain networks when we interact with increasingly complex or opaque modern technologies. In the visual domain, they use high-resolution eye-tracking to examine how top-down causal reasoning and the functional affordances of objects guide gaze trajectories and visual exploration during scene perception. Additionally, their research spans into veterinary neurology, where they are investigating the pathophysiological mechanisms—specifically neurotrophic withdrawal—underlying adverse musculoskeletal and neurological side effects associated with anti-NGF pain therapies in osteoarthritic dogs.",
+    "main_research_area": "cognitive neuroscience of technology",
+    "bio": "Dr. Federico investigates the neurocognitive mechanisms that enable humans to understand, use, learn, share, delegate to, and be shaped by technologies, ranging from physical artefacts to digital platforms, artificial intelligence, and immersive sociotechnical systems. He combines experimental psychology, eye-tracking, structural and functional MRI, high-density EEG, and clinically oriented neuropsychological methods to develop a Cognitive Neuroscience of Technology (Federico et al., 2026, Cognitive Neuroscience). This research programme links basic mechanisms to applied questions in education, ageing, digital inclusion, human-AI interaction, clinical neuropsychology, rehabilitation, and technology-informed assessment, with the broader aim of understanding how technological environments reshape human cognition.",
+    "research_direction": "Dr. Federico has recently been investigating the cognitive neuroscience of technology, combining theoretical modeling and structural MRI to map the neural networks that support human technical reasoning and tool use. His recent work explores how our cognitive strategies dynamically shift between mechanical and social brain networks when we interact with increasingly complex or opaque modern technologies. In the visual domain, he uses high-resolution eye-tracking to examine how top-down causal reasoning and the functional affordances of objects guide gaze trajectories and visual exploration during scene perception.",
     "papers": [
-      {
-        "title": "A neurotrophic withdrawal hypothesis for multisystem adverse events associated with anti-NGF therapy for canine osteoarthritis pain",
-        "abstract": "Therapies neutralizing nerve growth factor (NGF), notably the canine monoclonal antibody bedinvetmab and newly authorized agents such as izenivetmab, effectively attenuate osteoarthritic pain but are increasingly associated with pharmacovigilance reports documenting concurrent musculoskeletal, autonomic, and central neurological complications. While prevailing interpretations treat these diverse manifestations as unrelated background pathologies or reporting artifacts, this paper presents a unifying mechanistic perspective: systemic sequestration of NGF induces an iatrogenic state of neurotrophic withdrawal. Signaling through tropomyosin receptor kinase A (TrkA) and the p75 neurotrophin receptor (p75NTR) is essential not merely for nociceptive signaling but for sensory axon survival, autonomic regulation, lower urinary tract innervation, and skeletal repair mediated by calcitonin gene-related peptide (CGRP)-positive dorsal root ganglion (DRG) afferents. The authors formulate a 'dual-hit' pathophysiological model wherein sustained depletion of trophic support synergizes with increased mechanical joint loading permitted by effective analgesia, precipitating accelerated joint destruction, bone remodeling failure, and neuropathic decline, particularly in geriatric animals with attenuated homeostatic resilience.",
-        "year": "2026",
-        "venue": "Frontiers in Veterinary Science",
-        "citations": "0",
-        "authors": "Giovanni Federico, Alfonso Ilardi, Valerio Elia, Sergio Chieffi",
-        "url": "https://doi.org/10.3389/fvets.2026.1776920"
-      },
       {
         "title": "Growing Technological Opacity and the Social Brain",
         "abstract": "While cumulative cultural evolution has long been assumed to impose escalating computational demands primarily on mechanical problem-solving faculties, recent cognitive neuroscience evidence reveals that growing technological opacity increasingly recruits the social brain. Over evolutionary history, artifacts have shifted from physically transparent implements to functionally opaque mechanisms, complex division-of-labor systems, and autonomous digital or computational agents. This theoretical framework posits that human cognition dynamically negotiates between two large-scale, intrinsically anticorrelated neural systems: the technical brain (anchored in the left inferior frontal gyrus and area PF within the inferior parietal lobule), specialized for deterministic mechanical causality, and the social brain (spanning the temporoparietal junction, temporal pole, and anterior medial prefrontal cortex), dedicated to mentalizing and agentic inference. As physical mechanisms become epistemically opaque, bottom-up perceptual cues and heightened causal uncertainty drive network switching, compelling humans to rely on transactive socio-technical expertise and to project intentional stances onto non-biological technological systems.",
@@ -28117,7 +28111,7 @@
     "lab_url": "https://bonnerlab.org",
     "main_research_area": "computational neuroscience and deep learning",
     "bio": "Michael F. Bonner is an Assistant Professor in the Department of Cognitive Science at Johns Hopkins University, where he directs the Bonner Lab. His research investigates the computational principles of the human visual system by integrating functional neuroimaging with deep neural network modeling. He focuses on characterizing the high-dimensional nature of cortical representations, challenging traditional low-dimensional theories of neural coding through advanced statistical techniques. His recent work explores the alignment between artificial and biological vision systems and the latent manifold structure that underlies individual differences in visual experience.",
-    "research_direction": "Dr. Bonner has recently been investigating the high-dimensional geometry of visual representations in the brain and the principles that govern representational alignment between biological and artificial vision systems. Using spectral analysis of fMRI responses to naturalistic movies and images, their recent work explores the fundamental organization of the visual hierarchy, probing whether neural populations rely on expansive, scale-free manifolds to encode both shared sensory inputs and unique individual visual experiences. Additionally, they are examining the computational drivers of brain-model similarity by comparing human and macaque neural data against large, diverse ensembles of deep neural networks. Specifically, Dr. Bonner investigates how latent dimensionality impacts model predictivity and tests whether brain-like visual processing is driven by universal regularities of natural scenes, massive experience-dependent training, or the inherent architectural inductive biases of untrained convolutional networks.",
+    "research_direction": "Dr. Bonner studies how the visual brain represents the world, treating deep neural networks as working models of visual cortex and comparing the two directly with large-scale human fMRI. A recurring theme is that brain-like vision is easier to get than one might expect: networks with very different architectures and training goals end up sharing a common set of features, and those shared features are the ones that best match human visual cortex. Even untrained convolutional networks line up with cortex surprisingly well given the right wiring, and models trained with only extremely coarse feedback still learn human-aligned representations. On the brain side, the lab finds that visual cortex uses rich, high-dimensional codes that are organized the same way across people yet still carry each person's individual experience, setting a clear bar for what good models must capture. Current work asks how such representations can emerge from local, label-free learning without backpropagation, and uses AI agents to automatically search for interpretable models of visual cortex.",
     "papers": [
       {
         "title": "High-dimensional structure underlying individual differences in naturalistic visual experience",

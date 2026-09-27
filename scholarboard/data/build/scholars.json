@@ -22520,12 +22520,12 @@
   "0369": {
     "id": "0369",
     "name": "Kirsten Adam",
-    "institution": "Rice University",
-    "department": "Department of Psychological Sciences",
+    "institution": "University of California, Davis",
+    "department": "Department of Psychology and Center for Mind and Brain",
     "lab_name": "Adam Lab",
-    "lab_url": "https://adamlab.rice.edu/",
+    "lab_url": "https://psychology.ucdavis.edu/people/kirsten-adam",
     "main_research_area": "attention and working memory",
-    "bio": "Kirsten Adam is an Assistant Professor at Rice University who investigates the cognitive and neural constraints that limit human attention and memory. Adam's research utilizes electroencephalography (EEG) and functional magnetic resonance imaging (fMRI) to examine how the brain manages visual distractions and why individuals experience moment-to-moment fluctuations in performance. Their work focuses on visual working memory capacity, demonstrating how attentional lapses and stimulus history influence the representation of information in the early visual cortex.",
+    "bio": "Kirsten Adam is an Assistant Professor in the Department of Psychology and the Center for Mind and Brain at UC Davis who investigates the cognitive and neural constraints that limit human attention and memory. Adam's research utilizes electroencephalography (EEG) and functional magnetic resonance imaging (fMRI) to examine how the brain manages visual distractions and why individuals experience moment-to-moment fluctuations in performance. Their work focuses on visual working memory capacity, demonstrating how attentional lapses and stimulus history influence the representation of information in the early visual cortex.",
     "research_direction": "Dr. Adam has recently been investigating the dynamic mechanisms and capacity limits of visual working memory, exploring how observers manage these strict cognitive bottlenecks. Their recent behavioral work explores whether memory retention can be optimized by aligning performance feedback with an individual's intrinsic capacity, and how observers might rapidly recruit visual long-term memory to bypass capacity limits during explicit stimulus repetitions. On a neural level, they are using fMRI and multivariate decoding to test whether memory load constraints stem from a localized parietal bottleneck or instead rely on distributed, drifting representational codes across the broader cortex. Additionally, they are investigating the true magnitude of attentional capture, utilizing single-trial surprise paradigms to measure how salient distractors disrupt visual search before observers have the opportunity to develop learned suppression strategies.",
     "papers": [
       {
@@ -24241,11 +24241,11 @@
     "name": "Lili Sahakyan",
     "institution": "University of Illinois Urbana-Champaign",
     "department": "Department of Psychology",
-    "lab_name": "Context, Memory, & Forgetting Lab",
-    "lab_url": "http://labs.psychology.illinois.edu/CMFlab/index.html",
+    "lab_name": "Control of Memory & Forgetting Lab",
+    "lab_url": "https://cmflab.pages.dev/",
     "main_research_area": "Episodic memory and intentional forgetting",
-    "bio": "Lili Sahakyan is a Professor of Psychology at the University of Illinois Urbana-Champaign, where they direct the Context, Memory, & Forgetting Lab and maintain affiliations with the Beckman Institute and the Neuroscience Program. Their research investigates the cognitive and neural mechanisms of human long-term memory, focusing on the strategic control of memory and the processes underlying intentional forgetting. Sahakyan utilizes functional MRI, EEG, and eye-tracking to examine how internal mental context and executive functions modulate memory retention and suppression. Their work also explores these memory control mechanisms in populations at risk for psychopathology, specifically investigating how schizotypy relates to episodic memory deficits.",
-    "research_direction": "Dr. Sahakyan has recently been investigating the cognitive and physiological mechanisms underlying intentional forgetting and relational memory. Their recent work explores the temporal dynamics and boundary conditions of motivated forgetting, using directed forgetting paradigms to test how stimulus meaningfulness, prior familiarity, and delayed testing might dissociate active cognitive inhibition from passive memory decay. In parallel, they have been utilizing high-resolution eye-tracking to examine encoding and retrieval strategies in associative memory, asking how visual fixation patterns and scanpaths contribute to phenomena like the cross-race effect in face-scene pairings. Additionally, Dr. Sahakyan uses pupillometry to track autonomic markers of cognitive control in real time, investigating whether trial-by-trial pupil fluctuations can index the mental effort required to intentionally forget natural scenes or the neurocognitive resources allocated to successfully bind items to their contexts.",
+    "bio": "Lili Sahakyan is a Professor of Psychology at the University of Illinois Urbana-Champaign, where they direct the Control of Memory & Forgetting Lab and maintain affiliations with the Beckman Institute and the Neuroscience Program. Their research investigates the cognitive and neural mechanisms of human long-term memory, focusing on the strategic control of memory and the processes underlying intentional forgetting. Sahakyan utilizes functional MRI, EEG, and eye-tracking to examine how internal mental context and executive functions modulate memory retention and suppression. Their work also explores these memory control mechanisms in populations at risk for psychopathology, specifically investigating how schizotypy relates to episodic memory deficits.",
+    "research_direction": "The Control of Memory & Forgetting Lab studies how the mind decides what to hold on to and what to let go, treating forgetting not as a failure of memory but as an adaptive tool of cognitive control. A central question is why intentional forgetting differs from everyday forgetting: the lab first showed that shifts in mental context, such as mentally travelling to another time or place, can themselves cause forgetting, and uses directed-forgetting paradigms to separate active from passive forms of it. Eye tracking and pupillometry reveal memory traces that behavior misses and distinguish incidental from intentional forgetting, while EEG (including frequency tagging) and fMRI with multivariate pattern and representational similarity analyses track how context is reactivated or flushed over time. Newer work uses music as a dynamic, cross-modal retrieval cue, applies computational models of memory competition, and examines individual differences in memory control in young adults at risk for psychopathology.",
     "papers": [
       {
         "title": "Encoding and retrieval eye movement patterns reveal cross-race effect in relational and item memory",
@@ -59790,5 +59790,85 @@
     "cluster": 0,
     "total_citations": 3453,
     "h_index": 32
+  },
+  "E369": {
+    "id": "E369",
+    "name": "Carsen Stringer",
+    "institution": "HHMI Janelia Research Campus",
+    "lab_name": "Pachitariu + Stringer Lab",
+    "lab_url": "https://mouseland.github.io/",
+    "main_research_area": "large-scale neural computation in visual cortex",
+    "bio": "Carsen Stringer is a Group Leader at HHMI Janelia Research Campus, where Stringer co-leads the Pachitariu + Stringer lab with Marius Pachitariu. The lab develops algorithms for understanding large-scale neural activity, combining machine learning with two-photon imaging of tens of thousands of neurons at once to study sensory representations and plasticity rules in mouse visual cortex. It also builds widely used open-source tools for the neuroscience community, including Cellpose for cellular segmentation, Suite2p, Kilosort, Facemap and Rastermap, and shares all of the data it generates.",
+    "research_direction": "Dr. Stringer combines machine learning and large-scale imaging to study how cortical circuits represent the visual world and learn from it. Recording from up to 90,000 neurons at once in mouse visual cortex, the lab builds the tools needed to make sense of such data, including Suite2p, Cellpose, Kilosort, Facemap and Rastermap. It has shown that visual cortex responses to natural images are high-dimensional and highly precise, that much ongoing activity tracks the mouse's own orofacial movements, and that compact two-layer \"minimodels\" explain over 70% of V1 responses. Current work finds that much visual cortical plasticity comes from unsupervised exposure rather than reward, that mismatch responses reflect spatial rather than temporal prediction, and that brainwide activity resembles a critically initialized network.",
+    "papers": [
+      {
+        "title": "A critical initialization for biological neural networks",
+        "abstract": "Spontaneous brainwide activity shows slow, large-scale coordination across neurons that outlasts the timescales of single cells. Large-scale recordings in mice had eigenvalue spectra and dynamics resembling linear dynamics driven by a random symmetric connectivity matrix that is critically normalized, including power-law decay of principal component variances and longer timescales for higher components. Hippocampal area CA1 was the exception, looking closer to an efficient, uncorrelated code. Critically normalized artificial networks produced the same high-dimensional global modes, even with sparse, clustered or spatial connectivity, and could solve time-dependent tasks such as zero-shot working memory.",
+        "year": "2026",
+        "venue": "Nature",
+        "citations": "0",
+        "authors": "Marius Pachitariu, Lin Zhong, Alexa Gracias, Amanda Minisi, Crystall Lopez, Carsen Stringer",
+        "url": "https://doi.org/10.1038/s41586-026-10528-1"
+      },
+      {
+        "title": "A simplified minimodel of visual cortical neurons",
+        "abstract": "Deep networks predict V1 responses better than classical models but are hard to interpret. Using a new dataset of more than 29,000 mouse V1 neurons responding to up to 65,000 natural images, the study found that two convolutional layers suffice, with a small first layer and a wide second layer. Fitting a compact 'minimodel' to each neuron matched the best population models, explaining over 70% of response variance, and the same simplifications held for monkey V1. The minimodels were then used to trace how stimulus invariance arises in individual neurons.",
+        "year": "2025",
+        "venue": "Nature Communications",
+        "citations": "0",
+        "authors": "Fengtong Du, Miguel Angel Núñez-Ochoa, Marius Pachitariu, Carsen Stringer",
+        "url": "https://doi.org/10.1038/s41467-025-61171-9"
+      },
+      {
+        "title": "Unsupervised pretraining in biological neural networks",
+        "abstract": "Up to 90,000 neurons were recorded simultaneously in mouse V1 and higher visual areas while mice learned texture-discrimination tasks in virtual reality, or were merely exposed to the same stimuli without reward. Neural changes that tracked behavioral learning in task mice were largely reproduced in unrewarded mice, indicating unsupervised learning; plasticity was strongest in medial higher visual areas and followed visual rather than spatial rules. A ramping reward-prediction signal in anterior areas appeared only in task mice, and behavioral experiments confirmed the prediction that unsupervised exposure speeds later task learning.",
+        "year": "2025",
+        "venue": "Nature",
+        "citations": "0",
+        "authors": "Lin Zhong, Scott Baptista, Rachel Gattoni, Jon Arnold, Daniel Flickinger, Carsen Stringer, Marius Pachitariu",
+        "url": "https://doi.org/10.1038/s41586-025-09180-y"
+      },
+      {
+        "title": "Rastermap: a discovery method for neural population recordings",
+        "abstract": "Large-scale recordings make it hard to spot patterns by eye the way physiologists once did with single neurons. Rastermap sorts neurons along a single axis according to their activity patterns and shows them as a raster plot, bringing out sequences and behavior-related structure. After benchmarking on realistic simulations, it was used to explore tens of thousands of mouse cortical neurons during spontaneous, stimulus-driven and task-driven activity, and was applied to whole-brain zebrafish imaging, wide-field imaging, electrophysiology from rat hippocampus, monkey frontal cortex and mouse brain regions, and artificial networks. The work also identifies high-dimensional cases where such one-dimensional sorting breaks down.",
+        "year": "2024",
+        "venue": "Nature Neuroscience",
+        "citations": "0",
+        "authors": "Carsen Stringer, Lin Zhong, Atika Syeda, Fengtong Du, Maria Kesa, Marius Pachitariu",
+        "url": "https://doi.org/10.1038/s41593-024-01783-4"
+      },
+      {
+        "title": "Facemap: a framework for modeling neural activity based on orofacial tracking",
+        "abstract": "Orofacial behaviors drive a large share of neural activity across the mouse brain. Facemap pairs a keypoint tracker for mouse orofacial behaviors, more accurate and several times faster than existing pose-estimation tools and adaptable to new labs with as few as 10 annotated frames, with a deep network that predicts the activity of about 50,000 simultaneously recorded neurons from those keypoints. In visual cortex it doubled the explained variance compared with previous methods. The model showed that behavior-predicted activity clusters are spread widely across cortex and that the learned behavioral features follow stereotyped, sequential dynamics that are not reversible in time.",
+        "year": "2023",
+        "venue": "Nature Neuroscience",
+        "citations": "0",
+        "authors": "Atika Syeda, Lin Zhong, Renee Tung, Will Long, Marius Pachitariu, Carsen Stringer",
+        "url": "https://doi.org/10.1038/s41593-023-01490-6"
+      }
+    ],
+    "primary_subfield": "Theory & Computation",
+    "subfields": [
+      {
+        "subfield": "Theory & Computation",
+        "score": 1.0
+      },
+      {
+        "subfield": "Perceptual Learning & Plasticity",
+        "score": 0.5
+      },
+      {
+        "subfield": "Spatial Vision",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "carsen_stringer_E369.jpg",
+    "umap_projection": {
+      "x": -2.677032709121704,
+      "y": 5.3432841300964355
+    },
+    "cluster": 0,
+    "total_citations": 15632,
+    "h_index": 26
   }
 }

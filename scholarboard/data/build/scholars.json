@@ -21880,8 +21880,17 @@
     "lab_url": "https://www.katharinadobs.com/",
     "main_research_area": "cognitive computational neuroscience",
     "bio": "Dobs is a Professor of Applied Computer Science at Justus Liebig University Giessen and directs the Visual Cognitive Computational Neuroscience (VCCN) Lab. Their research integrates deep learning architectures with human behavioral and neuroimaging data to investigate the computational principles underlying visual recognition and the functional organization of the cortex. Dobs has conducted studies demonstrating that brain-like functional specialization, such as face-selective regions, emerges in artificial neural networks optimized for specific visual tasks. Their current research, supported by an ERC Starting Grant and a LOEWE Start Professorship, focuses on developing models to explain the organization of the human visual system into specialized domains.",
-    "research_direction": "Dr. Dobs has recently been investigating the computational and neural mechanisms underlying high-level perception by combining deep neural networks (DNNs) with neuroimaging techniques like fMRI, EEG, and MEG. A major focus of their recent work explores face processing, using task-optimized DNNs to probe the computational origins of the Other-Race Effect and face pareidolia, while also mapping the temporal dynamics of how prior scene context influences human face detection. Broadening their scope within the visual system, they are examining how human category-selective cortical regions might be driven by underlying multidimensional feature tuning rather than strict categorical boundaries. Furthermore, their research extends these NeuroAI approaches beyond vision, investigating how goal-driven artificial networks can be used to model the complex neural dynamics of the proprioceptive pathway.",
+    "research_direction": "Dr. Dobs studies functional specialization in the brain and in deep neural networks (DNNs), asking why the human visual system is organized into specialized domains such as faces and bodies and how face-specific phenomena arise, by combining task-optimized DNNs with fMRI, EEG, and MEG. Recent work shows that networks optimized for visual recognition develop face- and body-selective units alongside mixed-selective units that best explain activity across cortex, suggesting that face and body processing is increasingly integrated along the visual hierarchy, and that category-selective areas such as FFA, EBA, and PPA are tuned to multiple interpretable feature dimensions that link categorical and dimensional accounts of high-level visual cortex. The lab also uses DNNs to explain face-specific phenomena, showing that face pareidolia emerges in networks optimized for both face and object recognition and that the Other-Race Effect arises from homogeneous visual experience and is mitigated by diverse training. Complementing this modeling, EEG work maps how prior scene context speeds the neural dynamics of face detection.",
     "papers": [
+      {
+        "title": "Faces and bodies are increasingly integrated along the visual hierarchy in humans and deep neural networks",
+        "abstract": "Human visual cortex contains regions specialized for faces and bodies, yet people are perceived as wholes. This study asks whether deep neural networks optimized for visual recognition develop segregated or integrated face and body processing, and compares them with fMRI responses in visual cortex during natural image viewing. The networks contain face- and body-selective units as well as mixed-selective units tuned to both. Face- and body-selective units explain unique variance in their corresponding cortical regions, whereas mixed-selective units best explain activity across regions, and shared variance grows from posterior to anterior cortex. Face and body processing thus reflects a balance of segregation and integration along the visual hierarchy in both humans and models, supporting specialized yet flexible person perception.",
+        "year": "2026",
+        "venue": "bioRxiv",
+        "citations": "",
+        "authors": "Leonard E. van Dyck, Katharina Dobs",
+        "url": "https://doi.org/10.64898/2026.02.16.706115"
+      },
       {
         "title": "Prior Scene Context Shapes the Neural Dynamics of Face Detection",
         "abstract": "This study characterizes how prior contextual expectations derived from scene layout modulate the temporal dynamics of face detection using electroencephalography (EEG) and multivariate pattern analysis (MVPA). Observers performed a face detection task on natural scenes containing a single face, which were preceded by either a faceless preview of the same scene or a neutral control. Behavioral results demonstrated significant facilitation in face localization speed and accuracy in the presence of contextual previews. Neurally, face-location decoding revealed that prior scene context allows representations to emerge significantly earlier, suggesting a rapid modulation of sensory-driven processing. Furthermore, time-frequency analyses identified a sustained preview advantage in induced oscillatory activity across alpha, beta, and gamma bands, while the absence of context elicited delayed, compensatory neural signals. These results indicate that even rapid face perception reflects an interaction between incoming sensory input and temporally distinct contextual prior knowledge.",
@@ -21892,7 +21901,16 @@
         "url": "https://doi.org/10.64898/2026.01.27.701765"
       },
       {
-        "title": "Diverse Visual Experience Promotes Integrated Representations and Mitigates Bias in Deep Neural Networks for Face Perception",
+        "title": "Multidimensional feature tuning in category-selective areas of human visual cortex",
+        "abstract": "This work proposes a unifying framework for the functional organization of the human high-level visual cortex by reconciling categorical and dimensional perspectives. Utilizing a data-driven Bayesian non-negative matrix factorization (NMF) of fMRI voxel responses to thousands of natural images, the authors identified multiple interpretable representational dimensions within well-known category-selective areas (FFA, EBA, and PPA). They found that even highly selective voxels remain tuned to multiple, partially overlapping dimensions that encode subcategory features and cross-category distinctions. These dimensions form sparse subclusters within selective areas while also contributing to globally distributed feature-based maps across the visual cortex. The results suggest that category selectivity emerges from sparse tuning to a limited set of high-level dimensions, providing a more multifaceted and comprehensive account of how the brain encodes complex visual information than traditional categorical models.",
+        "year": "2026",
+        "venue": "Journal of Neuroscience",
+        "citations": "0",
+        "authors": "Leonard E. van Dyck, Martin N. Hebart, Katharina Dobs",
+        "url": "https://doi.org/10.1523/JNEUROSCI.0038-26.2026"
+      },
+      {
+        "title": "Diverse visual experience promotes integrated and human-aligned face representations in deep neural networks",
         "abstract": "This research investigates the computational origins of the Other-Race Effect (ORE) by analyzing how the diversity of training exposure influences representational geometry in deep convolutional neural networks (CNNs). By training CNNs on exclusively Asian faces, exclusively White faces, or a diverse mix of both, and comparing their performance to human behavioral data, the authors found that homogeneous training exposure spontaneously generates ORE-like recognition biases. Representational similarity analysis (RSA) revealed that these biases are associated with a lack of cross-group representational overlap. Conversely, networks trained on diverse face sets developed an integrated representational geometry with balanced discriminative performance across groups, which most accurately captured human behavioral benchmarks. These findings suggest that human recognition biases emerge as a consequence of optimizing neural representations to the specific statistical distributions of familiar groups and provide a framework for mitigating bias through diverse visual experience.",
         "year": "2025",
         "venue": "bioRxiv",
@@ -21908,24 +21926,6 @@
         "citations": "0",
         "authors": "Pranjul Gupta, Katharina Dobs",
         "url": "https://doi.org/10.1371/journal.pcbi.1012751"
-      },
-      {
-        "title": "Multidimensional feature tuning in category-selective areas of human visual cortex",
-        "abstract": "This work proposes a unifying framework for the functional organization of the human high-level visual cortex by reconciling categorical and dimensional perspectives. Utilizing a data-driven Bayesian non-negative matrix factorization (NMF) of fMRI voxel responses to thousands of natural images, the authors identified multiple interpretable representational dimensions within well-known category-selective areas (FFA, EBA, and PPA). They found that even highly selective voxels remain tuned to multiple, partially overlapping dimensions that encode subcategory features and cross-category distinctions. These dimensions form sparse subclusters within selective areas while also contributing to globally distributed feature-based maps across the visual cortex. The results suggest that category selectivity emerges from sparse tuning to a limited set of high-level dimensions, providing a more multifaceted and comprehensive account of how the brain encodes complex visual information than traditional categorical models.",
-        "year": "2025",
-        "venue": "bioRxiv",
-        "citations": "0",
-        "authors": "Leonard E. van Dyck, Martin N. Hebart, Katharina Dobs",
-        "url": "https://doi.org/10.1101/2025.06.17.659578"
-      },
-      {
-        "title": "Artificial intelligence meets body sense: task-driven neural networks reveal computational principles of the proprioceptive pathway",
-        "abstract": "This article highlights the application of task-driven deep neural networks to decode the computational logic of the proprioceptive system. By training artificial networks to solve motor control and musculoskeletal tasks, the authors show how these models can predict the complex neural dynamics of proprioceptive processing in both the cuneate nucleus and the primary somatosensory cortex. The study emphasizes that these normative models not only achieve high predictive accuracy of neural activity but also provide insights into the specific format of limb-state representations required for movement execution. Additionally, the paper discusses the translational potential of these biologically inspired encoders for neuroprosthetics, suggesting that understanding the goal-driven organization of proprioception is critical for restoring sensory feedback in brain-machine interfaces. This work advocates for the expansion of NeuroAI frameworks to include somatosensory and motor domains.",
-        "year": "2024",
-        "venue": "Signal Transduction and Targeted Therapy",
-        "citations": "0",
-        "authors": "Leonard E. van Dyck, Frank Bremmer, Katharina Dobs",
-        "url": "https://doi.org/10.1038/s41392-024-01870-9"
       }
     ],
     "primary_subfield": "Theory & Computation",

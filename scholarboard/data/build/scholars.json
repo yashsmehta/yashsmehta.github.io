@@ -30194,10 +30194,10 @@
     "country": "United States",
     "department": "Department of Brain and Cognitive Sciences",
     "lab_name": "Kanwisher Lab",
-    "lab_url": "https://kanwisherlab.mit.edu/",
+    "lab_url": "https://web.mit.edu/bcs/nklab/",
     "main_research_area": "Functional brain organization",
-    "bio": "Nancy Kanwisher is the Walter A. Rosenblith Professor of Cognitive Neuroscience at MIT and maps the functional architecture of the human brain using fMRI. Kanwisher identified and characterized specialized cortical regions, such as the Fusiform Face Area (FFA) for face processing and the Parahippocampal Place Area (PPA) for scene recognition. Their current research integrates intracranial recordings and deep neural networks to investigate the computational principles and developmental origins of these regions. This work examines the organization of the human mind into distinct, domain-specific processors for high-level perception and cognition.",
-    "research_direction": "Kanwisher is currently refining a modular-interactionist framework of human cognition, utilizing precision fMRI and the novel Efficient Multifunction fMRI Localizer (EMFL) to map the functional topography of domain-specific cortical regions. Her research investigates the neurocomputational \"physics engine\" within the frontoparietal network, employing multivariate fMRI decoding to demonstrate how the brain distinguishes physical ontologies—specifically \"things\" versus \"stuff\"—and runs forward simulations to predict future states like object collisions. Simultaneously, she explores the functional encapsulation of the core language system, arguing that deep narrative comprehension emerges from the systematic exportation of linguistic data to external systems for mental model construction. This work increasingly emphasizes human-specific methodologies, such as high-resolution intracranial recordings and deep neural networks, to bypass the limitations of comparative animal models in studying uniquely human faculties.",
+    "bio": "Nancy Kanwisher is the Walter A. Rosenblith Professor of Cognitive Neuroscience at MIT and maps the functional architecture of the human brain using fMRI. Kanwisher identified and characterized specialized cortical regions, such as the Fusiform Face Area (FFA) for face processing and the Parahippocampal Place Area (PPA) for scene recognition. Her current research integrates intracranial recordings and deep neural networks to investigate the computational principles and developmental origins of these regions. This work examines the organization of the human mind into distinct, domain-specific processors for high-level perception and cognition.",
+    "research_direction": "Dr. Kanwisher studies the functional organization of the human brain as a window into the architecture of the mind. Her lab discovered cortical regions specialized for faces (FFA), places (PPA) and bodies (EBA), studies regions for music, language and thinking about other people, and asks what each region represents and computes, how it develops, and why the brain has such specialized regions at all. Favoring human-specific methods over animal models, the lab combines fMRI, including a new localizer that maps many visual, auditory and cognitive regions in a single session, with intracranial recordings in neurosurgery patients and deep neural networks that make precise, testable predictions about brain responses. Recent work extends this approach to an intuitive \"physics engine\" in frontoparietal cortex that tells rigid objects (\"things\") from substances (\"stuff\") and predicts how physical events will unfold, and to how the language network passes information to other brain systems to build a full understanding of what we hear and read.",
     "papers": [
       {
         "title": "What does it mean to understand language?",
@@ -30262,8 +30262,8 @@
     ],
     "profile_pic": "nancy_kanwisher_0493.jpg",
     "umap_projection": {
-      "x": -3.391857624053955,
-      "y": 1.8532565832138062
+      "x": -3.3556485176086426,
+      "y": 1.542596459388733
     },
     "cluster": 0,
     "total_citations": 83449,

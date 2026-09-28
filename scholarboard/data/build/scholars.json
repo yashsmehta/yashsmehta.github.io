@@ -14459,7 +14459,7 @@
     "lab_name": "Visual Cognitive Neuroscience Laboratory",
     "lab_url": "https://psychology.asu.edu/research/labs/visual-cognitive-neuroscience-lab",
     "main_research_area": "visual working memory and attention",
-    "bio": "Gi-Yeul Bae is an Assistant Professor in the Department of Psychology at Arizona State University and the principal investigator of the Visual Cognitive Neuroscience Laboratory. Bae’s research investigates the neural architectures of visual perception and memory, employing EEG decoding and psychophysics to track stimulus-specific information in the human brain. Bae develops computational models that examine how prior trial history and categorical frameworks introduce systematic biases into visual working memory. Their work aims to describe how the brain maintains a stable and coherent visual experience by integrating sensory inputs with internal goals and past experiences.",
+    "bio": "Gi-Yeul Bae is an Associate Professor in the Department of Psychology at Arizona State University and the principal investigator of the Visual Cognitive Neuroscience Laboratory. Bae’s research investigates the neural architectures of visual perception and memory, employing EEG decoding and psychophysics to track stimulus-specific information in the human brain. Bae develops computational models that examine how prior trial history and categorical frameworks introduce systematic biases into visual working memory. Their work aims to describe how the brain maintains a stable and coherent visual experience by integrating sensory inputs with internal goals and past experiences.",
     "research_direction": "Dr. Bae has recently been investigating the mechanisms underlying serial dependence in visual perception and working memory, focusing on how prior stimulus history systematically biases current judgments. Their recent work explores the tension between attractive and repulsive serial dependencies, probing whether these history effects are rooted in low-level sensory encoding—such as visual adaptation—or if they emerge from higher-order, post-perceptual decisional dynamics. To disentangle these processing stages, they employ continuous mouse-tracking and delayed-estimation paradigms, manipulating factors like working memory maintenance and attentional distraction to determine how they dictate the direction of the bias. Additionally, they are examining how these short-term perceptual history effects interact with long-term categorical priors, such as cardinal orientation biases, to balance sensory sensitivity with perceptual stability.",
     "papers": [
       {
@@ -15088,83 +15088,6 @@
     },
     "cluster": 0
   },
-  "0251": {
-    "id": "0251",
-    "name": "Hannah Block",
-    "institution": "Indiana University",
-    "department": "Department of Kinesiology",
-    "lab_name": "Sensorimotor Neurophysiology Lab",
-    "lab_url": "https://www.blocklab.net/",
-    "main_research_area": "human sensorimotor neurophysiology",
-    "bio": "Hannah J. Block is an Associate Professor whose research characterizes the neurophysiological substrates of human sensorimotor control and multisensory integration. Utilizing transcranial magnetic stimulation (TMS), functional magnetic resonance imaging (fMRI), and robotic behavioral assays, Block’s lab investigates how the central nervous system weights and realigns visual and proprioceptive inputs during motor learning. Their current research examines the mechanisms of visuo-proprioceptive recalibration and the spatial representation of the body to understand how these sensory updates influence motor skill retention. This work aims to connect sensory perception and motor control research to inform clinical strategies for stroke rehabilitation and the development of assistive technologies.",
-    "research_direction": "Dr. Block has recently been investigating how the brain integrates visual and proprioceptive information to guide motor control and dynamically update body representation. Their recent work explores the behavioral mechanisms of visuo-proprioceptive recalibration, specifically asking how the motor system adapts to spatial cue conflicts of varying abruptness and whether explicit cognitive awareness of these sensory mismatches alters perceptual realignment. To map the neural substrates of these multisensory processes, they use non-invasive brain stimulation (TMS and cTBS) to probe how somatosensory, parietal, and frontal cortices communicate sensory updates to the motor cortex during precision skill learning. Additionally, they utilize resting-state fMRI to examine how individual differences in sensory weighting—whether a person relies more heavily on vision or proprioception—are intrinsically reflected in whole-brain functional connectivity networks.",
-    "papers": [
-      {
-        "title": "Frontal and Parietal Contributions to Proprioception and Motor Skill Learning",
-        "abstract": "This study evaluated the distinct roles of the dorsolateral prefrontal cortex (DLPFC) and the supramarginal gyrus (SMG) in motor skill acquisition and proprioceptive processing during a spatially complex maze-tracing task. Using continuous theta-burst stimulation (cTBS) to induce transient focal inhibition, the research measured changes in movement accuracy and variability (RMSE) across various execution speeds on a Kinarm robotic manipulandum. While participants in all experimental conditions exhibited basic skill improvement, inhibition of the DLPFC or SMG selectively impaired the reduction of movement variability at high precision speeds. These results suggest that while low-level sensorimotor mechanisms support basic learning, higher-order proprioceptive regions in the posterior parietal cortex and cognitive control nodes in the frontal cortex are essential for managing the precision and complexity requirements of advanced motor skills.",
-        "year": "2025",
-        "venue": "bioRxiv",
-        "citations": "0",
-        "authors": "Manasi Wali, Hannah J. Block",
-        "url": "https://doi.org/10.1101/2025.10.29.685338"
-      },
-      {
-        "title": "Timing of responses to gradual and abrupt visuo-proprioceptive cue conflict with and without feedback",
-        "abstract": "The study investigated the temporal dynamics and magnitude of visuo-proprioceptive recalibration under gradual versus abrupt spatial offsets (70 mm) and analyzed the impact of performance feedback on these processes. Behavioral results indicated that although an abrupt conflict onset triggered near-instantaneous perceptual realignment, the final magnitude of recalibration reached a steady state comparable to that of a gradually introduced conflict. Furthermore, the presence of performance feedback significantly enhanced error-based motor adaptation in the indicator hand but did not appreciably shift the magnitude of perceptual recalibration in the target hand. These findings demonstrate that perceptual recalibration following a multisensory cue conflict is primarily driven by the magnitude of the discrepancy rather than the rate of onset, and that this process is largely distinct from the error-based mechanisms mediating motor adaptation.",
-        "year": "2025",
-        "venue": "Journal of Neurophysiology",
-        "citations": "0",
-        "authors": "Reshma Babu, Ramanpreet K. Matharu, Che-Wei Lo, Hannah J. Block",
-        "url": "https://doi.org/10.1152/jn.00493.2024"
-      },
-      {
-        "title": "Somatosensory cortex and body representation: Updating the motor system during a visuo-proprioceptive cue conflict",
-        "abstract": "This investigation explored the neural substrates through which multisensory body representation updates are communicated to the motor system. Utilizing transcranial magnetic stimulation (TMS) and continuous theta-burst stimulation (cTBS), the research established that short-latency afferent inhibition (SAI)—a marker of sensorimotor integration—is specifically modulated by proprioceptive recalibration during visuo-proprioceptive cue conflict. Experimental results showed that inhibiting the primary somatosensory cortex (S1), but not the primary motor cortex (M1), increased both proprioceptive variance and recalibration magnitude. These results support a model where multisensory updates to hand representation are conveyed via an S1-to-M1 pathway, suggesting that S1 activity reflects the outcome of higher-order multisensory computations rather than simple unisensory processing.",
-        "year": "2025",
-        "venue": "The Journal of Neuroscience",
-        "citations": "0",
-        "authors": "Jasmine L. Mirdamadi, Reshma Babu, Manasi Wali, Courtney R. Seigel, Anna Hsiao, Trevor Lee-Miller, Hannah J. Block",
-        "url": "https://doi.org/10.1523/JNEUROSCI.0181-25.2025"
-      },
-      {
-        "title": "Network dynamics for sensory prioritization: Functional connectivity related to individual sensory weighting of vision versus proprioception during upper limb control",
-        "abstract": "This research utilized resting-state functional MRI (rsfMRI) to examine how individual variations in sensory weighting—specifically the reliance on visual versus proprioceptive cues—are reflected in whole-brain functional connectivity. Using atlas-based and individually-localized regions of interest, the study quantified intrinsic connectivity between sensorimotor networks and other cortical nodes. The analysis revealed that individual sensory prioritization during upper limb tasks is significantly correlated with the strength of functional connectivity between sensorimotor regions and the default mode network (DMN). The results suggest that the DMN may facilitate the integration of unisensory signals with internal representations, thereby contributing to the unique sensory prioritization strategies observed across individuals during motor control.",
-        "year": "2025",
-        "venue": "bioRxiv",
-        "citations": "0",
-        "authors": "Kess L. Folco, Artur Pilacinski, Hu Cheng, Sharlene D. Newman, Manasi Wali, Reshma Babu, Hannah J. Block",
-        "url": "https://doi.org/10.1101/2025.07.31.667932"
-      },
-      {
-        "title": "The role of explicit knowledge in compensating for a visuo-proprioceptive cue conflict",
-        "abstract": "This study evaluated how conscious awareness of a spatial mismatch between visual and proprioceptive cues influences the magnitude of perceptual recalibration. Using a 70 mm forward shift of the visual cue, three groups were provided with varying levels of information, ranging from no awareness to explicit instructional and direct visual cues of the limb discrepancy. The findings indicated that explicit instructional knowledge alone was insufficient to override the brain's intrinsic belief in a 'common cause,' with recalibration magnitudes remaining largely consistent with uninformed controls. Significant reductions in recalibration were only observed when instructions were combined with redundant visual evidence of the mismatch, suggesting that the causal inference framework governing multisensory integration is robust against purely top-down cognitive instructions but sensitive to contradictory sensory evidence.",
-        "year": "2024",
-        "venue": "Experimental Brain Research",
-        "citations": "0",
-        "authors": "Anna Hsiao, Hannah J. Block",
-        "url": "https://doi.org/10.1007/s00221-024-06898-5"
-      }
-    ],
-    "primary_subfield": "Multisensory Processing",
-    "subfields": [
-      {
-        "subfield": "Multisensory Processing",
-        "score": 1.0
-      },
-      {
-        "subfield": "Perception & Action",
-        "score": 0.5
-      }
-    ],
-    "profile_pic": "hannah_block_0251.jpg",
-    "umap_projection": {
-      "x": 2.673875570297241,
-      "y": 1.1740813255310059
-    },
-    "cluster": 0,
-    "total_citations": 1696,
-    "h_index": 18
-  },
   "0252": {
     "id": "0252",
     "name": "Hans Op de Beeck",
@@ -15556,87 +15479,6 @@
     "cluster": 0,
     "total_citations": 2360,
     "h_index": 22
-  },
-  "0257": {
-    "id": "0257",
-    "name": "Hermann Bulf",
-    "institution": "University of Milano-Bicocca",
-    "department": "Department of Psychology",
-    "lab_name": "MinDevLab (Milano Developmental Mind & Brain Laboratory)",
-    "lab_url": "https://www.unimib.it/hermann-sergio-bulf",
-    "main_research_area": "infant developmental cognitive neuroscience",
-    "bio": "Hermann Sergio Bulf is a developmental cognitive neuroscientist and Professor of Developmental Psychology at the University of Milano-Bicocca. Bulf’s research investigates the early development of perceptual and cognitive capacities in infants, focusing on visual statistical learning, biological motion detection, and face processing. They employ methodologies such as eye-tracking and neural entrainment (EEG) to examine how newborns and infants extract structural regularities from their environment and how early-life predispositions, such as the preference for social cues, influence subsequent cognitive growth. Additionally, Bulf explores the ontogenetic foundations of magnitude processing, specifically the spatial mapping of numbers and size in the preverbal mind.",
-    "research_direction": "Dr. Bulf has recently been investigating the early development of social cognition, visual attention, and pattern learning in both typical and atypical populations. Their recent work explores how the developing brain processes complex socio-emotional cues, using high-density EEG to examine how infants integrate action kinematics with facial expressions, and physiological measures to assess newborn attention to vocal prosody. Additionally, they are employing eye-tracking and visual habituation paradigms to study how toddlers and preschoolers—including those at high risk for autism—extract abstract visual rules and statistical regularities from their environment. Beyond early infancy, they are also testing how affective social experiences like ostracism influence the flexibility of spatial attention and gaze-cueing behavior throughout childhood and adulthood.",
-    "papers": [
-      {
-        "title": "The infant brain combines emotional information from faces and action kinematics",
-        "abstract": "Using high-density EEG, this study investigated the neural mechanisms by which 6-month-old infants integrate emotional valence across different visual modalities: action kinematics and facial expressions. Infants were presented with dynamic point-light displays of actions (arm movements) conveying happy or angry emotions, followed by static happy or angry faces. ERP analyses focused on the N290 and P400 components to assess early and late stages of emotion processing. Results demonstrated that while the N290 differentiated between happy and angry facial expressions regardless of the preceding action, the P400 was specifically modulated by the congruency between action kinematics and faces. Specifically, happy faces elicited a larger P400 when preceded by incongruent (angry) kinematics compared to congruent (happy) kinematics, suggesting that bodily kinematics provide a salient social context that biases the subsequent processing of facial affect in the developing brain.",
-        "year": "2026",
-        "venue": "Journal of Experimental Child Psychology",
-        "citations": "0",
-        "authors": "Margaret Addabbo, Julia Mermier, Joanna Rutkowska, Marlene Meyer, Sabine Hunnius, Chiara Turati, Hermann Bulf",
-        "url": "https://doi.org/10.1016/j.jecp.2025.106406"
-      },
-      {
-        "title": "Visual statistical learning and social attention in neurotypical, minimally speaking and speaking autistic preschoolers",
-        "abstract": "This research utilized eye-tracking to evaluate the relationship between visual statistical learning (SL), social attention, and spoken language abilities in autistic and neurotypical preschoolers. Minimally speaking autistic children, speaking autistic children, and neurotypical peers were tested on their ability to extract statistical regularities from visual sequences (transitional probability tracking) and their preference for social vs. non-social stimuli. Contrary to hypotheses of core deficits in these domains, participants across all groups exhibited significant evidence of statistical learning and a robust preference for social stimuli. Furthermore, within-group analyses revealed no significant correlation between SL performance or social attention indexes and standardized measures of expressive language (Mullen Scales and Vineland-II). These findings suggest that language acquisition atypicalities in autism may be independent of basic statistical learning and social orienting mechanisms in the preschool period.",
-        "year": "2025",
-        "venue": "Scientific Reports",
-        "citations": "0",
-        "authors": "Roberta Bettoni, Margaret Addabbo, Chiara Pezzana, David Vagni, Ermanno Quadrelli, Chiara Turati, Hermann Bulf",
-        "url": "https://doi.org/10.1038/s41598-025-22854-x"
-      },
-      {
-        "title": "Newborns' attention to socio-emotional prosodic cues from voices",
-        "abstract": "The study examined the relative contribution of socio-emotional and linguistic prosodic information in capturing neonatal attention during the first days of life. Using a non-nutritive sucking (NNS) paradigm, newborns were exposed to a nursery rhyme presented in three conditions: narrated by a female actress (high linguistic and socio-emotional cues), hummed by the same actress (high socio-emotional, low linguistic), and synthesized by a computer (low socio-emotional, high linguistic). Results showed a significant inhibition of sucking behavior—an index of heightened attention—in response to the hummed and narrated conditions compared to the synthesized voice. Additionally, prenatal exposure to maternal speech and music was positively correlated with the strength of the attentional response. These findings indicate that the neonatal brain is predisposed to orient toward the socio-emotional dimensions of vocal stimuli, with this sensitivity being shaped by intrauterine auditory experience.",
-        "year": "2025",
-        "venue": "PLOS One",
-        "citations": "0",
-        "authors": "Valentina Silvestri, Silvia Polver, Maria Lorella Giannì, Angelo Petrelli, Matteo Santini, Lorenzo Colombo, Hermann Bulf",
-        "url": "https://doi.org/10.1371/journal.pone.0298016"
-      },
-      {
-        "title": "Ostracism affects children's behavioral reactivity and gaze cueing of attention",
-        "abstract": "This study explored the impact of self-experienced social exclusion (ostracism) on attentional processes and emotional reactivity in 6-year-old children, 10-year-old children, and adults. Participants engaged in an online ball-tossing game (Cyberball) where they were either included or ostracized, followed by a Posner-style gaze-cueing task. Results revealed that ostracism significantly modulated the gaze-cueing effect across all ages: ostracized individuals were slower to detect targets in incongruent locations compared to included participants, suggesting that social exclusion impairs the ability to flexibly reorient attention away from social signals. Behaviorally, both children and adults exhibited increased negative affect (disappointment) following ostracism. For 10-year-olds, ostracism also reduced target detection accuracy. The findings suggest that the cognitive and affective consequences of social exclusion on social signal processing emerge early in development and persist into adulthood.",
-        "year": "2025",
-        "venue": "PLOS One",
-        "citations": "0",
-        "authors": "Giada Basset, Alessia Testa, Chiara Turati, Ermanno Quadrelli, Hermann Bulf",
-        "url": "https://doi.org/10.1371/journal.pone.0320338"
-      },
-      {
-        "title": "Learning and generalization of repetition-based rules in toddlers at high-risk for Autism Spectrum Disorder",
-        "abstract": "This study investigated visual rule learning (RL)—the ability to extract and generalize abstract repetition-based patterns (e.g., ABA)—in toddlers at high familial risk (HR) for Autism Spectrum Disorder compared to neurotypical (NT) controls. Using a visual habituation-dishabituation paradigm, toddlers were exposed to sequences of geometric shapes following specific repetition rules. While NT toddlers successfully discriminated familiar from novel rules, providing evidence for rule abstraction and generalization, the HR group showed significant impairments in extracting these high-order regularities. These results suggest that deficits in the early mechanisms of rule induction may be a marker of the broader social-communicative profile associated with autism, potentially hindering the acquisition of structured systems like language and social conventions.",
-        "year": "2024",
-        "venue": "Psychological Research",
-        "citations": "0",
-        "authors": "Roberta Bettoni, Margaret Addabbo, Chiara Ghidina, Chiara Pezzana, David Vagni, Chiara Turati, Hermann Bulf",
-        "url": "https://doi.org/10.1007/s00426-024-01934-2"
-      }
-    ],
-    "primary_subfield": "Development",
-    "subfields": [
-      {
-        "subfield": "Development",
-        "score": 1.0
-      },
-      {
-        "subfield": "Social Perception",
-        "score": 0.5
-      },
-      {
-        "subfield": "Attention",
-        "score": 0.5
-      }
-    ],
-    "profile_pic": "hermann_bulf_0257.jpg",
-    "umap_projection": {
-      "x": 1.3809679746627808,
-      "y": -2.228240489959717
-    },
-    "cluster": 0,
-    "total_citations": 2621,
-    "h_index": 19
   },
   "0258": {
     "id": "0258",

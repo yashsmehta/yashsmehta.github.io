@@ -8535,7 +8535,7 @@
     "lab_url": "https://secure.web.emory.edu/psychology/dilks/main.php",
     "main_research_area": "high-level vision and cortical plasticity",
     "bio": "Daniel D. Dilks is an Associate Professor at Emory University, where their research explores the functional organization, development, and plasticity of the human visual cortex. Dilks investigates specialized cortical regions for processing scenes, faces, and objects, as well as how these systems emerge in childhood and reorganize following brain damage or sensory loss in adulthood. Using functional magnetic resonance imaging (fMRI), transcranial magnetic stimulation (TMS), and psychophysics, Dilks characterizes the neural mechanisms underlying visually guided navigation and categorization. Their recent studies examine the protracted development of scene-selective regions and the distinct cognitive systems involved in navigating environments versus recognizing places.",
-    "research_direction": "Dr. Dilks has recently been investigating the functional architecture and developmental trajectories of human spatial navigation systems. Using pediatric fMRI, multivoxel pattern analysis, and computational modeling, their recent work explores how distinct cortical networks support different navigational modes, contrasting map-based spatial memory in the retrosplenial complex with visually guided navigation in the occipital place area. Specifically, they are examining the timeline of these neural representations in young children to understand why landmark location encoding and scene categorization emerge early, whereas mechanisms for active navigation—such as processing left-right orientation, \"walking\" visual motion, and cortical signal-to-noise ratios—undergo protracted development. Additionally, they are mapping the broader dorsal stream network by investigating a newly identified scene-selective region in the superior parietal lobule and its role in processing first-person ego-motion.",
+    "research_direction": "Dr. Dilks has recently been investigating the functional architecture and developmental trajectories of human scene recognition and navigation systems. Using pediatric fMRI, multivoxel pattern analysis, and computational modeling, their recent work explores how distinct cortical networks support different computational goals, contrasting scene categorization in the parahippocampal place area, map-based navigation in the retrosplenial complex, and visually-guided navigation in the occipital place area. Specifically, they are examining the developmental timeline of these neural representations in infants and young children to understand why scene categorization and map-based navigation emerge early, whereas visually-guided navigation—moving through the immediately visible environment—undergoes such protracted development.",
     "papers": [
       {
         "title": "Two cortical navigation systems and their differential development",
@@ -55059,8 +55059,26 @@
     "lab_url": "https://harvardlds.org/",
     "main_research_area": "Developmental cognitive neuroscience",
     "bio": "Elizabeth Spelke is a researcher in cognitive development who formulated the core knowledge theory, which posits that infants possess innate systems for representing objects, agents, and number. Their methodology utilizes behavioral tasks, such as habituation and looking-time paradigms, to map the cognitive foundations of human knowledge. Spelke’s current research focuses on how these systems interact with language and symbolic thought to facilitate capacities for formal mathematics and abstract reasoning.",
-    "research_direction": "Dr. Spelke's recent work explores the developmental origins and boundary conditions of foundational cognitive systems across social, mathematical, and perceptual domains. Using anticipatory looking and reaching paradigms, they have recently been examining early social evaluation to determine how pre-verbal infants and toddlers use interactive cues like imitation or the physical costs of a task to infer social affiliations and identify prosocial helpers. In the domain of numerical cognition, their research investigates the representational formats of mathematical knowledge by testing whether domain-specific arithmetic skills acquired in real-world market environments successfully transfer to abstract, school-based learning contexts. Additionally, they are evaluating broader theoretical frameworks of the developing mind, synthesizing interdisciplinary perspectives on innate \"core knowledge\" systems and reviewing how historical ecological approaches to perception continue to influence the study of biological and artificial intelligence.",
+    "research_direction": "Dr. Spelke studies the core knowledge systems that infants bring to learning, and how they support children's later mastery of mathematics and other abstract knowledge. Building on the work summarized in What Babies Know, the lab now carries developmental cognitive science into field settings in low- and middle-income countries. One line of work develops an open battery of laboratory-based cognitive tests for children aged 1 to 7, validated with more than 1,400 children in Ghana, with numeracy and spatial reasoning tasks proving especially reliable. Another designs and tests, in large randomized experiments, classroom math games that link children's intuitive sense of number and geometry to school mathematics, aimed at children at high risk of falling behind. Related work in India shows that arithmetic skills children learn in markets and in school do not transfer from one setting to the other.",
     "papers": [
+      {
+        "title": "Developing an Open Multi-Domain Assessment Battery Using Laboratory Tasks for Children in Low- and Middle-Income Countries",
+        "abstract": "Randomized evaluations of early-childhood interventions in low- and middle-income countries need assessments that track development before school entry, often in noisy outdoor settings. Drawing on developmental cognitive science, the authors built an open battery of tasks adapted from laboratory paradigms, targeting abilities that emerge early across cultures and predict related adult skills. Given to 1,435 Ghanaian children at ages 1.5, 3.5, 5.5 and 7.5 years, the tasks were internally consistent and above chance from age 3.5 and predicted later performance. Validity was strong for numeracy and spatial reasoning as well as language and executive function, but weak for infant tasks and for intuitive physics and mental-state reasoning. Materials and data are freely shared.",
+        "year": "2026",
+        "venue": "Open Mind: Discoveries in Cognitive Science",
+        "citations": "0",
+        "authors": "Joseph R. Coffey, Elizabeth S. Spelke",
+        "url": "https://doi.org/10.1162/opmi.a.369"
+      },
+      {
+        "title": "Scaling cognitive science with classroom games for learning mathematics",
+        "abstract": "Two randomized evaluations tested math games for children in low-income neighborhoods of Delhi, India. The four games, played in social groups, link early-emerging, universally intuitive concepts of number and geometry to the mathematical language, symbols and operations taught in Delhi government schools. In 231 NGO-run preschool classrooms (1,986 children), the games improved children's mathematics both right after the intervention and a year later, after their first year of primary school. In 141 government kindergarten and first-grade classrooms (2,828 children), the games stayed effective when played cooperatively in larger groups led by regular teachers during math time, with no extra staff, showing how basic research on mathematical intuitions can yield ready-to-scale interventions.",
+        "year": "2026",
+        "venue": "PsyArXiv (preprint)",
+        "citations": "0",
+        "authors": "Joshua T. Dean, Moira R. Dillon, Esther Duflo, Harini Kannan, Elizabeth S. Spelke",
+        "url": "https://doi.org/10.31234/osf.io/mnkwd_v2"
+      },
       {
         "title": "Children's arithmetic skills do not transfer between applied and academic mathematics",
         "abstract": "This field investigation evaluated the transferability of arithmetic competence between vocational and academic domains in children working in market environments in India (n = 1,436). The experimental results demonstrated that while these children effectively executed complex mental arithmetic during real-world transactions and in contextualized verbal problems, they exhibited a significant failure in solving isomorphic arithmetic problems when presented in the abstract format standard to school-based curricula. Conversely, a control group of non-working school children (n = 471) performed more accurately on abstract problems but failed to solve applied market-math problems. These findings underscore a critical lack of transfer between intuitive, domain-specific arithmetic acquired through practice and formal, symbolic mathematical systems, suggesting that educational curricula must bridge these disparate representational formats.",
@@ -55069,24 +55087,6 @@
         "citations": "0",
         "authors": "Abhijit V. Banerjee, Swati Bhattacharjee, Raghabendra Chattopadhyay, Esther Duflo, Alejandro J. Ganimian, Kailash Rajah, Elizabeth S. Spelke",
         "url": "https://doi.org/10.1038/s41586-024-08502-w"
-      },
-      {
-        "title": "Infants use imitation but not comforting or social synchrony to evaluate those in social interactions",
-        "abstract": "To identify the specific social cues diagnostic of affiliation and prosocial value in early development, this research presented pre-reaching infants with dyadic social interactions involving imitation, comforting, or social synchrony. Utilizing anticipatory looking and manual reaching paradigms, the studies tested whether infants use these cues to predict future social approach and to form social preferences. The results indicated that while infants robustly used imitative behavior to infer social relationships and preferred imitators over non-imitators, they did not make similar inferences or display preferences based on comforting or synchronized movements. These findings suggest that imitation serves as a privileged cue in the core social cognition system for representing social relationships and evaluating social partners.",
-        "year": "2025",
-        "venue": "Proceedings of the 47th Annual Meeting of the Cognitive Science Society (CogSci 2025)",
-        "citations": "0",
-        "authors": "Ashley Thomas, Rebecca Saxe, Elizabeth S. Spelke",
-        "url": "https://escholarship.org/uc/item/52w7z43h"
-      },
-      {
-        "title": "Toddlers prefer agents who help those facing harder tasks",
-        "abstract": "This study investigated whether 16-month-old toddlers (N = 94) utilize cost-benefit analysis in their social evaluation of third-party helping actions. Across three experiments, the researchers tested whether toddlers differentiate between helpers based on the physical costs faced by the beneficiaries, distinguishing between agent-general costs (task difficulty) and agent-specific costs (individual competence). The findings reveal that toddlers selectively prefer agents who provide aid to individuals facing higher costs, whether due to the inherent difficulty of the task or the limited abilities of the beneficiary. This provides evidence that early social-evaluative mechanisms are integrated with naive utility calculus, allowing toddlers to prioritize prosocial actors who provide help where the need—defined as the required physical work—is greatest.",
-        "year": "2024",
-        "venue": "Open Mind: Discoveries in Cognitive Science",
-        "citations": "0",
-        "authors": "Brandon M. Woo, Shari Liu, Hyowon Gweon, Elizabeth S. Spelke",
-        "url": "https://doi.org/10.1162/opmi_a_00129"
       },
       {
         "title": "Response to commentaries on What Babies Know",
@@ -55112,10 +55112,6 @@
       {
         "subfield": "Development",
         "score": 1.0
-      },
-      {
-        "subfield": "Social Perception",
-        "score": 0.5
       },
       {
         "subfield": "Object Recognition",
@@ -59870,5 +59866,163 @@
     "cluster": 0,
     "total_citations": 15632,
     "h_index": 26
+  },
+  "E370": {
+    "id": "E370",
+    "name": "Ashley J. Thomas",
+    "institution": "Harvard University",
+    "department": "Department of Psychology",
+    "lab_name": "Thomas Lab",
+    "lab_url": "https://sites.harvard.edu/harvardlds/our-labs/thomas-lab/",
+    "main_research_area": "infant and child social cognition",
+    "bio": "Ashley J. Thomas is an Assistant Professor of Psychology at Harvard University, where Thomas directs the Thomas Lab within the Harvard Laboratory for Developmental Studies. The lab studies how infants and children make sense of the social world, including how they learn about social relationships, social hierarchies and networks, and how demographics shape their understanding of these concepts. Thomas has proposed that humans have core knowledge of social relationships, allowing even infants to recognize different kinds of relationships and judge how strong they are.",
+    "research_direction": "Dr. Thomas studies how infants and children make sense of the social world, especially the relationships that connect the people around them. Proposing that humans have core knowledge of social relationships, the lab asks how even preverbal infants sort relationships into kinds, such as communal sharing or authority ranking, and judge how strong they are. Studies show that infants and toddlers treat imitation as a sign of a close relationship and expect imitators and their targets to respond to each other's distress, and that infants may understand caregiving as intimate, altruistic and asymmetric. With age, children link their ideas about minds and relationships, inferring by about six that people who know each other's goals and desires are close. Ongoing work examines how children learn about social hierarchies, networks and families.",
+    "papers": [
+      {
+        "title": "Developing Intuitions That Close Friends Know the Content of Each Other's Minds",
+        "abstract": "Close relationships depend on representing partners' minds accurately, but little is known about whether children link mental-state reasoning to relationships. In three experiments, 5- to 9-year-olds, but not 4-year-olds, inferred that characters who engage in affective touch are socially closer and know each other's goals and desires, and 6- to 9-year-olds inferred that characters who are correct about each other's minds are close. Being correct about external states of the world, or about observable features such as an outfit, did not signal closeness. By about age six, children integrate intuitive theories of mind and of relationships to judge whether, and how strongly, people are connected.",
+        "year": "2025",
+        "venue": "Open Mind: Discoveries in Cognitive Science",
+        "citations": "0",
+        "authors": "Brandon M. Woo, Emma Yu, Megan Richardson, Ashley J. Thomas",
+        "url": "https://doi.org/10.1162/opmi.a.22"
+      },
+      {
+        "title": "Infants use imitation but not comforting or social synchrony to evaluate those in social interactions",
+        "abstract": "To identify the specific social cues diagnostic of affiliation and prosocial value in early development, this research presented pre-reaching infants with dyadic social interactions involving imitation, comforting, or social synchrony. Utilizing anticipatory looking and manual reaching paradigms, the studies tested whether infants use these cues to predict future social approach and to form social preferences. The results indicated that while infants robustly used imitative behavior to infer social relationships and preferred imitators over non-imitators, they did not make similar inferences or display preferences based on comforting or synchronized movements. These findings suggest that imitation serves as a privileged cue in the core social cognition system for representing social relationships and evaluating social partners.",
+        "year": "2025",
+        "venue": "Proceedings of the 47th Annual Meeting of the Cognitive Science Society (CogSci 2025)",
+        "citations": "0",
+        "authors": "Ashley Thomas, Rebecca Saxe, Elizabeth S. Spelke",
+        "url": "https://escholarship.org/uc/item/52w7z43h"
+      },
+      {
+        "title": "How Do Infants Experience Caregiving?",
+        "abstract": "Nearly all of infants' early experience and learning happens within caregiving relationships. This essay outlines what an intuitive theory of care might look like, with a distinctive structure that sets caregiving apart from other social relationships, and reviews research on how infants understand people and relationships. It proposes that, even before language, infants may understand care relationships as intimate, altruistic and asymmetric, citing findings that infants distinguish intimate relationships from merely positive ones and hold asymmetric expectations about responses to distress between large and small individuals, and it considers the implications for how societies structure early caregiving.",
+        "year": "2025",
+        "venue": "Daedalus",
+        "citations": "0",
+        "authors": "Ashley J. Thomas, Christina M. Steele, Alison Gopnik, Rebecca R. Saxe",
+        "url": "https://doi.org/10.1162/daed_a_02121"
+      },
+      {
+        "title": "Cognitive representations of social relationships and their developmental origins",
+        "abstract": "Drawing on infant psychology, this target article proposes that humans have core knowledge of social relationships. These representations would let even infants categorize relationships into models from relational models theory (communal sharing, authority ranking or equality matching) and compute their strength from factors such as expected future interaction, obligations and commitment. The article reviews the supporting evidence and weighs alternative explanations.",
+        "year": "2024",
+        "venue": "Behavioral and Brain Sciences",
+        "citations": "0",
+        "authors": "Ashley J. Thomas",
+        "url": "https://doi.org/10.1017/S0140525X24001328"
+      },
+      {
+        "title": "Infants Infer Social Relationships Between Individuals Who Engage in Imitative Social Interactions",
+        "abstract": "When infants watch social interactions, it is unclear whether their predictions rest on individuals' dispositions or on the relationships between them. In studies with 12-month-olds and 16- to 18-month-old toddlers (N = 188), infants expected both imitators and the targets of imitation to respond to their partner's distress, but these expectations did not carry over to interactions with a new partner, indicating learning about relationships rather than dispositions. Infants made no such predictions about responses to laughter, suggesting imitation signals a specific kind of relationship.",
+        "year": "2024",
+        "venue": "Open Mind: Discoveries in Cognitive Science",
+        "citations": "0",
+        "authors": "Vanessa Kudrnova, Elizabeth S. Spelke, Ashley J. Thomas",
+        "url": "https://doi.org/10.1162/opmi_a_00124"
+      }
+    ],
+    "primary_subfield": "Social Perception",
+    "subfields": [
+      {
+        "subfield": "Social Perception",
+        "score": 1.0
+      },
+      {
+        "subfield": "Development",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "ashley_j_thomas_E370.jpg",
+    "umap_projection": {
+      "x": 1.5229823589324951,
+      "y": -2.4130632877349854
+    },
+    "cluster": 0,
+    "total_citations": 810,
+    "h_index": 12
+  },
+  "E371": {
+    "id": "E371",
+    "name": "Moira R. Dillon",
+    "institution": "New York University",
+    "department": "Department of Psychology",
+    "lab_name": "Lab for the Developing Mind",
+    "lab_url": "https://www.labdevelopingmind.com/",
+    "main_research_area": "development of geometric and spatial cognition",
+    "bio": "Moira R. Dillon is an Assistant Professor of Psychology at New York University, where Dillon directs the Lab for the Developing Mind. The lab uses cognitive, developmental and computational approaches to study the origin and development of uniquely human cognition, from the basic sensitivities of infants to children's untutored use of symbols and language to the high-level concepts of adults. Current areas of investigation include early knowledge about objects, people and places; symbolic and abstract reasoning about geometry; pictorial and linguistic production; and the relation between human and machine intelligence, pursued with partners including the National Museum of Mathematics, Lookit and J-PAL.",
+    "research_direction": "Dr. Dillon studies the early knowledge infants and children have about objects, places and people, and how it grounds uniquely human achievements such as abstract geometry. Under the Wanderers Hypothesis, the lab argues that human geometry is rooted in navigation-like processes shared with other animals, which language lets people apply flexibly: adults asked to reason about abstract geometry respond as they do when tracking a navigating agent, not when completing an object's shape. Related work finds an object-over-place bias when children and adults learn new nouns, paralleling how drawings favor object shape over surrounding space. With machine-learning collaborators, the lab also builds infant-inspired benchmarks, showing that infants expect agents to act efficiently toward goal objects where neural networks fail, and asks when infants see imitation as social.",
+    "papers": [
+      {
+        "title": "The cognitive origins of geometry",
+        "abstract": "Geometry is often treated as the model of abstract thought, and a dominant view holds that a specialized, modular language of thought underlies humans' unique geometric abilities. This review instead proposes the Wanderers Hypothesis for Geometry: human geometry is rooted mainly in navigation-like mental processes shared with nonhuman animals that approximate Euclidean geometry. Drawing on infant experiments, cross-cultural studies and cognitive modeling, it argues that natural language gives humans access to these primitive processes, supporting their flexible use and our capacity for formal learning.",
+        "year": "2026",
+        "venue": "Trends in Cognitive Sciences",
+        "citations": "0",
+        "authors": "Moira R. Dillon",
+        "url": "https://doi.org/10.1016/j.tics.2026.01.005"
+      },
+      {
+        "title": "15-Month-Olds' Understanding of Imitation in Social and Instrumental Contexts",
+        "abstract": "Imitation serves social engagement, affiliation and learning from others, but its social and instrumental goals are usually intertwined. Using minimal, tightly controlled visual displays, the study asked whether 15-month-olds see the same simple imitative actions shared by two agents as social or nonsocial depending on intentional cues such as obstacles, object goals and efficient, causally effective action. Infants attributed social value to imitation only when such intentional cues were absent, which may be a signature of early understanding of imitation, and the authors propose systematic sets of simple scenarios for probing early social knowledge and building human-like AI.",
+        "year": "2025",
+        "venue": "Infancy",
+        "citations": "0",
+        "authors": "Shannon Yasuda, Wenjie Li, Deisy Martinez, Brenden M. Lake, Moira R. Dillon",
+        "url": "https://doi.org/10.1111/infa.70002"
+      },
+      {
+        "title": "Seeing the Forest but Naming the Trees: An Object-Over-Place Bias in Learning Noun Labels",
+        "abstract": "Drawings prioritize small-scale object shape over the large-scale navigable places where objects sit. Across six experiments, adults and 3- to 4-year-olds extended novel nouns in labeling or prepositional phrases, or simply matched pictures, for scenes pairing a room with a block inside or, as a figure-ground control, an open container with a smaller block. Adults showed a specific object-over-place bias when extending noun labels and when matching, but not after prepositions; young children showed it only when extending noun labels. Spatial domains may thus confer foundational word-learning biases that change over development, like the shape bias.",
+        "year": "2024",
+        "venue": "Open Mind: Discoveries in Cognitive Science",
+        "citations": "0",
+        "authors": "Yi Lin, Moira R. Dillon",
+        "url": "https://doi.org/10.1162/opmi_a_00154"
+      },
+      {
+        "title": "We are wanderers: Abstract geometry reflects spatial navigation",
+        "abstract": "In two preregistered experiments, adults watched short videos of two points and two line segments forming an open figure, described with sparse, minimally different language that set up different spatial contexts, and then clicked to complete a triangle, place an object's next corner, mark an agent's next stop, or place the next point on an abstract surface. Responses reflected very different geometric representations across contexts, preserving distance and direction for open navigation paths but length and angle for closed shapes, while the navigation and abstract contexts elicited remarkably similar geometry. Language may isolate ancient geometric representations used for navigation and object recognition, and uniquely human abstract geometry may originate in representations for navigating the physical world.",
+        "year": "2024",
+        "venue": "Journal of Experimental Psychology: General",
+        "citations": "0",
+        "authors": "Yi Lin, Moira R. Dillon",
+        "url": "https://doi.org/10.1037/xge0001504"
+      },
+      {
+        "title": "Commonsense psychology in human infants and machines",
+        "abstract": "Eleven-month-old infants and state-of-the-art learning-driven neural networks were tested on the Baby Intuitions Benchmark (BIB), a suite of tasks requiring high-level predictions about the causes of agents' actions. Infants expected agents' actions to be directed toward objects rather than locations and expected agents to act efficiently toward goals, whereas the neural-network models failed to capture this knowledge. The benchmark offers a framework for characterizing infants' commonsense psychology and for testing whether human-like AI can be built from the foundations proposed by cognitive and developmental theories.",
+        "year": "2023",
+        "venue": "Cognition",
+        "citations": "0",
+        "authors": "Gala Stojnić, Kanishk Gandhi, Shannon Yasuda, Brenden M. Lake, Moira R. Dillon",
+        "url": "https://doi.org/10.1016/j.cognition.2023.105406"
+      }
+    ],
+    "primary_subfield": "Development",
+    "subfields": [
+      {
+        "subfield": "Development",
+        "score": 1.0
+      },
+      {
+        "subfield": "Scene Perception",
+        "score": 0.5
+      },
+      {
+        "subfield": "Social Perception",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "moira_r_dillon_E371.jpg",
+    "umap_projection": {
+      "x": 1.3507205247879028,
+      "y": -2.4666194915771484
+    },
+    "cluster": 0,
+    "total_citations": 842,
+    "h_index": 14
   }
 }

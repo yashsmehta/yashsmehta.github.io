@@ -22603,34 +22603,43 @@
     "lab_url": "https://vital-kolab.org/",
     "main_research_area": "visual neuroscience and computational modeling",
     "bio": "Kohitij Kar is an Assistant Professor in the Department of Biology and a Canada Research Chair in Visual Neuroscience at York University. Kar’s research functions at the intersection of primate neurophysiology and artificial intelligence, focusing on the recurrent neural mechanisms underlying core object recognition in the ventral stream. Utilizing large-scale electrophysiology, behavioral assays, and deep learning, they develop computational models to analyze the relationship between biological and artificial vision. Their work investigates how these neural frameworks can be used to understand visual cognition and to model neurodevelopmental disorders such as autism.",
-    "research_direction": "Dr. Kar has recently been investigating the neural computations underlying high-level visual perception, focusing on how the primate inferior temporal (IT) cortex represents complex features like image memorability, facial expressions, and scene context. Their recent work explores the mechanisms of cortical plasticity and naturalistic object recognition by directly comparing behavioral and electrophysiological data from macaques with state-of-the-art artificial neural network models. Specifically, they are examining whether distinct visual dimensions—such as face identity versus expression, or categorical object features versus intrinsic image memorability—are multiplexed within shared neural subspaces or handled by dissociable circuits. To support these large-scale psychophysical and modeling efforts, Dr. Kar is also developing open-source, portable home-cage testing kiosks that facilitate high-throughput, low-stress behavioral experiments in nonhuman primates.",
+    "research_direction": "Dr. Kar builds and tests brain-like neural network models of how the primate inferior temporal (IT) cortex supports visual recognition. Combining macaque electrophysiology, large-scale behavior and deep networks, the lab asks not only how well models predict IT responses but also how well IT predicts the models, revealing network units with no counterpart in the brain. Recent work shows that learning new objects reshapes IT in ways well captured by gradient-based optimization, that facial expression and identity are coded along partially overlapping IT dimensions, and that masked-image tests can reveal which model explanations match human and monkey recognition strategies. Low-cost home-cage kiosks make this high-throughput primate behavior practical.",
     "papers": [
       {
-        "title": "Distinct contributions of memorability and object recognition to the representational goals of the macaque inferior temporal cortex",
-        "abstract": "This study evaluates whether image memorability—a metric describing the intrinsic likelihood of a stimulus being remembered—and object identity are represented through distinct or multiplexed neural mechanisms in the macaque inferior temporal (IT) cortex. By recording large-scale neural population activity during delayed match-to-sample object discrimination, the researchers characterized the neural geometry of these features. The results indicate that IT neurons exhibit specific tuning for memorability that is statistically dissociable from categorization-related signals. These findings suggest that the primate ventral stream is optimized not only for category-level discrimination but also for the representational prioritization of memorable stimuli, potentially facilitating downstream consolidation and cognitive processing.",
-        "year": "2025",
-        "venue": "bioRxiv",
+        "title": "Reverse predictivity for bidirectional comparison of neural networks and biological brains",
+        "abstract": "Models of the primate visual system are usually judged by forward predictivity, how well their features predict neural responses. This work adds the reverse test, how well macaque inferior temporal (IT) cortex responses predict a network's unit activations. Networks that predict IT well (around 50% explained variance) often still contain many units that IT activity cannot predict, whereas monkey-to-monkey mappings are symmetric, so the asymmetry reflects a genuine representational mismatch. The metric separates 'common' units shared with IT, which are behaviourally relevant and generalize across species, from 'unique' units, and depends on feature dimensionality, training objective and adversarial robustness, offering a conservative guide toward more brain-like networks.",
+        "year": "2026",
+        "venue": "Nature Machine Intelligence",
         "citations": "0",
-        "authors": "Soroush Ziaee, Ram Ahuja, Sabine Muzellec, Ezgi Fide, R. Shayna Rosenbaum, Kohitij Kar",
-        "url": "https://doi.org/10.1101/2025.10.06.680822"
+        "authors": "Sabine Muzellec, Kohitij Kar",
+        "url": "https://doi.org/10.1038/s42256-026-01204-0"
       },
       {
-        "title": "Facial expression discrimination emerges from neural subspaces shared with detection and identity",
-        "abstract": "Deciphering the neural computations underlying high-level face perception, including detection, identity recognition, and expression discrimination, remains a core challenge in visual neuroscience. Using rhesus macaques to model human facial processing, this study employs electrophysiological recordings and computational modeling to analyze the representational structure of the ventral stream. The researchers found that facial expression information is not localized to modular circuits but emerges from distributed neural population activity. Specifically, expression discrimination is supported by neural subspaces that are shared with face detection and identity manifolds. This integrated representational geometry suggests that the primate visual system employs a unified manifold to multiplex various social and categorical dimensions required for robust face perception.",
-        "year": "2025",
-        "venue": "bioRxiv",
+        "title": "Facial expression discrimination emerges from partially overlapping neural subspaces of detection and identity",
+        "abstract": "Rhesus macaques were first shown to be a good model of human facial expression discrimination, closely matching human behavior across six expressions. Artificial neural network models of the ventral stream were then tested as hypotheses for the monkeys' image-level behavior: broadly trained networks matched it better than face-specialized ones, and the best-matching networks were those whose internal representations most resembled macaque inferior temporal (IT) geometry. Neural recordings showed that early IT responses best predicted expression judgments, with identity and expression information coexisting along partially overlapping dimensions.",
+        "year": "2026",
+        "venue": "Nature Communications",
         "citations": "0",
-        "authors": "Maren H. Wehrheim, Shirin Taghian Alamooti, Hamidreza Ramezanpour, Kohitij Kar",
-        "url": "https://doi.org/10.1101/2025.08.25.672186"
+        "authors": "Maren Wehrheim, Shirin Taghian Alamooti, Hamidreza Ramezanpour, Kohitij Kar",
+        "url": "https://doi.org/10.1038/s41467-026-76106-1"
       },
       {
-        "title": "Hierarchical Optimization predicts Plasticity in the Macaque Inferior Temporal Cortex following Object Training",
-        "abstract": "This research investigates how task-specific plasticity in the macaque inferior temporal (IT) cortex supports the learning of new object discrimination tasks. By comparing IT neural activity in task-naive monkeys and those trained to perform specific discriminations, the authors observed that training increases object selectivity, linear separability, and object invariance. To provide a mechanistic account of these changes, the study utilized sensory-computable, mechanistic, architecturally referenced, and testable (SMART) artificial neural network (ANN) models of the ventral stream. Simulations demonstrated that gradient-based, performance-optimizing updates within a hierarchical visual model effectively predict the observed empirical changes in neural population metrics and behavioral performance, suggesting that hierarchical optimization is a viable model for cortical plasticity in adult primates.",
-        "year": "2024",
-        "venue": "bioRxiv",
+        "title": "Masked attribution-based probing of strategies as a computational framework to align human, non-human primate, and model explanations",
+        "abstract": "Which image features do primates rely on to recognize objects, and can explanation methods from artificial neural networks reveal them? Behavioral methods such as Bubbles measure diagnostic features directly but need extensive psychophysics, while network explanation maps are cheap but disagree with one another and lack biological validation. MAPS turns explanation maps into minimal masked images and tests whether these images preserve image-by-image recognition behavior. It recovered ground-truth strategy similarity in simulation and, applied to 56 humans and two macaques, identified the explanation methods best aligned with biological vision, with validity comparable to Bubbles at far lower experimental cost.",
+        "year": "2026",
+        "venue": "Communications Psychology",
+        "citations": "0",
+        "authors": "Sabine Muzellec, Yousif Kashef Alghetaa, Simon Kornblith, Kohitij Kar",
+        "url": "https://doi.org/10.1038/s44271-026-00502-y"
+      },
+      {
+        "title": "Hierarchical optimization predicts plasticity in the macaque inferior temporal cortex following object training",
+        "abstract": "Comparing inferior temporal (IT) cortex in macaques trained to discriminate new objects with task-naive animals, trained monkeys showed greater object selectivity, better linear separability between objects and more object-invariant representations. Anatomically mapped neural network models of the ventral stream trained with different learning algorithms showed that gradient-based, performance-optimizing updates best reproduced these changes. The models also predicted new training effects in IT, including changes independent of object identity and in IT's alignment with behavior, suggesting that ventral stream plasticity follows task-optimization principles well approximated by gradient descent.",
+        "year": "2026",
+        "venue": "Nature Communications",
         "citations": "0",
         "authors": "Lynn K. A. Sörensen, James J. DiCarlo, Kohitij Kar",
-        "url": "https://doi.org/10.1101/2024.12.27.630539"
+        "url": "https://doi.org/10.1038/s41467-026-74816-0"
       },
       {
         "title": "Low-cost, portable, easy-to-use kiosks to facilitate home-cage testing of nonhuman primates during vision-based behavioral tasks",
@@ -22640,15 +22649,6 @@
         "citations": "0",
         "authors": "Hamidreza Ramezanpour, Christopher Giverin, Kohitij Kar",
         "url": "https://doi.org/10.1152/jn.00397.2023"
-      },
-      {
-        "title": "The impact of scene context on visual object recognition: comparing humans, monkeys, and computational models",
-        "abstract": "This study quantifies the effect of scene context on object recognition by comparing the behavioral biases of humans and macaques with those of state-of-the-art computational models. Utilizing context-level (B. C1) and image-level (B. I1) behavioral signatures, the researchers observed that monkeys exhibit context-driven effects, such as congruency biases, that closely match human psychophysical patterns. However, standard feedforward artificial neural networks (ANNs) and neural responses recorded from the macaque IT cortex (which were not explicitly trained in context) failed to fully explain the shared behavioral variance between the two species. This identifies a critical explanatory gap in current models of the ventral stream regarding the integration of contextual and relational information during naturalistic object recognition.",
-        "year": "2024",
-        "venue": "bioRxiv",
-        "citations": "0",
-        "authors": "Sara Djambazovska, Anaa Zafer, Hamidreza Ramezanpour, Gabriel Kreiman, Kohitij Kar",
-        "url": "https://doi.org/10.1101/2024.05.27.596127"
       }
     ],
     "primary_subfield": "Object Recognition",

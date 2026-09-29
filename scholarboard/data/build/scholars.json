@@ -3111,16 +3111,16 @@
         "score": 0.9201
       },
       {
-        "id": "0660",
-        "score": 0.9174
-      },
-      {
         "id": "0151",
         "score": 0.9169
       },
       {
         "id": "0361",
         "score": 0.9161
+      },
+      {
+        "id": "0692",
+        "score": 0.9156
       }
     ]
   },
@@ -10989,12 +10989,12 @@
         "score": 0.9039
       },
       {
-        "id": "0660",
+        "id": "0085",
         "score": 0.9036
       },
       {
-        "id": "0085",
-        "score": 0.9036
+        "id": "0132",
+        "score": 0.9029
       }
     ]
   },
@@ -11681,10 +11681,6 @@
         "score": 0.9288
       },
       {
-        "id": "0660",
-        "score": 0.9284
-      },
-      {
         "id": "0369",
         "score": 0.9271
       },
@@ -11695,6 +11691,10 @@
       {
         "id": "0292",
         "score": 0.9258
+      },
+      {
+        "id": "0190",
+        "score": 0.9256
       }
     ]
   },
@@ -12045,16 +12045,16 @@
         "score": 0.9295
       },
       {
-        "id": "0660",
-        "score": 0.9258
-      },
-      {
         "id": "0331",
         "score": 0.9254
       },
       {
         "id": "0568",
         "score": 0.9229
+      },
+      {
+        "id": "0661",
+        "score": 0.9227
       }
     ]
   },
@@ -17287,7 +17287,7 @@
         "score": 0.9222
       },
       {
-        "id": "0660",
+        "id": "0592",
         "score": 0.9215
       }
     ]
@@ -23890,12 +23890,12 @@
         "score": 0.9232
       },
       {
-        "id": "0660",
-        "score": 0.9209
-      },
-      {
         "id": "0436",
         "score": 0.92
+      },
+      {
+        "id": "0292",
+        "score": 0.9167
       }
     ]
   },
@@ -26495,10 +26495,6 @@
         "score": 0.9258
       },
       {
-        "id": "0660",
-        "score": 0.9257
-      },
-      {
         "id": "0369",
         "score": 0.9248
       },
@@ -26513,6 +26509,10 @@
       {
         "id": "0661",
         "score": 0.9212
+      },
+      {
+        "id": "0692",
+        "score": 0.9207
       }
     ]
   },
@@ -40023,10 +40023,6 @@
         "score": 0.9288
       },
       {
-        "id": "0660",
-        "score": 0.9265
-      },
-      {
         "id": "0661",
         "score": 0.9262
       },
@@ -40049,6 +40045,10 @@
       {
         "id": "0331",
         "score": 0.9216
+      },
+      {
+        "id": "0264",
+        "score": 0.92
       }
     ]
   },
@@ -59841,122 +59841,6 @@
       }
     ]
   },
-  "0660": {
-    "id": "0660",
-    "name": "Thomas B. Christophel",
-    "institution": "Humboldt-Universität zu Berlin",
-    "country": "Germany",
-    "department": "Department of Psychology",
-    "lab_name": "Distributed Cognition and Memory Group (DisCo Lab)",
-    "lab_url": "https://discolab.eu/",
-    "main_research_area": "distributed cognition and working memory",
-    "bio": "Thomas B. Christophel heads the Distributed Cognition and Memory Group at Humboldt-Universität zu Berlin, where their research focuses on the neural architectures supporting short-term information storage. Christophel utilizes high-resolution functional magnetic resonance imaging (fMRI) and multivariate pattern analysis (MVPA) to decode and map content-specific representations across the human brain. Their work demonstrates the distributed nature of working memory, showing that sensory, parietal, and frontal regions—such as the frontal eye fields—actively maintain mnemonic information. Currently, their research examines how these distributed neural codes are transformed and integrated to guide cognitive processes and decision-making.",
-    "research_direction": "Dr. Christophel has recently been studying how the brain holds information in working memory and what limits how much can be held at once. Their recent work asks whether items interfere with each other because they share a sensory modality or because they share a feature, by having people remember visual orientations alongside auditory pitches, and it uses fMRI to trace how memory contents are represented across sensory, parietal, and frontal cortex. They are also examining the format of these memory codes, from detailed sensory-like patterns in early visual areas to more categorical and semantic ones in higher regions, and how people's own verbal labels bias what they recall. A further line of work asks whether deliberately refreshing a memory makes it more accessible while leaving it just as vulnerable to interference.",
-    "papers": [
-      {
-        "title": "Sensory Modality- and Load-Dependent Changes across Cortical Working Memory Representations",
-        "abstract": "This neuroimaging investigation examines the cortical architecture supporting multi-item working memory maintenance, specifically assessing whether distributed representations in sensory, parietal, and frontal regions exhibit differential sensitivity to mnemonic load. Utilizing functional magnetic resonance imaging (fMRI) with a cohort of 81 participants, the researchers manipulated effective visual load by varying the sensory modality of two concurrently maintained items (orientations versus auditory pitches). Multivariate pattern analysis (MVPA) revealed that increased visual load specifically attenuated orientation-selective decodability in the early visual cortex (V1–V3), whereas representations in the intraparietal sulcus and superior precentral sulcus demonstrated greater resilience to interference. Computational simulations further indicated that the decline in decoding performance reflects a degradation of mnemonic pattern fidelity in posterior sensory regions. These findings support a shared-labor model where high-precision sensory codes in the occipital cortex are complemented by more robust, albeit lower-precision, representations in anterior cortical regions.",
-        "year": "2026",
-        "venue": "Imaging Neuroscience",
-        "citations": "0",
-        "authors": "Vivien Chopurian, Simon Weber, Thomas B. Christophel",
-        "url": "https://doi.org/10.1162/IMAG.a.1115"
-      },
-      {
-        "title": "Refreshing Boosts Memory But Does Not Protect It Against Interference",
-        "abstract": "This study evaluates the functional role of attentional refreshing—the prioritization of a representation within the focus of attention—in shielding working memory contents from interference. Utilizing a retro-cue paradigm to direct internal attention to specific items, the researchers quantified mnemonic performance following the introduction of visual distractors or novel memory items. Although the results demonstrate that refreshing significantly enhances the accessibility of cued representations, as evidenced by improved recall accuracy and attenuated response latencies, this prioritization benefit does not confer resistance to subsequent interference. The absence of a protective effect implies that refreshing strengthens existing mnemonic traces within a capacity-limited store but does not transition these representations into an interference-resistant format, challenging models that equate attentional prioritization with representational consolidation.",
-        "year": "2026",
-        "venue": "Psychonomic Bulletin & Review",
-        "citations": "0",
-        "authors": "Andreea-Maria Gui, Vivien Chopurian, Alessandra S. Souza, Carsten Allefeld, Thomas B. Christophel",
-        "url": "https://doi.org/10.31234/osf.io/fmqns"
-      },
-      {
-        "title": "Verbal encoding strategies in visuo-spatial working memory",
-        "abstract": "This research investigates the intersection of visuo-spatial working memory and linguistic encoding, specifically examining how self-generated verbal labels influence the maintenance of low-level visual features. In behavioral experiments, participants performed continuous orientation and location recall tasks followed by a naming task for the same stimuli. The study characterizes a diverse repertoire of labeling strategies and demonstrates that the utilization of specific spatial descriptors (e.g., cardinal terms) predicts systematic biases in mnemonic recall. Specifically, the use of cardinal labels was associated with Class 1 attraction biases toward cardinal axes, while uncertainty-related modifiers predicted Class 2 repulsion biases away from these axes. These findings suggest that visuo-spatial working memory recruits shared representational resources with verbal systems, where linguistic categorization actively shapes the format of visual information during maintenance.",
-        "year": "2025",
-        "venue": "Journal of Cognition",
-        "citations": "0",
-        "authors": "Joana Pereira Seabra, Vivien Chopurian, Alessandra S. Souza, Thomas B. Christophel",
-        "url": "https://doi.org/10.5334/joc.406"
-      },
-      {
-        "title": "Modality-, feature-, and strategy-dependent organization of low-level working memory",
-        "abstract": "The present study explores the mechanisms underlying capacity limitations in working memory, focusing on whether interference between concurrently maintained items is primarily driven by shared sensory modalities or specific feature dimensions. Through behavioral experiments involving the continuous recall of orientations and auditory pitches, the authors demonstrate that cross-modal item sets (auditory-visual) exhibit significantly reduced interference compared to unimodal sets, even under constant load conditions. Analysis of strategy reports and performance patterns suggests that distinct mnemonic formats, such as categorical versus veridical codes, are selectively recruited based on feature type. These results provide evidence for a cortical organization wherein specialization for low-level features minimizes interference across modalities and highlight the role of strategic encoding in optimizing the maintenance of heterogeneous information.",
-        "year": "2025",
-        "venue": "Journal of Vision",
-        "citations": "0",
-        "authors": "Vivien Chopurian, Anni Kienke, Christoph Bledowski, Thomas B. Christophel",
-        "url": "https://doi.org/10.1167/jov.25.1.16"
-      },
-      {
-        "title": "Visuospatial working memory is cortically enabled through veridical, categorical and semantic representations",
-        "abstract": "This fMRI study (N=40) utilizes multivariate encoding modeling to delineate the concurrent representational formats underlying the maintenance of visuospatial information in the human brain. The researchers characterized orientation-selective activity across the cortical hierarchy, identifying a gradient of abstraction: early sensory regions represent stimuli in a veridical, high-fidelity format, while extrastriate, parietal, and frontal areas increasingly recruit categorical and semantic codes. Critically, cross-condition encoding models revealed that neural patterns in the visual cortex during the memory delay generalize to those evoked during a separate spatial language task. These results suggest that visual working memory is supported by a distributed network of simultaneous representations ranging from low-level sensory traces to abstract, semantic, and goal-directed formats.",
-        "year": "2025",
-        "venue": "bioRxiv",
-        "citations": "0",
-        "authors": "Joana Pereira Seabra, Andreea-Maria Gui, Vivien Chopurian, Alessandra S. Souza, Carsten Allefeld, Thomas B. Christophel",
-        "url": "https://doi.org/10.1101/2025.08.08.669067"
-      }
-    ],
-    "primary_subfield": "Visual Memory",
-    "subfields": [
-      {
-        "subfield": "Visual Memory",
-        "score": 1.0
-      }
-    ],
-    "profile_pic": "thomas_b._christophel_0660.jpg",
-    "umap_projection": {
-      "x": 10.804462432861328,
-      "y": 6.023355960845947
-    },
-    "cluster": 0,
-    "total_citations": 2190,
-    "h_index": 14,
-    "similar": [
-      {
-        "id": "E178",
-        "score": 0.9352
-      },
-      {
-        "id": "0132",
-        "score": 0.9284
-      },
-      {
-        "id": "0693",
-        "score": 0.928
-      },
-      {
-        "id": "0436",
-        "score": 0.9265
-      },
-      {
-        "id": "0135",
-        "score": 0.9258
-      },
-      {
-        "id": "0292",
-        "score": 0.9257
-      },
-      {
-        "id": "0326",
-        "score": 0.9244
-      },
-      {
-        "id": "0369",
-        "score": 0.9223
-      },
-      {
-        "id": "0191",
-        "score": 0.9215
-      },
-      {
-        "id": "0264",
-        "score": 0.9209
-      }
-    ]
-  },
   "0661": {
     "id": "0661",
     "name": "Thomas C. Sprague",
@@ -62453,10 +62337,6 @@
         "score": 0.9295
       },
       {
-        "id": "0660",
-        "score": 0.928
-      },
-      {
         "id": "0292",
         "score": 0.927
       },
@@ -62475,6 +62355,10 @@
       {
         "id": "0707",
         "score": 0.924
+      },
+      {
+        "id": "0191",
+        "score": 0.9222
       }
     ]
   },
@@ -76598,10 +76482,6 @@
         "score": 0.9359
       },
       {
-        "id": "0660",
-        "score": 0.9352
-      },
-      {
         "id": "0326",
         "score": 0.9342
       },
@@ -76616,6 +76496,10 @@
       {
         "id": "0292",
         "score": 0.9277
+      },
+      {
+        "id": "0198",
+        "score": 0.9261
       }
     ]
   },

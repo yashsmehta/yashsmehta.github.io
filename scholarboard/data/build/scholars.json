@@ -44712,9 +44712,9 @@
   "0490": {
     "id": "0490",
     "name": "Máté Lengyel",
-    "institution": "Central European University",
-    "country": "Austria",
-    "department": "Department of Engineering (Cambridge); Department of Cognitive Science (CEU)",
+    "institution": "University of Cambridge",
+    "country": "United Kingdom",
+    "department": "Department of Engineering (University of Cambridge); Department of Cognitive Science (Central European University)",
     "lab_name": "Computational and Biological Learning Lab",
     "lab_url": "https://lengyellab.org",
     "main_research_area": "computational neuroscience",
@@ -45990,15 +45990,31 @@
   "0507": {
     "id": "0507",
     "name": "Nihong Chen",
-    "institution": "Tsinghua University",
+    "institution": "South China Normal University",
     "country": "China",
-    "department": "Department of Psychology, School of Social Sciences",
-    "lab_name": "Chen Nihong's Research Group",
-    "lab_url": "https://www.psych.tsinghua.edu.cn/en/info/1175/1213.htm",
+    "department": "School of Psychology",
     "main_research_area": "visual perception and plasticity",
-    "bio": "Nihong Chen is an Associate Professor at Tsinghua University and a Principal Investigator at the IDG/McGovern Institute for Brain Research. Chen’s research investigates the neural mechanisms of human visual perception, focusing on how perceptual learning and attention reshape the functional architecture of the visual cortex. Using functional magnetic resonance imaging (fMRI), transcranial magnetic stimulation (TMS), and psychophysical modeling, they have characterized the cortical plasticity of areas like V3A and MT+ and explored the computational strategies the brain employs to resolve visual crowding. Chen’s current work examines how cortical population codes and multi-stage integration models facilitate object recognition in complex and ambiguous visual environments.",
-    "research_direction": "Dr. Chen has recently been studying how the human visual system combines information across space and features, and how it changes with practice. Their recent work explores how the brain binds properties like color and motion, using high-field fMRI to ask which visual areas reflect what is perceived rather than what is physically shown. They also study peripheral vision and crowding, asking how nearby clutter is pooled and how training changes communication between early visual areas. In addition, they examine how focused attention shapes signal flow through the visual hierarchy, and compare human learning of natural texture statistics with that of deep neural networks.",
+    "bio": "Nihong Chen is a Professor at the School of Psychology, South China Normal University. Chen’s research investigates the neural mechanisms of human visual perception, focusing on how perceptual learning and attention reshape the functional architecture of the visual cortex. Using functional magnetic resonance imaging (fMRI), transcranial magnetic stimulation (TMS), and psychophysical modeling, they have characterized the cortical plasticity of areas like V3A and MT+ and explored the computational strategies the brain employs to resolve visual crowding. Chen’s current work examines how cortical population codes and multi-stage integration models facilitate object recognition in complex and ambiguous visual environments.",
+    "research_direction": "Dr. Chen has recently been studying how the human visual system combines information across space and features, and how experience reshapes it. Their recent work explores how perceptual learning changes the way working memory is stored in visual cortex, using fMRI to track whether sensory-like or more abstract memory codes are strengthened across the visual hierarchy. They also study how the brain binds features such as color and motion, how peripheral vision copes with crowding, and how focused attention shapes signal flow between visual areas. In addition, they compare how humans and deep neural networks learn the statistics of natural textures, and have written on how hierarchical and parallel processing in primate visual cortex relates to artificial intelligence.",
     "papers": [
+      {
+        "title": "Perceptual learning reformats working memory codes along a reverse visual hierarchy",
+        "abstract": null,
+        "year": "2026",
+        "venue": "bioRxiv",
+        "citations": "0",
+        "authors": "Siyuan Cheng, Yiran Ge, Nihong Chen",
+        "url": "https://doi.org/10.64898/2026.03.20.712287"
+      },
+      {
+        "title": "Hierarchical and parallel processing: From primate visual cortex to artificial intelligence",
+        "abstract": null,
+        "year": "2025",
+        "venue": "Science China Technological Sciences",
+        "citations": "0",
+        "authors": "Nihong Chen, Hailin Ai, Peng Zhang",
+        "url": "https://doi.org/10.1007/s11431-025-2971-2"
+      },
       {
         "title": "Multivariate Patterns of fMRI Activity in Human V2 Predict Feature Binding of Color and Motion",
         "abstract": "This study investigates the neural architecture of feature binding using a steady-state misbinding illusion where color and motion signals are perceived incorrectly relative to their physical properties. Utilizing 7-Tesla fMRI and multivariate pattern analysis (MVPA), the researchers examined whether the human visual cortex codes for physical or perceived feature pairings. The results demonstrate that multivariate patterns of activity in the secondary visual area (V2), but not V1, significantly predict the perceived (misbound) combinations of color and motion. Additionally, direction-selective adaptation effects in V2 were found to be contingent on color and significantly correlated with the magnitude of psychophysical aftereffects across subjects, indicating that V2 is a critical site for the active binding of basic visual features into coherent objects.",

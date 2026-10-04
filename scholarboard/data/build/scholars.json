@@ -1962,10 +1962,6 @@
         "score": 0.9385
       },
       {
-        "id": "0657",
-        "score": 0.9368
-      },
-      {
         "id": "0637",
         "score": 0.9357
       },
@@ -1992,6 +1988,10 @@
       {
         "id": "E273",
         "score": 0.9211
+      },
+      {
+        "id": "0647",
+        "score": 0.9163
       }
     ]
   },
@@ -2802,10 +2802,6 @@
         "score": 0.902
       },
       {
-        "id": "0657",
-        "score": 0.9016
-      },
-      {
         "id": "0561",
         "score": 0.9014
       },
@@ -2816,6 +2812,10 @@
       {
         "id": "0531",
         "score": 0.9005
+      },
+      {
+        "id": "0269",
+        "score": 0.9001
       }
     ]
   },
@@ -4311,10 +4311,6 @@
         "score": 0.9322
       },
       {
-        "id": "0657",
-        "score": 0.9309
-      },
-      {
         "id": "0269",
         "score": 0.9285
       },
@@ -4333,6 +4329,10 @@
       {
         "id": "0634",
         "score": 0.9223
+      },
+      {
+        "id": "0596",
+        "score": 0.9195
       }
     ]
   },
@@ -7378,10 +7378,6 @@
         "score": 0.9185
       },
       {
-        "id": "0657",
-        "score": 0.9175
-      },
-      {
         "id": "0150",
         "score": 0.9161
       },
@@ -7392,6 +7388,10 @@
       {
         "id": "0418",
         "score": 0.9155
+      },
+      {
+        "id": "0704",
+        "score": 0.9151
       }
     ]
   },
@@ -10569,16 +10569,16 @@
         "score": 0.9204
       },
       {
-        "id": "0657",
-        "score": 0.9198
-      },
-      {
         "id": "0137",
         "score": 0.9193
       },
       {
         "id": "0435",
         "score": 0.9192
+      },
+      {
+        "id": "0415",
+        "score": 0.9187
       }
     ]
   },
@@ -10937,16 +10937,16 @@
         "score": 0.8737
       },
       {
-        "id": "0726",
-        "score": 0.8726
-      },
-      {
         "id": "0555",
         "score": 0.8712
       },
       {
         "id": "0094",
         "score": 0.8702
+      },
+      {
+        "id": "0389",
+        "score": 0.8697
       }
     ]
   },
@@ -11722,10 +11722,6 @@
         "score": 0.9422
       },
       {
-        "id": "0657",
-        "score": 0.9323
-      },
-      {
         "id": "0172",
         "score": 0.9295
       },
@@ -11752,6 +11748,10 @@
       {
         "id": "0531",
         "score": 0.9166
+      },
+      {
+        "id": "0634",
+        "score": 0.915
       }
     ]
   },
@@ -13819,10 +13819,6 @@
         "score": 0.9337
       },
       {
-        "id": "0657",
-        "score": 0.9334
-      },
-      {
         "id": "0531",
         "score": 0.9322
       },
@@ -13845,6 +13841,10 @@
       {
         "id": "0634",
         "score": 0.9224
+      },
+      {
+        "id": "0354",
+        "score": 0.9221
       }
     ]
   },
@@ -15819,10 +15819,6 @@
         "score": 0.9094
       },
       {
-        "id": "0657",
-        "score": 0.9094
-      },
-      {
         "id": "0544",
         "score": 0.9042
       },
@@ -15833,6 +15829,10 @@
       {
         "id": "0310",
         "score": 0.904
+      },
+      {
+        "id": "E309",
+        "score": 0.9008
       }
     ]
   },
@@ -21023,10 +21023,6 @@
         "score": 0.9057
       },
       {
-        "id": "0657",
-        "score": 0.9039
-      },
-      {
         "id": "0435",
         "score": 0.9035
       },
@@ -21049,6 +21045,10 @@
       {
         "id": "0314",
         "score": 0.9009
+      },
+      {
+        "id": "0320",
+        "score": 0.9008
       }
     ]
   },
@@ -22058,8 +22058,8 @@
         "score": 0.901
       },
       {
-        "id": "0657",
-        "score": 0.9009
+        "id": "0270",
+        "score": 0.9007
       }
     ]
   },
@@ -24719,10 +24719,6 @@
         "score": 0.926
       },
       {
-        "id": "0657",
-        "score": 0.922
-      },
-      {
         "id": "0320",
         "score": 0.919
       },
@@ -24737,6 +24733,10 @@
       {
         "id": "0634",
         "score": 0.9162
+      },
+      {
+        "id": "0415",
+        "score": 0.916
       }
     ]
   },
@@ -24849,16 +24849,16 @@
         "score": 0.9149
       },
       {
-        "id": "0657",
-        "score": 0.9146
-      },
-      {
         "id": "0615",
         "score": 0.9141
       },
       {
         "id": "0240",
         "score": 0.9139
+      },
+      {
+        "id": "E323",
+        "score": 0.9132
       }
     ]
   },
@@ -29274,10 +29274,6 @@
         "score": 0.9189
       },
       {
-        "id": "0726",
-        "score": 0.9184
-      },
-      {
         "id": "0425",
         "score": 0.9182
       },
@@ -29292,6 +29288,10 @@
       {
         "id": "0387",
         "score": 0.9119
+      },
+      {
+        "id": "0567",
+        "score": 0.9118
       }
     ]
   },
@@ -29398,10 +29398,6 @@
         "score": 0.8727
       },
       {
-        "id": "0657",
-        "score": 0.8712
-      },
-      {
         "id": "0354",
         "score": 0.871
       },
@@ -29416,6 +29412,10 @@
       {
         "id": "0422",
         "score": 0.8707
+      },
+      {
+        "id": "0344",
+        "score": 0.8699
       }
     ]
   },
@@ -29874,10 +29874,6 @@
         "score": 0.919
       },
       {
-        "id": "0657",
-        "score": 0.9163
-      },
-      {
         "id": "E243",
         "score": 0.9162
       },
@@ -29908,6 +29904,10 @@
       {
         "id": "0159",
         "score": 0.9102
+      },
+      {
+        "id": "0438",
+        "score": 0.9099
       }
     ]
   },
@@ -32415,16 +32415,16 @@
         "score": 0.9159
       },
       {
-        "id": "0657",
-        "score": 0.9153
-      },
-      {
         "id": "E228",
         "score": 0.9145
       },
       {
         "id": "0525",
         "score": 0.9121
+      },
+      {
+        "id": "0477",
+        "score": 0.9118
       }
     ]
   },
@@ -33472,10 +33472,6 @@
         "score": 0.8978
       },
       {
-        "id": "0657",
-        "score": 0.896
-      },
-      {
         "id": "0137",
         "score": 0.8949
       },
@@ -33502,6 +33498,10 @@
       {
         "id": "E309",
         "score": 0.8921
+      },
+      {
+        "id": "0531",
+        "score": 0.8913
       }
     ]
   },
@@ -34384,10 +34384,6 @@
         "score": 0.8938
       },
       {
-        "id": "0657",
-        "score": 0.893
-      },
-      {
         "id": "0635",
         "score": 0.8922
       },
@@ -34402,6 +34398,10 @@
       {
         "id": "0049",
         "score": 0.8905
+      },
+      {
+        "id": "0435",
+        "score": 0.8895
       }
     ]
   },
@@ -35460,12 +35460,12 @@
         "score": 0.8738
       },
       {
-        "id": "0657",
-        "score": 0.8732
-      },
-      {
         "id": "E330",
         "score": 0.8721
+      },
+      {
+        "id": "0346",
+        "score": 0.872
       }
     ]
   },
@@ -36160,10 +36160,6 @@
         "score": 0.9086
       },
       {
-        "id": "0726",
-        "score": 0.9065
-      },
-      {
         "id": "0567",
         "score": 0.9057
       },
@@ -36190,6 +36186,10 @@
       {
         "id": "0615",
         "score": 0.8964
+      },
+      {
+        "id": "0328",
+        "score": 0.8946
       }
     ]
   },
@@ -36277,12 +36277,12 @@
         "score": 0.904
       },
       {
-        "id": "0657",
-        "score": 0.9034
-      },
-      {
         "id": "0415",
         "score": 0.9031
+      },
+      {
+        "id": "0142",
+        "score": 0.9012
       }
     ]
   },
@@ -36377,10 +36377,6 @@
         "score": 0.9009
       },
       {
-        "id": "0726",
-        "score": 0.8922
-      },
-      {
         "id": "0650",
         "score": 0.8911
       },
@@ -36393,16 +36389,20 @@
         "score": 0.8879
       },
       {
-        "id": "0657",
-        "score": 0.8857
-      },
-      {
         "id": "E324",
         "score": 0.8842
       },
       {
         "id": "0262",
         "score": 0.8832
+      },
+      {
+        "id": "0295",
+        "score": 0.8825
+      },
+      {
+        "id": "0229",
+        "score": 0.8821
       }
     ]
   },
@@ -37704,16 +37704,16 @@
         "score": 0.8909
       },
       {
-        "id": "0657",
-        "score": 0.8903
-      },
-      {
         "id": "0386",
         "score": 0.8899
       },
       {
         "id": "0310",
         "score": 0.8884
+      },
+      {
+        "id": "0357",
+        "score": 0.8883
       }
     ]
   },
@@ -40679,8 +40679,8 @@
         "score": 0.9215
       },
       {
-        "id": "0657",
-        "score": 0.9212
+        "id": "0443",
+        "score": 0.9205
       }
     ]
   },
@@ -40909,8 +40909,8 @@
         "score": 0.9073
       },
       {
-        "id": "0726",
-        "score": 0.9071
+        "id": "0094",
+        "score": 0.9062
       }
     ]
   },
@@ -45126,10 +45126,6 @@
         "score": 0.9108
       },
       {
-        "id": "0657",
-        "score": 0.91
-      },
-      {
         "id": "0634",
         "score": 0.9061
       },
@@ -45152,6 +45148,10 @@
       {
         "id": "0119",
         "score": 0.9
+      },
+      {
+        "id": "0591",
+        "score": 0.8995
       }
     ]
   },
@@ -48618,10 +48618,6 @@
         "score": 0.9134
       },
       {
-        "id": "0657",
-        "score": 0.9125
-      },
-      {
         "id": "0346",
         "score": 0.9121
       },
@@ -48640,6 +48636,10 @@
       {
         "id": "0269",
         "score": 0.9097
+      },
+      {
+        "id": "0083",
+        "score": 0.9085
       }
     ]
   },
@@ -49102,10 +49102,6 @@
         "score": 0.9317
       },
       {
-        "id": "0657",
-        "score": 0.9314
-      },
-      {
         "id": "0634",
         "score": 0.9295
       },
@@ -49124,6 +49120,10 @@
       {
         "id": "E210",
         "score": 0.9203
+      },
+      {
+        "id": "0435",
+        "score": 0.9178
       }
     ]
   },
@@ -50354,10 +50354,6 @@
     "h_index": 29,
     "similar": [
       {
-        "id": "0657",
-        "score": 0.9306
-      },
-      {
         "id": "0531",
         "score": 0.9232
       },
@@ -50392,6 +50388,10 @@
       {
         "id": "0130",
         "score": 0.9117
+      },
+      {
+        "id": "0644",
+        "score": 0.9094
       }
     ]
   },
@@ -50501,10 +50501,6 @@
         "score": 0.9138
       },
       {
-        "id": "0657",
-        "score": 0.9119
-      },
-      {
         "id": "0439",
         "score": 0.9117
       },
@@ -50515,6 +50511,10 @@
       {
         "id": "0129",
         "score": 0.9091
+      },
+      {
+        "id": "E081",
+        "score": 0.9086
       }
     ]
   },
@@ -50711,10 +50711,6 @@
         "score": 0.8866
       },
       {
-        "id": "0657",
-        "score": 0.8838
-      },
-      {
         "id": "0119",
         "score": 0.8832
       },
@@ -50737,6 +50733,10 @@
       {
         "id": "0060",
         "score": 0.876
+      },
+      {
+        "id": "0634",
+        "score": 0.8745
       }
     ]
   },
@@ -51717,10 +51717,6 @@
         "score": 0.912
       },
       {
-        "id": "0657",
-        "score": 0.9113
-      },
-      {
         "id": "0435",
         "score": 0.9099
       },
@@ -51735,6 +51731,10 @@
       {
         "id": "0429",
         "score": 0.9072
+      },
+      {
+        "id": "0270",
+        "score": 0.9068
       }
     ]
   },
@@ -52172,16 +52172,8 @@
         "score": 0.9186
       },
       {
-        "id": "0726",
-        "score": 0.9174
-      },
-      {
         "id": "0389",
         "score": 0.9152
-      },
-      {
-        "id": "0657",
-        "score": 0.9134
       },
       {
         "id": "0238",
@@ -52202,6 +52194,14 @@
       {
         "id": "0150",
         "score": 0.91
+      },
+      {
+        "id": "0109",
+        "score": 0.9099
+      },
+      {
+        "id": "0320",
+        "score": 0.9089
       }
     ]
   },
@@ -55253,10 +55253,6 @@
         "score": 0.9189
       },
       {
-        "id": "0657",
-        "score": 0.9133
-      },
-      {
         "id": "0647",
         "score": 0.9113
       },
@@ -55275,6 +55271,10 @@
       {
         "id": "0455",
         "score": 0.9009
+      },
+      {
+        "id": "0696",
+        "score": 0.9008
       }
     ]
   },
@@ -58735,10 +58735,6 @@
         "score": 0.9211
       },
       {
-        "id": "0657",
-        "score": 0.9202
-      },
-      {
         "id": "0129",
         "score": 0.917
       },
@@ -58753,6 +58749,10 @@
       {
         "id": "0435",
         "score": 0.9148
+      },
+      {
+        "id": "0415",
+        "score": 0.913
       }
     ]
   },
@@ -59059,10 +59059,6 @@
         "score": 0.9349
       },
       {
-        "id": "0657",
-        "score": 0.9343
-      },
-      {
         "id": "0150",
         "score": 0.9337
       },
@@ -59089,6 +59085,10 @@
       {
         "id": "E075",
         "score": 0.9194
+      },
+      {
+        "id": "0435",
+        "score": 0.9186
       }
     ]
   },
@@ -59705,10 +59705,6 @@
         "score": 0.9144
       },
       {
-        "id": "0657",
-        "score": 0.9136
-      },
-      {
         "id": "0172",
         "score": 0.9094
       },
@@ -59735,6 +59731,10 @@
       {
         "id": "0596",
         "score": 0.8981
+      },
+      {
+        "id": "0031",
+        "score": 0.8954
       }
     ]
   },
@@ -59946,12 +59946,12 @@
         "score": 0.9014
       },
       {
-        "id": "0657",
-        "score": 0.8957
-      },
-      {
         "id": "0635",
         "score": 0.8953
+      },
+      {
+        "id": "E270",
+        "score": 0.8919
       }
     ]
   },
@@ -60731,126 +60731,6 @@
       {
         "id": "0324",
         "score": 0.8324
-      }
-    ]
-  },
-  "0657": {
-    "id": "0657",
-    "name": "Teng Leng Ooi",
-    "institution": "The Ohio State University",
-    "country": "United States",
-    "department": "College of Optometry",
-    "lab_name": "Teng Leng Ooi's Laboratory",
-    "lab_url": "https://u.osu.edu/ooi.22",
-    "main_research_area": "binocular vision and space perception",
-    "bio": "Teng Leng Ooi is a Professor in the College of Optometry at The Ohio State University, where they investigate the mechanisms underlying binocular vision and 3D space perception. Ooi’s research focuses on how the brain integrates sensory visual information with cognitive factors and motor signals to guide actions in natural, virtual, and augmented reality environments. Ooi developed the 'Push-Pull' perceptual learning protocol and video game-based therapies aimed at reducing sensory eye dominance and restoring stereopsis in individuals with amblyopia and strabismus. Their work utilizes psychophysical methods and optical imaging to explore the neural circuitry of binocular rivalry and suppression.",
-    "research_direction": "Dr. Ooi has recently been investigating the mechanisms of human space perception alongside the clinical assessment of amblyopia. In the realm of depth perception, their recent work explores how the visual system computes absolute distance at intermediate ranges and during self-motion, examining how cues like angular declination, binocular disparity, and temporal sampling interact with the brain's internal model of the ground surface. Parallel to this psychophysical research, they are investigating objective, quantitative methods to characterize binocular dysfunction in clinical populations. Specifically, they are using optical coherence tomography to measure how foveal fixation error relates to visual acuity loss, and they are adapting clinical tools like the Synoptophore to precisely quantify the depth of interocular suppression in amblyopic eyes.",
-    "papers": [
-      {
-        "title": "Absolute Distance Discrimination in the Intermediate Distance Mediated by Angular Declination/Elevation and Binocular Disparity Cues",
-        "abstract": "Tests how well observers can tell apart the absolute distances of targets lying a few to tens of meters away, a range where most depth cues are weak. The study identifies angular declination (or elevation) relative to the horizon and binocular disparity as the cues that carry this discrimination, and shows how they combine. It extends the lab's ground-surface-based model of egocentric distance to a natural-environment range that is rarely studied.",
-        "year": "2026",
-        "venue": "Investigative Ophthalmology & Visual Science",
-        "citations": "0",
-        "authors": "Yiya Chen, Zijiang J. He, Teng Leng Ooi",
-        "url": "https://doi.org/10.1167/iovs.67.6.6"
-      },
-      {
-        "title": "Perception of distance during self-motion depends on the brain's internal model of the terrain",
-        "abstract": "Examines how people judge how far away a target is while they are walking. Results indicate that the brain relies on an internal representation of the ground surface as a reference frame during self-motion, so distance judgments shift when that terrain model is altered or unreliable. The work links self-motion signals to the ground-based distance-coding scheme the group has developed.",
-        "year": "2025",
-        "venue": "PLOS ONE",
-        "citations": "1",
-        "authors": "Liu Zhou, Zijiang J. He, Teng Leng Ooi",
-        "url": "https://doi.org/10.1371/journal.pone.0316524"
-      },
-      {
-        "title": "Determining fixation accuracy with optical coherence tomography and its implication on visual acuity in amblyopia",
-        "abstract": "Uses optical coherence tomography imaging to measure where the fovea is aligned relative to the fixation target in amblyopic and normal eyes, giving an objective estimate of fixation accuracy. Fixation error is then related to the reduced visual acuity seen in amblyopia. The result suggests eccentric or unstable fixation contributes to acuity loss and offers a clinically usable measurement approach.",
-        "year": "2025",
-        "venue": "Vision Research",
-        "citations": "2",
-        "authors": "Maureen D. Plaumann, Wei Wei, Teng Leng Ooi",
-        "url": "https://doi.org/10.1016/j.visres.2025.108659"
-      },
-      {
-        "title": "Factors Affecting Stimulus Duration Threshold for Depth Discrimination of Asynchronous Targets in the Intermediate Distance Range",
-        "abstract": "Measures how long a pair of targets must be viewed, when shown one after the other in a real environment, before their depth order at a few to tens of meters can be discriminated. Viewing-duration thresholds depend on the available ground texture and cues, revealing how much sampling time the visual system needs to build a ground-based distance representation.",
-        "year": "2024",
-        "venue": "Investigative Ophthalmology & Visual Science",
-        "citations": "1",
-        "authors": "Yiya Chen, Zijiang J. He, Teng Leng Ooi",
-        "url": "https://doi.org/10.1167/iovs.65.12.36"
-      },
-      {
-        "title": "Refining Clinical Quantification of Depth of Suppression in Amblyopia through Synoptophore Measurement",
-        "abstract": "Extends the clinical Synoptophore, normally used for qualitative assessment, into a quantitative tool by systematically manipulating illumination to find the balance at which the two eyes fuse. In previously treated adult amblyopes, the protocol yields a numerical measure of how deeply the weaker eye is suppressed, which can be tracked across treatment. It provides a practical bridge between basic binocular-suppression research and clinical care.",
-        "year": "2023",
-        "venue": "Life",
-        "citations": "5",
-        "authors": "Maureen D. Plaumann, Krista L. Roberts, Wei Wei, Chao Han, Teng Leng Ooi",
-        "url": "https://doi.org/10.3390/life13091900"
-      }
-    ],
-    "primary_subfield": "3D Perception",
-    "subfields": [
-      {
-        "subfield": "3D Perception",
-        "score": 1.0
-      },
-      {
-        "subfield": "Binocular Vision",
-        "score": 0.5
-      }
-    ],
-    "profile_pic": "teng_leng_ooi_0657.jpg",
-    "umap_projection": {
-      "x": 8.051572799682617,
-      "y": 2.756950616836548
-    },
-    "cluster": 0,
-    "total_citations": 804,
-    "h_index": 11,
-    "similar": [
-      {
-        "id": "0023",
-        "score": 0.9368
-      },
-      {
-        "id": "0637",
-        "score": 0.9343
-      },
-      {
-        "id": "0150",
-        "score": 0.9334
-      },
-      {
-        "id": "0130",
-        "score": 0.9323
-      },
-      {
-        "id": "0531",
-        "score": 0.9314
-      },
-      {
-        "id": "0049",
-        "score": 0.9309
-      },
-      {
-        "id": "0544",
-        "score": 0.9306
-      },
-      {
-        "id": "E273",
-        "score": 0.9299
-      },
-      {
-        "id": "E228",
-        "score": 0.9223
-      },
-      {
-        "id": "0726",
-        "score": 0.9221
       }
     ]
   },
@@ -62405,16 +62285,16 @@
         "score": 0.851
       },
       {
-        "id": "0657",
-        "score": 0.8506
-      },
-      {
         "id": "0229",
         "score": 0.8506
       },
       {
         "id": "0425",
         "score": 0.8499
+      },
+      {
+        "id": "0422",
+        "score": 0.8484
       }
     ]
   },
@@ -65429,8 +65309,8 @@
         "score": 0.8455
       },
       {
-        "id": "0657",
-        "score": 0.8443
+        "id": "0541",
+        "score": 0.844
       }
     ]
   },
@@ -66847,112 +66727,6 @@
       {
         "id": "0013",
         "score": 0.91
-      }
-    ]
-  },
-  "0726": {
-    "id": "0726",
-    "name": "Zijiang He",
-    "institution": "University of Louisville",
-    "country": "United States",
-    "department": "Department of Psychological and Brain Sciences",
-    "lab_url": "https://profiles.louisville.edu/zijiang.he",
-    "main_research_area": "visual space perception and binocular vision",
-    "bio": "Zijiang He is a Professor in the Department of Psychological and Brain Sciences at the University of Louisville, specializing in the mechanisms of three-dimensional space perception and visual cognition. Their research explores the ground-based spatial coding scheme and the visual system's \"intrinsic bias,\" an internal model used for distance representation in environments with limited visual cues. Utilizing psychophysics, virtual reality, and the blind walking-gesturing paradigm, He investigates how the brain integrates surface information through the sequential surface integration process (SSIP) and manages path integration during self-motion. Additionally, their work on binocular rivalry and sensory eye dominance has resulted in the development of \"push-pull\" perceptual learning protocols for treating visual impairments like amblyopia.",
-    "research_direction": "Dr. He has recently been investigating how the human visual system computes distance and depth in intermediate space, emphasizing the critical role of the brain's internal model of the ground surface. Their recent work explores spatial updating during self-motion, using walking tasks in cue-poor environments to determine whether the brain anchors its spatial representation to a moving body-centered frame or an allocentric starting point. Concurrently, they are examining the mechanisms of depth discrimination for midair targets by manipulating variables like stimulus duration, binocular disparity, and angular declination. Across these distinct experimental paradigms, Dr. He asks how internal spatial biases are fused with external visual cues, such as visible floor textures and continuous backgrounds, to build a stable reference frame for navigation and perception.",
-    "papers": [
-      {
-        "title": "Absolute Distance Discrimination in the Intermediate Distance Mediated by Angular Declination/Elevation and Binocular Disparity Cues",
-        "abstract": "In a large light-tight room, observers judged which of two midair targets was nearer or lower under different viewing and background conditions. Binocular disparity and angular declination/elevation both contributed, with weighted integration between them; the angular cue was weaker when a visible surface was present and could produce errors that disparity corrected. Both cues depend on a well-represented background surface.",
-        "year": "2026",
-        "venue": "Investigative Ophthalmology & Visual Science",
-        "citations": "0",
-        "authors": "Yiya Chen, Zijiang J. He, Teng Leng Ooi",
-        "url": "https://doi.org/10.1167/iovs.67.6.6"
-      },
-      {
-        "title": "Perception of distance during self-motion depends on the brain's internal model of the terrain",
-        "abstract": "Extending the allocentric-odometer idea, observers walked short distances in a cue-poor room and then localized dim targets. The intrinsic bias stayed at the starting point, causing distance underestimation, and when floor texture was visible the perceived floor appeared slanted toward the start location. The results suggest the brain fuses the allocentric internal ground model with external depth cues to build a ground reference frame during self-motion.",
-        "year": "2025",
-        "venue": "PLOS ONE",
-        "citations": "1",
-        "authors": "Liu Zhou, Zijiang J. He, Teng Leng Ooi",
-        "url": "https://doi.org/10.1371/journal.pone.0316524"
-      },
-      {
-        "title": "An allocentric human odometer for perceiving distances on the ground plane",
-        "abstract": "Walking observers in the dark keep judging target distance relative to the spot where they started, not where they are now. This shows that the brain's built-in model of the ground surface (the intrinsic bias) is anchored in world-based coordinates rather than moving with the body. Path integration turns out to be asymmetric: distance along the ground plane is updated during movement, while the vertical component is not, in line with a terrestrial ground-based spatial code.",
-        "year": "2024",
-        "venue": "eLife",
-        "citations": "3",
-        "authors": "Liu Zhou, Wei Wei, Teng Leng Ooi, Zijiang J. He",
-        "url": "https://doi.org/10.7554/eLife.88095"
-      },
-      {
-        "title": "Factors Affecting Stimulus Duration Threshold for Depth Discrimination of Asynchronous Targets in the Intermediate Distance Range",
-        "abstract": "The study asks whether depth discrimination improves with stimulus duration at intermediate distances (about 2-25 m) as it does in near space. Discrimination improved with longer target duration, binocular viewing and a visible texture background, and was near chance monocularly. A continuously visible background helped further, underscoring the role of ground-surface representation in spatial coding.",
-        "year": "2024",
-        "venue": "Investigative Ophthalmology & Visual Science",
-        "citations": "1",
-        "authors": "Yiya Chen, Zijiang J. He, Teng Leng Ooi",
-        "url": "https://doi.org/10.1167/iovs.65.12.36"
-      }
-    ],
-    "primary_subfield": "3D Perception",
-    "subfields": [
-      {
-        "subfield": "3D Perception",
-        "score": 1.0
-      }
-    ],
-    "profile_pic": "zijiang_he_0726.jpg",
-    "umap_projection": {
-      "x": 7.909200668334961,
-      "y": 3.6906042098999023
-    },
-    "cluster": 0,
-    "total_citations": 4869,
-    "h_index": 33,
-    "similar": [
-      {
-        "id": "0657",
-        "score": 0.9221
-      },
-      {
-        "id": "0314",
-        "score": 0.9184
-      },
-      {
-        "id": "0567",
-        "score": 0.9174
-      },
-      {
-        "id": "0119",
-        "score": 0.9094
-      },
-      {
-        "id": "0262",
-        "score": 0.9091
-      },
-      {
-        "id": "0425",
-        "score": 0.9091
-      },
-      {
-        "id": "0555",
-        "score": 0.9079
-      },
-      {
-        "id": "E144",
-        "score": 0.9075
-      },
-      {
-        "id": "0438",
-        "score": 0.9071
-      },
-      {
-        "id": "0387",
-        "score": 0.9065
       }
     ]
   },
@@ -72036,10 +71810,6 @@
         "score": 0.9217
       },
       {
-        "id": "0657",
-        "score": 0.9195
-      },
-      {
         "id": "0637",
         "score": 0.9194
       },
@@ -72058,6 +71828,10 @@
       {
         "id": "E228",
         "score": 0.915
+      },
+      {
+        "id": "E243",
+        "score": 0.9131
       }
     ]
   },
@@ -73591,12 +73365,12 @@
         "score": 0.8821
       },
       {
-        "id": "0726",
-        "score": 0.8787
-      },
-      {
         "id": "0121",
         "score": 0.8784
+      },
+      {
+        "id": "0358",
+        "score": 0.8761
       }
     ]
   },
@@ -74195,10 +73969,6 @@
         "score": 0.8571
       },
       {
-        "id": "0726",
-        "score": 0.8561
-      },
-      {
         "id": "0210",
         "score": 0.8548
       },
@@ -74209,6 +73979,10 @@
       {
         "id": "0296",
         "score": 0.8474
+      },
+      {
+        "id": "E145",
+        "score": 0.8472
       }
     ]
   },
@@ -80201,10 +79975,6 @@
         "score": 0.925
       },
       {
-        "id": "0657",
-        "score": 0.9223
-      },
-      {
         "id": "0150",
         "score": 0.922
       },
@@ -80222,6 +79992,10 @@
       },
       {
         "id": "0119",
+        "score": 0.9166
+      },
+      {
+        "id": "0269",
         "score": 0.9166
       }
     ]
@@ -84251,10 +84025,6 @@
         "score": 0.9312
       },
       {
-        "id": "0657",
-        "score": 0.9299
-      },
-      {
         "id": "0172",
         "score": 0.9238
       },
@@ -84277,6 +84047,10 @@
       {
         "id": "0298",
         "score": 0.9106
+      },
+      {
+        "id": "E228",
+        "score": 0.9105
       }
     ]
   },
@@ -87400,10 +87174,6 @@
         "score": 0.9199
       },
       {
-        "id": "0657",
-        "score": 0.9168
-      },
-      {
         "id": "0403",
         "score": 0.9153
       },
@@ -87430,6 +87200,10 @@
       {
         "id": "0596",
         "score": 0.9055
+      },
+      {
+        "id": "0023",
+        "score": 0.9027
       }
     ]
   },
@@ -88810,8 +88584,8 @@
         "score": 0.8656
       },
       {
-        "id": "0657",
-        "score": 0.8644
+        "id": "0150",
+        "score": 0.8642
       }
     ]
   },

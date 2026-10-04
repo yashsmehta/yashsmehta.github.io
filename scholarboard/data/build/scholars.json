@@ -83,12 +83,12 @@
         "score": 0.8934
       },
       {
-        "id": "0555",
-        "score": 0.8929
+        "id": "0634",
+        "score": 0.8931
       },
       {
-        "id": "0137",
-        "score": 0.8927
+        "id": "0555",
+        "score": 0.8929
       }
     ]
   },
@@ -2786,10 +2786,6 @@
         "score": 0.9107
       },
       {
-        "id": "0634",
-        "score": 0.9092
-      },
-      {
         "id": "E075",
         "score": 0.9055
       },
@@ -2816,6 +2812,10 @@
       {
         "id": "0269",
         "score": 0.9001
+      },
+      {
+        "id": "0080",
+        "score": 0.8994
       }
     ]
   },
@@ -4327,12 +4327,12 @@
         "score": 0.9234
       },
       {
-        "id": "0634",
-        "score": 0.9223
-      },
-      {
         "id": "0596",
         "score": 0.9195
+      },
+      {
+        "id": "0544",
+        "score": 0.919
       }
     ]
   },
@@ -5360,8 +5360,8 @@
         "score": 0.8445
       },
       {
-        "id": "0634",
-        "score": 0.8417
+        "id": "0066",
+        "score": 0.8411
       }
     ]
   },
@@ -5732,8 +5732,8 @@
         "score": 0.903
       },
       {
-        "id": "0634",
-        "score": 0.9019
+        "id": "0284",
+        "score": 0.9013
       }
     ]
   },
@@ -11612,10 +11612,6 @@
         "score": 0.9171
       },
       {
-        "id": "0634",
-        "score": 0.917
-      },
-      {
         "id": "0062",
         "score": 0.9163
       },
@@ -11642,6 +11638,10 @@
       {
         "id": "0270",
         "score": 0.9086
+      },
+      {
+        "id": "0415",
+        "score": 0.9084
       }
     ]
   },
@@ -11750,8 +11750,8 @@
         "score": 0.9166
       },
       {
-        "id": "0634",
-        "score": 0.915
+        "id": "0637",
+        "score": 0.9125
       }
     ]
   },
@@ -13839,11 +13839,11 @@
         "score": 0.9224
       },
       {
-        "id": "0634",
-        "score": 0.9224
+        "id": "0354",
+        "score": 0.9221
       },
       {
-        "id": "0354",
+        "id": "0435",
         "score": 0.9221
       }
     ]
@@ -21035,6 +21035,10 @@
         "score": 0.903
       },
       {
+        "id": "0634",
+        "score": 0.9021
+      },
+      {
         "id": "0150",
         "score": 0.9019
       },
@@ -21045,10 +21049,6 @@
       {
         "id": "0314",
         "score": 0.9009
-      },
-      {
-        "id": "0320",
-        "score": 0.9008
       }
     ]
   },
@@ -24731,12 +24731,12 @@
         "score": 0.9166
       },
       {
-        "id": "0634",
-        "score": 0.9162
-      },
-      {
         "id": "0415",
         "score": 0.916
+      },
+      {
+        "id": "0023",
+        "score": 0.9159
       }
     ]
   },
@@ -25069,16 +25069,16 @@
         "score": 0.9069
       },
       {
+        "id": "0634",
+        "score": 0.9029
+      },
+      {
         "id": "0615",
         "score": 0.902
       },
       {
         "id": "E229",
         "score": 0.8978
-      },
-      {
-        "id": "0634",
-        "score": 0.8968
       },
       {
         "id": "E230",
@@ -25205,6 +25205,10 @@
         "score": 0.8918
       },
       {
+        "id": "0634",
+        "score": 0.8914
+      },
+      {
         "id": "0344",
         "score": 0.8908
       },
@@ -25223,10 +25227,6 @@
       {
         "id": "E228",
         "score": 0.8883
-      },
-      {
-        "id": "0394",
-        "score": 0.8879
       }
     ]
   },
@@ -26150,16 +26150,16 @@
         "score": 0.9066
       },
       {
-        "id": "0634",
-        "score": 0.9059
-      },
-      {
         "id": "E321",
         "score": 0.9038
       },
       {
         "id": "0531",
         "score": 0.9034
+      },
+      {
+        "id": "0066",
+        "score": 0.9013
       }
     ]
   },
@@ -32411,6 +32411,10 @@
         "score": 0.9169
       },
       {
+        "id": "0634",
+        "score": 0.916
+      },
+      {
         "id": "0669",
         "score": 0.9159
       },
@@ -32421,10 +32425,6 @@
       {
         "id": "0525",
         "score": 0.9121
-      },
-      {
-        "id": "0477",
-        "score": 0.9118
       }
     ]
   },
@@ -35448,10 +35448,6 @@
         "score": 0.8897
       },
       {
-        "id": "0634",
-        "score": 0.879
-      },
-      {
         "id": "0480",
         "score": 0.8764
       },
@@ -35466,6 +35462,10 @@
       {
         "id": "0346",
         "score": 0.872
+      },
+      {
+        "id": "0634",
+        "score": 0.8719
       }
     ]
   },
@@ -39122,12 +39122,12 @@
         "score": 0.9116
       },
       {
-        "id": "0480",
-        "score": 0.9108
+        "id": "0634",
+        "score": 0.9115
       },
       {
-        "id": "E157",
-        "score": 0.9104
+        "id": "0480",
+        "score": 0.9108
       }
     ]
   },
@@ -42645,16 +42645,16 @@
         "score": 0.9028
       },
       {
-        "id": "0634",
-        "score": 0.9018
-      },
-      {
         "id": "0066",
         "score": 0.9012
       },
       {
         "id": "0596",
         "score": 0.9009
+      },
+      {
+        "id": "0049",
+        "score": 0.9006
       }
     ]
   },
@@ -43352,10 +43352,6 @@
         "score": 0.9227
       },
       {
-        "id": "0634",
-        "score": 0.9211
-      },
-      {
         "id": "0083",
         "score": 0.9201
       },
@@ -43374,6 +43370,10 @@
       {
         "id": "0049",
         "score": 0.9178
+      },
+      {
+        "id": "0634",
+        "score": 0.916
       },
       {
         "id": "0270",
@@ -45127,7 +45127,7 @@
       },
       {
         "id": "0634",
-        "score": 0.9061
+        "score": 0.9103
       },
       {
         "id": "0321",
@@ -48610,6 +48610,10 @@
         "score": 0.9143
       },
       {
+        "id": "0634",
+        "score": 0.9138
+      },
+      {
         "id": "E214",
         "score": 0.9137
       },
@@ -48636,10 +48640,6 @@
       {
         "id": "0269",
         "score": 0.9097
-      },
-      {
-        "id": "0083",
-        "score": 0.9085
       }
     ]
   },
@@ -49102,10 +49102,6 @@
         "score": 0.9317
       },
       {
-        "id": "0634",
-        "score": 0.9295
-      },
-      {
         "id": "0269",
         "score": 0.9283
       },
@@ -49120,6 +49116,10 @@
       {
         "id": "E210",
         "score": 0.9203
+      },
+      {
+        "id": "0634",
+        "score": 0.918
       },
       {
         "id": "0435",
@@ -50382,16 +50382,16 @@
         "score": 0.9119
       },
       {
-        "id": "0634",
-        "score": 0.9118
-      },
-      {
         "id": "0130",
         "score": 0.9117
       },
       {
         "id": "0644",
         "score": 0.9094
+      },
+      {
+        "id": "0635",
+        "score": 0.909
       }
     ]
   },
@@ -50735,8 +50735,8 @@
         "score": 0.876
       },
       {
-        "id": "0634",
-        "score": 0.8745
+        "id": "0340",
+        "score": 0.8742
       }
     ]
   },
@@ -51725,16 +51725,16 @@
         "score": 0.9096
       },
       {
-        "id": "0634",
-        "score": 0.9073
-      },
-      {
         "id": "0429",
         "score": 0.9072
       },
       {
         "id": "0270",
         "score": 0.9068
+      },
+      {
+        "id": "0150",
+        "score": 0.9051
       }
     ]
   },
@@ -58646,7 +58646,7 @@
     "lab_url": "https://engellab.psych.umn.edu/",
     "main_research_area": "visual plasticity and perception",
     "bio": "Stephen Engel is a Professor of Psychology at the University of Minnesota who researches the neural mechanisms of visual perception and cortical plasticity. Engel utilizes functional MRI (fMRI) to map retinotopic organization and color tuning in the human primary visual cortex. Their current research program employs psychophysics, EEG, and immersive virtual reality systems to study how the adult visual system adapts to environmental changes. This work aims to develop therapeutic interventions for clinical conditions such as macular degeneration and amblyopia.",
-    "research_direction": "Dr. Engel's recent work explores a diverse range of clinical and fundamental visual phenomena using psychophysical and electrophysiological methods. They have recently been investigating visual snow syndrome, utilizing sensory adaptation techniques like dynamic noise and motion aftereffects to probe the cortical origins of this spontaneous visual activity. Another major line of their research focuses on low vision rehabilitation, testing how customizing the spatial remapping of text into the intact visual field might improve reading performance in the presence of simulated central scotomata. Additionally, they are examining the neural mechanisms underlying binocular rivalry, using frequency-tagged steady-state EEG to track the gradual accumulation of sensory signals that precede perceptual switches.",
+    "research_direction": "Engel Vision and Imaging Laboratory seeks to understand vision and cognition by combining measurements of behavior with neural measurements made using functional MRI and EEG. The main theoretical topic currently under investigation is visual plasticity—how cortex can change with experience, including perceptual adaptation and perceptual learning. On the applied side they are applying their methods to better understand a newly discovered visual disorder, visual snow syndrome, and to develop aids for reading with central vision loss. Another long term interest of the lab is understanding binocular rivalry.",
     "papers": [
       {
         "title": "Spatial remapping improves reading with simulated central field loss",
@@ -58707,52 +58707,52 @@
     ],
     "profile_pic": "stephen_engel_0634.jpg",
     "umap_projection": {
-      "x": 8.213142395019531,
-      "y": 2.766462564468384
+      "x": 8.162928581237793,
+      "y": 3.290269613265991
     },
     "cluster": 0,
     "total_citations": 15223,
     "h_index": 45,
     "similar": [
       {
+        "id": "0435",
+        "score": 0.9195
+      },
+      {
         "id": "0531",
-        "score": 0.9295
+        "score": 0.918
       },
       {
-        "id": "0637",
-        "score": 0.9237
+        "id": "0310",
+        "score": 0.9177
       },
       {
-        "id": "0150",
-        "score": 0.9224
-      },
-      {
-        "id": "0049",
-        "score": 0.9223
-      },
-      {
-        "id": "0461",
-        "score": 0.9211
-      },
-      {
-        "id": "0129",
+        "id": "E066",
         "score": 0.917
       },
       {
-        "id": "0269",
-        "score": 0.9162
+        "id": "0346",
+        "score": 0.916
       },
       {
-        "id": "0130",
-        "score": 0.915
+        "id": "0461",
+        "score": 0.916
       },
       {
-        "id": "0435",
-        "score": 0.9148
+        "id": "0477",
+        "score": 0.9159
       },
       {
-        "id": "0415",
-        "score": 0.913
+        "id": "0138",
+        "score": 0.9156
+      },
+      {
+        "id": "E228",
+        "score": 0.9156
+      },
+      {
+        "id": "0525",
+        "score": 0.9138
       }
     ]
   },
@@ -59071,10 +59071,6 @@
         "score": 0.9305
       },
       {
-        "id": "0634",
-        "score": 0.9237
-      },
-      {
         "id": "E228",
         "score": 0.9209
       },
@@ -59089,6 +59085,10 @@
       {
         "id": "0435",
         "score": 0.9186
+      },
+      {
+        "id": "E210",
+        "score": 0.9185
       }
     ]
   },
@@ -59717,10 +59717,6 @@
         "score": 0.9083
       },
       {
-        "id": "0634",
-        "score": 0.9071
-      },
-      {
         "id": "0637",
         "score": 0.9054
       },
@@ -59735,6 +59731,10 @@
       {
         "id": "0031",
         "score": 0.8954
+      },
+      {
+        "id": "E309",
+        "score": 0.8946
       }
     ]
   },
@@ -63783,7 +63783,7 @@
         "score": 0.9035
       },
       {
-        "id": "0634",
+        "id": "0596",
         "score": 0.9008
       }
     ]
@@ -66483,16 +66483,16 @@
         "score": 0.8828
       },
       {
+        "id": "0634",
+        "score": 0.8815
+      },
+      {
         "id": "0159",
         "score": 0.8812
       },
       {
         "id": "0335",
         "score": 0.8795
-      },
-      {
-        "id": "0017",
-        "score": 0.8794
       }
     ]
   },
@@ -71554,6 +71554,10 @@
         "score": 0.9183
       },
       {
+        "id": "0634",
+        "score": 0.917
+      },
+      {
         "id": "0435",
         "score": 0.9076
       },
@@ -71564,10 +71568,6 @@
       {
         "id": "0346",
         "score": 0.9072
-      },
-      {
-        "id": "0634",
-        "score": 0.9071
       },
       {
         "id": "0477",
@@ -84038,7 +84038,7 @@
       },
       {
         "id": "0634",
-        "score": 0.9109
+        "score": 0.9113
       },
       {
         "id": "0637",

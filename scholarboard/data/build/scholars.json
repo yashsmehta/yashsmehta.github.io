@@ -457,8 +457,8 @@
     "lab_url": "https://cos.northeastern.edu/people/adam-reeves/",
     "scholar_profile_url": "https://scholar.google.com/citations?user=jBbPpaAAAAAJ&hl=en",
     "main_research_area": "visual perception, color, and attention",
-    "bio": "Adam Reeves is a Professor Emeritus of Psychology at Northeastern University whose research examines the mechanisms of human visual perception, including color constancy, iconic memory, and stereoscopic depth. Reeves utilizes psychophysical methodologies and computational modeling to study how visual attention modulates perception and how the brain processes phenomena such as synesthesia and crowding. Their recent work focuses on the short-term retention of depth and the effects of environmental lighting conditions on visual adaptation and phenomenal contrast.",
-    "research_direction": "Dr. Reeves has recently been investigating a broad array of psychophysical mechanisms spanning early visual processing and higher-level visual cognition. Their recent work explores the interaction between mental imagery and actual visual discrimination, specifically modeling the precise signal conditions under which visualizing an object facilitates or interferes with target detection. They are also examining the methodological foundations of color vision by evaluating the mathematical limitations and systemic weaknesses of standard metrics used to quantify color constancy. Furthermore, their research spans several other distinct visual phenomena, probing how environmental lighting adaptation shapes phenomenal contrast and depth perception, modeling numerosity judgments based on normalized contrast energy rather than absolute item counts, and measuring how peripheral crowding zones and target-flanker interactions dynamically change during shifts of visual attention.",
+    "bio": "Adam Reeves is a Professor Emeritus of Psychology at Northeastern University whose research examines the mechanisms of human visual perception, including color constancy, iconic memory, and stereoscopic depth. Reeves utilizes psychophysical methodologies and computational modeling to study how visual attention modulates perception and how the brain processes phenomena such as synesthesia and crowding. He also studies how visual imagery and visual attention affect vision. His recent work focuses on the short-term retention of depth and the effects of environmental lighting conditions on visual adaptation and phenomenal contrast. He is retired and no longer has a lab, so he cannot take on PhD students.",
+    "research_direction": "Dr. Reeves, who studies how visual imagery and visual attention affect vision, has recently been investigating a broad array of psychophysical mechanisms spanning early visual processing and higher-level visual cognition. His recent work explores the interaction between mental imagery and actual visual discrimination, specifically modeling the precise signal conditions under which visualizing an object facilitates or interferes with target detection. He is also examining the methodological foundations of color vision by evaluating the mathematical limitations and systemic weaknesses of standard metrics used to quantify color constancy. Furthermore, his research spans several other distinct visual phenomena, probing how environmental lighting adaptation shapes phenomenal contrast and depth perception, modeling numerosity judgments based on normalized contrast energy rather than absolute item counts, and measuring how peripheral crowding zones and target-flanker interactions dynamically change during shifts of visual attention.",
     "papers": [
       {
         "title": "Imagery: Interference, facilitation, and theory",
@@ -1640,8 +1640,8 @@
         "score": 0.8706
       },
       {
-        "id": "0455",
-        "score": 0.8693
+        "id": "0023",
+        "score": 0.866
       }
     ]
   },
@@ -7552,10 +7552,6 @@
         "score": 0.8971
       },
       {
-        "id": "0455",
-        "score": 0.8926
-      },
-      {
         "id": "0284",
         "score": 0.8914
       },
@@ -7574,6 +7570,10 @@
       {
         "id": "E331",
         "score": 0.8855
+      },
+      {
+        "id": "0066",
+        "score": 0.882
       }
     ]
   },
@@ -11023,6 +11023,10 @@
         "score": 0.8743
       },
       {
+        "id": "E389",
+        "score": 0.8741
+      },
+      {
         "id": "0567",
         "score": 0.8737
       },
@@ -11033,10 +11037,6 @@
       {
         "id": "0094",
         "score": 0.8702
-      },
-      {
-        "id": "0389",
-        "score": 0.8697
       }
     ]
   },
@@ -13155,7 +13155,7 @@
     "lab_name": "Curtis Baker's Lab",
     "lab_url": "http://mvr.mcgill.ca/Curtis/cbaker_home.html",
     "main_research_area": "human visual psychophysics and modeling",
-    "bio": "Curtis L. Baker Jr. is a Professor in the Departments of Ophthalmology and Visual Sciences and Biomedical Engineering at McGill University, and an Affiliate Member of the UBC Vision Cluster. Baker's lab aims to understand human visual perception, particularly the low-level neural mechanisms that perform signal processing relevant to everyday vision. Natural scenes contain objects set apart from their backgrounds not only by luminance or colour but by differences in contrast, texture and motion, and a central goal is to understand how early vision detects and uses these cues to support robust figure-ground and local depth perception. The lab combines human psychophysics with computational modeling of psychophysical and neurophysiological data.",
+    "bio": "Curtis L. Baker Jr. is a Professor in the Department of Ophthalmology & Visual Sciences at McGill University, an Associate Member in Physiology and in the Integrated Program in Neuroscience, and an Affiliate Member of the UBC Vision Cluster. Baker's lab aims to understand human visual perception, particularly the low-level neural mechanisms that perform signal processing relevant to everyday vision. Natural scenes contain objects set apart from their backgrounds not only by luminance or colour but by differences in contrast, texture and motion, and a central goal is to understand how early vision detects and uses these cues to support robust figure-ground and local depth perception. The lab combines human psychophysics with computational modeling of psychophysical and neurophysiological data.",
     "research_direction": "Dr. Baker's research is now centred on human psychophysics of early visual processing: how the visual system uses contrast, texture and motion cues, not just luminance or colour, to separate objects from their backgrounds and judge local depth. Recent work uses isoluminant contrast-modulation stimuli to show that such second-order cues are hard to see when luminance information is removed, pointing to a magnocellular pathway mechanism, and looks for behavioral signatures in human vision of the nonlinear, Y-cell-like processing long studied in neurons. These experiments are paired with computational models that link perception to its neural basis. The lab's earlier neurophysiology in early visual cortex, now wrapping up, produced convolutional-network encoding models that capture simple and complex cells in one framework, showed that dark-dominance in V1 arises mainly from slower inhibition to light, and modeled how fluctuating cortical state shapes trial-to-trial response variability.",
     "papers": [
       {
@@ -14094,7 +14094,7 @@
     "scholar_profile_url": "https://scholar.google.com/citations?user=KLnfuU8AAAAJ&hl=en",
     "main_research_area": "cognitive neuroscience and brain plasticity",
     "bio": "Daphné Bavelier is a cognitive neuroscientist and Professor at the University of Geneva, where they direct the Brain and Learning Lab at Campus Biotech. Bavelier investigates the mechanisms of human brain plasticity and learning, focusing on how the brain adapts to experiences such as deafness or training with digital media. Bavelier’s research indicates that action video games can serve as tools to enhance visual attention, perception, and spatial cognition. Utilizing fMRI, psychophysics, and eye-tracking, Bavelier currently identifies factors that promote learning and the transfer of cognitive skills across different domains.",
-    "research_direction": "Dr. Bavelier has recently been investigating the cognitive impacts of action video game play, specifically exploring the theoretical mechanisms through which gaming might strengthen broad attentional control and transfer to high-stakes psychomotor tasks like aviation screening. To better measure and harness these phenomena, their recent work explores methodological improvements in cognitive assessment and training, including designing multidimensional dynamic difficulty algorithms to personalize game-based interventions and evaluating how different psychometric scoring practices affect the reliability of executive function models. Additionally, they are examining the clinical aspects of heavy gaming behavior. By combining actual gameplay telemetry with psychological batteries, they are investigating whether raw gaming consumption predicts Internet Gaming Disorder, or if such symptoms are better accounted for by underlying mental health and personality traits.",
+    "research_direction": "Dr. Bavelier has recently been investigating the cognitive impacts of action video game play, specifically exploring the theoretical mechanisms through which gaming might strengthen broad attentional control and transfer to high-stakes psychomotor tasks like aviation screening. To better measure and harness these phenomena, their recent work explores methodological improvements in cognitive assessment and training, including designing multidimensional dynamic difficulty algorithms to personalize game-based interventions and evaluating how different psychometric scoring practices affect the reliability of executive function models. Additionally, together with Ben Bediou, her lab is examining the clinical aspects of heavy gaming behavior. By combining actual gameplay telemetry with psychological batteries, the lab is investigating whether raw gaming consumption predicts Internet Gaming Disorder, or if such symptoms are better accounted for by underlying mental health and personality traits.",
     "papers": [
       {
         "title": "Action video game playing impacts occupational screening for high-stakes professionals",
@@ -16079,12 +16079,12 @@
         "score": 0.8881
       },
       {
-        "id": "0225",
-        "score": 0.887
+        "id": "E388",
+        "score": 0.8873
       },
       {
-        "id": "0382",
-        "score": 0.8869
+        "id": "0225",
+        "score": 0.887
       }
     ]
   },
@@ -20105,20 +20105,20 @@
         "score": 0.8751
       },
       {
+        "id": "E388",
+        "score": 0.8746
+      },
+      {
+        "id": "E389",
+        "score": 0.8731
+      },
+      {
         "id": "E341",
         "score": 0.8723
       },
       {
         "id": "0464",
         "score": 0.8716
-      },
-      {
-        "id": "0112",
-        "score": 0.8709
-      },
-      {
-        "id": "0555",
-        "score": 0.8699
       }
     ]
   },
@@ -26342,10 +26342,6 @@
         "score": 0.9181
       },
       {
-        "id": "0455",
-        "score": 0.9169
-      },
-      {
         "id": "0150",
         "score": 0.9117
       },
@@ -26372,6 +26368,10 @@
       {
         "id": "0066",
         "score": 0.9013
+      },
+      {
+        "id": "0001",
+        "score": 0.8996
       }
     ]
   },
@@ -28143,11 +28143,11 @@
     "institution": "Wellesley College",
     "country": "United States",
     "department": "Department of Psychology",
-    "lab_name": "Wilmer Lab",
+    "lab_name": "I See What You Mean (ISWYM) Lab",
     "lab_url": "https://www.wellesley.edu/psychology/faculty/wilmer",
     "scholar_profile_url": "https://scholar.google.com/citations?user=1WMns9cAAAAJ&hl=en",
     "main_research_area": "graph interpretation, data visualization, perceptual organization, decision making, attention, spatial thinking, ensemble processing",
-    "bio": "Jeremy B. Wilmer is a Professor of Psychology whose research investigates the nature and origins of individual variation in human cognition, focusing on face recognition and visual perception. Wilmer utilizes large-scale, internet-based citizen science through platforms like TestMyBrain.org to examine the heritability and cognitive specificity of social-perceptual abilities. Their work extends into statistical cognition and data visualization, where they develop tools and practices, such as ShowMyData.org, to communicate individual-level data in scientific research. By using massive sample sizes and psychometric methodologies, Wilmer aims to map the architecture of the human mind through its variations.",
+    "bio": "Jeremy Wilmer is a Professor of Psychology at Wellesley College and directs the I See What You Mean (ISWYM) Lab, where his research examines how people see, understand, and reason from statistical graphics. His lab studies the perceptual and cognitive processes that shape graph interpretation, including systematic misunderstandings of familiar visualizations such as bar and line graphs of averages, individual differences in graph comprehension, and the ways that showing underlying data can improve the accuracy and consistency of people’s interpretations. A central goal of this work is to develop data visualizations that take advantage of the strengths of human visual perception rather than working against them. He is also the principal creator of ShowMyData.org, a free, open-access suite of tools for creating and exploring data visualizations that emphasize individual observations and the distributions underlying summary statistics.",
     "research_direction": "Jeremy Wilmer directs the I See What You Mean (ISWYM) Lab at Wellesley College, where his research examines how people see, understand, and reason from statistical graphics. His lab studies the perceptual and cognitive processes that shape graph interpretation, including systematic misunderstandings of familiar visualizations such as bar and line graphs of averages, individual differences in graph comprehension, and the ways that showing underlying data can improve the accuracy and consistency of people’s interpretations. A central goal of this work is to develop data visualizations that take advantage of the strengths of human visual perception rather than working against them.\n\nWilmer is also the principal creator of ShowMyData.org, a free, open-access suite of tools for creating and exploring data visualizations that emphasize individual observations and the distributions underlying summary statistics. His work on graph interpretation and data literacy has been featured on Science Friday, including an interview with Ira Flatow on why seemingly simple bar graphs can lead people to misunderstand the data they represent.",
     "papers": [
       {
@@ -28195,6 +28195,10 @@
       },
       {
         "subfield": "Decision Making",
+        "score": 0.5
+      },
+      {
+        "subfield": "Attention",
         "score": 0.5
       }
     ],
@@ -29644,16 +29648,16 @@
         "score": 0.871
       },
       {
-        "id": "0455",
-        "score": 0.8709
-      },
-      {
         "id": "0422",
         "score": 0.8707
       },
       {
         "id": "0344",
         "score": 0.8699
+      },
+      {
+        "id": "E228",
+        "score": 0.8697
       }
     ]
   },
@@ -37734,10 +37738,6 @@
         "score": 0.9386
       },
       {
-        "id": "0455",
-        "score": 0.8922
-      },
-      {
         "id": "0284",
         "score": 0.8864
       },
@@ -37768,6 +37768,10 @@
       {
         "id": "0354",
         "score": 0.8747
+      },
+      {
+        "id": "E323",
+        "score": 0.874
       }
     ]
   },
@@ -42880,127 +42884,6 @@
       }
     ]
   },
-  "0455": {
-    "id": "0455",
-    "name": "Michael A. Crognale",
-    "institution": "University of Nevada, Reno",
-    "country": "United States",
-    "department": "Department of Psychology",
-    "lab_name": "Crognale Vision Lab",
-    "lab_url": "https://labs.psych.unr.edu/crognale_lab/",
-    "scholar_profile_url": "https://scholar.google.com/citations?user=xzfFfHQAAAAJ&hl=en",
-    "main_research_area": "visual neuroscience and color vision",
-    "bio": "Michael A. Crognale is a retired Professor of Visual Neuroscience (retired July 1, 2026) and former Chair of the Department of Psychology at the University of Nevada, Reno, and continues to do consulting. Crognale’s research investigates the physiological mechanisms of sensory processing, focusing on color vision, comparative visual capacities, and neural development across the lifespan. They utilize methodologies such as high-density electroencephalography (EEG), electroretinography (ERG), and adaptive optics scanning laser ophthalmoscopy (AOSLO) to examine visual function ranging from photoreceptor genetics to cortical attention. Their work is applied to the clinical diagnosis of color vision deficiencies and human factors in aviation visibility.",
-    "research_direction": "Dr. Crognale has recently been investigating how the human visual system responds to color and brightness, using both brain recordings and perceptual experiments. Their recent work explores how to get stronger and cleaner visual evoked potentials, including stimulus designs that limit neural adaptation and tripolar electrodes that reduce electrical noise, and whether attention changes early responses to chromatic versus achromatic patterns. They have also been developing tablet-based tests of color vision that can identify color deficiencies more efficiently than traditional clinical tests. In addition, they have been asking how the visual system computes the apparent brightness of a patch from its surroundings, and how this depends on whether the patch is lighter or darker than its background.",
-    "papers": [
-      {
-        "title": "Alternating pattern orientation or phase can increase the amplitude of the visual evoked potential",
-        "abstract": "The research evaluates the cortical response characteristics to pattern-reversal visual evoked potentials (VEPs), which typically yield robust signals for achromatic stimuli but attenuated responses for isoluminant chromatic stimuli. This attenuation is hypothesized to result from contrast adaptation within the sustained parvocellular and koniocellular visual pathways, which exhibit higher time-averaged contrast under reversal paradigms compared to pattern-onset paradigms. To address this, the authors implemented a novel stimulus protocol that modulates pattern orientation or phase in addition to luminance reversal to minimize steady-state adaptation. Findings demonstrate that these spatio-temporal modifications significantly increase the amplitude of the chromatic VEP, providing a methodological enhancement for electrophysiological studies of the sustained chromatic pathways in the human visual cortex.",
-        "year": "2025",
-        "venue": "Vision Research",
-        "citations": "0",
-        "authors": "Jawshan Ara, Alireza Tavakkoli, Michael A. Crognale",
-        "url": "https://doi.org/10.1016/j.visres.2025.108609"
-      },
-      {
-        "title": "Comparison of tripolar and traditional EEG recording of the visual evoked potential",
-        "abstract": "This study conducts a comparative performance analysis between traditional disc electroencephalography (EEG) and tripolar concentric ring electrodes (TCRE/tEEG) in the recording of pattern-reversal visual evoked potentials (VEPs). The authors characterized the signal-to-noise ratio (SNR) and noise profiles, finding that tEEG exhibits significantly enhanced robustness against non-physiological interference, particularly 60 Hz line noise and its harmonics, due to its inherent Laplacian spatial filtering properties. While the qualitative morphology of the VEP waveforms was preserved across both electrode types, systematic shifts in the latencies of primary peaks (N75, P100, N135) were observed, suggesting that the TCRE configuration isolates a more localized subset of the spatiotemporal neural generators involved in early visual processing.",
-        "year": "2025",
-        "venue": "Vision Research",
-        "citations": "0",
-        "authors": "Mackenzie V. Wise, Gideon P. Caplovitz, Gabriel Foster, Michael A. Crognale",
-        "url": "https://doi.org/10.1016/j.visres.2025.108594"
-      },
-      {
-        "title": "Application of the angular indication measurement and foraging interactive D-prime paradigms to tablet-based color vision testing",
-        "abstract": "The authors developed and validated a tablet-based platform for screening color vision deficiencies (CVD) using two advanced psychophysical paradigms: the Angular Indication Measurement (AIM) and the Foraging Interactive D-prime (FInD). The study benchmarked these automated paradigms against traditional clinical assessments, including the Farnsworth-Munsell 100-hue (FM-100) test and the Hardy-Rand-Rittler (HRR) plates. Using Spearman’s rho and linear mixed models to analyze total error scores (TES) and discrimination thresholds, the researchers demonstrated that these computer-based paradigms accurately categorize observers into superior, average, and deficient color discrimination groups. The findings support the use of mobile tablet technology as a reliable and high-throughput alternative to legacy clinical color vision testing methods.",
-        "year": "2025",
-        "venue": "Journal of the Optical Society of America A",
-        "citations": "0",
-        "authors": "Christabel Arthur, Jingyi He, Peter J. Bex, Jan Skerswetat, Michael A. Crognale",
-        "url": "https://doi.org/10.1364/JOSAA.545286"
-      },
-      {
-        "title": "Dependence of brightness induction on the contrast polarity of a disk–annulus stimulus",
-        "abstract": "This study investigates the neural computations underlying brightness induction by testing a model based on edge integration theory coupled with contrast gain control. Using a disk-annulus paradigm, observers performed brightness matches across varying annulus luminance levels. The data was used to construct achromatic color appearance matching functions (ACAMFs), which were found to be non-linear and well-modeled by second-order polynomial functions. The analysis revealed that brightness induction is highly dependent on the contrast polarity (increment vs. decrement) of the target disk relative to its annulus. These results support the existence of distinct gain control mechanisms for the ON and OFF pathways in the human visual system that regulate the strength of induction from luminance edges.",
-        "year": "2025",
-        "venue": "Journal of the Optical Society of America A",
-        "citations": "0",
-        "authors": "Osman Kavcar, Michael E. Rudd, Michael A. Crognale",
-        "url": "https://doi.org/10.1364/JOSAA.546972"
-      },
-      {
-        "title": "Pattern reversal chromatic VEPs like onsets, are unaffected by attentional demand",
-        "abstract": "The study examined the susceptibility of early chromatic and achromatic cortical processing to attentional modulation using visual evoked potentials (VEPs) and a multiple object tracking (MOT) distractor task. Participants were presented with pattern-reversal stimuli in CIE color space along isoluminant (L−M and S−(L+M)) and achromatic axes while performing varying levels of the MOT task. Frequency tagging and FFT analysis showed that while achromatic VEP amplitudes were significantly modulated by attentional demand—exhibiting a decrease in response during the distractor task—the chromatic VEP responses remained robust and invariant. These findings indicate that while top-down attention influences luminance-based spatial pathways in the primary visual cortex, the chromatic pathways are largely resistant to such attentional filtering.",
-        "year": "2024",
-        "venue": "Visual Neuroscience",
-        "citations": "0",
-        "authors": "Christabel Arthur, Osman B. Kavcar, Mackenzie V. Wise, Michael A. Crognale",
-        "url": "https://doi.org/10.1017/S0952523824000063"
-      }
-    ],
-    "primary_subfield": "Color, Light & Materials",
-    "subfields": [
-      {
-        "subfield": "Color, Light & Materials",
-        "score": 1.0
-      },
-      {
-        "subfield": "Spatial Vision",
-        "score": 0.5
-      }
-    ],
-    "profile_pic": "michael_a._crognale_0455.jpg",
-    "umap_projection": {
-      "x": 8.566678047180176,
-      "y": 2.3676841259002686
-    },
-    "cluster": 0,
-    "total_citations": 2867,
-    "h_index": 31,
-    "similar": [
-      {
-        "id": "0150",
-        "score": 0.9194
-      },
-      {
-        "id": "0284",
-        "score": 0.9169
-      },
-      {
-        "id": "0531",
-        "score": 0.9087
-      },
-      {
-        "id": "0696",
-        "score": 0.9086
-      },
-      {
-        "id": "0637",
-        "score": 0.9052
-      },
-      {
-        "id": "E321",
-        "score": 0.9039
-      },
-      {
-        "id": "0456",
-        "score": 0.9028
-      },
-      {
-        "id": "0066",
-        "score": 0.9012
-      },
-      {
-        "id": "0596",
-        "score": 0.9009
-      },
-      {
-        "id": "0049",
-        "score": 0.9006
-      }
-    ]
-  },
   "0456": {
     "id": "0456",
     "name": "Michael A. Webster",
@@ -46911,6 +46794,10 @@
         "score": 0.881
       },
       {
+        "id": "E389",
+        "score": 0.8803
+      },
+      {
         "id": "0555",
         "score": 0.8793
       },
@@ -46925,10 +46812,6 @@
       {
         "id": "E156",
         "score": 0.8765
-      },
-      {
-        "id": "0119",
-        "score": 0.8756
       }
     ]
   },
@@ -48100,7 +47983,7 @@
   },
   "0517": {
     "id": "0517",
-    "name": "OH-SANG KWON",
+    "name": "Oh-Sang Kwon",
     "institution": "Ulsan National Institute of Science and Technology",
     "country": "South Korea",
     "department": "Department of Biomedical Engineering",
@@ -55718,12 +55601,12 @@
         "score": 0.901
       },
       {
-        "id": "0455",
-        "score": 0.9009
-      },
-      {
         "id": "0696",
         "score": 0.9008
+      },
+      {
+        "id": "0531",
+        "score": 0.9003
       }
     ]
   },
@@ -59245,7 +59128,7 @@
     "scholar_profile_url": "https://scholar.google.com/citations?user=I1DDmRMAAAAJ&hl=en",
     "main_research_area": "oculomotor control and visual cognition",
     "bio": "Stephen Heinen is a Senior Scientist at the Smith-Kettlewell Eye Research Institute, where they investigate the neural circuitry governing smooth pursuit, fixation, and saccadic eye movements. Heinen’s research utilizes oculomotor behavior as a non-invasive probe into human cognitive processes, including decision-making and attention allocation. They have provided evidence for independent ocular control during binocular viewing, which challenges classical oculomotor theories such as Hering’s Law. This work aims to translate basic neuroscience into clinical applications for diagnosing and treating conditions like strabismus, macular degeneration, and various psychiatric disorders.",
-    "research_direction": "Dr. Heinen has recently been questioning a classic idea in eye-movement research: that the two eyes are driven by a single shared command. Their recent work records both eyes at high temporal resolution during steady fixation, smooth tracking of moving targets, and shifts in depth, often with one eye covered, to see whether each eye is controlled independently. They have also been developing an oculomotor model to explain unusual saccades that occur when the eyes change depth, and studying how peripheral visual cues can steady gaze and reduce tiny fixational eye movements.",
+    "research_direction": "Dr. Heinen has recently been questioning a classic idea in eye-movement research: that the two eyes are driven by a single shared command. Their recent work records both eyes at high temporal resolution during steady fixation, smooth tracking of moving targets, and shifts in depth, often with one eye behind an infrared-pass occluder (the eye tracker uses infrared light), to see whether each eye is controlled independently. They have also been developing an oculomotor model to explain unusual saccades that occur when the eyes change depth, and studying how peripheral visual cues can steady gaze and reduce tiny fixational eye movements.",
     "papers": [
       {
         "title": "A new oculomotor model demystifies “Remarkable Saccades”",
@@ -63001,6 +62884,10 @@
         "score": 0.92
       },
       {
+        "id": "E389",
+        "score": 0.92
+      },
+      {
         "id": "0109",
         "score": 0.9186
       },
@@ -63019,10 +62906,6 @@
       {
         "id": "0452",
         "score": 0.9154
-      },
-      {
-        "id": "0294",
-        "score": 0.9152
       }
     ]
   },
@@ -64288,10 +64171,6 @@
         "score": 0.9101
       },
       {
-        "id": "0455",
-        "score": 0.9086
-      },
-      {
         "id": "E332",
         "score": 0.9075
       },
@@ -64306,6 +64185,10 @@
       {
         "id": "0596",
         "score": 0.9008
+      },
+      {
+        "id": "0023",
+        "score": 0.8987
       }
     ]
   },
@@ -64417,16 +64300,16 @@
         "score": 0.8785
       },
       {
+        "id": "E388",
+        "score": 0.878
+      },
+      {
         "id": "E341",
         "score": 0.876
       },
       {
         "id": "0174",
         "score": 0.8743
-      },
-      {
-        "id": "0253",
-        "score": 0.8736
       }
     ]
   },
@@ -78533,7 +78416,7 @@
     "scholar_profile_url": "https://scholar.google.com/citations?user=6dHxiEkAAAAJ&hl=en",
     "main_research_area": "computational neuroscience and working memory",
     "bio": "Paul Bays is a Professor of Computation and Cognition at the University of Cambridge, where they direct the Computational Cognition Group. Bays's research utilizes visual psychophysics, mathematical modeling, and eye-tracking to investigate how the brain constructs and maintains internal representations for goal-directed behavior. This work focuses on the resource-based limits of visual working memory, arguing that memory fidelity is constrained by neural noise rather than discrete storage slots. Additionally, their research characterizes the computational principles of feature binding, Bayesian efficient coding, and the predictive attenuation of self-generated sensory inputs.",
-    "research_direction": "Dr Bays' lab has recently been investigating the computational principles governing how the human brain encodes sensory information and allocates limited cognitive resources across modalities. Their recent work explores the dynamics of visual working memory, utilizing continuous analogue report tasks to isolate internal representational noise from motor execution errors and to examine how memory precision is impacted by varying set sizes, temporal delays, and intrinsic motivational states. Beyond visual cognition, they are also probing sensorimotor predictions and haptic perception, applying Bayesian efficient coding and probabilistic frameworks to investigate classical phenomena like the size-weight illusion and the mechanisms of sensory attenuation during self-touch.",
+    "research_direction": "Dr Bays' lab has recently been investigating the computational principles governing how the human brain encodes sensory information and allocates limited cognitive resources across modalities. The lab's recent work explores the dynamics of visual working memory, utilizing continuous analogue report tasks to isolate internal representational noise from motor execution errors and to examine how memory precision is impacted by varying set sizes, temporal delays, and intrinsic motivational states. Beyond visual cognition, the lab is also probing sensorimotor predictions and haptic perception, applying Bayesian efficient coding and probabilistic frameworks to investigate classical phenomena like the size-weight illusion and the mechanisms of sensory attenuation during self-touch.",
     "papers": [
       {
         "title": "Dynamics of variability and bias in working memory",
@@ -88715,10 +88598,6 @@
         "score": 0.8993
       },
       {
-        "id": "0455",
-        "score": 0.8986
-      },
-      {
         "id": "E321",
         "score": 0.898
       },
@@ -88729,6 +88608,10 @@
       {
         "id": "0415",
         "score": 0.897
+      },
+      {
+        "id": "E323",
+        "score": 0.896
       }
     ]
   },
@@ -88832,10 +88715,6 @@
         "score": 0.8709
       },
       {
-        "id": "0455",
-        "score": 0.8682
-      },
-      {
         "id": "0284",
         "score": 0.8653
       },
@@ -88846,6 +88725,10 @@
       {
         "id": "0066",
         "score": 0.8629
+      },
+      {
+        "id": "E328",
+        "score": 0.8625
       }
     ]
   },
@@ -90157,10 +90040,10 @@
         "url": "https://doi.org/10.1080/13506285.2025.2486493"
       }
     ],
-    "primary_subfield": "Perceptual Organization",
+    "primary_subfield": "Attention",
     "subfields": [
       {
-        "subfield": "Perceptual Organization",
+        "subfield": "Attention",
         "score": 1.0
       },
       {
@@ -94643,6 +94526,255 @@
       {
         "id": "0066",
         "score": 0.832
+      }
+    ]
+  },
+  "E388": {
+    "id": "E388",
+    "name": "Jiri Lukavsky",
+    "institution": "Institute of Psychology, Czech Academy of Sciences",
+    "country": "Czech Republic",
+    "department": "Institute of Psychology CAS; Department of Psychology, Faculty of Arts, Charles University (teaching)",
+    "lab_url": "https://www.lukavsky.info/",
+    "scholar_profile_url": "https://scholar.google.com/citations?user=K6NaHlMAAAAJ&hl=en",
+    "main_research_area": "Visual attention and memory",
+    "bio": "Lukavský studies human visual attention, tracking and memory using behavioural experiments, eye tracking and computational modelling. Work on multiple object and multiple identity tracking examines how observers follow moving targets, including under occlusion and with identity information, and which gaze strategies they use. Related studies examine memory for scenes and images, including how much detail is retained, how typicality and image distinctiveness relate to memorability, and how recall differs between art students and laypeople. Lukavský also collaborates on psychological and neuroimaging studies outside core vision research, including replication work.",
+    "research_direction": "Dr. Lukavský has recently been investigating how people follow moving objects and how much of the visual world they remember. Their work on multiple object and multiple identity tracking uses repeated trials, gaze recordings and simulations to ask whether the two tasks rely on the same tracking mechanism. A second thread explores long-term memory for scenes and images, asking how much fine detail is retained after extended study, how recall differs between art students and laypeople, and how a scene's typicality and its distinctiveness in a CNN representation relate to categorization and memorability. Dr. Lukavský also contributes to a neuroimaging replication study that tests reported links between personality traits and resting-state brain connectivity.",
+    "papers": [
+      {
+        "title": "Scene memorability reflects representational distinctiveness within visual categories",
+        "abstract": "Across three experiments (N = 477), participants categorized indoor scenes that had been rated for typicality and then took recognition memory tests. Typical scenes were categorized faster and more accurately but remembered worse, with a more liberal response bias. A CNN-derived distinctiveness measure tracked human typicality ratings and predicted categorization speed and memorability, most strongly in higher layers. The memory advantage for atypical scenes held even when most images were atypical, which argues against rarity within the experiment as the cause.",
+        "year": "2026",
+        "venue": "bioRxiv",
+        "citations": "1",
+        "authors": "Charlotte Atzert, Filip Děchtěrenko, Jiří Lukavský, Niko A. Busch",
+        "url": "https://doi.org/10.64898/2026.03.20.713124"
+      },
+      {
+        "title": "Replication challenges in linking personality to resting-state functional connectomics",
+        "abstract": "This conceptual replication tested reported links between Big Five personality traits and graph-theoretical measures of resting-state fMRI connectivity, in a larger sample of 84 people with adequate power. None of the nine reported correlates replicated. The authors argue that the original testing scheme's liberal control of false positives would be expected to yield about ten spurious findings, and that no correlations survived family-wise error control in their data. They conclude that any personality-connectivity link is subtler than previously reported.",
+        "year": "2026",
+        "venue": "Frontiers in Computational Neuroscience",
+        "citations": "0",
+        "authors": "Nikola Jajcay, David Tomeček, Iveta Fajnerová, Jan Rydlo, Jaroslav Tintěra, Jiří Horáček, Jiří Lukavský, Jaroslav Hlinka",
+        "url": "https://doi.org/10.3389/fncom.2026.1796308"
+      },
+      {
+        "title": "Low detail retention in visual memory despite focused effort",
+        "abstract": "The authors tested whether prolonged study of a small set of scenes lets people remember fine details. A new paradigm allowed repeated testing of individual images, showing which parts of a scene were remembered and which forgotten. Accuracy on detail questions stayed low even with extensive effort, and follow-up experiments probed possible reasons. The results indicate that people store many scenes at low fidelity but struggle to retain details even for few scenes.",
+        "year": "2025",
+        "venue": "Quarterly Journal of Experimental Psychology",
+        "citations": "1",
+        "authors": "Filip Děchtěrenko, Jiří Lukavský, Petr Adámek",
+        "url": "https://doi.org/10.1177/17470218251335636"
+      },
+      {
+        "title": "Visual free recall and recognition in art students and laypeople",
+        "abstract": "Two studies compared visual memory in art students and the general population. In the first, both groups studied images and later drew them from memory in a surprise recall test, alongside a recognition test. In the second, other raters scored the drawings for quality and similarity to the originals. Recognition was comparable between groups, but art students showed better recall and produced better, more similar drawings, and drawing ratings were consistent across raters and tracked recognition accuracy.",
+        "year": "2024",
+        "venue": "Memory & Cognition",
+        "citations": "5",
+        "authors": "Filip Děchtěrenko, Wilma A. Bainbridge, Jiří Lukavský",
+        "url": "https://doi.org/10.3758/s13421-024-01607-7"
+      },
+      {
+        "title": "Gaze coherence reveals distinct tracking strategies in multiple object and multiple identity tracking",
+        "abstract": "The study asks whether tracking only object locations (MOT) and tracking distinct identities (MIT) rely on one mechanism. Participants tracked the same object locations twice and the authors measured how closely their gaze repeated across trials. Gaze was more coherent in repeated MOT trials than in repeated MIT or mixed MOT-MIT pairs. Simulations suggest MOT leans more on grouping and MIT more on jumping between targets, so the two tasks probably do not share one tracking mechanism.",
+        "year": "2023",
+        "venue": "Psychonomic Bulletin & Review",
+        "citations": "5",
+        "authors": "Jiří Lukavský, Hauke S. Meyerhoff",
+        "url": "https://doi.org/10.3758/s13423-023-02417-9"
+      }
+    ],
+    "primary_subfield": "Visual Memory",
+    "subfields": [
+      {
+        "subfield": "Visual Memory",
+        "score": 1.0
+      },
+      {
+        "subfield": "Attention",
+        "score": 0.5
+      },
+      {
+        "subfield": "Scene Perception",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "jiri_lukavsky_E388.jpg",
+    "umap_projection": {
+      "x": 9.57269287109375,
+      "y": 6.524616718292236
+    },
+    "cluster": 0,
+    "total_citations": 4322,
+    "h_index": 31,
+    "similar": [
+      {
+        "id": "E341",
+        "score": 0.9123
+      },
+      {
+        "id": "0361",
+        "score": 0.8975
+      },
+      {
+        "id": "E196",
+        "score": 0.8973
+      },
+      {
+        "id": "0065",
+        "score": 0.8957
+      },
+      {
+        "id": "0174",
+        "score": 0.8952
+      },
+      {
+        "id": "0509",
+        "score": 0.895
+      },
+      {
+        "id": "0112",
+        "score": 0.895
+      },
+      {
+        "id": "0663",
+        "score": 0.8945
+      },
+      {
+        "id": "E339",
+        "score": 0.8932
+      },
+      {
+        "id": "0665",
+        "score": 0.8927
+      }
+    ]
+  },
+  "E389": {
+    "id": "E389",
+    "name": "M. Pilar Aivar",
+    "institution": "Universidad Autónoma de Madrid",
+    "country": "Spain",
+    "department": "Facultad de Psicología; Departamento de Psicología Básica",
+    "lab_name": "Cognition, Attention and Learning Lab (UAM); research group Percepción y Movimiento",
+    "lab_url": "https://www.psicologiauam.es/aivar/index.html",
+    "scholar_profile_url": "https://scholar.google.com/citations?user=0_xhVtUAAAAJ",
+    "main_research_area": "Visual search and eye movements",
+    "bio": "Aivar studies how people search for and act on objects, focusing on the role of memory and eye, head and body movements in visual search. Their work uses eye tracking, immersive virtual reality environments and contextual-cueing paradigms to examine how repeated exposure changes search behavior and fixation patterns. Related work examines whether irrelevant distractors are truly ignored during learned search. They also record smooth pursuit and saccades in children with strabismus, and have written on teaching sensation and perception with class demonstrations.",
+    "research_direction": "Dr. Aivar has recently been studying how memory and learning shape visual search, in both natural and laboratory settings. Their recent work explores how people searching an immersive virtual apartment use spatial memory to guide eye, head and body movements, and how eye movements change when the same display is searched repeatedly, including adjustments of fixation duration, saccade amplitude and landing position. They also investigate whether task-irrelevant distractors are truly ignored in contextual-cueing experiments, using eye tracking to measure whether participants look at them. A separate thread uses eye tracking to compare smooth pursuit and saccades in children with different types of strabismus. They have also published a collection of classroom demonstrations for teaching sensation and perception.",
+    "papers": [
+      {
+        "title": "Hold it there! Dynamic adjustment of fixation duration in visual search tasks",
+        "abstract": "Three eye-tracking experiments examined how oculomotor behavior changes when the same search display is repeated, with one experiment mixing repeated and new displays. The number of fixations needed to find the target fell with repetition, while search fixations grew longer and fixations on the target grew shorter. Saccade amplitudes also decreased and fixations landed progressively closer to the target. The pattern is interpreted as a dynamic, strategic adjustment of fixation durations during search.",
+        "year": "2026",
+        "venue": "Journal of Vision",
+        "citations": "1",
+        "authors": "M. Pilar Aivar, Laura Cepero Amores, Elena Sanz, Miguel A. Vadillo, Victoria Plaza",
+        "url": "https://doi.org/10.1167/jov.26.6.3"
+      },
+      {
+        "title": "Differences in Smooth Pursuit and Associated Saccades in Children With Two Common Types of Strabismus",
+        "abstract": "Eye movements of 58 children, 24 with accommodative esotropia, 18 with intermittent exotropia and 16 controls, were recorded with a 120 Hz eye tracker during sinusoidal smooth pursuit. Pursuit gain was lower in intermittent exotropia than in controls, whereas accommodative esotropia showed more anticipatory saccades during pursuit. Latency did not differ between groups, and rightward pursuit outperformed leftward pursuit. The authors suggest the pursuit system is mainly affected in intermittent exotropia and the saccadic system in accommodative esotropia.",
+        "year": "2026",
+        "venue": "Investigative Ophthalmology & Visual Science",
+        "citations": "0",
+        "authors": "Elena Sanz, M. Pilar Aivar, Jaime Tejedor",
+        "url": "https://doi.org/10.1167/iovs.67.2.28"
+      },
+      {
+        "title": "Knowing where to go: Spatial memory guides eye and body movements in a naturalistic visual search task",
+        "abstract": "Participants searched for geometric 3D objects inside an immersive virtual-reality apartment while eye and head positions were recorded, with the location and visibility of the targets manipulated. Repeated searches for objects with stable locations shortened search time, reduced fixations and errors, and objects seen earlier but searched for the first time were found more easily, which suggests incidental learning of context. Body trajectories became shorter and faster only for repeatedly searched objects. The authors argue that memory for 3D space and target location is central to natural search and shapes movement kinematics.",
+        "year": "2024",
+        "venue": "Journal of Vision",
+        "citations": "10",
+        "authors": "M. Pilar Aivar, Chia-Ling Li, Matthew H. Tong, Dmitry M. Kit, Mary M. Hayhoe",
+        "url": "https://doi.org/10.1167/jov.24.9.1"
+      },
+      {
+        "title": "Measuring learning and attention to irrelevant distractors in contextual cueing.",
+        "abstract": "Contextual-cueing studies have asked participants to ignore task-irrelevant distractors and taken learning from them as evidence that the effect does not need selective attention. Across a series of experiments, the authors show that this instruction often fails to prevent selection, since search is slower when many irrelevant distractors are present. Eye-tracking data show that participants fixate on these distractors. The results question earlier claims that contextual cueing is independent of selective attention.",
+        "year": "2024",
+        "venue": "Journal of Experimental Psychology: Human Perception and Performance",
+        "citations": "6",
+        "authors": "Miguel A. Vadillo, Patricia Aniento, David Hernández-Gutiérrez, Luca Saini, M. Pilar Aivar",
+        "url": "https://doi.org/10.1037/xhp0001230"
+      },
+      {
+        "title": "“Experiencing perception”: A collection of class demonstrations and activities to engage students in sensation & perception courses",
+        "abstract": "The paper presents a set of 15 class activities for sensation and perception courses, each paired with reading assignments and reflection questions to increase student engagement. The collection grew out of the need for demonstrations that could be done remotely during the pandemic. The author also reflects on the challenges and opportunities of using demonstrations with groups of different sizes and cultural backgrounds.",
+        "year": "2024",
+        "venue": "Visual Cognition",
+        "citations": "3",
+        "authors": "M. Pilar Aivar",
+        "url": "https://doi.org/10.1080/13506285.2023.2250519"
+      }
+    ],
+    "primary_subfield": "Visual Search",
+    "subfields": [
+      {
+        "subfield": "Visual Search",
+        "score": 1.0
+      },
+      {
+        "subfield": "Eye Movements",
+        "score": 0.5
+      },
+      {
+        "subfield": "Visual Memory",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "m._pilar_aivar_E389.jpg",
+    "umap_projection": {
+      "x": 11.054167747497559,
+      "y": 5.939302921295166
+    },
+    "cluster": 0,
+    "total_citations": 651,
+    "h_index": 12,
+    "similar": [
+      {
+        "id": "0681",
+        "score": 0.92
+      },
+      {
+        "id": "0166",
+        "score": 0.909
+      },
+      {
+        "id": "0262",
+        "score": 0.908
+      },
+      {
+        "id": "0555",
+        "score": 0.9077
+      },
+      {
+        "id": "0109",
+        "score": 0.9067
+      },
+      {
+        "id": "0728",
+        "score": 0.9019
+      },
+      {
+        "id": "0443",
+        "score": 0.901
+      },
+      {
+        "id": "0043",
+        "score": 0.9007
+      },
+      {
+        "id": "0565",
+        "score": 0.9
+      },
+      {
+        "id": "0019",
+        "score": 0.8996
       }
     ]
   }

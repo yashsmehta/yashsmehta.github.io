@@ -1146,6 +1146,10 @@
         "score": 0.9182
       },
       {
+        "id": "E379",
+        "score": 0.9175
+      },
+      {
         "id": "0256",
         "score": 0.9169
       },
@@ -1156,10 +1160,6 @@
       {
         "id": "E301",
         "score": 0.9161
-      },
-      {
-        "id": "0542",
-        "score": 0.9156
       }
     ]
   },
@@ -5324,6 +5324,10 @@
     "h_index": 6,
     "similar": [
       {
+        "id": "E387",
+        "score": 0.937
+      },
+      {
         "id": "0709",
         "score": 0.9011
       },
@@ -5358,10 +5362,6 @@
       {
         "id": "0634",
         "score": 0.8417
-      },
-      {
-        "id": "0066",
-        "score": 0.8411
       }
     ]
   },
@@ -8692,11 +8692,11 @@
         "score": 0.9157
       },
       {
-        "id": "0378",
-        "score": 0.9152
+        "id": "E384",
+        "score": 0.9153
       },
       {
-        "id": "0331",
+        "id": "0378",
         "score": 0.9152
       }
     ]
@@ -9040,6 +9040,10 @@
         "score": 0.9232
       },
       {
+        "id": "E379",
+        "score": 0.9203
+      },
+      {
         "id": "0542",
         "score": 0.9175
       },
@@ -9058,10 +9062,6 @@
       {
         "id": "0653",
         "score": 0.9138
-      },
-      {
-        "id": "E089",
-        "score": 0.9129
       }
     ]
   },
@@ -14664,8 +14664,8 @@
         "score": 0.901
       },
       {
-        "id": "0457",
-        "score": 0.8987
+        "id": "E385",
+        "score": 0.8998
       }
     ]
   },
@@ -14784,7 +14784,7 @@
         "score": 0.9114
       },
       {
-        "id": "0342",
+        "id": "E379",
         "score": 0.9078
       }
     ]
@@ -17349,6 +17349,10 @@
     "h_index": 14,
     "similar": [
       {
+        "id": "E380",
+        "score": 0.8989
+      },
+      {
         "id": "0410",
         "score": 0.8844
       },
@@ -17383,10 +17387,6 @@
       {
         "id": "E081",
         "score": 0.8513
-      },
-      {
-        "id": "0079",
-        "score": 0.8508
       }
     ]
   },
@@ -18293,6 +18293,10 @@
     "h_index": 19,
     "similar": [
       {
+        "id": "E384",
+        "score": 0.9126
+      },
+      {
         "id": "0100",
         "score": 0.9122
       },
@@ -18317,20 +18321,16 @@
         "score": 0.8958
       },
       {
+        "id": "E385",
+        "score": 0.8932
+      },
+      {
         "id": "0298",
         "score": 0.8915
       },
       {
         "id": "0658",
         "score": 0.8866
-      },
-      {
-        "id": "0607",
-        "score": 0.8843
-      },
-      {
-        "id": "0669",
-        "score": 0.8835
       }
     ]
   },
@@ -19705,6 +19705,10 @@
         "score": 0.8405
       },
       {
+        "id": "E387",
+        "score": 0.8278
+      },
+      {
         "id": "0596",
         "score": 0.8244
       },
@@ -19731,10 +19735,6 @@
       {
         "id": "0084",
         "score": 0.819
-      },
-      {
-        "id": "0380",
-        "score": 0.8184
       }
     ]
   },
@@ -20065,6 +20065,10 @@
         "score": 0.9069
       },
       {
+        "id": "E379",
+        "score": 0.9056
+      },
+      {
         "id": "E136",
         "score": 0.9054
       },
@@ -20075,10 +20079,6 @@
       {
         "id": "0394",
         "score": 0.9033
-      },
-      {
-        "id": "0520",
-        "score": 0.9016
       }
     ]
   },
@@ -22487,6 +22487,10 @@
     "h_index": 50,
     "similar": [
       {
+        "id": "E378",
+        "score": 0.9123
+      },
+      {
         "id": "E037",
         "score": 0.9089
       },
@@ -22521,10 +22525,6 @@
       {
         "id": "0715",
         "score": 0.8966
-      },
-      {
-        "id": "0104",
-        "score": 0.8956
       }
     ]
   },
@@ -23639,6 +23639,10 @@
         "score": 0.9169
       },
       {
+        "id": "E379",
+        "score": 0.9164
+      },
+      {
         "id": "0342",
         "score": 0.9133
       },
@@ -23665,10 +23669,6 @@
       {
         "id": "0280",
         "score": 0.9087
-      },
-      {
-        "id": "E076",
-        "score": 0.9069
       }
     ]
   },
@@ -25796,6 +25796,10 @@
     "h_index": 59,
     "similar": [
       {
+        "id": "E378",
+        "score": 0.9184
+      },
+      {
         "id": "E017",
         "score": 0.9152
       },
@@ -25830,10 +25834,6 @@
       {
         "id": "0631",
         "score": 0.9007
-      },
-      {
-        "id": "0653",
-        "score": 0.9002
       }
     ]
   },
@@ -26215,6 +26215,10 @@
     "h_index": 107,
     "similar": [
       {
+        "id": "E379",
+        "score": 0.9029
+      },
+      {
         "id": "E013",
         "score": 0.9024
       },
@@ -26249,10 +26253,6 @@
       {
         "id": "0550",
         "score": 0.8951
-      },
-      {
-        "id": "0370",
-        "score": 0.8946
       }
     ]
   },
@@ -31298,6 +31298,10 @@
     "h_index": 16,
     "similar": [
       {
+        "id": "E380",
+        "score": 0.8954
+      },
+      {
         "id": "E202",
         "score": 0.8899
       },
@@ -31332,10 +31336,6 @@
       {
         "id": "0099",
         "score": 0.8768
-      },
-      {
-        "id": "0448",
-        "score": 0.8754
       }
     ]
   },
@@ -32035,6 +32035,10 @@
         "score": 0.9233
       },
       {
+        "id": "E379",
+        "score": 0.9219
+      },
+      {
         "id": "0280",
         "score": 0.919
       },
@@ -32057,10 +32061,6 @@
       {
         "id": "0256",
         "score": 0.9133
-      },
-      {
-        "id": "0725",
-        "score": 0.9122
       }
     ]
   },
@@ -35340,16 +35340,16 @@
         "score": 0.9034
       },
       {
+        "id": "E385",
+        "score": 0.901
+      },
+      {
         "id": "0651",
         "score": 0.9005
       },
       {
         "id": "0587",
         "score": 0.9002
-      },
-      {
-        "id": "0445",
-        "score": 0.8999
       }
     ]
   },
@@ -36858,16 +36858,16 @@
         "score": 0.8782
       },
       {
+        "id": "E380",
+        "score": 0.8782
+      },
+      {
         "id": "0562",
         "score": 0.8746
       },
       {
         "id": "0444",
         "score": 0.8732
-      },
-      {
-        "id": "0448",
-        "score": 0.8724
       }
     ]
   },
@@ -39599,8 +39599,8 @@
         "score": 0.8861
       },
       {
-        "id": "0101",
-        "score": 0.8854
+        "id": "E379",
+        "score": 0.886
       }
     ]
   },
@@ -41757,8 +41757,8 @@
         "score": 0.8912
       },
       {
-        "id": "0658",
-        "score": 0.89
+        "id": "E385",
+        "score": 0.8906
       }
     ]
   },
@@ -41865,6 +41865,10 @@
         "score": 0.8938
       },
       {
+        "id": "E378",
+        "score": 0.8933
+      },
+      {
         "id": "0024",
         "score": 0.8918
       },
@@ -41879,10 +41883,6 @@
       {
         "id": "0493",
         "score": 0.8913
-      },
-      {
-        "id": "0067",
-        "score": 0.8898
       }
     ]
   },
@@ -45949,8 +45949,8 @@
     ],
     "profile_pic": "nancy_kanwisher_0493.jpg",
     "umap_projection": {
-      "x": 6.386118412017822,
-      "y": 7.385662078857422
+      "x": 6.416323184967041,
+      "y": 7.346538066864014
     },
     "cluster": 0,
     "total_citations": 83449,
@@ -46204,6 +46204,10 @@
         "score": 0.9025
       },
       {
+        "id": "E379",
+        "score": 0.9023
+      },
+      {
         "id": "E175",
         "score": 0.9014
       },
@@ -46221,10 +46225,6 @@
       },
       {
         "id": "E136",
-        "score": 0.9006
-      },
-      {
-        "id": "0143",
         "score": 0.9006
       }
     ]
@@ -47940,6 +47940,10 @@
         "score": 0.8947
       },
       {
+        "id": "E379",
+        "score": 0.8936
+      },
+      {
         "id": "E262",
         "score": 0.8918
       },
@@ -47950,10 +47954,6 @@
       {
         "id": "E149",
         "score": 0.8897
-      },
-      {
-        "id": "E153",
-        "score": 0.8895
       }
     ]
   },
@@ -48273,6 +48273,10 @@
         "score": 0.9144
       },
       {
+        "id": "E384",
+        "score": 0.9102
+      },
+      {
         "id": "0199",
         "score": 0.9093
       },
@@ -48299,10 +48303,6 @@
       {
         "id": "0536",
         "score": 0.9005
-      },
-      {
-        "id": "E232",
-        "score": 0.9002
       }
     ]
   },
@@ -48413,16 +48413,16 @@
         "score": 0.9175
       },
       {
+        "id": "E385",
+        "score": 0.917
+      },
+      {
         "id": "0378",
         "score": 0.9164
       },
       {
         "id": "0587",
         "score": 0.9146
-      },
-      {
-        "id": "0138",
-        "score": 0.914
       }
     ]
   },
@@ -49542,6 +49542,10 @@
         "score": 0.876
       },
       {
+        "id": "E380",
+        "score": 0.8754
+      },
+      {
         "id": "0708",
         "score": 0.8747
       },
@@ -49572,10 +49576,6 @@
       {
         "id": "0477",
         "score": 0.8685
-      },
-      {
-        "id": "0004",
-        "score": 0.8682
       }
     ]
   },
@@ -51940,6 +51940,10 @@
         "score": 0.9097
       },
       {
+        "id": "E379",
+        "score": 0.9093
+      },
+      {
         "id": "0256",
         "score": 0.9058
       },
@@ -51958,10 +51962,6 @@
       {
         "id": "0013",
         "score": 0.8962
-      },
-      {
-        "id": "E252",
-        "score": 0.895
       }
     ]
   },
@@ -53928,6 +53928,10 @@
         "score": 0.9076
       },
       {
+        "id": "E385",
+        "score": 0.8968
+      },
+      {
         "id": "0523",
         "score": 0.8957
       },
@@ -53958,10 +53962,6 @@
       {
         "id": "0138",
         "score": 0.8857
-      },
-      {
-        "id": "E307",
-        "score": 0.8848
       }
     ]
   },
@@ -60496,10 +60496,6 @@
         "score": 0.8615
       },
       {
-        "id": "E181",
-        "score": 0.859
-      },
-      {
         "id": "0730",
         "score": 0.8543
       },
@@ -60514,6 +60510,10 @@
       {
         "id": "0282",
         "score": 0.8524
+      },
+      {
+        "id": "0391",
+        "score": 0.8509
       }
     ]
   },
@@ -62273,6 +62273,10 @@
         "score": 0.9007
       },
       {
+        "id": "E378",
+        "score": 0.8999
+      },
+      {
         "id": "0653",
         "score": 0.8997
       },
@@ -62287,10 +62291,6 @@
       {
         "id": "0065",
         "score": 0.8991
-      },
-      {
-        "id": "0421",
-        "score": 0.895
       }
     ]
   },
@@ -64744,16 +64744,16 @@
         "score": 0.9072
       },
       {
+        "id": "E181",
+        "score": 0.9068
+      },
+      {
         "id": "0465",
         "score": 0.9068
       },
       {
         "id": "E247",
         "score": 0.9056
-      },
-      {
-        "id": "E026",
-        "score": 0.905
       }
     ]
   },
@@ -65401,6 +65401,10 @@
         "score": 0.9011
       },
       {
+        "id": "E387",
+        "score": 0.8686
+      },
+      {
         "id": "0229",
         "score": 0.8581
       },
@@ -65427,10 +65431,6 @@
       {
         "id": "0657",
         "score": 0.8443
-      },
-      {
-        "id": "0541",
-        "score": 0.844
       }
     ]
   },
@@ -65504,6 +65504,10 @@
     "h_index": 29,
     "similar": [
       {
+        "id": "E387",
+        "score": 0.8568
+      },
+      {
         "id": "0217",
         "score": 0.8531
       },
@@ -65538,10 +65542,6 @@
       {
         "id": "0066",
         "score": 0.7843
-      },
-      {
-        "id": "E331",
-        "score": 0.7835
       }
     ]
   },
@@ -65991,6 +65991,10 @@
         "score": 0.9062
       },
       {
+        "id": "E378",
+        "score": 0.9037
+      },
+      {
         "id": "0468",
         "score": 0.9033
       },
@@ -66013,10 +66017,6 @@
       {
         "id": "0281",
         "score": 0.8974
-      },
-      {
-        "id": "E090",
-        "score": 0.8966
       }
     ]
   },
@@ -66841,12 +66841,12 @@
         "score": 0.9122
       },
       {
-        "id": "0013",
-        "score": 0.91
+        "id": "E379",
+        "score": 0.911
       },
       {
-        "id": "0394",
-        "score": 0.9081
+        "id": "0013",
+        "score": 0.91
       }
     ]
   },
@@ -69293,6 +69293,10 @@
         "score": 0.912
       },
       {
+        "id": "E378",
+        "score": 0.912
+      },
+      {
         "id": "0065",
         "score": 0.9119
       },
@@ -69307,10 +69311,6 @@
       {
         "id": "0012",
         "score": 0.9105
-      },
-      {
-        "id": "0356",
-        "score": 0.9103
       }
     ]
   },
@@ -69517,6 +69517,10 @@
     "h_index": 31,
     "similar": [
       {
+        "id": "E378",
+        "score": 0.9222
+      },
+      {
         "id": "E286",
         "score": 0.9191
       },
@@ -69551,10 +69555,6 @@
       {
         "id": "0631",
         "score": 0.9055
-      },
-      {
-        "id": "0067",
-        "score": 0.9044
       }
     ]
   },
@@ -69773,6 +69773,10 @@
         "score": 0.8951
       },
       {
+        "id": "E378",
+        "score": 0.8936
+      },
+      {
         "id": "0242",
         "score": 0.8934
       },
@@ -69787,10 +69791,6 @@
       {
         "id": "0510",
         "score": 0.8898
-      },
-      {
-        "id": "0459",
-        "score": 0.889
       }
     ]
   },
@@ -72536,12 +72536,12 @@
         "score": 0.8903
       },
       {
-        "id": "E056",
-        "score": 0.8893
+        "id": "E385",
+        "score": 0.8894
       },
       {
-        "id": "0603",
-        "score": 0.8892
+        "id": "E056",
+        "score": 0.8893
       }
     ]
   },
@@ -75135,6 +75135,10 @@
         "score": 0.9264
       },
       {
+        "id": "E379",
+        "score": 0.9262
+      },
+      {
         "id": "E296",
         "score": 0.9261
       },
@@ -75160,10 +75164,6 @@
       },
       {
         "id": "E297",
-        "score": 0.9195
-      },
-      {
-        "id": "E312",
         "score": 0.9195
       }
     ]
@@ -78204,6 +78204,10 @@
         "score": 0.9357
       },
       {
+        "id": "E181",
+        "score": 0.9325
+      },
+      {
         "id": "0239",
         "score": 0.9274
       },
@@ -78234,10 +78238,6 @@
       {
         "id": "0465",
         "score": 0.9222
-      },
-      {
-        "id": "0524",
-        "score": 0.9177
       }
     ]
   },
@@ -78254,33 +78254,6 @@
     "research_direction": "Dr. Ma's work centers on how the brain represents and uses uncertainty, with visual perception and visual working memory as the main testbeds. They introduced probabilistic population codes, a proposal for how neural populations can carry probability distributions so that Bayesian inference is neurally implementable, and have tested Bayesian ideal-observer models against human behavior in tasks such as visual search, and against neural data from visual cortex. A second theme is resource-based accounts of visual working memory, in which variability in encoding precision, rather than a fixed number of slots, limits memory, and, more recently, the neural mechanisms by which limited memory resources are allocated across items. A third theme is confidence and attention-dependent uncertainty, where observers appear to incorporate the reliability of their own sensory evidence into decisions. More recently their group has extended this normative approach to higher-level cognition, including human planning, temporal discounting and procrastination, and to how dopaminergic neurons encode reward.",
     "papers": [
       {
-        "title": "Environmental stochasticity reduces human planning effort",
-        "abstract": "Participants planned in tasks where outcomes of actions were either deterministic or partly random. Behavior and modeling showed that when the environment is stochastic, people invest less planning effort, because deep look-ahead is less valuable when the future is uncertain. The results tie resource-rational accounts of planning to the amount of uncertainty in the world.",
-        "year": "2026",
-        "venue": "Nature Communications",
-        "citations": "0",
-        "authors": "Jordan Lei, Jeroen Olieslagers, Nastaran Arfaei, Daisy Xinlei Lin, Wei Ji Ma",
-        "url": "https://doi.org/10.1038/s41467-026-78023-9"
-      },
-      {
-        "title": "A computational model of backward reasoning in human problem solving",
-        "abstract": "The authors model how people solve problems by reasoning backward from a goal, decomposing it into subgoals as in AND/OR trees, rather than only searching forward. The model captures human choices and search patterns in a behavioral task. It extends the lab's work on planning to problem solving and goal pursuit.",
-        "year": "2026",
-        "venue": "Computational Brain & Behavior",
-        "citations": "0",
-        "authors": "Jeroen Olieslagers, Zahy Bnaya, Daisy Xinlei Lin, Wei Ji Ma",
-        "url": "https://doi.org/10.1007/s42113-026-00335-2"
-      },
-      {
-        "title": "Decision reversals in sequential decision-making",
-        "abstract": "The study examines when and why people reverse an earlier decision partway through a sequence of choices. Behavioral experiments and computational models are used to characterize the conditions that produce reversals and what they reveal about how people plan and update. It adds to the lab's account of sequential decision-making beyond single-shot planning.",
-        "year": "2026",
-        "venue": "Communications Psychology",
-        "citations": "0",
-        "authors": "Sherry Dongqi Bao, Dongjae Kim, Qi Xiu Fu, Wei Ji Ma",
-        "url": "https://doi.org/10.1038/s44271-026-00496-7"
-      },
-      {
         "title": "Reward prediction error neurons implement an efficient code for reward",
         "abstract": "The paper proposes that dopamine reward prediction error neurons are tuned to encode reward in an efficient way, with response functions matched to the distribution of rewards the animal experiences. Using this efficient-coding framework, the authors reproduce features of the diversity of dopamine neuron responses and show the account agrees with recorded data. It links a normative theory of neural coding to reinforcement-learning signals.",
         "year": "2024",
@@ -78290,13 +78263,40 @@
         "url": "https://doi.org/10.1038/s41593-024-01671-x"
       },
       {
-        "title": "Expertise increases planning depth in human gameplay",
-        "abstract": "The authors collected a large set of moves from people of different skill levels playing a simple board game (four-in-a-row) and fit a resource-rational planning model to the choices. Stronger players were best explained by a model that searches deeper and considers more candidate moves, while also evaluating positions more accurately. The work gives a mechanistic account of how expertise changes the computations behind multi-step planning.",
+        "title": "Challenging the fixed-criterion model of perceptual decision-making",
+        "abstract": "Argues mathematically that earlier findings taken as evidence for a fixed decision criterion (the account of 'subjective inflation' in the visual periphery or at unattended locations) are equally consistent with a criterion that adjusts to sensory uncertainty. The authors lay out the task properties needed to tell the two apart and conclude that the fixed-criterion account is poorly tenable.",
         "year": "2023",
-        "venue": "Nature",
-        "citations": "61",
-        "authors": "Bas van Opheusden, Ionatan Kuperwajs, Gianni Galbiati, Zahy Bnaya, Yunqi Li, Wei Ji Ma",
-        "url": "https://doi.org/10.1038/s41586-023-06124-2"
+        "venue": "Neuroscience of Consciousness",
+        "citations": "12",
+        "authors": "Jennifer Laura Lee, Rachel N. Denison, Wei Ji Ma",
+        "url": "https://doi.org/10.1093/nc/niad010"
+      },
+      {
+        "title": "Point estimate observers: A new class of models for perceptual decision making",
+        "abstract": "Introduces observer models that evaluate only a single best estimate of the world state per response category, instead of full Bayesian posteriors. Compared against human decisions in five perceptual categorization tasks, the point estimate observer beats the Bayesian observer in two, ties in two and loses in one, and is competitive with sampling observers.",
+        "year": "2023",
+        "venue": "Psychological Review",
+        "citations": "1",
+        "authors": "Heiko H. Schütt, Aspen H. Yoo, Joshua Michael Calder-Travis, Wei Ji Ma",
+        "url": "https://doi.org/10.1037/rev0000402"
+      },
+      {
+        "title": "No effect of monetary reward in a visual working memory task",
+        "abstract": "Tests whether people can raise the total visual working memory resource they devote to a task when paid more. In three delayed-estimation experiments with bonus payments of $0 to $10, between and within subjects, neither performance nor intrinsic motivation depended on reward, with implications for resource-rational theories of visual working memory.",
+        "year": "2023",
+        "venue": "PLoS ONE",
+        "citations": "13",
+        "authors": "Ronald van den Berg, Qijia Zou, Yuhang Li, Wei Ji Ma",
+        "url": "https://doi.org/10.1371/journal.pone.0280257"
+      },
+      {
+        "title": "A Computational Approach to Search in Visual Working Memory",
+        "abstract": "Asks whether process models from visual working memory and visual search also explain search in memory. In a two-alternative color localization task varying set size and color similarity, a variable-precision model with a Bayesian decision stage fit well and an item limit did not help; a resource-rational model did not beat it. Search in working memory resembles search in perception.",
+        "year": "2023",
+        "venue": "PsyArXiv (preprint)",
+        "citations": "0",
+        "authors": "Aditi Singh, Andra Mihali, Wen-Chuang Chou, Wei Ji Ma",
+        "url": "https://doi.org/10.31234/osf.io/jqthb"
       }
     ],
     "primary_subfield": "Theory & Computation",
@@ -78316,8 +78316,8 @@
     ],
     "profile_pic": "wei_ji_ma_E181.jpg",
     "umap_projection": {
-      "x": 8.316288948059082,
-      "y": 5.789738178253174
+      "x": 8.389781951904297,
+      "y": 5.898800849914551
     },
     "cluster": 0,
     "total_citations": 17785,
@@ -78325,43 +78325,43 @@
     "similar": [
       {
         "id": "E180",
-        "score": 0.9106
-      },
-      {
-        "id": "E247",
-        "score": 0.9089
-      },
-      {
-        "id": "E253",
-        "score": 0.9019
-      },
-      {
-        "id": "0017",
-        "score": 0.8971
-      },
-      {
-        "id": "E198",
-        "score": 0.896
-      },
-      {
-        "id": "0703",
-        "score": 0.895
+        "score": 0.9325
       },
       {
         "id": "0524",
-        "score": 0.8946
+        "score": 0.9182
       },
       {
-        "id": "E251",
-        "score": 0.891
+        "id": "E247",
+        "score": 0.9154
+      },
+      {
+        "id": "0592",
+        "score": 0.9151
+      },
+      {
+        "id": "E198",
+        "score": 0.9107
+      },
+      {
+        "id": "0017",
+        "score": 0.9083
+      },
+      {
+        "id": "0703",
+        "score": 0.9068
+      },
+      {
+        "id": "0465",
+        "score": 0.9066
+      },
+      {
+        "id": "0239",
+        "score": 0.9056
       },
       {
         "id": "0264",
-        "score": 0.8904
-      },
-      {
-        "id": "0554",
-        "score": 0.8878
+        "score": 0.9047
       }
     ]
   },
@@ -79072,12 +79072,12 @@
         "score": 0.9121
       },
       {
-        "id": "E247",
-        "score": 0.9106
+        "id": "E181",
+        "score": 0.9107
       },
       {
-        "id": "0362",
-        "score": 0.9103
+        "id": "E247",
+        "score": 0.9106
       }
     ]
   },
@@ -82013,6 +82013,10 @@
         "score": 0.9158
       },
       {
+        "id": "E382",
+        "score": 0.9057
+      },
+      {
         "id": "E136",
         "score": 0.9055
       },
@@ -82035,10 +82039,6 @@
       {
         "id": "E301",
         "score": 0.9018
-      },
-      {
-        "id": "E297",
-        "score": 0.9009
       }
     ]
   },
@@ -82133,6 +82133,10 @@
         "score": 0.916
       },
       {
+        "id": "E181",
+        "score": 0.9154
+      },
+      {
         "id": "0465",
         "score": 0.9138
       },
@@ -82151,10 +82155,6 @@
       {
         "id": "0181",
         "score": 0.909
-      },
-      {
-        "id": "E181",
-        "score": 0.9089
       },
       {
         "id": "0451",
@@ -82381,6 +82381,10 @@
         "score": 0.8951
       },
       {
+        "id": "E181",
+        "score": 0.895
+      },
+      {
         "id": "E180",
         "score": 0.8943
       },
@@ -82395,10 +82399,6 @@
       {
         "id": "0101",
         "score": 0.8912
-      },
-      {
-        "id": "E181",
-        "score": 0.891
       },
       {
         "id": "0580",
@@ -82501,6 +82501,14 @@
         "score": 0.9149
       },
       {
+        "id": "E382",
+        "score": 0.9123
+      },
+      {
+        "id": "E379",
+        "score": 0.9102
+      },
+      {
         "id": "E254",
         "score": 0.9101
       },
@@ -82515,14 +82523,6 @@
       {
         "id": "0518",
         "score": 0.9075
-      },
-      {
-        "id": "E136",
-        "score": 0.9068
-      },
-      {
-        "id": "E297",
-        "score": 0.9044
       }
     ]
   },
@@ -82605,10 +82605,6 @@
     "h_index": 32,
     "similar": [
       {
-        "id": "E181",
-        "score": 0.9019
-      },
-      {
         "id": "E180",
         "score": 0.901
       },
@@ -82631,6 +82627,10 @@
       {
         "id": "E255",
         "score": 0.8888
+      },
+      {
+        "id": "E181",
+        "score": 0.886
       },
       {
         "id": "E158",
@@ -84119,6 +84119,10 @@
         "score": 0.9117
       },
       {
+        "id": "E385",
+        "score": 0.9111
+      },
+      {
         "id": "0377",
         "score": 0.8966
       },
@@ -84149,10 +84153,6 @@
       {
         "id": "0529",
         "score": 0.8808
-      },
-      {
-        "id": "E018",
-        "score": 0.8776
       }
     ]
   },
@@ -85986,16 +85986,16 @@
         "score": 0.9031
       },
       {
+        "id": "E379",
+        "score": 0.9014
+      },
+      {
         "id": "E040",
         "score": 0.9002
       },
       {
         "id": "0280",
         "score": 0.8998
-      },
-      {
-        "id": "E175",
-        "score": 0.8996
       }
     ]
   },
@@ -86210,6 +86210,10 @@
         "score": 0.9181
       },
       {
+        "id": "E379",
+        "score": 0.9176
+      },
+      {
         "id": "0542",
         "score": 0.915
       },
@@ -86232,10 +86236,6 @@
       {
         "id": "0568",
         "score": 0.908
-      },
-      {
-        "id": "E301",
-        "score": 0.9075
       }
     ]
   },
@@ -86342,6 +86342,10 @@
         "score": 0.9149
       },
       {
+        "id": "E379",
+        "score": 0.9145
+      },
+      {
         "id": "E175",
         "score": 0.9144
       },
@@ -86352,10 +86356,6 @@
       {
         "id": "E161",
         "score": 0.914
-      },
-      {
-        "id": "0104",
-        "score": 0.9109
       }
     ]
   },
@@ -86678,6 +86678,10 @@
         "score": 0.943
       },
       {
+        "id": "E379",
+        "score": 0.9303
+      },
+      {
         "id": "E167",
         "score": 0.927
       },
@@ -86708,10 +86712,6 @@
       {
         "id": "E076",
         "score": 0.9181
-      },
-      {
-        "id": "0571",
-        "score": 0.9178
       }
     ]
   },
@@ -86792,6 +86792,10 @@
         "score": 0.8995
       },
       {
+        "id": "E379",
+        "score": 0.8979
+      },
+      {
         "id": "0287",
         "score": 0.8952
       },
@@ -86810,10 +86814,6 @@
       {
         "id": "0013",
         "score": 0.8902
-      },
-      {
-        "id": "0342",
-        "score": 0.8887
       }
     ]
   },
@@ -86920,6 +86920,10 @@
         "score": 0.9037
       },
       {
+        "id": "E379",
+        "score": 0.9017
+      },
+      {
         "id": "0280",
         "score": 0.9012
       },
@@ -86934,10 +86938,6 @@
       {
         "id": "0220",
         "score": 0.8994
-      },
-      {
-        "id": "0498",
-        "score": 0.8987
       }
     ]
   },
@@ -87148,6 +87148,10 @@
     "h_index": 45,
     "similar": [
       {
+        "id": "E379",
+        "score": 0.907
+      },
+      {
         "id": "0138",
         "score": 0.9065
       },
@@ -87182,10 +87186,6 @@
       {
         "id": "E295",
         "score": 0.9014
-      },
-      {
-        "id": "0542",
-        "score": 0.9012
       }
     ]
   },
@@ -93251,6 +93251,864 @@
       {
         "id": "0222",
         "score": 0.8858
+      }
+    ]
+  },
+  "E378": {
+    "id": "E378",
+    "name": "Leila Wehbe",
+    "institution": "Stanford University",
+    "country": "United States",
+    "department": "Department of Biomedical Data Science and Department of Neurology and Neurological Sciences",
+    "lab_url": "https://leilawehbe.com/",
+    "main_research_area": "computational cognitive neuroscience",
+    "bio": "Leila Wehbe is a computational neuroscientist whose research investigates how the human brain processes and represents complex information during naturalistic vision and language comprehension. Wehbe integrates non-invasive functional neuroimaging, primarily fMRI and MEG, with machine learning architectures to develop predictive voxel-wise encoding models and representation alignment methods. Their work includes developing generative frameworks such as BrainDiVE and BrainSCUBA to discover, synthesize, and interpret visual feature tuning and domain selectivity across the human higher visual cortex. Additionally, their research explores computational parallels and divergences between artificial neural networks and biological brains to advance NeuroAI models of cognitive processing.",
+    "research_direction": "Dr. Wehbe has recently been investigating the computational principles underlying both high-level vision and natural language processing in the human brain. Their recent work explores category selectivity in the ventral visual cortex, utilizing massive fMRI datasets to probe whether higher visual areas operate as domain-general statistical filters or domain-specific modules, and to search for novel functional regions dedicated to complex, heterogeneous categories like food. To map these cortical tuning profiles without relying on predefined stimulus labels, they are developing data-driven encoding frameworks that leverage multimodal deep networks and text-conditioned generative models to produce fine-grained natural language captions of individual voxel preferences. Beyond visual processing, they are also investigating how biological language comprehension diverges from artificial networks, using MEG recordings during naturalistic story processing to evaluate how well large language models align with human neural activity across complex semantic domains like social intelligence and physical commonsense.",
+    "papers": [
+      {
+        "title": "Higher visual areas act like domain-general filters with strong selectivity and functional specialization",
+        "abstract": "Rather than testing a-priori category hypotheses, this work takes a hypothesis-neutral approach to category selectivity in human higher visual cortex: randomly initialized deep networks are trained end-to-end solely to predict voxel-wise fMRI responses to natural images. Without any category-level supervision, units in the trained encoding models emerge as detectors of semantic concepts such as faces and words, giving data-driven support for categorical selectivity. Selectivity largely persists when networks are trained with all images of the preferred category held out, indicating that it reflects sensitivity to generic visual statistics characteristic of those categories rather than domain-specific machinery. Transfer of the learned representations to perceptual tasks exposes the functional role of the selective responses, and the models recover selectivity only for a small set of previously described categories, suggesting the core categories of ventral visual cortex are already known.",
+        "year": "2026",
+        "venue": "Nature Communications",
+        "citations": "0",
+        "authors": "Meenakshi Khosla, Leila Wehbe",
+        "url": "https://doi.org/10.1038/s41467-026-73938-9"
+      },
+      {
+        "title": "Divergences between Language Models and Human Brains",
+        "abstract": "While internal latent representations extracted from deep language models (LMs) demonstrate high predictive accuracy for human cortical activity elicited during naturalistic text processing, the nature and extent of computational divergences between biological and artificial language representations remain poorly understood. Using magnetoencephalography (MEG) recordings from participants reading and listening to narrative stories across two distinct datasets, this work applies a data-driven, LLM-based hypothesis generation framework to isolate residual neural variance unaccounted for by pretrained LM embeddings. The analysis reveals two prominent dimensions where LMs systematically diverge from human neural processing: social/emotional intelligence and physical commonsense reasoning. Furthermore, task-specific fine-tuning of GPT-2 XL representations on corpora targeting these domains significantly improves linear encoding model alignment with cortical language responses, indicating that representational deficiencies in these specific semantic domains drive the observed LM-brain divergence.",
+        "year": "2024",
+        "venue": "Advances in Neural Information Processing Systems (NeurIPS 2024)",
+        "citations": "0",
+        "authors": "Yuchen Zhou, Emmy Liu, Graham Neubig, Michael J. Tarr, Leila Wehbe",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/938062ec7e5da3c23315a6b09339e8ad-Abstract-Conference.html"
+      },
+      {
+        "title": "BrainSCUBA: Fine-Grained Natural Language Captions of Visual Cortex Selectivity",
+        "abstract": "Characterizing functional tuning in high-order visual cortex has historically relied on hypothesis-driven testing using curated stimulus subsets, potentially restricting discoveries to predefined category labels. To overcome this limitation, this paper introduces Semantic Captioning Using Brain Alignments (BrainSCUBA), a data-driven framework that generates fine-grained natural language descriptions of the visual and semantic tuning profiles of individual cortical voxels. BrainSCUBA aligns voxel-wise encoding weights with the multimodal embedding space of a contrastive vision-language model (CLIP) and conditions a pretrained large language model to decode interpretable text captions detailing the visual features predicted to drive maximal voxel activation. Text-conditioned diffusion synthesis validates that captions preserve functional specificity by generating high-activating, semantically coherent imagery, revealing nuanced sub-categorical selectivity within body- and person-selective visual areas.",
+        "year": "2024",
+        "venue": "International Conference on Learning Representations (ICLR 2024)",
+        "citations": "0",
+        "authors": "Andrew F. Luo, Margaret M. Henderson, Michael J. Tarr, Leila Wehbe",
+        "url": "https://openreview.net/forum?id=mQYHXUUTkU"
+      },
+      {
+        "title": "Better models of human high-level visual cortex emerge from natural language supervision with a large and diverse dataset",
+        "abstract": "Voxel-wise encoding models built on features from a wide range of deep networks are compared on their ability to predict 7T fMRI responses to natural scenes in high-level human visual cortex (Natural Scenes Dataset). Models trained with natural-language supervision on large, diverse image-text corpora (CLIP) yield the best predictions of high-level visual cortex, outperforming vision-only and label-supervised models. Controlled comparisons that vary training objective, dataset size and dataset diversity show that both language supervision and the scale and diversity of training data contribute to the gain, and variance partitioning and principal-component analyses of the CLIP-based model reveal semantically interpretable dimensions of tuning across category-selective regions.",
+        "year": "2023",
+        "venue": "Nature Machine Intelligence",
+        "citations": "0",
+        "authors": "Aria Y. Wang, Kendrick Kay, Thomas Naselaris, Michael J. Tarr, Leila Wehbe",
+        "url": "https://doi.org/10.1038/s42256-023-00753-y"
+      },
+      {
+        "title": "Selectivity for food in human ventral visual cortex",
+        "abstract": "Food is an ecologically critical but visually heterogeneous category, which may explain why earlier studies failed to find dedicated visual selectivity for it. Using natural-image 7T fMRI from all eight participants of the Natural Scenes Dataset together with modern, more sensitive designs and statistical analyses, this study identifies two food-selective regions in human ventral visual cortex, flanking the fusiform face area along medial and lateral bands. The result replicates across independent image sets and multiple analysis approaches, and is confirmed in an independent fMRI localizer using grayscale food images, establishing food alongside faces, bodies, places and words as a domain of functional selectivity in the ventral visual stream.",
+        "year": "2023",
+        "venue": "Communications Biology",
+        "citations": "0",
+        "authors": "Nidhi Jain, Aria Y. Wang, Margaret M. Henderson, Ruogu Lin, Jacob S. Prince, Michael J. Tarr, Leila Wehbe",
+        "url": "https://doi.org/10.1038/s42003-023-04546-2"
+      }
+    ],
+    "primary_subfield": "Theory & Computation",
+    "subfields": [
+      {
+        "subfield": "Theory & Computation",
+        "score": 1.0
+      },
+      {
+        "subfield": "Object Recognition",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "leila_wehbe_E378.jpg",
+    "umap_projection": {
+      "x": 5.621914386749268,
+      "y": 7.948140621185303
+    },
+    "cluster": 0,
+    "total_citations": 2907,
+    "h_index": 23,
+    "similar": [
+      {
+        "id": "E037",
+        "score": 0.9222
+      },
+      {
+        "id": "E090",
+        "score": 0.9197
+      },
+      {
+        "id": "0281",
+        "score": 0.9184
+      },
+      {
+        "id": "E032",
+        "score": 0.9143
+      },
+      {
+        "id": "0653",
+        "score": 0.9125
+      },
+      {
+        "id": "0242",
+        "score": 0.9123
+      },
+      {
+        "id": "E017",
+        "score": 0.912
+      },
+      {
+        "id": "E033",
+        "score": 0.912
+      },
+      {
+        "id": "E286",
+        "score": 0.9094
+      },
+      {
+        "id": "0459",
+        "score": 0.9089
+      }
+    ]
+  },
+  "E379": {
+    "id": "E379",
+    "name": "Matthew A. Smith",
+    "institution": "Carnegie Mellon University",
+    "country": "United States",
+    "department": "Biomedical Engineering; Neuroscience Institute (Center for the Neural Basis of Cognition)",
+    "lab_name": "Smith Laboratory",
+    "lab_url": "https://smithlab.net/",
+    "main_research_area": "Visual cortex population neurophysiology",
+    "bio": "Smith studies how the primate brain processes visual input and turns it into decisions and eye movements, using multi-electrode population recordings in macaques together with computational modeling. Work in the lab covers mid-level visual cortex (V4), the prefrontal cortex, the superior colliculus and the locus coeruleus. Questions include how recent visual experience and internal states such as arousal change neuronal responses, and how working memory is maintained. The lab also builds deep neural network models of visual cortical neurons and uses microstimulation to perturb neural population activity.",
+    "research_direction": "Dr. Smith has recently been investigating how the primate visual system's neuronal populations represent images and how that representation shifts with experience and internal state. Their recent work explores compact deep-network models that predict responses of visual cortical neurons, and recordings in V4 showing how recent experience with an image changes population activity and change-detection performance. They also study how arousal and brain state are embedded in oculomotor circuits such as the superior colliculus and in the locus coeruleus during saccadic perceptual decisions. A further thread uses prefrontal microstimulation during a memory-guided saccade task to ask how working-memory signals withstand perturbation.",
+    "papers": [
+      {
+        "title": "Compact deep neural network models of the visual cortex",
+        "abstract": "The authors train a deep ensemble model that predicts macaque visual cortical responses to arbitrary images and then compress it into compact models with about 5,000 times fewer parameters but comparable accuracy. Compact models for V4 (and also V1 and IT) share similar early filters and differ mainly in how they consolidate that shared representation, so a neuron's stimulus preference is set largely by this consolidation step. Responses to images designed with the compact models verified that they capture real V4 stimulus preferences.",
+        "year": "2026",
+        "venue": "Nature",
+        "citations": "26",
+        "authors": "Benjamin R. Cowley, Patricia L. Stan, Jonathan W. Pillow, Matthew A. Smith",
+        "url": "https://doi.org/10.1038/s41586-026-10150-1"
+      },
+      {
+        "title": "Brain-wide arousal signals are segregated from movement planning in the superior colliculus of the macaque",
+        "abstract": "Spiking in superior colliculus populations was recorded while macaques made memory-guided saccades, revealing slow fluctuations over tens of minutes in some neurons. A low-dimensional activity pattern tracked pupil size and simultaneously recorded prefrontal activity, consistent with arousal. Deep-layer collicular neurons were less coupled to this signal, and the arousal and saccade-tuning dimensions did not overlap with movement-initiation signals in population space.",
+        "year": "2026",
+        "venue": "eLife",
+        "citations": "4",
+        "authors": "Richard Johnston, Matthew A Smith",
+        "url": "https://doi.org/10.7554/elife.99278.4"
+      },
+      {
+        "title": "The Role of the Locus Ceruleus in Eye Movements during Perceptual Decision-Making",
+        "abstract": "Single locus ceruleus neurons were recorded in macaques performing a visual change-detection task with a saccadic report that separates sensory from motor contributions. Most neurons responded in time with the choice saccade, whereas few responded to the visual stimuli. These saccade-locked responses did not depend on outcome, difficulty, reaction time or fluctuations in sensitivity and criterion, pointing to an oculomotor rather than perceptual role.",
+        "year": "2026",
+        "venue": "Journal of Neuroscience",
+        "citations": "0",
+        "authors": "Katerina Acar, Matthew A. Smith",
+        "url": "https://doi.org/10.1523/jneurosci.0385-26.2026"
+      },
+      {
+        "title": "Robustness of Working Memory to Prefrontal Cortex Microstimulation",
+        "abstract": "Patterned microstimulation was applied through multielectrode arrays in dorsolateral prefrontal cortex of macaques performing a memory-guided saccade task. Stimulation altered working-memory-related signals in individual neurons but left task performance largely intact. Population analyses showed that stimulation affected dimensions in which memory signals evolve over time but barely affected dimensions in which they are stable.",
+        "year": "2025",
+        "venue": "Journal of Neuroscience",
+        "citations": "3",
+        "authors": "Joana Soldado-Magraner, Yuki Minai, Byron M. Yu, Matthew A. Smith",
+        "url": "https://doi.org/10.1523/jneurosci.2197-24.2025"
+      },
+      {
+        "title": "Recent Visual Experience Reshapes V4 Neuronal Activity and Improves Perceptual Performance",
+        "abstract": "Populations of V4 neurons were recorded while macaques performed a natural-image change detection task under different amounts of recent experience with an image. More recent experience improved change detection and reduced V4 responses, with the size of the behavioral gain correlating with the size of the suppression. The suppression increased signal separation and lowered shared trial-to-trial variability within the population.",
+        "year": "2024",
+        "venue": "Journal of Neuroscience",
+        "citations": "5",
+        "authors": "Patricia L. Stan, Matthew A. Smith",
+        "url": "https://doi.org/10.1523/jneurosci.1764-23.2024"
+      }
+    ],
+    "primary_subfield": "Theory & Computation",
+    "subfields": [
+      {
+        "subfield": "Theory & Computation",
+        "score": 1.0
+      },
+      {
+        "subfield": "Eye Movements",
+        "score": 0.5
+      },
+      {
+        "subfield": "Decision Making",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "matthew_a._smith_E379.jpg",
+    "umap_projection": {
+      "x": 4.983667373657227,
+      "y": 5.183396339416504
+    },
+    "cluster": 0,
+    "total_citations": 7701,
+    "h_index": 37,
+    "similar": [
+      {
+        "id": "E301",
+        "score": 0.9303
+      },
+      {
+        "id": "E136",
+        "score": 0.9262
+      },
+      {
+        "id": "0342",
+        "score": 0.9219
+      },
+      {
+        "id": "0104",
+        "score": 0.9203
+      },
+      {
+        "id": "0280",
+        "score": 0.9186
+      },
+      {
+        "id": "E296",
+        "score": 0.9176
+      },
+      {
+        "id": "0013",
+        "score": 0.9175
+      },
+      {
+        "id": "0412",
+        "score": 0.9166
+      },
+      {
+        "id": "0256",
+        "score": 0.9164
+      },
+      {
+        "id": "E297",
+        "score": 0.9145
+      }
+    ]
+  },
+  "E380": {
+    "id": "E380",
+    "name": "Ian Phillips",
+    "institution": "Johns Hopkins University",
+    "country": "United States",
+    "department": "William H. Miller III Department of Philosophy; Department of Psychological and Brain Sciences",
+    "lab_url": "https://www.ianbphillips.com/",
+    "main_research_area": "Perception, awareness and cognition",
+    "bio": "Phillips works at the intersection of philosophy and the mind/brain sciences, studying the nature and contents of perception and its relations to memory, imagination and belief. Their experimental work uses large online samples to ask what visual information remains available to observers who report seeing nothing, as in inattentional blindness. They also study how time is represented in perception, including distortions of perceived time within events marked by sound or silence. A further strand concerns mental imagery, in particular the distinction between visual-object and spatial imagery in aphantasia, and the metacognitive knowledge that people draw on when simulating their own decision-making.",
+    "research_direction": "Dr. Phillips has recently been studying what observers can and cannot perceive, and how the mind represents experience, by combining philosophical analysis with large online behavioral experiments. Their recent work tests whether people who deny noticing a stimulus in inattentional blindness still carry above-chance information about its location, color and shape, and whether their reports reflect response bias. They also ask whether events structure perceived time in the way objects structure perceived space, using sound- and silence-defined events. In addition, they explore the purpose of perception and the border between perception and cognition, the structure of mental imagery in aphantasia, and the metacognitive self-models people draw on when pretending not to know something.",
+    "papers": [
+      {
+        "title": "Pretending Not to Know Reveals a Capacity for Model-Based Self-Simulation",
+        "abstract": "Adults (N = 1,001) saw the solution to a game (Battleship or Hangman) and then tried to play as if they did not know it, so that their simulated play could be compared with genuine play. Pretenders matched the number of guesses needed and subtler patterns such as how decision time tracks uncertainty, and other people could not detect the pretense. Statistics and computational modeling nonetheless showed signs of overacting, pointing to a simplified internal model of one's own decision-making.",
+        "year": "2026",
+        "venue": "Psychological Science",
+        "citations": "4",
+        "authors": "Matan Mazor, Chaz Firestone, Ian Phillips",
+        "url": "https://doi.org/10.1177/09567976251409747"
+      },
+      {
+        "title": "Sensitivity to visual features in inattentional blindness",
+        "abstract": "Inattentional blindness is usually inferred from observers saying they noticed nothing unusual, a measure open to response bias. In the largest set of such studies to date, observers who denied noticing a stimulus still reported its location, color and shape better than chance. Adding trials with no stimulus showed that observers as a group are biased toward saying they saw nothing. The results indicate residual visual sensitivity in inattentional blindness and weaken its use as evidence that awareness requires attention.",
+        "year": "2025",
+        "venue": "eLife",
+        "citations": "15",
+        "authors": "Makaela Nartker, Chaz Firestone, Howard Egeth, Ian Phillips",
+        "url": "https://doi.org/10.7554/elife.100337.3"
+      },
+      {
+        "title": "Aphantasia reimagined",
+        "abstract": "People who report no visual imagery often perform normally on tasks that seem to need it, which has been explained by reporting quirks, faulty introspection, unconscious imagery or alternative strategies. The paper argues that the puzzle comes from treating imagery variation as a single vividness scale. It proposes separating visual-object imagery from spatial imagery, so that aphantasia reflects loss of the former with spatial imagery spared and unreported on vividness questionnaires. Aphantasia is then treated like agnosia, a label for several imagery deficits with different sparing.",
+        "year": "2025",
+        "venue": "Noûs",
+        "citations": "19",
+        "authors": "Ian Phillips",
+        "url": "https://doi.org/10.1111/nous.12551"
+      },
+      {
+        "title": "Event-based warping: A relative distortion of time within events.",
+        "abstract": "Objects are known to warp perceived space, so that points inside an object look farther apart than points in empty space. Five experiments (N = 500) show an analogous effect in time: stimuli presented within an event seem further apart in time. The effect arises for events defined by sound and by silence, is not explained by surprise, distraction or attentional cueing, and also appears across modalities from audition to vision. The authors propose that structured representations in both space and time produce similar relative perceptual distortions.",
+        "year": "2025",
+        "venue": "Journal of Experimental Psychology: General",
+        "citations": "5",
+        "authors": "Rui Zhe Goh, Hanbei Zhou, Chaz Firestone, Ian Phillips",
+        "url": "https://doi.org/10.1037/xge0001798"
+      },
+      {
+        "title": "Visual adaptation and the purpose of perception",
+        "abstract": "Examines Ned Block's attempt to separate perception from cognition by appealing to what perception is for. The authors critically assess these proposals, using visual adaptation as a test case. More broadly, they look at how vision science explains perceptual mechanisms by their evolved purpose, as in two-visual-systems theories and debates over cognitive penetration, and at the strengths and pitfalls of asking what perception is for.",
+        "year": "2023",
+        "venue": "Analysis",
+        "citations": "25",
+        "authors": "Ian Phillips, Chaz Firestone",
+        "url": "https://doi.org/10.1093/analys/anac060"
+      }
+    ],
+    "primary_subfield": "Attention",
+    "subfields": [
+      {
+        "subfield": "Attention",
+        "score": 1.0
+      },
+      {
+        "subfield": "Temporal Processing",
+        "score": 0.5
+      },
+      {
+        "subfield": "Decision Making",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "ian_phillips_E380.jpg",
+    "umap_projection": {
+      "x": 10.066583633422852,
+      "y": 4.3737473487854
+    },
+    "cluster": 0,
+    "total_citations": 2656,
+    "h_index": 28,
+    "similar": [
+      {
+        "id": "0188",
+        "score": 0.8989
+      },
+      {
+        "id": "0334",
+        "score": 0.8954
+      },
+      {
+        "id": "E202",
+        "score": 0.8952
+      },
+      {
+        "id": "0410",
+        "score": 0.8891
+      },
+      {
+        "id": "0099",
+        "score": 0.8786
+      },
+      {
+        "id": "0393",
+        "score": 0.8782
+      },
+      {
+        "id": "E057",
+        "score": 0.8776
+      },
+      {
+        "id": "0007",
+        "score": 0.8775
+      },
+      {
+        "id": "0079",
+        "score": 0.8761
+      },
+      {
+        "id": "0535",
+        "score": 0.8754
+      }
+    ]
+  },
+  "E382": {
+    "id": "E382",
+    "name": "Christopher Fetsch",
+    "institution": "Johns Hopkins University",
+    "country": "United States",
+    "department": "Solomon H. Snyder Department of Neuroscience; Zanvyl Krieger Mind/Brain Institute",
+    "lab_name": "Fetsch Lab @ Johns Hopkins",
+    "lab_url": "https://www.fetschlab.org/",
+    "main_research_area": "Perceptual decision confidence",
+    "bio": "Fetsch studies how the brain forms perceptual decisions and the accompanying sense of confidence, and how signals from multiple senses are combined to guide action. Their work uses quantitative behavior in nonhuman primates together with neural recordings and causal manipulation of neural activity. A central focus is the dynamics of evidence accumulation in parietal cortex, including how choice and confidence are computed. A related line concerns visual-vestibular integration and the perception of self-motion heading.",
+    "research_direction": "Dr. Fetsch has recently been investigating how the brain forms a perceptual decision and, at the same time, an estimate of confidence in it. Their recent work explores how neurons in parietal area LIP of macaque monkeys reflect choice and confidence in parallel during evidence accumulation, and how confidence on one trial adjusts the decision process on the next. They have also been reviewing how decisions arise from distributed, recurrent population dynamics across brain areas, and the computational and neuronal basis of visual confidence and metacognition. A complementary thread examines multisensory decision-making and self-motion perception, including how visual and vestibular heading signals are combined over time and with confidence.",
+    "papers": [
+      {
+        "title": "Macaque Area LIP Reflects Confidence-Dependent Changes in Decision Policy",
+        "abstract": "Monkeys reported a choice and a confidence judgment in a reaction-time motion discrimination task. They repeated rewarded choices more often after low-confidence trials and changed their reaction times more after surprising outcomes. LIP activity encoded the previous trial's choice and confidence more strongly after low-confidence correct trials and tracked a trial-by-trial estimate of choice bias, and decoded decision-variable ramps depended on the previous confidence and reward. The results suggest LIP may take part in confidence-guided adjustment of the next decision.",
+        "year": "2026",
+        "venue": "bioRxiv",
+        "citations": "0",
+        "authors": "Mengyu Serene Tu, Miguel Vivar-Lazo, Christopher R. Fetsch",
+        "url": "https://doi.org/10.64898/2026.04.27.721150"
+      },
+      {
+        "title": "Neural basis of concurrent deliberation toward a choice and confidence judgment",
+        "abstract": "Monkeys reported both a perceptual choice and their confidence with a single eye movement on each trial. Behavior was captured by a bounded accumulator in which choice and confidence are computed concurrently rather than by a serial model with post-decision accumulation. Neurons in area LIP showed covarying choice and confidence signals and within-trial dynamics consistent with near-zero-lag parallel updating, which points to LIP as a substrate for pursuing two computational goals from one evidence stream.",
+        "year": "2025",
+        "venue": "Nature Neuroscience",
+        "citations": "22",
+        "authors": "Miguel Vivar-Lazo, Christopher R. Fetsch",
+        "url": "https://doi.org/10.1038/s41593-025-02116-9"
+      },
+      {
+        "title": "No Central Executive? Decision Formation Through Multi-Area Population Dynamics",
+        "abstract": "This review contrasts the classic feedforward-hierarchy view of perceptual decisions with newer evidence that decisions arise from recurrent computation distributed across many areas. It describes how high-density electrophysiology, well-designed tasks, causal manipulations such as optogenetics, methods for inter-area communication, and theory linking population dynamics to representational geometry are being combined to build an updated framework for decision formation.",
+        "year": "2025",
+        "venue": "The Journal of Neuroscience",
+        "citations": "10",
+        "authors": "Chandramouli Chandrasekaran, Diksha Gupta, Mitra Javadzadeh, Tian Wang, Miguel Vivar-Lazo, Tatiana Engel, Paul Cisek, Christopher R. Fetsch",
+        "url": "https://doi.org/10.1523/jneurosci.1633-25.2025"
+      },
+      {
+        "title": "Computational and Neuronal Basis of Visual Confidence",
+        "abstract": "The review examines the neuronal basis of confidence in perceptual decisions, with a focus on vision, treating confidence as metacognition about the quality of a perceptual interpretation. It surveys the computational processes and neural operations that underlie and constrain how visual signals are transformed into a confidence estimate.",
+        "year": "2025",
+        "venue": "Annual Review of Vision Science",
+        "citations": "4",
+        "authors": "Robbe L.T. Goris, Zhongzheng Fu, Christopher R. Fetsch",
+        "url": "https://doi.org/10.1146/annurev-vision-110323-120909"
+      },
+      {
+        "title": "Self-motion perception and sequential decision-making: where are we heading?",
+        "abstract": "The article reviews how visual and vestibular signals are combined for heading perception using ideal-observer models and neurophysiology. It then covers extensions that add time, through stimulus dynamics and the speed-accuracy tradeoff, and confidence in heading discrimination. It closes with ongoing work on closed-loop virtual reality, active self-motion and large-scale neural recording aimed at connecting self-motion perception to navigation.",
+        "year": "2023",
+        "venue": "Philosophical Transactions of the Royal Society B",
+        "citations": "7",
+        "authors": "Steven J. Jerjian, Devin R. Harsch, Christopher R. Fetsch",
+        "url": "https://doi.org/10.1098/rstb.2022.0333"
+      }
+    ],
+    "primary_subfield": "Decision Making",
+    "subfields": [
+      {
+        "subfield": "Decision Making",
+        "score": 1.0
+      },
+      {
+        "subfield": "Multisensory Processing",
+        "score": 0.5
+      },
+      {
+        "subfield": "Theory & Computation",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "christopher_fetsch_E382.jpg",
+    "umap_projection": {
+      "x": 5.529464244842529,
+      "y": 4.6971564292907715
+    },
+    "cluster": 0,
+    "total_citations": 3394,
+    "h_index": 17,
+    "similar": [
+      {
+        "id": "E252",
+        "score": 0.9123
+      },
+      {
+        "id": "0013",
+        "score": 0.9085
+      },
+      {
+        "id": "0524",
+        "score": 0.9081
+      },
+      {
+        "id": "0465",
+        "score": 0.9067
+      },
+      {
+        "id": "0362",
+        "score": 0.9065
+      },
+      {
+        "id": "E167",
+        "score": 0.906
+      },
+      {
+        "id": "E246",
+        "score": 0.9057
+      },
+      {
+        "id": "E379",
+        "score": 0.8958
+      },
+      {
+        "id": "E312",
+        "score": 0.8956
+      },
+      {
+        "id": "0293",
+        "score": 0.8954
+      }
+    ]
+  },
+  "E384": {
+    "id": "E384",
+    "name": "Marina Bedny",
+    "institution": "Johns Hopkins University",
+    "country": "United States",
+    "department": "Department of Psychological & Brain Sciences",
+    "lab_name": "Neuroplasticity and Development Lab (BednyLab)",
+    "lab_url": "https://www.bednylab.com",
+    "main_research_area": "Cortical plasticity in blindness",
+    "bio": "Bedny studies how developmental experience shapes the human mind and brain, mainly by comparing congenitally blind, late blind and sighted people, and also deaf signers. A central question is what 'visual' cortex does in people who have never seen, including its involvement in language, logical reasoning and executive control. The work also examines how sensory and linguistic experience contribute to conceptual knowledge, for example of animates and visual events. A further line asks how cultural skills such as reading Braille and computer programming are implemented in the brain. Methods include fMRI (univariate, multivariate and connectivity analyses), TMS and behavioral experiments.",
+    "research_direction": "Dr. Bedny has recently been investigating how experience shapes the human cortex, especially the 'visual' cortex of people who are blind or deaf. Their recent work explores how resting-state connectivity of occipital cortex differs between blind adults, sighted adults and infants, and how signers process narrative structure across timescales, including in ventral occipital and parietal regions. They also ask whether neural codes for visually grounded concepts such as living things and light events depend on seeing, using fMRI with word-similarity judgments in blind and sighted adults. A further thread tests whether learning a cultural skill like computer programming reuses existing frontoparietal logical-reasoning representations, and a theoretical review frames developing cortex as functionally flexible, constrained by innate connectivity and experience.",
+    "papers": [
+      {
+        "title": "Visual experience shapes functional connectivity between occipital and non-visual networks",
+        "abstract": "The study compares resting-state connectivity of visual cortices in blind adults, blindfolded sighted adults and a large cohort of infants from the Developing Human Connectome Project. Sighted adults' visual cortices couple more with auditory and somatomotor networks than with prefrontal cortex, whereas blind adults show the opposite pattern. Infant secondary visual cortices resemble the blind-adult profile, and primary visual cortex falls in between, implying that visual experience modifies the long-range connectivity profile of sighted adults.",
+        "year": "2026",
+        "venue": "eLife",
+        "citations": "19",
+        "authors": "Mengyu Tian, Xiang Xiao, Huiqing Hu, Rhodri Cusack, Marina Bedny",
+        "url": "https://doi.org/10.7554/elife.93067.4"
+      },
+      {
+        "title": "Sign language narrative reveals universal and modality-specific features of cortical timescale hierarchy",
+        "abstract": "Native signers watched a 20-minute Polish Sign Language narrative and scrambled versions of it during fMRI to separate speech-specific from modality-general parts of the language timescale hierarchy. Frontotemporal regions tracked sentence-level structure and the default mode network tracked plot, as reported for spoken narratives. Two features not seen for speech appeared: superior parietal cortex synchronized at long discourse timescales and ventral occipital cortex responded to word- and sentence-level structure.",
+        "year": "2026",
+        "venue": "Nature Communications",
+        "citations": "0",
+        "authors": "Maria Zimmermann, Piotr Tomaszewski, Artur Marchewka, Marcin Szwed, Marina Bedny",
+        "url": "https://doi.org/10.1038/s41467-026-73895-3"
+      },
+      {
+        "title": "Neural specialization for 'visual' concepts emerges in the absence of vision",
+        "abstract": "Sighted and congenitally blind adults judged the similarity of words while undergoing fMRI, using nouns for living things and places and verbs for visual versus non-visual events. Blind participants still showed distinctive univariate and multivariate responses to living things in a temporo-parietal semantic network including the precuneus. Signatures of visual light-event verbs were also preserved in left middle temporal gyrus, so neural representations of visually grounded concepts do not require visual experience.",
+        "year": "2025",
+        "venue": "Cognition",
+        "citations": "10",
+        "authors": "Miriam Hauptman, Giulia Elli, Rashi Pant, Marina Bedny",
+        "url": "https://doi.org/10.1016/j.cognition.2024.106058"
+      },
+      {
+        "title": "Learning to Program \"Recycles\" Preexisting Frontoparietal Population Codes of Logical Algorithms",
+        "abstract": "Students were scanned with fMRI before and after their first Python course to test whether programming builds new neural representations or reuses existing ones. A left frontoparietal reasoning network was engaged by pseudocode even before instruction, and its multivariate patterns distinguished 'for' loops from 'if' conditionals both before and after the course. Representational similarity analysis showed shared information across time, supporting a neural recycling account of programming.",
+        "year": "2025",
+        "venue": "The Journal of Neuroscience",
+        "citations": "4",
+        "authors": "Yun-Fei Liu, Marina Bedny",
+        "url": "https://doi.org/10.1523/jneurosci.0314-25.2025"
+      },
+      {
+        "title": "Developing cortex is functionally pluripotent: Evidence from blindness",
+        "abstract": "This review synthesizes evidence on what visual cortices do in people born blind, weighing accounts of drastic repurposing for higher cognition against metamodal accounts in which ventral occipitotemporal areas keep perceptual functions such as face recognition. The authors argue that in blindness visual cortices become incorporated into higher-cognitive frontoparietal networks. They propose a connectivity-constrained experience-dependent account in which the same anatomical constraints can develop into different functions depending on experience.",
+        "year": "2024",
+        "venue": "Developmental Cognitive Neuroscience",
+        "citations": "25",
+        "authors": "Elizabeth J. Saccone, Mengyu Tian, Marina Bedny",
+        "url": "https://doi.org/10.1016/j.dcn.2024.101360"
+      }
+    ],
+    "primary_subfield": "Perceptual Learning & Plasticity",
+    "subfields": [
+      {
+        "subfield": "Perceptual Learning & Plasticity",
+        "score": 1.0
+      },
+      {
+        "subfield": "Multisensory Processing",
+        "score": 0.5
+      },
+      {
+        "subfield": "Development",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "marina_bedny_E384.jpg",
+    "umap_projection": {
+      "x": 6.105546951293945,
+      "y": 6.26742696762085
+    },
+    "cluster": 0,
+    "total_citations": 5937,
+    "h_index": 35,
+    "similar": [
+      {
+        "id": "0100",
+        "score": 0.9153
+      },
+      {
+        "id": "0199",
+        "score": 0.9126
+      },
+      {
+        "id": "0522",
+        "score": 0.9102
+      },
+      {
+        "id": "0523",
+        "score": 0.9027
+      },
+      {
+        "id": "0658",
+        "score": 0.8965
+      },
+      {
+        "id": "0607",
+        "score": 0.8911
+      },
+      {
+        "id": "0446",
+        "score": 0.8907
+      },
+      {
+        "id": "0445",
+        "score": 0.8904
+      },
+      {
+        "id": "0493",
+        "score": 0.8898
+      },
+      {
+        "id": "0145",
+        "score": 0.8898
+      }
+    ]
+  },
+  "E385": {
+    "id": "E385",
+    "name": "Hey-Kyoung Lee",
+    "institution": "Johns Hopkins University",
+    "country": "United States",
+    "department": "Department of Neuroscience, Zanvyl Krieger Mind/Brain Institute (School of Medicine)",
+    "lab_name": "Lee Lab",
+    "lab_url": "https://sites.krieger.jhu.edu/lee-lab/",
+    "main_research_area": "Cross-modal cortical plasticity",
+    "bio": "Lee studies how sensory experience and sensory loss reshape synapses and circuits in adult sensory cortex and thalamus, mainly in mice. The work combines slice electrophysiology, in vivo two-photon calcium imaging, activity-dependent labeling of active neurons, and optogenetic and ultrasound-based manipulations. A central theme is cross-modal plasticity, in which loss of vision (by dark exposure or enucleation) changes excitatory and inhibitory transmission in visual cortex and in the spared auditory and somatosensory cortices. Lee also examines homeostatic and Hebbian plasticity, metaplasticity, and interneuron-specific synaptic changes as mechanisms for adaptation in the adult brain.",
+    "research_direction": "Dr. Lee has been recently exploring how adult sensory cortex and thalamus adapt when vision is lost or when plasticity is deliberately induced. Their recent work uses two-photon calcium imaging and activity-dependent labeling in mice to ask how spontaneous network architecture and brain-wide activity patterns in visual, auditory and somatosensory cortex change after dark exposure or enucleation. At the synaptic level, they examine how fast and slow excitatory inputs onto somatostatin interneurons in visual cortex are regulated by visual or cross-modal auditory deprivation. They have also been testing whether noninvasive focused ultrasound can induce long-term depression at thalamocortical synapses in adults, and they place these findings in a sliding-threshold metaplasticity framework for cross-modal plasticity.",
+    "papers": [
+      {
+        "title": "Rapid plasticity of default-mode local network architectures following adult-onset blindness",
+        "abstract": "Two-photon calcium imaging of layer 2/3 mouse V1 was used to track spontaneous activity of pyramidal, PV, VIP and SOM neurons before and after bilateral enucleation. Pyramidal and PV cells showed rapid, lasting increases in spontaneous firing, but only the pyramidal network rearranged and stabilized into a new architecture. VIP networks also restructured, although their rate increase came later, whereas the SOM network stayed stable. The authors conclude that blindness quickly and selectively remodels intrinsic network structure in V1, separately from changes in firing rate.",
+        "year": "2026",
+        "venue": "Cell Reports",
+        "citations": "4",
+        "authors": "Lukas Mesik, Katie Hang Thanh Pham, Keqin Ding, Yiyang Martin Huang, Daniel Severin, Alfredo Kirkwood, Andrei Dragomir, Nitish Thakor, Hey-Kyoung Lee",
+        "url": "https://doi.org/10.1016/j.celrep.2025.116720"
+      },
+      {
+        "title": "Transcranial Low-Intensity Focused Ultrasound Stimulation of the Visual Thalamus Produces Long-Term Depression of Thalamocortical Synapses in the Adult Visual Cortex",
+        "abstract": "The study tests whether noninvasive low-intensity focused ultrasound aimed at the dorsal lateral geniculate nucleus can induce lasting synaptic change in adult mice. Sonication produced NMDA-receptor-dependent long-term depression of thalamic input onto layer 4 neurons in V1. It did so without large increases in cFos-labeled activity or microglial activation. A SONIC model based on the intramembrane cavitation theory suggests that dLGN activity during sonication falls in a range suited to inducing depression, pointing to a way of restoring plasticity at adult thalamocortical synapses.",
+        "year": "2024",
+        "venue": "Journal of Neuroscience",
+        "citations": "19",
+        "authors": "Lukas Mesik, Samuel Parkins, Daniel Severin, Bryce D. Grier, Gabrielle Ewall, Sumasri Kotha, Christian Wesselborg, Cristian Moreno, Yanis Jaoui, Adrianna Felder, Brian Huang, Marina B. Johnson, Timothy P. Harrigan, Anna E. Knight, Shane W. Lani, Théo Lemaire, Alfredo Kirkwood, Grace M. Hwang, Hey-Kyoung Lee",
+        "url": "https://doi.org/10.1523/jneurosci.0784-23.2024"
+      },
+      {
+        "title": "Spatial Mapping of Activity Changes across Sensory Areas Following Visual Deprivation in Adults",
+        "abstract": "Using a cFos-TRAP2 reporter line to label active cells, the study maps how activity changes across sensory cortices of adult mice after dark exposure or enucleation. V1 and lateral V2 first lose active cells and then partly recover, mostly in superficial layers. Spared primary somatosensory barrel and auditory cortices adapt differently, depending on deprivation duration and mode, while secondary cortices and retrosplenial cortex change little. The pattern fits cross-modal recruitment of the deprived visual cortex alongside compensatory plasticity in the spared senses.",
+        "year": "2024",
+        "venue": "Journal of Neuroscience",
+        "citations": "3",
+        "authors": "Samuel Parkins, Yidong Song, Yanis Jaoui, Aryan Gala, Kaven T. Konda, Crispo Richardson, Hey-Kyoung Lee",
+        "url": "https://doi.org/10.1523/jneurosci.0969-24.2024"
+      },
+      {
+        "title": "Selective plasticity of fast and slow excitatory synapses on somatostatin interneurons in adult visual cortex",
+        "abstract": "Recordings from layer 2/3 of mouse V1 show that excitatory synapses onto somatostatin interneurons divide into fast and slow types according to AMPA-receptor current kinetics, and that each interneuron carries both in varying proportions. Most local pyramidal-to-SOM connections use both types, and a minority use only one. The two types are regulated differently by experience: fast synapses change with visual deprivation, while slow synapses change with cross-modal auditory deprivation. This indicates a mechanism for adjusting SOM recruitment in the adult cortex.",
+        "year": "2023",
+        "venue": "Nature Communications",
+        "citations": "9",
+        "authors": "Bryce D. Grier, Samuel Parkins, Jarra Omar, Hey-Kyoung Lee",
+        "url": "https://doi.org/10.1038/s41467-023-42968-y"
+      },
+      {
+        "title": "Metaplasticity framework for cross-modal synaptic plasticity in adults",
+        "abstract": "This mini review covers how loss of one sensory modality drives cross-modal plasticity in adult primary sensory cortices, including recruitment of the deprived cortex and compensatory changes in the spared cortices. It argues that these changes arise mainly from functional plasticity of existing circuits, through homeostatic and Hebbian mechanisms. It evaluates the sliding-threshold metaplasticity model as a framework for explaining how neurons adjust their feature selectivity after sensory loss.",
+        "year": "2023",
+        "venue": "Frontiers in Synaptic Neuroscience",
+        "citations": "36",
+        "authors": "Hey-Kyoung Lee",
+        "url": "https://doi.org/10.3389/fnsyn.2022.1087042"
+      }
+    ],
+    "primary_subfield": "Perceptual Learning & Plasticity",
+    "subfields": [
+      {
+        "subfield": "Perceptual Learning & Plasticity",
+        "score": 1.0
+      },
+      {
+        "subfield": "Multisensory Processing",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "hey-kyoung_lee_E385.jpg",
+    "umap_projection": {
+      "x": 5.9603190422058105,
+      "y": 5.757084846496582
+    },
+    "cluster": 0,
+    "total_citations": 14726,
+    "h_index": 50,
+    "similar": [
+      {
+        "id": "0523",
+        "score": 0.917
+      },
+      {
+        "id": "E272",
+        "score": 0.9111
+      },
+      {
+        "id": "0310",
+        "score": 0.9102
+      },
+      {
+        "id": "0298",
+        "score": 0.9055
+      },
+      {
+        "id": "0100",
+        "score": 0.9016
+      },
+      {
+        "id": "0378",
+        "score": 0.901
+      },
+      {
+        "id": "0161",
+        "score": 0.8998
+      },
+      {
+        "id": "E018",
+        "score": 0.8983
+      },
+      {
+        "id": "0583",
+        "score": 0.8968
+      },
+      {
+        "id": "0669",
+        "score": 0.8965
+      }
+    ]
+  },
+  "E387": {
+    "id": "E387",
+    "name": "Gislin Dagnelie",
+    "institution": "Johns Hopkins University",
+    "country": "United States",
+    "department": "Department of Ophthalmology, School of Medicine (Wilmer Eye Institute; Lions Vision Research and Rehabilitation Center)",
+    "lab_name": "Dagnelie Ultra Low Vision Lab",
+    "lab_url": "https://www.ultralowvisionlabjhu.net/",
+    "main_research_area": "Ultra-low vision and visual prosthetics",
+    "bio": "Dagnelie studies how people with profound vision loss, including those using retinal and cortical visual prostheses, use limited or artificial vision in daily activities. Their work develops standardized outcome measures for ultra-low vision, combining patient-reported questionnaires with performance tests in virtual reality and the real world. Analyses typically use signal-detection and Rasch-type latent-variable models to place task difficulty and person ability on common scales. They also test image-processing strategies, such as thermal and distance filtering, for prosthesis users' mobility, and study phosphene mapping and psychophysical assessment for visual prostheses.",
+    "research_direction": "Dr. Dagnelie has been developing ways to measure and improve functional vision in people with ultra-low vision and in users of visual prostheses. Their recent work explores virtual-reality performance tests of visual information gathering (localization, motion detection, direction of motion) and of visually guided hand-eye coordination, calibrated with signal-detection and Rasch-type latent-variable models. They have compared questionnaire-based self-reports with measured task performance, and have extended VR assessments to everyday activities validated against matching real-world tasks. In prosthetic vision, they have tested whether thermal-camera and distance-filtered video improve people-finding and obstacle avoidance for Argus II wearers.",
+    "papers": [
+      {
+        "title": "Low Vision Assessment in Virtual Reality (LVAVR): Spatial Computing in Virtual Reality and Real-World",
+        "abstract": "This project builds virtual-reality performance assessments of daily-living activities for a broad low vision population. The authors recreated a rehabilitation-space kitchen and living room in photorealistic Unity VR, created 25 activities based on their earlier visual functioning questionnaire, and ran a validation study against matching real-world activities.",
+        "year": "2026",
+        "venue": "2026 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)",
+        "citations": "0",
+        "authors": "Elnaz Tafrihi Bailey, Priyanka Roy, Kristen Shifflett, Judith Goldstein, Gislin Dagnelie",
+        "url": "https://doi.org/10.1109/vrw70859.2026.00284"
+      },
+      {
+        "title": "Benefits of thermal and distance-filtered imaging for wayfinding with prosthetic vision",
+        "abstract": "Argus II retinal prosthesis users have limited function in cluttered everyday scenes, so the authors tested whether extra image processing could help indoor mobility. A mobile system fed thermal-camera or distance-filtered video to the implant, and four participants used it to find a person and to navigate a hallway with obstacles. Filtered video led to much higher success in locating the target person and detecting obstacles than unfiltered video, and success rose faster over elapsed time, despite individual variation.",
+        "year": "2024",
+        "venue": "Scientific Reports",
+        "citations": "6",
+        "authors": "Roksana Sadeghi, Arathy Kartha, Michael P. Barry, Paul Gibson, Avi Caspi, Arup Roy, Duane R. Geruschat, Gislin Dagnelie",
+        "url": "https://doi.org/10.1038/s41598-024-51798-x"
+      },
+      {
+        "title": "Self-Reported Visual Ability Versus Task Performance in Individuals With Ultra-Low Vision",
+        "abstract": "The study asked how well questionnaire self-reports predict measured task performance in people with ultra-low vision. Twenty-seven participants completed matched items from the ULV-VFQ questionnaire and the Wilmer VRI virtual-reality performance test, analyzed with Rasch and latent-variable signal-detection models respectively. Item difficulty and person ability correlated only modestly between instruments, indicating that direct performance testing is needed in clinical trials.",
+        "year": "2023",
+        "venue": "Translational Vision Science & Technology",
+        "citations": "10",
+        "authors": "Arathy Kartha, Ravnit Kaur Singh, Chris Bradley, Gislin Dagnelie",
+        "url": "https://doi.org/10.1167/tvst.12.10.14"
+      },
+      {
+        "title": "Measuring visual information gathering in individuals with ultra low vision using virtual reality",
+        "abstract": "The authors built a set of 19 virtual-reality activities involving spatial localization, motion detection and direction-of-motion judgments to assess visual performance in people with ultra-low vision. Using a signal-detection-based latent-variable analysis, they placed item difficulty and person ability on a relative d-prime axis. Items spanned a range of difficulty across a heterogeneous participant group, supporting use of the instrument as a clinical-trial outcome measure.",
+        "year": "2023",
+        "venue": "Scientific Reports",
+        "citations": "8",
+        "authors": "Arathy Kartha, Roksana Sadeghi, Chris Bradley, Chau Thi Thuy Tran, Will Gee, Gislin Dagnelie",
+        "url": "https://doi.org/10.1038/s41598-023-30249-z"
+      },
+      {
+        "title": "Measuring visually guided motor performance in ultra low vision using virtual reality",
+        "abstract": "This paper presents Wilmer VRH, a virtual-reality test of hand-eye coordination for ultra-low vision with 55 activities such as reaching, grasping, stacking, sorting, pointing, throwing and cutting. Data from normally sighted volunteers under normal and simulated ultra-low vision and from 33 participants with ultra-low vision were calibrated with a polytomous Rasch model (method of successive dichotomizations). Fit statistics and reliabilities supported unidimensionality, and items were well targeted to the ULV sample.",
+        "year": "2023",
+        "venue": "Frontiers in Neuroscience",
+        "citations": "4",
+        "authors": "Arathy Kartha, Roksana Sadeghi, Chris Bradley, Brittnee Livingston, Chau Thi Thuy Tran, Will Gee, Gislin Dagnelie",
+        "url": "https://doi.org/10.3389/fnins.2023.1251935"
+      }
+    ],
+    "primary_subfield": "Perception & Action",
+    "subfields": [
+      {
+        "subfield": "Perception & Action",
+        "score": 1.0
+      },
+      {
+        "subfield": "Decision Making",
+        "score": 0.5
+      },
+      {
+        "subfield": "Perceptual Learning & Plasticity",
+        "score": 0.5
+      }
+    ],
+    "profile_pic": "gislin_dagnelie_E387.jpg",
+    "umap_projection": {
+      "x": 8.021425247192383,
+      "y": 2.0535290241241455
+    },
+    "cluster": 0,
+    "total_citations": 14747,
+    "h_index": 59,
+    "similar": [
+      {
+        "id": "0060",
+        "score": 0.937
+      },
+      {
+        "id": "0709",
+        "score": 0.8686
+      },
+      {
+        "id": "0711",
+        "score": 0.8568
+      },
+      {
+        "id": "0547",
+        "score": 0.8566
+      },
+      {
+        "id": "0644",
+        "score": 0.8561
+      },
+      {
+        "id": "0172",
+        "score": 0.8531
+      },
+      {
+        "id": "0229",
+        "score": 0.8389
+      },
+      {
+        "id": "E279",
+        "score": 0.8387
+      },
+      {
+        "id": "0023",
+        "score": 0.834
+      },
+      {
+        "id": "0066",
+        "score": 0.832
       }
     ]
   }

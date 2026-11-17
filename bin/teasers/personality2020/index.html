@@ -1,0 +1,93 @@
+<!doctype html><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Source+Serif+4:opsz,wght@8..60,400..600&display=block" rel="stylesheet">
+<style>html,body{margin:0;width:640px;height:448px;overflow:hidden;background:linear-gradient(#fffdf9,#f8f5ee)}
+svg{position:absolute;left:0;top:0}
+text{font-family:"Bricolage Grotesque";}</style>
+<svg id="s" width="640" height="448" viewBox="0 0 640 448"></svg>
+<script>
+const INK='#0f1c33',SOFT='#445267',FAINT='#6c7788',LINE='#e4ddcf',WASH='#f1ece1',NAVY='#002d72',SKY='#68ace5',PAPER='#fffdf9';
+const KEY='#1e8f6b';
+const MOD=[{name:'text',c:'#1a55b4',t0:0.5},{name:'audio',c:'#e0811f',t0:1.7},{name:'video',c:'#d4424e',t0:2.9}];
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const seg=(t,a,b)=>ease((t-a)/(b-a));
+const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+const mix=(a,b,k)=>{const A=hex(a),B=hex(b);return 'rgb('+A.map((v,i)=>Math.round(v+(B[i]-v)*clamp(k))).join(',')+')'};
+const CY=[180,256,332], CX=36, CW=120, CH=56;
+const LX=[214,274,334,394];
+const LY=[CY,[190,234,278,322],[190,234,278,322],[176,216,256,296,336]];
+const TRAITS=['O','C','E','A','N'], VAL=[0.78,0.5,0.66,0.88,0.38];
+const BX=448, BW=152;
+window.DURATION=9;
+window.renderAt=function(t){
+  let o='';
+  // heading
+  o+=`<text x="36" y="94" font-size="27" font-weight="600" fill="${INK}" letter-spacing="-0.3">Deep learning for <tspan fill="${KEY}">personality</tspan> detection</text>`;
+  // modality activation
+  const act=MOD.map(m=>seg(t,m.t0,m.t0+0.5));
+  // layer activations
+  const inAct=MOD.map(m=>seg(t,m.t0+0.75,m.t0+1.15));
+  const h1=seg(t,4.5,5.0), h2=seg(t,4.95,5.45), outA=seg(t,5.4,5.9);
+  const nodeAct=(l,i)=>l==0?inAct[i]:l==1?h1:l==2?h2:outA;
+  // edges
+  for(let l=0;l<3;l++)for(let i=0;i<LY[l].length;i++)for(let j=0;j<LY[l+1].length;j++){
+    const k=Math.min(nodeAct(l,i),nodeAct(l+1,j));
+    o+=`<line x1="${LX[l]}" y1="${LY[l][i]}" x2="${LX[l+1]}" y2="${LY[l+1][j]}" stroke="${mix(LINE,SKY,k*0.75)}" stroke-width="1.5"/>`;
+  }
+  // card -> input connectors
+  MOD.forEach((m,i)=>{
+    const y=CY[i],x1=CX+CW,x2=LX[0]-11;
+    o+=`<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${mix(LINE,m.c,act[i]*0.55)}" stroke-width="2.5"/>`;
+    const p=(t-(m.t0+0.35))/0.6;
+    if(p>0&&p<1){const e=ease(p);o+=`<circle cx="${x1+(x2-x1)*e}" cy="${y}" r="5.5" fill="${m.c}"/>`;}
+  });
+  // output -> bar connectors + bars
+  TRAITS.forEach((tr,i)=>{
+    const y=LY[3][i];
+    const g=seg(t,5.9+i*0.22,6.9+i*0.22);
+    o+=`<text x="${BX-22}" y="${y+6}" font-size="17" font-weight="600" fill="${mix(FAINT,INK,g)}">${tr}</text>`;
+    o+=`<rect x="${BX}" y="${y-8}" width="${BW}" height="16" rx="8" fill="${WASH}" stroke="${LINE}" stroke-width="1.5"/>`;
+    const w=16+(BW*VAL[i]-16)*g;
+    o+=`<rect x="${BX}" y="${y-8}" width="${w}" height="16" rx="8" fill="${mix('#cfc7b6',NAVY,g)}"/>`;
+  });
+  // nodes
+  for(let l=0;l<4;l++)LY[l].forEach((y,i)=>{
+    const k=nodeAct(l,i);
+    const col=l==0?MOD[i].c:(l==3?NAVY:SKY);
+    // brief swell at activation
+    const sw=Math.sin(Math.PI*k)*2;
+    o+=`<circle cx="${LX[l]}" cy="${y}" r="${9+sw}" fill="${mix(PAPER,col,k)}" stroke="${mix('#b9b2a2',col,k)}" stroke-width="2"/>`;
+  });
+  // cards
+  MOD.forEach((m,i)=>{
+    const a=act[i],y=CY[i],c=mix('#a9a394',m.c,a);
+    o+=`<rect x="${CX}" y="${y-CH/2}" width="${CW}" height="${CH}" rx="10" fill="${PAPER}" stroke="${mix(LINE,m.c,a)}" stroke-width="2"/>`;
+    const ix=CX+14, live=clamp((t-m.t0)/1.6);          // 0..1 while "reading"
+    const busy=Math.sin(Math.PI*live);                  // 0 at rest, both ends
+    if(i==0){
+      [[30],[24],[30],[16]].forEach(([w],r)=>{
+        const ww=w*(1-0.75*busy*clamp(1.4-live*2.2+ -r*0.0)* (live<0.6?1:0)) ;
+        const reveal=live>0&&live<1?clamp(live*4.5-r):1;
+        o+=`<rect x="${ix}" y="${y-15+r*8.5}" width="${w*reveal}" height="3.6" rx="1.8" fill="${c}"/>`;
+      });
+    }else if(i==1){
+      const base=[6,14,22,10,26,16,8];
+      base.forEach((h,r)=>{
+        const hh=h+busy*7*Math.sin(t*9+r*1.9);
+        const H=Math.max(4,hh);
+        o+=`<rect x="${ix+r*4.6}" y="${y-H/2}" width="3" height="${H}" rx="1.5" fill="${c}"/>`;
+      });
+    }else{
+      o+=`<rect x="${ix}" y="${y-13}" width="32" height="26" rx="5" fill="none" stroke="${c}" stroke-width="2.5"/>`;
+      const s=1+busy*0.25;
+      o+=`<path d="M${ix+16-4.5*s} ${y-6.5*s} L${ix+16+7*s} ${y} L${ix+16-4.5*s} ${y+6.5*s} Z" fill="${c}"/>`;
+    }
+    o+=`<text x="${CX+58}" y="${y+6}" font-size="18" font-weight="500" fill="${mix(FAINT,INK,a)}">${m.name}</text>`;
+  });
+  // captions
+  o+=`<text x="${(LX[0]+LX[3])/2}" y="384" font-size="16" fill="${FAINT}" text-anchor="middle">deep network</text>`;
+  o+=`<text x="${BX+BW/2-11}" y="384" font-size="16" fill="${FAINT}" text-anchor="middle">Big Five traits</text>`;
+  document.getElementById('s').innerHTML=o;
+};
+window.renderAt(0);
+</script>

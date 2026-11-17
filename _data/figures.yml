@@ -1,0 +1,21 @@
+# Alt text for the live schematics drawn by _includes/pub_figures.html, keyed by the
+# name a paper gives in its `figure` (or `home_figure`) field in papers.bib.
+
+# A paper's `teaser` clip (assets/video/) is described here too, keyed by its file name.
+iwsp2026.mp4: "A short animation: images, language and sound pass through the brain to give recorded activity; a deep network predicts that activity but is a black box; an LLM agent instead writes the model as code, testing it on the brain and keeping the best, and ends with four readable features of an image: oriented edges, ridges and bumps, color differences and bending contours."
+coarse2026.mp4: "A short animation: a cloud of image embeddings is split at the median of its first, second and third principal components, turning 1,000 classes into 2, 4 and then 8 coarse classes. A network trained on the 8 classes then matches human similarity judgments better than one trained on 1,000 classes (0.58 against 0.37), and is on par or better in visual cortex."
+plasticity2024.mp4: "A short animation: a model network with a parameterized plasticity rule is simulated and its activity trace compared with the observed one; the gradient of the mismatch updates the rule's coefficients until the two traces match. Two coefficients settle at plus one and minus one and the rest return to zero, leaving Oja's rule."
+nodepert2022.mp4: "A short animation: a point on a loss landscape tries random noise directions, keeps the ones that lower the loss, steps that way, and repeats until it reaches the minimum, with no backward pass."
+nasbench2022.mp4: "A short animation: a 5 by 5 grid of benchmarks fills in one cell at a time, each taking the colour of the search method that ranks best on it, while five method bars beside it re-rank for every benchmark. The finished grid is a mosaic of five colours: no method wins on all 25 benchmarks."
+fgcs2022.mp4: "A short animation: dots flow from three digital-footprint sources (text, likes, phone use) into a small model, which then fills in five bars for the Big Five personality traits, O, C, E, A and N."
+bioconv2021.mp4: "A short animation: four neurons each start with a different 5x5 weight filter; lateral connections draw in between them and the four filters converge to nearly the same oriented pattern, ending with w1 ≈ w2 ≈ w3 ≈ w4."
+personality2020.mp4: "A short animation: text, audio and video inputs light up one by one and feed a deep network, whose five outputs fill in bars for the Big Five personality traits (O, C, E, A, N)."
+personality_icdm2020.mp4: "A short animation: a block of text feeds two streams, one counting highlighted words into psycholinguistic features and one passing the whole text through a language model; the two feature vectors join into one and predict the Big Five traits O, C, E, A, N."
+personality_bert2020.mp4: "A short animation: an essay splits into four coloured sub-documents, each passes through BERT to become an embedding vector, a bag of SVM decision boundaries labels each one, and the sub-document labels are combined by majority vote into one trait prediction."
+mtl2020.mp4: "A short animation: two parallel networks, one predicting emotion and one predicting personality, first run separately; then crossing links appear between their layers and each network picks up signal from the other before producing its output."
+
+kernel: Two small filters whose weights are filled in one cell at a time, written by a program rather than learned by gradient descent.
+cloud: A cloud of image embeddings, recolored as it is split along its principal components into two, four and then eight classes.
+rule: "Coefficients of a candidate plasticity rule over training: two settle at plus one and minus one, the rest decay to zero, leaving Oja’s rule."
+perturb: A small network run forward twice, once clean and once with noise added to its hidden units; the change in loss then updates every weight at once, with no backward pass.
+suite: A five-by-five grid of benchmarks, each taking the colour of the search method that scored best on it, beside the five methods re-ranking from one benchmark to the next.

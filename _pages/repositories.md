@@ -10,7 +10,7 @@ nav_order: 3
 <style>
   /* ── Page header ── */
   .post .post-title {
-    font-family: "factoria", sans-serif;
+    font-family: var(--display);
     font-weight: 700;
     font-style: normal !important;
     color: #002D72;
@@ -18,7 +18,7 @@ nav_order: 3
     margin-bottom: 0.5rem;
   }
   .post .post-description {
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 300;
     font-size: 0.95em;
     color: #6b7c8d;
@@ -64,21 +64,21 @@ nav_order: 3
     min-width: 0;
   }
   .gh-profile-name {
-    font-family: "factoria", sans-serif;
+    font-family: var(--display);
     font-weight: 700;
     font-size: 1.1em;
     color: #002D72;
     line-height: 1.2;
   }
   .gh-profile-username {
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 300;
     font-size: 0.82em;
     color: #68ACE5;
     margin-top: 0.1rem;
   }
   .gh-profile-bio {
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 300;
     font-size: 0.78em;
     color: #6b7c8d;
@@ -99,14 +99,14 @@ nav_order: 3
     text-align: center;
   }
   .gh-stat-num {
-    font-family: "factoria", sans-serif;
+    font-family: var(--display);
     font-weight: 700;
     font-size: 1.15em;
     color: #002D72;
     line-height: 1;
   }
   .gh-stat-label {
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 300;
     font-size: 0.65em;
     color: #8a9bac;
@@ -125,7 +125,7 @@ nav_order: 3
 
   /* ── Section headings ── */
   .repositories-page h2 {
-    font-family: "factoria", sans-serif;
+    font-family: var(--display);
     font-weight: 500;
     font-size: 1.15em;
     color: #002D72;
@@ -203,7 +203,7 @@ nav_order: 3
     flex-wrap: wrap;
   }
   .repo-row .repo-name {
-    font-family: "factoria", sans-serif;
+    font-family: var(--display);
     font-weight: 700;
     font-size: 0.9em;
     color: #002D72;
@@ -220,7 +220,7 @@ nav_order: 3
     margin: 0 0.05em;
   }
   .repo-row .repo-desc {
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 300;
     font-size: 0.78em;
     color: #9baab8;
@@ -242,7 +242,7 @@ nav_order: 3
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 500;
     font-size: 0.75em;
     color: #6b7c8d;
@@ -260,7 +260,7 @@ nav_order: 3
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 400;
     font-size: 0.72em;
     color: #8a9bac;
@@ -286,7 +286,7 @@ nav_order: 3
 
   /* ── Loading state ── */
   .loading-placeholder {
-    font-family: "proxima-nova", sans-serif;
+    font-family: var(--text);
     font-weight: 300;
     font-size: 0.85em;
     color: #b0bec5;
@@ -344,7 +344,7 @@ nav_order: 3
 
 <div style="display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.8rem;">
   <h2 style="margin-bottom: 0;"><i class="fas fa-code-branch" style="font-size: 0.85em; margin-right: 0.3em; color: #68ACE5;"></i>Repositories</h2>
-  <span id="total-stars" style="font-family: 'proxima-nova', sans-serif; font-weight: 300; font-size: 0.78em; color: #8a9bac;"></span>
+  <span id="total-stars" style="font-family: var(--text); font-weight: 300; font-size: 0.78em; color: #8a9bac;"></span>
 </div>
 
 <div id="repo-list-container" class="repo-list">

@@ -1,0 +1,108 @@
+# Experience shown on the homepage: one logo per place, with the position under it
+# and a card on hover / tap that says who the work was with and what came out of it.
+#
+#   id       short key; a paper with `place={id}` in papers.bib is listed in this
+#            entry's card, and carries this entry's logo and role on the homepage
+#   org      name shown at the top of the card
+#   unit     optional second line (department, team, city)
+#   logo     file in assets/img/
+#   logo_class  optional class for the logo: logo-boost darkens a pale logo,
+#            logo-amazon sizes the Amazon wordmark
+#   role     position shown under the logo
+#   title    optional longer title for the card (defaults to role)
+#   period   dates shown in the card
+#   people   optional list: name, relation, url, photo
+#            photo is a file in assets/img/people/ (square, ~160px);
+#            without it the card shows the person's initials.
+
+academia:
+  - id: jhu
+    org: Johns Hopkins University
+    unit: Computational Cognitive Science
+    logo: jhu.png
+    role: PhD student
+    period: 2023 – present
+    people:
+      - name: Michael F. Bonner
+        relation: PhD advisor
+        url: https://bonnerlab.org/
+        photo: bonner.jpg
+
+  - id: janelia
+    org: HHMI Janelia Research Campus
+    logo: janelia.png
+    role: Research Engineer 2
+    period: Jan 2022 – Sep 2023
+    people:
+      - name: James Fitzgerald
+        relation: Supervisor
+        url: https://shorturl.at/lyzFR
+        photo: fitzgerald.jpg
+      - name: Jan Funke
+        relation: Supervisor
+        url: https://shorturl.at/dfuyQ
+        photo: funke.jpg
+
+  - id: freiburg
+    org: University of Freiburg
+    unit: Machine Learning Lab
+    logo: uni_freiburg.png
+    logo_class: logo-boost
+    role: ML Research Engineer
+    period: Aug 2020 – Dec 2021
+    people:
+      - name: Frank Hutter
+        relation: Supervisor
+        url: https://shorturl.at/nrBEJ
+        photo: hutter.jpg
+
+  - id: gatsby
+    org: Gatsby Computational Neuroscience Unit
+    unit: University College London
+    logo: gatsby.png
+    logo_class: logo-boost
+    role: Research Resident
+    period: Jan 2019 – Jun 2020
+    people:
+      - name: Peter Latham
+        relation: Supervisor
+        url: https://www.gatsby.ucl.ac.uk/~pel/
+        photo: latham.jpg
+      - name: Timothy Lillicrap
+        relation: Supervisor (DeepMind)
+        url: https://shorturl.at/uDHLX
+        photo: lillicrap.jpg
+
+  - id: ntu
+    org: NTU Singapore
+    logo: ntu.png
+    role: Undergraduate thesis
+    period: "2018"
+    people:
+      - name: Erik Cambria
+        relation: Thesis advisor
+        url: https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en&inst=7575085548378563675
+        photo: cambria.jpg
+
+industry:
+  - id: msr
+    org: Microsoft Research
+    unit: Deep Learning team, Redmond
+    logo: msr.jpeg
+    role: Research Intern
+    period: Apr 2026 – present
+
+  - id: sakana
+    org: Sakana AI
+    logo: sakana.png
+    role: Research Intern
+    period: Summer 2025
+
+  - id: amazon
+    org: Amazon
+    unit: Bangalore
+    logo: amazon.png
+    logo_class: logo-amazon
+    role: Software Developer
+    title: Software Development Engineer
+    period: Jul 2018 – Dec 2018

@@ -2,12 +2,19 @@
 ---
 <!-- _layouts/bib.html -->
 <div class="publication-item {% if entry.topic %}topic-{{entry.topic}}{% endif %}">
+  {%- assign figure_alt = site.data.figures[entry.figure] | default: '' %}
   <div class="pub-image">
+    {%- if entry.teaser %}
+      {%- assign teaser_url = entry.teaser | prepend: '/assets/video/' | relative_url %}
+      <video data-teaser src="{{ teaser_url }}" poster="{{ teaser_url | replace: '.mp4', '.jpg' }}" muted playsinline preload="metadata" aria-label="{{ site.data.figures[entry.teaser] }}"></video>
+    {%- elsif entry.figure %}
+      <canvas data-figure="{{ entry.figure }}" role="img" aria-label="{{ figure_alt }}"></canvas>
+    {%- endif -%}
     {%- if entry.preview -%}
       {% if entry.preview contains '://' -%}
-      <img src="{{ entry.preview }}" alt="Preview of {{entry.title}}">
+      <img src="{{ entry.preview }}" alt="" loading="lazy">
       {%- else -%}
-      <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="Preview of {{entry.title}}">
+      <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="" loading="lazy">
       {%- endif -%}
     {%- else -%}
       <div class="preview-placeholder"></div>
@@ -15,23 +22,7 @@
   </div>
 
   <div class="pub-content">
-    <!-- Title and Topic -->
-    <div class="title-row">
-      <div class="title">
-        {{entry.title}}
-        {%- if entry.topic %}
-        <span class="topic-icon" title="{{entry.topic}}">
-          {%- if entry.topic == "bio-learning" -%}
-          <i class="fas fa-brain"></i>
-          {%- elsif entry.topic == "nas" -%}
-          <i class="fas fa-search"></i>
-          {%- elsif entry.topic == "personality" -%}
-          <i class="fas fa-robot"></i>
-          {%- endif -%}
-        </span>
-        {%- endif -%}
-      </div>
-    </div>
+    <div class="title">{{entry.title}}</div>
 
     <!-- Author -->
     <div class="author">
@@ -42,10 +33,10 @@
           {%- assign author_is_self = true -%}
         {%- endif -%}
       {%- endif -%}
-      
-      {%- if forloop.length > 1 -%}
-        {%- if forloop.first == false -%},&nbsp;{%- endif -%}
-        {%- if forloop.last -%}&nbsp;and&nbsp;{%- endif -%}
+
+      {%- if forloop.first == false -%}
+        {%- if forloop.length > 2 -%}, {% else %} {% endif -%}
+        {%- if forloop.last -%}and {% endif -%}
       {%- endif -%}
       {%- if author_is_self -%}
         <em>{{author.first}} {{author.last}}</em>
@@ -55,7 +46,7 @@
     {%- endfor -%}
     </div>
 
-    <!-- Journal/Book title and date -->
+    <!-- Venue, year and topic -->
     <div class="periodical">
       <span class="venue">
       {%- if entry.type == "article" -%}
@@ -64,66 +55,65 @@
         <em>{{entry.booktitle}}</em>
       {%- endif -%}
       </span>
-
       <span class="year">{{entry.year}}</span>
 
-      {%- if entry.volume or entry.number or entry.pages %}
-      <span class="details">
-        (
-        {%- if entry.volume -%}Vol. {{entry.volume}}{%- endif -%}
-        {%- if entry.number -%}, No. {{entry.number}}{%- endif -%}
-        {%- if entry.pages -%}, pp. {{entry.pages}}{%- endif -%}
-        )
+      {%- if entry.topic %}
+      <span class="topic-tag">
+        <span class="topic-dot"></span>
+        {%- if entry.topic == "neuro-ai" -%}
+        NeuroAI
+        {%- elsif entry.topic == "discovery" -%}
+        Automated discovery
+        {%- elsif entry.topic == "personality" -%}
+        Computational personality
+        {%- endif -%}
       </span>
       {%- endif -%}
-
-      {%- if entry.publisher %}
-        <span class="publisher">· {{entry.publisher}}</span>
-      {%- endif -%}
     </div>
 
-    <!-- Links/Buttons -->
+    <!-- Links -->
     <div class="pub-links">
       {%- if entry.abstract %}
-        <span class="abstract-toggle" role="button" tabindex="0">
-          <i class="fas fa-chevron-right"></i> Abstract
-        </span>
-        <div class="abstract-content" aria-hidden="true">
-          {{entry.abstract}}
-        </div>
+        <button type="button" class="abstract-toggle" aria-expanded="false">
+          <i class="fas fa-chevron-right"></i>Abstract
+        </button>
       {%- endif %}
-      
+
+      {%- if entry.arxiv %}
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>arXiv</a>
+      {%- endif %}
+
       {%- if entry.pdf %}
         {% if entry.pdf contains '://' -%}
-        <a href="{{ entry.pdf }}" target="_blank"><i class="fas fa-file-pdf"></i>PDF</a>
+        <a href="{{ entry.pdf }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>Paper</a>
         {%- else -%}
-        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" target="_blank"><i class="fas fa-file-pdf"></i>PDF</a>
+        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>Paper</a>
         {%- endif %}
       {%- endif %}
-      
+
       {%- if entry.code %}
-        <a href="{{ entry.code }}" target="_blank"><i class="fas fa-code"></i>Code</a>
+        <a href="{{ entry.code }}" target="_blank" rel="noopener"><i class="fas fa-code"></i>Code</a>
       {%- endif %}
-      
+
       {%- if entry.website %}
-        <a href="{{ entry.website }}" target="_blank"><i class="fas fa-globe"></i>Website</a>
+        <a href="{{ entry.website }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i>Website</a>
       {%- endif %}
-      
-      {%- if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank"><i class="fas fa-archive"></i>arXiv</a>
-      {%- endif %}
-      
+
       {%- if entry.blog %}
-        <a href="{{ entry.blog }}" target="_blank"><i class="fas fa-blog"></i>Blog</a>
+        <a href="{{ entry.blog }}" target="_blank" rel="noopener"><i class="fas fa-pen"></i>Blog</a>
       {%- endif %}
-      
+
       {%- if entry.slides %}
         {% if entry.slides contains '://' -%}
-        <a href="{{ entry.slides }}" target="_blank"><i class="fas fa-presentation"></i>Slides</a>
+        <a href="{{ entry.slides }}" target="_blank" rel="noopener"><i class="fas fa-chalkboard"></i>Slides</a>
         {%- else -%}
-        <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" target="_blank"><i class="fas fa-presentation"></i>Slides</a>
+        <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-chalkboard"></i>Slides</a>
         {%- endif %}
       {%- endif %}
     </div>
+
+    {%- if entry.abstract %}
+    <div class="abstract-content">{{entry.abstract}}</div>
+    {%- endif %}
   </div>
 </div>

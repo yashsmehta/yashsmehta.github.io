@@ -1,0 +1,62 @@
+---
+---
+{%- comment -%}
+  _layouts/bib_line.html: one "Representative work" row on the homepage.
+  Rendered by the bibliography tag in about.html (--template bib_line) for
+  entries with selected={true}. A `place` field names the Experience entry
+  (_data/experience.yml) the paper came out of; that entry's logo and position
+  close the row, a small copy of its chip under Experience. A `figure` field (or
+  `home_figure`, for a schematic shown here but not on the publications page) puts
+  that paper's live schematic in the row; see _includes/pub_figures.html.
+{%- endcomment -%}
+{%- if entry.arxiv -%}
+  {%- assign paper_url = entry.arxiv | prepend: 'https://arxiv.org/abs/' -%}
+{%- elsif entry.pdf contains '://' -%}
+  {%- assign paper_url = entry.pdf -%}
+{%- elsif entry.pdf -%}
+  {%- assign paper_url = entry.pdf | prepend: '/assets/pdf/' | relative_url -%}
+{%- elsif entry.website -%}
+  {%- assign paper_url = entry.website -%}
+{%- else -%}
+  {%- assign paper_url = '/publications/' | relative_url -%}
+{%- endif -%}
+{%- assign origin = nil -%}
+{%- if entry.place -%}
+  {%- assign places = site.data.experience.academia | concat: site.data.experience.industry -%}
+  {%- assign origin = places | where: "id", entry.place | first -%}
+{%- endif -%}
+{%- assign fig = entry.figure | default: entry.home_figure -%}
+<article class="rep-item reveal"{% if origin %} data-place="{{ origin.id }}"{% endif %}>
+  <span class="rep-year">{{ entry.year }}</span>
+  <div class="rep-body">
+    <h3 class="rep-title"><a href="{{ paper_url }}">{{ entry.title }}</a></h3>
+    <p class="rep-meta">
+      <span class="rep-venue">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}</span>
+      {%- if entry.code %}
+      <a href="{{ entry.code }}">Code</a>
+      {%- endif %}
+      {%- if entry.website and entry.website != paper_url %}
+      <a href="{{ entry.website }}">Website</a>
+      {%- endif %}
+    </p>
+  </div>
+  {%- if entry.teaser or fig %}
+  <div class="rep-figure">
+    {%- if entry.teaser %}
+    {%- assign teaser_url = entry.teaser | prepend: '/assets/video/' | relative_url %}
+    <video data-teaser src="{{ teaser_url }}" poster="{{ teaser_url | replace: '.mp4', '.jpg' }}" muted playsinline preload="metadata" aria-label="{{ site.data.figures[entry.teaser] }}"></video>
+    {%- else %}
+    <canvas data-figure="{{ fig }}" role="img" aria-label="{{ site.data.figures[fig] }}"></canvas>
+    {%- endif %}
+    {%- if entry.preview %}
+    <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="" loading="lazy">
+    {%- endif %}
+  </div>
+  {%- endif %}
+  {%- if origin %}
+  <a class="rep-origin" href="#experience" data-place="{{ origin.id }}" title="From my time at {{ origin.org }}">
+    <span class="rep-origin-logo"><img src="{{ origin.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ origin.org }}"{% if origin.logo_class %} class="{{ origin.logo_class }}"{% endif %}></span>
+    <span class="rep-origin-role">{{ origin.role }}</span>
+  </a>
+  {%- endif %}
+</article>

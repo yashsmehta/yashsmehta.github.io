@@ -1,0 +1,94 @@
+<!doctype html><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Source+Serif+4:opsz,wght@8..60,400..600&display=block" rel="stylesheet">
+<style>html,body{margin:0;width:640px;height:448px;overflow:hidden;background:#fffdf9}
+svg{display:block;font-family:"Bricolage Grotesque",sans-serif}</style>
+<svg id="s" width="640" height="448" viewBox="0 0 640 448" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="cp"><rect x="40" y="118" width="300" height="280" rx="14"/></clipPath></defs>
+<text x="40" y="84" font-size="27" font-weight="600" fill="#0f1c33">Learning from <tspan fill="#e0811f">noise</tspan>, no backward pass</text>
+<g clip-path="url(#cp)"><rect x="40" y="118" width="300" height="280" fill="#f3f6fa"/><g id="cont"></g></g>
+<rect x="40" y="118" width="300" height="280" rx="14" fill="none" stroke="#c9d3e0" stroke-width="2"/>
+<text x="326" y="144" font-size="15" fill="#445267" text-anchor="end">loss</text>
+<g id="dyn"></g>
+<g id="leg"></g>
+</svg>
+<script>
+(function(){
+var NS='http://www.w3.org/2000/svg';
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function rng(seed){var s=seed>>>0;return function(){s=(s+0x6D2B79F5)>>>0;var t=Math.imul(s^(s>>>15),1|s);t=(t+Math.imul(t^(t>>>7),61|t))^t;return((t^(t>>>14))>>>0)/4294967296}}
+function cl(x){return x<0?0:x>1?1:x}
+function ease(x){x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+function seg(t,a,b){return cl((t-a)/(b-a))}
+function mix(c1,c2,k){var o=[];for(var i=0;i<3;i++)o.push(Math.round(c1[i]+(c2[i]-c1[i])*k));return 'rgb('+o+')'}
+var ORANGE=[224,129,31],GREEN=[30,143,107],RED=[212,66,78];
+
+/* loss: rotated quadratic bowl, minimum inside the panel */
+var MIN=[268,330],TH=-0.6,ca=Math.cos(TH),sa=Math.sin(TH),A=1,B=2.1;
+function L(p){var dx=p[0]-MIN[0],dy=p[1]-MIN[1],u=dx*ca+dy*sa,v=-dx*sa+dy*ca;return A*u*u+B*v*v}
+var cont=document.getElementById('cont');
+for(var i=9;i>=1;i--){var r=i*38;
+  el('ellipse',{cx:MIN[0],cy:MIN[1],rx:r/Math.sqrt(A),ry:r/Math.sqrt(B),transform:'rotate('+(TH*180/Math.PI)+' '+MIN[0]+' '+MIN[1]+')',
+    fill:'rgba(26,85,180,0.055)',stroke:'rgba(0,45,114,0.22)','stroke-width':1.5},cont)}
+
+/* precompute the walk */
+var R=rng(20221), N=7, P=[[92,170]], IT=[];
+for(var k=0;k<N;k++){var p=P[k], rad=Math.max(26,44-k*3), M=5, off=R()*6.283, arr=[], gx=0, gy=0, L0=L(p);
+  for(var j=0;j<M;j++){var a=off+j*6.283/M+(R()-.5)*1.0, d=[Math.cos(a),Math.sin(a)], len=rad*(.78+.22*R());
+    var dL=L([p[0]+d[0]*len,p[1]+d[1]*len])-L0; arr.push({d:d,len:len,good:dL<0}); gx-=dL*d[0]; gy-=dL*d[1]}
+  var g=Math.hypot(gx,gy), dist=Math.hypot(MIN[0]-p[0],MIN[1]-p[1]), st=Math.min(dist*.42,62);
+  P.push([p[0]+gx/g*st,p[1]+gy/g*st]); IT.push({arr:arr,rad:rad})}
+function times(k){ if(k===0) return {g0:.6,g1:1.4,c0:1.7,c1:2.3,m0:2.6,m1:3.4};
+  var s=3.6+(k-1)*.7; return {g0:s,g1:s+.24,c0:s+.24,c1:s+.42,m0:s+.42,m1:s+.68}}
+var TEND=times(N-1).m1;
+
+var dyn=document.getElementById('dyn'), leg=document.getElementById('leg');
+var ROWS=[['add noise',ORANGE],['loss lower?',GREEN],['step that way',[0,45,114]]], RY=[178,246,314];
+function arrow(g,x,y,d,len,col,op,w){ if(len<3||op<=.01) return;
+  var hx=x+d[0]*len, hy=y+d[1]*len, h=Math.min(11,len*.5), bx=hx-d[0]*h, by=hy-d[1]*h, nx=-d[1]*h*.5, ny=d[0]*h*.5;
+  el('line',{x1:x,y1:y,x2:bx,y2:by,stroke:col,'stroke-width':w,'stroke-linecap':'round',opacity:op},g);
+  el('polygon',{points:hx+','+hy+' '+(bx+nx)+','+(by+ny)+' '+(bx-nx)+','+(by-ny),fill:col,opacity:op},g)}
+
+window.DURATION=9;
+window.renderAt=function(t){
+  while(dyn.firstChild)dyn.removeChild(dyn.firstChild); while(leg.firstChild)leg.removeChild(leg.firstChild);
+  /* which iteration */
+  var k=0; for(var i=0;i<N;i++){ if(t>=times(i).g0) k=i }
+  var T=times(k), it=IT[k], p=P[k], q=P[k+1];
+  var grow=ease(seg(t,T.g0,T.g1)), colr=ease(seg(t,T.c0,T.c1)), mv=ease(seg(t,T.m0,T.m1));
+  var cur=[p[0]+(q[0]-p[0])*mv, p[1]+(q[1]-p[1])*mv];
+  /* minimum marker */
+  var fin=ease(seg(t,TEND,TEND+.45));
+  el('circle',{cx:MIN[0],cy:MIN[1],r:4,fill:'#002d72',opacity:.35*(1-fin)},dyn);
+  /* trail */
+  var pts=P.slice(0,k+1).concat([cur]).map(function(a){return a[0].toFixed(1)+','+a[1].toFixed(1)}).join(' ');
+  el('polyline',{points:pts,fill:'none',stroke:'#002d72','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round',opacity:.85},dyn);
+  for(var i=0;i<=k;i++) el('circle',{cx:P[i][0],cy:P[i][1],r:i===0?5:3.5,fill:i===0?'#fffdf9':'#002d72',stroke:'#002d72','stroke-width':2},dyn);
+  /* probe circle + arrows (anchored at p, fade as the step is taken) */
+  var vis=(t>=T.g0?1:0)*(1-mv);
+  if(vis>0){
+    el('circle',{cx:p[0],cy:p[1],r:it.rad*grow,fill:'rgba(255,253,249,.55)',stroke:'#6c7788','stroke-width':1.5,'stroke-dasharray':'4 4',opacity:vis*grow},dyn);
+    it.arr.forEach(function(a){
+      var col=mix(ORANGE,a.good?GREEN:RED,colr), op=vis*(a.good?1:1-.45*colr);
+      arrow(dyn,p[0],p[1],a.d,a.len*grow,col,op,3)});
+  }
+  /* weight dot */
+  if(fin>0) el('circle',{cx:cur[0],cy:cur[1],r:9+9*fin,fill:'none',stroke:'#1e8f6b','stroke-width':2.5,opacity:fin},dyn);
+  el('circle',{cx:cur[0],cy:cur[1],r:9,fill:'#002d72',stroke:'#fffdf9','stroke-width':2.5},dyn);
+  /* legend */
+  var act=[0,0,0];
+  if(k===0){ act[0]=seg(t,T.g0,T.g0+.3)*(1-seg(t,T.c0-.1,T.c0+.2)); act[1]=seg(t,T.c0-.1,T.c0+.2)*(1-seg(t,T.m0-.1,T.m0+.2)); act[2]=seg(t,T.m0-.1,T.m0+.2)*(1-seg(t,3.45,3.75)) }
+  var all=k===0?seg(t,3.45,3.75):1;
+  ROWS.forEach(function(r,i){ var a=Math.max(act[i],all*.999), y=RY[i];
+    el('circle',{cx:392,cy:y,r:16,fill:mix([241,236,225],r[1],a)},leg);
+    var n=el('text',{x:392,y:y+6,'font-size':17,'font-weight':600,'text-anchor':'middle',fill:mix([108,119,136],[255,253,249],a)},leg); n.textContent=i+1;
+    var tx=el('text',{x:420,y:y+7,'font-size':21,'font-weight':k===0&&act[i]>.5?600:500,fill:mix([108,119,136],[15,28,51],a)},leg); tx.textContent=r[0];
+  });
+  /* repeat bracket */
+  if(all>0){ var g=el('g',{opacity:all},leg);
+    el('path',{d:'M 392 '+(RY[2]+26)+' V 366 H 420',fill:'none',stroke:'#6c7788','stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'},g);
+    var rp=el('text',{x:428,y:372,'font-size':17,fill:'#445267'},g); rp.textContent='repeat';
+  }
+};
+window.renderAt(0);
+})();
+</script>

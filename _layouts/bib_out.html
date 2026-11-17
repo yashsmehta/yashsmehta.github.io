@@ -1,0 +1,22 @@
+---
+---
+{%- comment -%}
+  _layouts/bib_out.html: one paper inside an Experience card on the homepage.
+  Rendered by the bibliography tag in about.html (--template bib_out) for the
+  entries whose `place` field names that position.
+{%- endcomment -%}
+{%- if entry.arxiv -%}
+  {%- assign paper_url = entry.arxiv | prepend: 'https://arxiv.org/abs/' -%}
+{%- elsif entry.pdf contains '://' -%}
+  {%- assign paper_url = entry.pdf -%}
+{%- elsif entry.pdf -%}
+  {%- assign paper_url = entry.pdf | prepend: '/assets/pdf/' | relative_url -%}
+{%- elsif entry.website -%}
+  {%- assign paper_url = entry.website -%}
+{%- else -%}
+  {%- assign paper_url = '/publications/' | relative_url -%}
+{%- endif -%}
+<a class="exp-paper" href="{{ paper_url }}">
+  <span class="exp-paper-title">{{ entry.title }}</span>
+  <span class="exp-paper-meta">{{ entry.abbr | default: entry.journal | default: entry.booktitle }} · {{ entry.year }}</span>
+</a>

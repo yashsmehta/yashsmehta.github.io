@@ -1,13 +1,37 @@
-@inproceedings{mehta2025empirical,
-  title={An Empirical Study of Perturbation Based Algorithms for Training Deep Networks},
-  author={Mehta, Yash and Hiratani, Naoki and Latham, Peter and Lillicrap, Timothy},
-  booktitle={In preparation},
-  year={2025},
-  abbr={In prep},
-  code={https://github.com/silverpaths/nodepert},
-  preview={nodepert2025.png},
-  topic={bio-learning},
-  abstract={We conduct a comprehensive empirical study of perturbation-based training algorithms, comparing their performance and properties across different network architectures and tasks.}
+@article{mehta2026iwsp,
+  title={Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models},
+  author={Mehta, Yash and Singh, Chandan and Xu, Weijia and Antonello, Richard J. and Flinker, Adeen and Mesgarani, Nima and Bonner, Michael F. and Jojic, Nebojsa and Gao, Jianfeng},
+  journal={Preprint},
+  year={2026},
+  month={11},
+  abbr={Preprint},
+  pdf={https://www.alphaxiv.org/abs/2611.interpretable-weight-space-programming},
+  code={https://github.com/csinva/weight-space-programming-autoresearch},
+  preview={iwsp2026.jpg},
+  teaser={iwsp2026.mp4},
+  topic={discovery},
+  place={msr},
+  abstract={Neural networks are powerful predictors, yet their opacity limits their usefulness in science, where the goal is explanation rather than mere prediction. In neuroscience, for example, deep encoding models accurately predict brain activity in response to natural stimuli, but struggle to reveal which stimulus features drive those predictions. Here we introduce interpretable weight-space programming (iWSP), a method in which an LLM agent iteratively builds interpretable models by explicitly programming their weights and features in code, without gradient-based training (backpropagation). Without backpropagation to tune parameters, the agent must draw on its prior knowledge and reason over previous trials to hypothesize, "hand-craft", and refine human-interpretable computations mirroring the workflow of a human scientist. LLM audits confirm the interpretability of the hand-crafted models. We first validate iWSP by tasking it with constructing transformers for canonical benchmarks such as arithmetic and sentiment classification, finding that LLM agents can successfully craft compact, accurate networks directly. Next, we apply iWSP to build neural encoding models across vision, language, and audition. In the visual cortex, iWSP outpredicts existing interpretable baselines, uncovers distinct computations across early/higher visual areas, and generalizes to unseen data. In language fMRI, iWSP surfaces a confound in the data and in auditory ECoG, it systematically discovers interpretable acoustic features that predict neural activity. Together, these results establish iWSP as a general paradigm for aligning high predictive performance with human-interpretable scientific discovery.},
+  figure={kernel},
+  selected={true}
+}
+
+@article{mehta2026coarse,
+  title={Extremely Coarse Learning Objectives Induce Human-Aligned Representations in AI Vision Models},
+  author={Mehta, Yash and Bonner, Michael F.},
+  journal={arXiv preprint},
+  year={2026},
+  month={5},
+  abbr={arXiv},
+  arxiv={2605.05556},
+  code={https://github.com/yashsmehta/visreps},
+  preview={coarse2026.png},
+  teaser={coarse2026.mp4},
+  topic={neuro-ai},
+  place={jhu},
+  abstract={Artificial neural networks trained on visual tasks develop internal representations resembling those of the primate visual system, a discovery that has guided a decade of computational neuroscience. Research on building brain-aligned models has progressively embraced finer-grained learning objectives, from object classification to contrastive self-supervised objectives that maximize distinctions among individual images. Yet the effect of learning-signal granularity on brain alignment remains largely unexamined. Here we systematically investigate how the granularity of a learning signal shapes representational alignment with human vision. We parametrically vary the number of training classes using a data-driven approach that partitions a set of training images into different numbers of categories via PCA-based splits of pretrained embeddings. We train hundreds of neural networks across convolutional and transformer architectures on these coarse classification tasks and compare their representations with human fMRI responses, macaque electrophysiology recordings, and human behavior. We find that networks trained to distinguish as few as eight broad categories learn representations that match or exceed the neural alignment of models distinguishing 1,000 classes. Even more strikingly, these coarsely trained networks align more closely with human perceptual similarity judgments than all other models evaluated, including networks trained with fine-grained supervision or self-supervision as well as leading large-scale vision models. These results demonstrate that human-like visual representations can emerge from surprisingly simple learning objectives, reframing what learning signals vision may require and opening a path toward building AI systems that are more aligned with human perception.},
+  figure={cloud},
+  selected={true}
 }
 
 @inproceedings{mehta2024model,
@@ -20,8 +44,11 @@
   abbr={NeurIPS},
   code={https://github.com/yashsmehta/MetaLearnPlasticity},
   preview={plasticity2024.png},
-  topic={bio-learning},
+  teaser={plasticity2024.mp4},
+  topic={discovery},
+  place={janelia},
   abstract={Synaptic plasticity, the ability of synapses to change their strength, is a key mechanism underlying learning in biological neural networks. However, inferring plasticity rules from neural recordings is challenging due to the complexity of biological networks and the difficulty of measuring synaptic weights directly. Here, we introduce a model-based approach to infer plasticity rules from neural activity alone, without requiring direct measurement of synaptic weights.},
+  figure={rule},
   selected={true}
 }
 
@@ -34,7 +61,10 @@
   pdf={https://openreview.net/forum?id=X0CKM7QV5k},
   code={https://github.com/silverpaths/nodepert},
   preview={nodepert2022.png},
-  topic={bio-learning},
+  teaser={nodepert2022.mp4},
+  topic={neuro-ai},
+  home_figure={perturb},
+  place={gatsby},
   abstract={We analyze the theoretical properties of node perturbation learning, providing new insights into its stability and scaling behavior in deep neural networks.},
   selected={true}
 }
@@ -48,7 +78,10 @@
   pdf={https://arxiv.org/pdf/2201.13396.pdf},
   code={https://github.com/automl/NASLib},
   preview={nasbench2022.png},
-  topic={nas},
+  teaser={nasbench2022.mp4},
+  topic={discovery},
+  home_figure={suite},
+  place={freiburg},
   abstract={We introduce NAS-Bench-Suite, a unified interface to popular Neural Architecture Search (NAS) benchmarks, making NAS research more accessible and reproducible while significantly reducing computational costs.},
   selected={true}
 }
@@ -62,6 +95,7 @@
   abbr={FGCS},
   website={https://www.sciencedirect.com/journal/future-generation-computer-systems/special-issue/104WJNQCXFX},
   preview={fgcs2022.jpg},
+  teaser={fgcs2022.mp4},
   topic={personality},
   abstract={This paper discusses emerging trends and challenges in personality prediction from digital footprints, focusing on ethical considerations and future directions for the field.}
 }
@@ -75,9 +109,10 @@
   pdf={https://proceedings.neurips.cc/paper/2021/file/746b02b6680562f44ad7526675bac026-Paper.pdf},
   code={https://github.com/romanpogodin/towards-bio-plausible-conv},
   preview={bioconv2021.png},
-  topic={bio-learning},
-  abstract={We develop a biologically plausible implementation of convolutional networks that maintains the computational advantages of weight sharing while respecting biological constraints on neural connectivity.},
-  selected={true}
+  teaser={bioconv2021.mp4},
+  topic={neuro-ai},
+  place={gatsby},
+  abstract={We develop a biologically plausible implementation of convolutional networks that maintains the computational advantages of weight sharing while respecting biological constraints on neural connectivity.}
 }
 
 @article{mehta2020recent,
@@ -85,12 +120,13 @@
   author={Mehta, Yash and Majumder, Navonil and Gelbukh, Alexander and Cambria, Erik},
   journal={Artificial Intelligence Review},
   year={2020},
-  abbr={AIRE},
+  abbr={AI Review},
   pdf={https://link.springer.com/article/10.1007/s10462-019-09770-z},
   preview={personality2020.png},
+  teaser={personality2020.mp4},
   topic={personality},
-  abstract={This survey provides a comprehensive overview of personality detection methods using deep learning, covering recent advances in computational personality recognition and discussing future research directions.},
-  selected={true}
+  place={ntu},
+  abstract={This survey provides a comprehensive overview of personality detection methods using deep learning, covering recent advances in computational personality recognition and discussing future research directions.}
 }
 
 @inproceedings{mehta2020bottom,
@@ -102,7 +138,9 @@
   pdf={https://ieeexplore.ieee.org/document/9338428},
   code={https://github.com/yashsmehta/personality-prediction},
   preview={personality_icdm2020.png},
+  teaser={personality_icdm2020.mp4},
   topic={personality},
+  place={ntu},
   abstract={This paper introduces a novel two-stream architecture that combines psycholinguistic features with deep language model representations for improved personality prediction from text data.}
 }
 
@@ -113,7 +151,9 @@
   year={2020},
   code={https://github.com/yashsmehta/personality-prediction},
   preview={personality_bert2020.png},
+  teaser={personality_bert2020.mp4},
   topic={personality},
+  place={ntu},
   abstract={We propose a novel approach combining BERT embeddings with bagged SVM classifiers for robust personality trait detection from text, achieving state-of-the-art results on standard benchmarks.}
 }
 
@@ -126,7 +166,9 @@
   pdf={https://www.sciencedirect.com/science/article/pii/S0925231222004180},
   code={https://github.com/npuliyang/Personality-Detection-MTL},
   preview={mtl2020.png},
+  teaser={mtl2020.mp4},
   topic={personality},
+  place={ntu},
   abstract={We present a multitask learning framework that jointly learns to predict emotions and personality traits, showing how these related tasks can benefit from shared representations.}
 }
 

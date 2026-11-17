@@ -1,0 +1,57 @@
+<!doctype html><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=block" rel="stylesheet">
+<style>html,body{margin:0;width:640px;height:448px;overflow:hidden;background:#fffdf9}
+svg{display:block;font-family:"Bricolage Grotesque",sans-serif}</style>
+<svg id="s" width="640" height="448" viewBox="0 0 640 448" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf9"/><stop offset="1" stop-color="#f8f5ee"/></linearGradient></defs>
+<rect width="640" height="448" fill="url(#bg)"/>
+<text x="40" y="84" font-size="27" font-weight="600" fill="#0f1c33">Shared weights, <tspan fill="#1a55b4">without copying</tspan></text>
+<g id="g"></g>
+<text id="lat" x="320" y="136" text-anchor="middle" font-size="17" font-weight="500" fill="#1a55b4">lateral connections</text>
+<text id="l1" x="320" y="386" text-anchor="middle" font-size="18" font-weight="500" fill="#445267">every neuron has its own weights</text>
+<text id="l2" x="320" y="388" text-anchor="middle" font-size="25" fill="#0f1c33" font-family="'Source Serif 4',serif"></text>
+</svg>
+<script>
+const NS='http://www.w3.org/2000/svg',g=document.getElementById('g');
+const el=(n,a,p)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);(p||g).appendChild(e);return e};
+let seed=7;const rnd=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};
+const N=4,K=5,TW=100,GAP=40,X0=60,TY=238,C=TW/K,NY=192;
+// shared target: oriented edge filter
+const target=[];for(let r=0;r<K;r++)for(let c=0;c<K;c++){const u=(c-2)*0.75+(r-2)*0.55;target.push(Math.cos(u*1.45)*Math.exp(-((c-2)**2+(r-2)**2)/9))}
+// per-neuron deviations, zero mean across neurons: filters converge to their common mean
+const dev=[];for(let i=0;i<N;i++){dev.push([]);for(let k=0;k<K*K;k++)dev[i].push(rnd()*2-1)}
+for(let k=0;k<K*K;k++){let m=0;for(let i=0;i<N;i++)m+=dev[i][k];m/=N;for(let i=0;i<N;i++)dev[i][k]-=m}
+const cx=i=>X0+i*(TW+GAP)+TW/2;
+const arcs=[],pulses=[],cells=[],frames=[];
+for(let i=0;i<N-1;i++){const a=cx(i),b=cx(i+1);const p=el('path',{d:`M${a} ${NY-15} C ${a+18} ${NY-52}, ${b-18} ${NY-52}, ${b} ${NY-15}`,fill:'none',stroke:'#1a55b4','stroke-width':3,'stroke-linecap':'round'});p._len=p.getTotalLength();p.setAttribute('stroke-dasharray',p._len);arcs.push(p)}
+for(let i=0;i<N-1;i++)pulses.push(el('circle',{r:5.5,fill:'#68ace5'}));
+for(let i=0;i<N;i++){const x=X0+i*(TW+GAP);
+  el('line',{x1:cx(i)-34,y1:TY-2,x2:cx(i),y2:NY+15,stroke:'#6c7788','stroke-width':2});
+  el('line',{x1:cx(i)+34,y1:TY-2,x2:cx(i),y2:NY+15,stroke:'#6c7788','stroke-width':2});
+  el('circle',{cx:cx(i),cy:NY,r:15,fill:'#fffdf9',stroke:'#0f1c33','stroke-width':2.5});
+  cells.push([]);for(let r=0;r<K;r++)for(let c=0;c<K;c++)cells[i].push(el('rect',{x:x+c*C,y:TY+r*C,width:C+0.4,height:C+0.4}));
+  frames.push(el('rect',{x:x,y:TY,width:TW,height:TW,rx:3,fill:'none',stroke:'#0f1c33','stroke-width':2.5}));}
+const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
+const NEU=[241,236,225],POS=[0,45,114],NEG=[224,129,31];
+const col=v=>{v=Math.max(-1,Math.min(1,v));const c=v>=0?mix(NEU,POS,v):mix(NEU,NEG,-v);return `rgb(${c})`};
+const cl=x=>Math.max(0,Math.min(1,x)),ease=x=>{x=cl(x);return x*x*(3-2*x)},seg=(t,a,b)=>ease((t-a)/(b-a));
+const l1=document.getElementById('l1'),l2=document.getElementById('l2'),lat=document.getElementById('lat');
+l2.innerHTML=[1,2,3,4].map(i=>`<tspan font-weight="600" font-style="italic">w</tspan><tspan font-size="16" dy="5">${i}</tspan>`).join('<tspan dy="-5"> ≈ </tspan>').replace(/<tspan font-weight/g,(m,o)=>o?'<tspan dy="-5" font-weight':m).replace(/<tspan dy="-5"> ≈ <\/tspan><tspan dy="-5"/g,'<tspan dy="-5"> ≈ </tspan><tspan');
+window.DURATION=8.6;
+window.renderAt=t=>{
+  const draw=i=>seg(t,1.3+i*0.35,2.2+i*0.35);
+  arcs.forEach((p,i)=>{const d=draw(i);p.setAttribute('stroke-dashoffset',p._len*(1-d));p.setAttribute('opacity',d>0?1:0)});
+  lat.setAttribute('opacity',seg(t,2.0,2.8));
+  const conv=seg(t,3.0,6.6);          // 0 → 1 convergence
+  const s=1-conv*0.94;                // remaining spread (≈, not =)
+  for(let i=0;i<N;i++)for(let k=0;k<K*K;k++)cells[i][k].setAttribute('fill',col(target[k]*1.5+dev[i][k]*1.25*s));
+  pulses.forEach((c,i)=>{const on=t>3.0&&t<6.6;const ph=((t-3.0)/1.2+i*0.33)%1;const u=ph<0.5?ph*2:2-ph*2;
+    const pt=arcs[i].getPointAtLength(arcs[i]._len*ease(u));c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);
+    c.setAttribute('opacity',on?Math.min(seg(t,3.0,3.3),1-seg(t,6.2,6.6)):0)});
+  const fr=mix([15,28,51],[26,85,180],seg(t,5.6,6.8));
+  frames.forEach(f=>f.setAttribute('stroke',`rgb(${fr})`));
+  l1.setAttribute('opacity',1-seg(t,3.2,4.0));
+  l2.setAttribute('opacity',seg(t,6.2,7.0));
+};
+renderAt(0);
+</script>

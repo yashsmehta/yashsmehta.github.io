@@ -7,169 +7,212 @@
     <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
   {%- endif -%}
   {% include head.html %}
-  <link rel="stylesheet" href="https://use.typekit.net/vxy8tas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap">
   <style>
-    #network-animation {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      opacity: 0.6;
-      background: white;
-      pointer-events: none;
+    /* ── Design tokens ─────────────────────────────────────────────
+       Blue-black ink and JHU heritage blue on warm paper. `--paper` is
+       the page, `--surface` is anything laid on it (cards, figure
+       plates), `--wash` a darker paper tone for fills and hovers. The
+       four class colours are the publication topic colours and are
+       reused inside the publication figures. */
+    :root {
+      --ink: #0f1c33;
+      --ink-soft: #445267;
+      --ink-faint: #6c7788;
+      --line: #e4ddcf;
+      --wash: #f1ece1;
+      --paper: #f8f5ee;
+      --surface: #fffdf9;
+      --navy: #002d72;
+      --link: #1a55b4;
+      --sky: #68ace5;
+      --c-green: #1e8f6b;
+      --c-mint: #58c39b;
+      --c-orange: #e0811f;
+      --c-red: #d4424e;
+      --display: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --text: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+      --page: 1040px;
+      --gutter: 2rem;
     }
-    
-    /* Hide animation on blog pages */
-    {% if page.url contains '/blog/' or page.layout == 'post' or page.title == 'blog' %}
-    #network-animation {
-      display: none !important;
-    }
-    
-    body {
-      background: white !important;
-    }
-    
-    .container.mt-5 {
-      background: white !important;
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-      box-shadow: none !important;
-    }
-    
-    header.fixed-top {
-      background: white !important;
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-    }
-    
-    footer {
-      background: white !important;
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-    }
-    {% endif %}
-    
+
+    html { scroll-behavior: smooth; }
+
     body {
       position: relative;
       min-height: 100vh;
-      background: transparent !important;
-      font-family: "proxima-nova", sans-serif;
-      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper) !important;
+      color: var(--ink);
+      font-family: var(--text);
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: "factoria", sans-serif;
-      font-weight: 700;
+      font-family: var(--display);
+      font-weight: 650;
+      letter-spacing: -0.015em;
+      color: var(--ink);
     }
 
-    strong, b {
-      font-weight: 700;
-    }
+    strong, b { font-weight: 650; }
+    em, i { font-style: italic; }
 
-    em, i {
-      font-style: italic;
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 0.18em; }
+    a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 3px;
+      border-radius: 3px;
     }
+    ::selection { background: rgba(104, 172, 229, 0.35); }
 
-    /* Navigation styles */
-    .navbar-nav .nav-link {
-      font-family: "factoria", sans-serif;
-      font-weight: 300;
-      color: #002D72 !important;
-    }
-
-    .navbar-brand {
-      font-family: "factoria", sans-serif;
-      font-weight: 300;
-    }
-
-    .dropdown-item {
-      font-family: "factoria", sans-serif;
-      font-weight: 300;
-    }
-
-    /* Center and constrain width for both header content and main container */
+    /* ── Page frame ── */
     .container.mt-5,
-    header .container {
-      max-width: 750px !important;
-      width: 60%;
+    header .container,
+    footer .container {
+      max-width: var(--page) !important;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
     }
-
     .container.mt-5 {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 1.5rem !important;
+      margin-top: 0 !important;
+      padding-top: 3.5rem;
+      padding-bottom: 1rem;
     }
+    body > .container.mt-5 { flex: 1 0 auto; }
+    footer.mt-5 { margin-top: 2rem !important; }
+    footer { flex-shrink: 0; }
 
-    /* Style header and footer to match */
-    header.fixed-top {
-      background: rgba(255, 255, 255, 0.6) !important;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+    /* ── Navigation ── */
+    header .navbar {
+      background: rgba(248, 245, 238, 0.9) !important;
+      backdrop-filter: saturate(160%) blur(12px);
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid var(--line) !important;
+      box-shadow: none !important;
+      padding-top: 0.55rem;
+      padding-bottom: 0.55rem;
     }
+    header .navbar .navbar-brand {
+      font-family: var(--display);
+      font-weight: 700 !important;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--navy) !important;
+      margin: 0;
+      padding: 0;
+    }
+    header .navbar .navbar-brand:hover { text-decoration: none; }
+    header .navbar .navbar-nav .nav-link {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--ink-soft) !important;
+      padding: 0.35rem 0 !important;
+      margin-left: 1.75rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    header .navbar .navbar-nav .nav-link:hover {
+      color: var(--navy) !important;
+      text-decoration: none;
+    }
+    header .navbar .navbar-nav .nav-item.active > .nav-link {
+      color: var(--navy) !important;
+      font-weight: 650;
+      border-bottom-color: var(--navy);
+    }
+    .dropdown-item { font-family: var(--display); }
 
+    /* ── Generic page header (publications, code, cv …) ── */
+    .post > .post-header { margin-bottom: 2rem; }
+    .post > .post-header .post-title {
+      font-family: var(--display);
+      font-weight: 750;
+      font-size: clamp(2.2rem, 5vw, 3.25rem);
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      color: var(--navy);
+      margin: 0 0 0.5rem 0;
+    }
+    .post > .post-header .post-description {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      max-width: 60ch;
+      margin: 0;
+    }
+    .post > .post-header .post-description:empty { display: none; }
+
+    /* ── Footer ── */
     footer {
-      background: rgba(255, 255, 255, 0.6) !important;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      min-height: unset !important;
+      padding: 0 !important;
+      background: var(--paper) !important;
+      border-top: 1px solid var(--line) !important;
     }
-    
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      /* Prevent horizontal scroll on mobile */
-      html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-      }
+    footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.75rem !important;
+      line-height: 1.4 !important;
+    }
+    .footer-quote {
+      font-family: var(--text);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--ink-soft);
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.1rem;
+      font-size: 1.05rem;
+    }
+    .footer-links a { color: var(--ink-faint); transition: color 0.15s ease; }
+    .footer-links a:hover { color: var(--navy); text-decoration: none; }
 
-      /* Hide animation on mobile */
-      #network-animation {
-        display: none !important;
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      :root { --gutter: 1.15rem; }
+      html, body { overflow-x: hidden; width: 100%; }
+      body { font-size: 1rem; }
+      .container.mt-5 { padding-top: 2rem; }
+      header .navbar .navbar-collapse {
+        border-top: 1px solid var(--line);
+        margin-top: 0.6rem;
+        padding: 0.4rem 0 0.2rem;
       }
-      
-      /* Full width content on mobile */
-      .container.mt-5,
-      header .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 14px !important;
-        padding-right: 14px !important;
-        box-sizing: border-box !important;
+      header .navbar .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0 !important;
+        border-bottom: 0;
       }
-      .container.mt-5 {
-        margin-top: 0.75rem !important;
-      }
-      
-      /* Remove glassmorphism effects for better performance */
-      .container.mt-5 {
-        background: white !important;
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-      }
-      
-      header.fixed-top {
-        background: white !important;
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-      }
+      footer .container { justify-content: center; text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
   </style>
   </head>
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    {% unless page.url contains '/blog/' or page.layout == 'post' or page.title == 'blog' %}
-    <canvas id="network-animation"></canvas>
-    {% endunless %}
 
     <!-- Header -->
     {%- include header.html %}
@@ -189,170 +232,5 @@
     {% include scripts/misc.html %}
     {% include scripts/mathjax.html %}
     {% include scripts/analytics.html %}
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Skip animation on blog pages
-        {% if page.url contains '/blog/' or page.layout == 'post' or page.title == 'blog' %}
-        return;
-        {% endif %}
-        
-        const canvas = document.getElementById('network-animation');
-        const ctx = canvas.getContext('2d');
-        const contentContainer = document.querySelector('.container.mt-5');
-        
-        // Mouse position
-        let mouse = {
-          x: undefined,
-          y: undefined,
-          isOverContent: false
-        };
-
-        // Track mouse position and content hover state
-        document.addEventListener('mousemove', function(event) {
-          mouse.x = event.clientX;
-          mouse.y = event.clientY;
-          
-          // Check if mouse is over content container
-          const containerRect = contentContainer.getBoundingClientRect();
-          const scrollY = window.scrollY;
-          
-          // Account for scroll position when checking bounds
-          mouse.isOverContent = (
-            event.clientX >= containerRect.left &&
-            event.clientX <= containerRect.right &&
-            (event.clientY + scrollY) >= (containerRect.top + scrollY) &&
-            (event.clientY + scrollY) <= (containerRect.bottom + scrollY)
-          );
-        });
-        
-        // Set canvas size to window size
-        function resizeCanvas() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        // Node class for particles
-        class Node {
-          constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.8;
-            this.vy = (Math.random() - 0.5) * 0.8;
-            this.baseRadius = 3;
-            this.radius = this.baseRadius;
-            this.color = 'rgba(104, 172, 229, 0.75)';      // JHU Spirit Blue
-            this.highlightColor = 'rgba(0, 45, 114, 0.9)';  // JHU Heritage Blue
-            this.currentColor = this.color;  // Initialize currentColor
-          }
-
-          update() {
-            // Move
-            this.x += this.vx;
-            this.y += this.vy;
-
-            // Bounce off walls
-            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-            // Reset to default state when over content
-            if (mouse.isOverContent) {
-              this.radius = this.baseRadius;
-              this.currentColor = this.color;
-              return;  // Skip all mouse interactions
-            }
-
-            // Interactive radius and color based on mouse proximity
-            const dx = mouse.x - this.x;
-            const dy = mouse.y - this.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            const mouseRadius = 120;
-
-            if (distance < mouseRadius) {
-              const scale = 1 - (distance / mouseRadius);
-              this.radius = this.baseRadius + (scale * 2);
-              this.currentColor = this.highlightColor;
-              // Add slight speed increase near mouse
-              this.vx += (dx / distance) * 0.02;
-              this.vy += (dy / distance) * 0.02;
-            } else {
-              this.radius = this.baseRadius;
-              this.currentColor = this.color;
-            }
-
-            // Limit max speed
-            const maxSpeed = 1.5;
-            const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-            if (speed > maxSpeed) {
-              this.vx = (this.vx / speed) * maxSpeed;
-              this.vy = (this.vy / speed) * maxSpeed;
-            }
-          }
-
-          draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = this.currentColor;
-            ctx.fill();
-            
-            // Add subtle glow effect
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius + 2, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(104, 172, 229, ${this.currentColor === this.highlightColor ? 0.1 : 0.05})`;
-            ctx.fill();
-          }
-        }
-
-        // Create nodes
-        const nodes = Array(100).fill().map(() => new Node());
-        const connectionDistance = 150;
-
-        // Animation loop
-        function animate() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-          // Update and draw nodes
-          nodes.forEach(node => {
-            node.update();
-            node.draw();
-          });
-
-          // Draw connections
-          for (let i = 0; i < nodes.length; i++) {
-            for (let j = i + 1; j < nodes.length; j++) {
-              const dx = nodes[i].x - nodes[j].x;
-              const dy = nodes[i].y - nodes[j].y;
-              const distance = Math.sqrt(dx * dx + dy * dy);
-
-              if (distance < connectionDistance) {
-                const opacity = 1 - (distance / connectionDistance);
-                
-                // Skip mouse interactions if over content
-                const mouseNearNode1 = !mouse.isOverContent && Math.sqrt(Math.pow(mouse.x - nodes[i].x, 2) + Math.pow(mouse.y - nodes[i].y, 2)) < 120;
-                const mouseNearNode2 = !mouse.isOverContent && Math.sqrt(Math.pow(mouse.x - nodes[j].x, 2) + Math.pow(mouse.y - nodes[j].y, 2)) < 120;
-                
-                const connectionColor = (mouseNearNode1 || mouseNearNode2) ? 
-                  `rgba(0, 45, 114, ${opacity * 0.5})` :
-                  `rgba(104, 172, 229, ${opacity * 0.35})`;
-                
-                ctx.strokeStyle = connectionColor;
-                ctx.lineWidth = mouseNearNode1 || mouseNearNode2 ? 1.5 : 1;
-                ctx.beginPath();
-                ctx.moveTo(nodes[i].x, nodes[i].y);
-                ctx.lineTo(nodes[j].x, nodes[j].y);
-                ctx.stroke();
-              }
-            }
-          }
-
-          requestAnimationFrame(animate);
-        }
-
-        // Start animation
-        animate();
-      });
-    </script>
   </body>
 </html>

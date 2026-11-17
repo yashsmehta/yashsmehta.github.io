@@ -1,0 +1,195 @@
+<!-- Shared styles for publication entries (_layouts/bib.html).
+     Included by the publications page. -->
+<style>
+.publications { margin-top: 0; }
+.publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.publications ol.bibliography > li { margin: 0; padding: 0; }
+
+.publications h2.bibliography {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+  margin: 2.75rem 0 0 0;
+  padding: 0 0 0.6rem 0;
+  border: 0;
+  text-align: left;
+}
+.publications h2.bibliography:first-child { margin-top: 0; }
+.publications h2.bibliography.hidden { display: none; }
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  column-gap: 1.75rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.publication-item.hidden { display: none; }
+
+.pub-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.pub-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* A live schematic (see _includes/pub_figures.html) sits over the preview image,
+   which stays as the fallback until the script marks the plate as live. */
+.pub-image canvas,
+.pub-image video {                 /* a `teaser` clip takes the place of a drawing */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.pub-image video { object-fit: cover; }
+.pub-image.figure-live canvas,
+.pub-image.figure-live video { display: block; }
+.pub-image.figure-live img { display: none; }
+.preview-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--wash);
+}
+
+.pub-content { min-width: 0; }
+
+.pub-content .title {
+  font-family: var(--display);
+  font-weight: 650;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  max-width: 34em;
+  text-wrap: balance;
+}
+
+.pub-content .author {
+  margin-top: 0.4rem;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.publications ol.bibliography li .author > em,
+.pub-content .author em {
+  font-style: normal;
+  font-weight: 650;
+  color: var(--ink);
+  border: 0;
+}
+
+.pub-content .periodical {
+  margin-top: 0.4rem;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: baseline;
+  column-gap: 0.5rem;
+  row-gap: 0.2rem;
+  flex-wrap: wrap;
+}
+.pub-content .periodical .venue em { font-style: normal; font-weight: 500; color: var(--ink); }
+.pub-content .periodical .year { color: var(--ink-soft); }
+
+.topic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.topic-dot {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--topic, var(--ink-faint));
+  flex-shrink: 0;
+}
+.topic-neuro-ai    { --topic: var(--c-red); }
+.topic-discovery   { --topic: var(--link); }
+.topic-personality { --topic: var(--c-green); }
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.2rem;
+  row-gap: 0.3rem;
+  margin-top: 0.7rem;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.pub-links a, .abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--link);
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.pub-links a:hover, .abstract-toggle:hover {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.pub-links i { font-size: 0.8em; opacity: 0.85; }
+.abstract-toggle i { transition: transform 0.18s ease; }
+.abstract-toggle[aria-expanded="true"] i { transform: rotate(90deg); }
+
+.abstract-content {
+  display: none;
+  margin-top: 0.9rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--line);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 68ch;
+}
+.publication-item.abstract-open .abstract-content { display: block; }
+
+@media (max-width: 640px) {
+  .publication-item {
+    grid-template-columns: 92px minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 1.15rem 0;
+  }
+  .pub-content .title { font-size: 1.05rem; }
+  .pub-content .author { font-size: 0.92rem; }
+  .topic-tag { margin-left: 0; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.abstract-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      var open = this.closest('.publication-item').classList.toggle('abstract-open');
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+});
+</script>

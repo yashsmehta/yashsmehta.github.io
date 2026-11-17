@@ -1,0 +1,583 @@
+<script>
+/* Live schematics for publication entries.
+   A paper with a `figure` field in papers.bib gets a <canvas data-figure="…"> in its
+   thumbnail slot on the publications page (_layouts/bib.html) and in its row on the
+   homepage (_layouts/bib_line.html, which also takes `home_figure` for a schematic
+   shown on the homepage only). Each drawing below illustrates that paper's central
+   idea with synthetic data.
+     kernel   hand-written filters (interpretable weight-space programming)
+     cloud    an embedding cloud split into 2, 4, 8 classes (coarse objectives, Fig. 1a)
+     rule     Taylor coefficients converging on Oja's rule (plasticity-rule inference)
+     perturb  a network learning from injected noise, no backward pass (node perturbation)
+     suite    five search methods ranked on 25 benchmarks, the winner changing (NAS-Bench-Suite)
+   A figure plays once when it scrolls into view and again on hover or tap, then rests
+   on its final frame. Under prefers-reduced-motion only that frame is drawn. Plates
+   narrower than 170px (the homepage rows, phones) get a label-free version of the same
+   drawing.
+   A paper with a `teaser` field gets a short muted clip (assets/video/) in the same
+   plate instead of a drawing, a <video data-teaser>, and it keeps the same manners. */
+document.addEventListener('DOMContentLoaded', function () {
+  var canvases = document.querySelectorAll('canvas[data-figure]');
+  var clips = document.querySelectorAll('video[data-teaser]');
+  if (!canvases.length && !clips.length) return;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var SANS = '"Bricolage Grotesque", system-ui, sans-serif';
+  var SERIF = '"Source Serif 4", Georgia, serif';
+  var MONO = 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace';
+  var INK = [15, 28, 51], SOFT = [68, 82, 103], FAINT = [108, 119, 136], RULE = [214, 206, 190];
+  var NAVY = [0, 45, 114], BLUE = [26, 85, 180], GREEN = [30, 143, 107], MINT = [88, 195, 155],
+      ORANGE = [224, 129, 31], RED = [212, 66, 78], YELLOW = [222, 170, 44],
+      WHITE = [255, 255, 255], EMPTY = [240, 235, 224];
+
+  function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function smooth(x) { x = clamp01(x); return x * x * (3 - 2 * x); }
+  function mix(a, b, f) {
+    return [Math.round(a[0] + (b[0] - a[0]) * f), Math.round(a[1] + (b[1] - a[1]) * f), Math.round(a[2] + (b[2] - a[2]) * f)];
+  }
+  function rgb(c, a) { return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (a === undefined ? 1 : a) + ')'; }
+  function font(weight, size, family) { return weight + ' ' + size + 'px ' + family; }
+  // Deterministic RNG so every visit sees the same figure.
+  function makeRng(seed) {
+    function rand() {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    }
+    function gauss() {
+      var u = 1 - rand(), v = rand();
+      return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+    }
+    return { rand: rand, gauss: gauss };
+  }
+  // Draws runs of text left to right; each run is [text, font, colour].
+  function runs(ctx, x, y, parts, alpha, align) {
+    var widths = parts.map(function (p) { ctx.font = p[1]; return ctx.measureText(p[0]).width; });
+    var total = widths.reduce(function (a, b) { return a + b; }, 0);
+    if (align === 'right') x -= total;
+    ctx.textAlign = 'left';
+    parts.forEach(function (p, i) {
+      ctx.font = p[1];
+      ctx.fillStyle = rgb(p[2], alpha === undefined ? 1 : alpha);
+      ctx.fillText(p[0], x, y);
+      x += widths[i];
+    });
+  }
+
+  /* ── kernel: filters whose weights are written, not learned ── */
+  function kernelFigure() {
+    var n = 7, half = 3;
+    function bell(x, y, s) { return Math.exp(-(x * x + y * y) / (2 * s * s)); }
+    function build(fn) {
+      var v = [], max = 0;
+      for (var j = 0; j < n; j++) for (var i = 0; i < n; i++) {
+        var w = fn(i - half, half - j);
+        v.push(w); max = Math.max(max, Math.abs(w));
+      }
+      return v.map(function (w) { return w / max; });
+    }
+    // Three of the hand-written computations shown in the paper's figure.
+    var programs = [
+      { name: 'Gabor energy', code: '√(a² + b²) → normalize', labels: ['filter a', 'filter b'],
+        pos: [NAVY, NAVY], neg: [ORANGE, ORANGE],
+        k: [build(function (x, y) { return Math.cos(2 * Math.PI * x / 4.4) * bell(x, y, 1.9); }),
+            build(function (x, y) { return Math.sin(2 * Math.PI * x / 4.4) * bell(x, y, 1.9); })] },
+      { name: 'Surface geometry', code: 'second derivatives → ridge, bump', labels: ['∂²/∂x²', '∂²/∂x∂y'],
+        pos: [NAVY, NAVY], neg: [ORANGE, ORANGE],
+        k: [build(function (x, y) { return (x * x / 2.25 - 1) * bell(x, y, 1.5); }),
+            build(function (x, y) { return x * y * bell(x, y, 1.5); })] },
+      { name: 'Color contrast', code: '√(a² + b²) → normalize', labels: ['red-green', 'blue-yellow'],
+        pos: [RED, YELLOW], neg: [GREEN, BLUE],
+        k: [build(function (x, y) { return Math.cos(2 * Math.PI * x / 4.4) * bell(x, 0, 1.9); }),
+            build(function (x, y) { return Math.cos(2 * Math.PI * x / 4.4) * bell(x, 0, 1.9); })] }
+    ];
+    var which = 0;
+    var T0 = 350, PER = 1500, GAP = 150, T_CODE = T0 + 2 * PER + GAP + 150, CODE_MS = 620;
+
+    return {
+      duration: T_CODE + CODE_MS + 250,
+      begin: function (playedBefore) { if (playedBefore) which = (which + 1) % programs.length; },
+      draw: function (ctx, W, H, t) {
+        var prog = programs[which], compact = W < 170, fs = W < 280 ? 11 : 12.5;
+        var padX = compact ? 7 : 14, top = compact ? 0 : fs + 20, labelH = compact ? 0 : 16, codeH = compact ? 0 : 20;
+        var gap = Math.max(compact ? 5 : 10, W * 0.045);
+        var cell = Math.min((H - top - labelH - codeH - (compact ? 14 : 6)) / n, (W - 2 * padX - gap) / (2 * n));
+        var side = cell * n, x0 = (W - 2 * side - gap) / 2, y0 = compact ? (H - side) / 2 : top;
+        var inset = cell > 9 ? 0.75 : 0.4, radius = Math.min(2.5, cell * 0.18);
+
+        ctx.textBaseline = 'alphabetic';
+        if (!compact) {
+          runs(ctx, x0, fs + 8, [[prog.name, font(600, fs, SANS), INK]]);
+          runs(ctx, x0 + 2 * side + gap, fs + 8,
+               [['0', font(600, fs, SANS), INK], [' gradient steps', font(500, fs, SANS), SOFT]], 1, 'right');
+        }
+
+        for (var m = 0; m < 2; m++) {
+          var kx = x0 + m * (side + gap), start = T0 + m * (PER + GAP), per = PER / (n * n);
+          for (var c = 0; c < n * n; c++) {
+            var cx = kx + (c % n) * cell, cy = y0 + Math.floor(c / n) * cell;
+            var f = smooth((t - (start + c * per)) / 150);
+            var w = prog.k[m][c];
+            var tone = mix(WHITE, w >= 0 ? prog.pos[m] : prog.neg[m], Math.pow(Math.abs(w), 0.72) * 0.94);
+            ctx.fillStyle = rgb(mix(EMPTY, tone, f));
+            ctx.beginPath();
+            ctx.roundRect(cx + inset, cy + inset, cell - 2 * inset, cell - 2 * inset, radius);
+            ctx.fill();
+          }
+          // The cell being written.
+          var idx = Math.floor((t - start) / per);
+          if (t >= start && idx < n * n) {
+            ctx.strokeStyle = rgb(NAVY); ctx.lineWidth = compact ? 1 : 1.5;
+            ctx.beginPath();
+            ctx.roundRect(kx + (idx % n) * cell + inset, y0 + Math.floor(idx / n) * cell + inset,
+                          cell - 2 * inset, cell - 2 * inset, radius);
+            ctx.stroke();
+          }
+          if (!compact) {
+            ctx.textAlign = 'center';
+            ctx.font = font(500, fs - 2, SANS);
+            ctx.fillStyle = rgb(FAINT, 0.4 + 0.6 * smooth((t - start) / 300));
+            ctx.fillText(prog.labels[m], kx + side / 2, y0 + side + 12);
+          }
+        }
+
+        // The operations applied to the filters, typed out last.
+        var chars = Math.round(clamp01((t - T_CODE) / CODE_MS) * prog.code.length);
+        if (!compact && chars > 0) {
+          var size = fs - 1.5;
+          ctx.font = font(500, size, MONO);
+          var full = ctx.measureText(prog.code).width, room = W - 2 * padX;
+          if (full > room) {                       // narrow tiles: shrink the line to fit
+            ctx.font = font(500, (size * room / full).toFixed(2), MONO);
+            full = room;
+          }
+          ctx.textAlign = 'left';
+          ctx.fillStyle = rgb(SOFT);
+          ctx.fillText(prog.code.slice(0, chars), W / 2 - full / 2, y0 + side + labelH + 15);
+        }
+      }
+    };
+  }
+
+  /* ── cloud: embeddings split along their principal components ── */
+  function cloudFigure() {
+    var r = makeRng(20260507);
+    var MANY = [GREEN, MINT, ORANGE, RED, BLUE, [104, 172, 229], [150, 96, 190], YELLOW,
+                [226, 120, 160], [90, 110, 135], NAVY, [120, 170, 70]];
+    function shade(c, f) {
+      return c.map(function (v) { return Math.round(f > 0 ? v + (255 - v) * f : v * (1 + f)); });
+    }
+    var pts = [];
+    while (pts.length < 430) {
+      var x = r.gauss(), y = r.gauss() * 0.62, z = r.gauss() * 0.42;
+      if (Math.abs(x) > 2.25 || Math.abs(y) > 1.35 || Math.abs(z) > 0.95) continue;
+      y += 0.16 * (x * x - 1);                 // a gentle arch, like a real embedding manifold
+      var bx = x >= 0, by = y >= 0, bz = z >= 0;
+      var quad = bx ? (by ? RED : ORANGE) : (by ? MINT : GREEN);
+      pts.push({ x: x, y: y, z: z, c: [MANY[Math.floor(r.rand() * MANY.length)],
+                                        bx ? ORANGE : GREEN, quad, shade(quad, bz ? 0.4 : -0.26)] });
+    }
+    var STEPS = [[0, '1,000'], [800, '2'], [2000, '4'], [3200, '8']], FADE = 520;
+    var BASE = -0.35, pitch = 0.16, yaw = BASE, target = BASE;
+
+    var fig = {
+      duration: 4500,
+      pointer: null,
+      live: function () { return fig.pointer !== null || Math.abs(yaw - target) > 0.004; },
+      draw: function (ctx, W, H, t, animating) {
+        var compact = W < 170, fs = W < 280 ? 11 : 12.5;
+        var step = 0;
+        for (var i = 0; i < STEPS.length; i++) if (t >= STEPS[i][0]) step = i;
+        var f = step === 0 ? 1 : smooth((t - STEPS[step][0]) / FADE), prev = Math.max(0, step - 1);
+
+        var sway = t < fig.duration ? 0.42 * Math.sin(2 * Math.PI * t / fig.duration) : 0;
+        target = BASE + sway + (fig.pointer === null ? 0 : fig.pointer * 0.9);
+        yaw = animating ? yaw + (target - yaw) * 0.09 : target;
+
+        var top = compact ? 3 : fs + 16, bottom = compact ? 3 : 8;
+        var cx = W / 2 + (compact ? 0 : 4), cy = top + (H - top - bottom) * 0.58;
+        var s = compact ? Math.min(W / 5.2, (H - top - bottom) / 3.3) : Math.min(W / 5.5, (H - top - bottom) / 3.75);
+        var cyaw = Math.cos(yaw), syaw = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
+
+        var proj = [], stride = compact ? 2 : 1;      // a thumbnail needs fewer points
+        for (var j = 0; j < pts.length; j += stride) {
+          var p = pts[j];
+          var x1 = p.x * cyaw + p.z * syaw, z1 = -p.x * syaw + p.z * cyaw;
+          var y1 = p.y * cp - z1 * sp, z2 = p.y * sp + z1 * cp;
+          proj.push([cx + x1 * s, cy - y1 * s, z2, f >= 1 ? p.c[step] : mix(p.c[prev], p.c[step], f)]);
+        }
+        proj.sort(function (a, b) { return a[2] - b[2]; });
+        var base = compact ? 1.4 : Math.max(1.45, s * 0.037);
+        for (var k = 0; k < proj.length; k++) {
+          var q = proj[k], depth = clamp01((q[2] + 1.2) / 2.4);    // 0 far … 1 near
+          ctx.fillStyle = rgb(q[3], 0.55 + 0.42 * depth);
+          ctx.beginPath();
+          ctx.arc(q[0], q[1], base * (0.75 + 0.5 * depth), 0, 6.2832);
+          ctx.fill();
+        }
+        if (compact) return;
+
+        ctx.textBaseline = 'alphabetic';
+        var bold = font(600, fs, SANS), plain = font(500, fs, SANS);
+        if (f < 1) runs(ctx, 14, fs + 8, [[STEPS[prev][1], bold, INK], [' classes', plain, SOFT]], 1 - f);
+        runs(ctx, 14, fs + 8, [[STEPS[step][1], bold, INK], [' classes', plain, SOFT]], f);
+
+        // A small axis marker: the cloud's axes are its principal components.
+        var ox = 14.5, oy = H - 12.5, len = 18;
+        ctx.strokeStyle = rgb(RULE); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(ox, oy - len); ctx.lineTo(ox, oy); ctx.lineTo(ox + len, oy); ctx.stroke();
+        ctx.font = font(500, fs - 2, SANS); ctx.fillStyle = rgb(FAINT); ctx.textAlign = 'left';
+        ctx.fillText('PC 1', ox + len + 5, oy + 3.5);
+        ctx.fillText('PC 2', ox - 1, oy - len - 5);
+      }
+    };
+    return fig;
+  }
+
+  /* ── rule: gradient descent recovering Oja's rule, Δw = xy − y²w ── */
+  function ruleFigure() {
+    var r = makeRng(20241210), S = 140, lines = [];
+    function sample(fn) { var v = []; for (var i = 0; i <= S; i++) v.push(fn(i / S)); return v; }
+    for (var k = 0; k < 11; k++) {
+      (function () {
+        var init = r.gauss() * 0.13, amp = r.gauss() * 0.2, peak = 0.1 + r.rand() * 0.2, tau = 0.08 + r.rand() * 0.12;
+        lines.push(sample(function (e) {
+          return init * Math.exp(-e / tau) + amp * (e / peak) * Math.exp(1 - e / peak);
+        }));
+      })();
+    }
+    var xy = sample(function (e) {
+      return 1 - Math.exp(-e / 0.13) + 0.07 * Math.exp(-Math.pow((e - 0.4) / 0.16, 2)) * (1 - Math.exp(-e / 0.05));
+    });
+    var y2w = sample(function (e) {
+      var d = Math.max(0, e - 0.06);
+      return -(1 - Math.exp(-d / 0.2)) - 0.06 * Math.exp(-e / 0.05) * (e / 0.05);
+    });
+    var DRAW = 3300, T_LABEL = 3050;
+
+    return {
+      duration: 4100,
+      draw: function (ctx, W, H, t) {
+        var compact = W < 170, fs = W < 280 ? 11 : 12.5;
+        var padL = compact ? 6 : 28, padR = compact ? 6 : 38, padT = compact ? 6 : fs + 22, padB = compact ? 6 : 24;
+        var pw = W - padL - padR, ph = H - padT - padB;
+        function X(e) { return padL + e * pw; }
+        function Y(v) { return padT + (1.28 - v) / 2.56 * ph; }
+        var p = clamp01(t / DRAW), upto = p * S;
+
+        // Target values and zero line.
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = rgb(RULE);
+        ctx.beginPath(); ctx.moveTo(padL, Math.round(Y(0)) + 0.5); ctx.lineTo(padL + pw, Math.round(Y(0)) + 0.5); ctx.stroke();
+        ctx.setLineDash([3, 4]);
+        [1, -1].forEach(function (v) {
+          ctx.beginPath(); ctx.moveTo(padL, Math.round(Y(v)) + 0.5); ctx.lineTo(padL + pw, Math.round(Y(v)) + 0.5); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+        if (!compact) {
+          ctx.font = font(500, fs - 2, SANS); ctx.fillStyle = rgb(FAINT);
+          ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+          [['+1', 1], ['0', 0], ['−1', -1]].forEach(function (tk) { ctx.fillText(tk[0], padL - 7, Y(tk[1])); });
+          ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+          ctx.fillText('training epochs', padL + pw / 2, H - 8);
+        }
+
+        function trace(v, colour, width) {
+          if (upto <= 0) return [X(0), Y(v[0])];
+          var last = Math.floor(upto), frac = upto - last, hx, hy;
+          ctx.strokeStyle = colour; ctx.lineWidth = width; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+          ctx.beginPath(); ctx.moveTo(X(0), Y(v[0]));
+          for (var i = 1; i <= last; i++) ctx.lineTo(X(i / S), Y(v[i]));
+          hx = X(last / S); hy = Y(v[last]);
+          if (last < S) {
+            hx = X(upto / S); hy = Y(v[last] + (v[last + 1] - v[last]) * frac);
+            ctx.lineTo(hx, hy);
+          }
+          ctx.stroke();
+          return [hx, hy];
+        }
+        lines.forEach(function (v) { trace(v, rgb([150, 158, 172], 0.6), compact ? 0.75 : 1); });
+        var h1 = trace(xy, rgb(ORANGE), compact ? 1.6 : 2.2), h2 = trace(y2w, rgb(BLUE), compact ? 1.6 : 2.2);
+        if (compact) return;
+
+        var term = font('italic 600', fs + 0.5, SERIF), math = font('italic 500', fs + 1.5, SERIF);
+        var named = smooth((p - 0.12) / 0.12);      // the two terms are named once they separate
+        ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.font = term;
+        ctx.fillStyle = rgb(ORANGE, named); ctx.fillText('xy', h1[0] + 6, h1[1]);
+        ctx.fillStyle = rgb(BLUE, named); ctx.fillText('y²w', h2[0] + 6, h2[1]);
+
+        // The rule being fitted, then the rule that was found.
+        var f = smooth((t - T_LABEL) / 600);
+        ctx.textBaseline = 'alphabetic';
+        if (f < 1) runs(ctx, 14, fs + 9, [['Δw = g', math, INK], ['θ', font('italic 500', fs - 2.5, SERIF), INK], ['(x, y, w)', math, INK]], 1 - f);
+        if (f > 0) {
+          runs(ctx, 14, fs + 9, [['Δw = ', math, INK], ['xy', math, ORANGE], [' − ', math, INK], ['y²w', math, BLUE]], f);
+          runs(ctx, W - 14, fs + 8, [['Oja’s rule', font(500, fs, SANS), SOFT]], f, 'right');
+        }
+      }
+    };
+  }
+
+  /* ── perturb: a network that learns from injected noise, with no backward pass ── */
+  function perturbFigure() {
+    var r = makeRng(20221128);
+    var SIZES = [3, 5, 5, 2], GAPS = SIZES.length - 1, nodes = [], edges = [], first = [];
+    SIZES.forEach(function (n, l) {
+      first.push(nodes.length);
+      for (var i = 0; i < n; i++) nodes.push({ l: l, off: i - (n - 1) / 2, act: 0.3 + 0.7 * r.rand(), lag: r.rand() });
+    });
+    for (var l = 0; l < GAPS; l++)
+      for (var a = 0; a < SIZES[l]; a++)
+        for (var b = 0; b < SIZES[l + 1]; b++)
+          edges.push({ a: first[l] + a, b: first[l + 1] + b, l: l, w: Math.pow(r.rand(), 1.7) });
+    var HOP = 300, T_CLEAN = 300, T_NOISE = T_CLEAN + GAPS * HOP + 200, T_NOISY = T_NOISE + 500,
+        T_UPDATE = T_NOISY + GAPS * HOP + 250, UPDATE_MS = 650;
+
+    return {
+      duration: T_UPDATE + UPDATE_MS + 250,
+      draw: function (ctx, W, H, t) {
+        var compact = W < 170, fs = W < 280 ? 11 : 12.5;
+        var padL = compact ? 20 : 28, padR = compact ? 20 : 66, top = compact ? 11 : fs + 26, bottom = compact ? 11 : 16;
+        var dx = (W - padL - padR) / GAPS, dy = (H - top - bottom) / 4.4, cy = top + (H - top - bottom) / 2;
+        var R = compact ? 3.3 : Math.min(6, dy * 0.27);
+        function X(n) { return padL + n.l * dx; }
+        function Y(n) { return cy + n.off * dy; }
+
+        var clean = (t - T_CLEAN) / HOP, noisy = (t - T_NOISY) / HOP;      // how far each pass has travelled, in layers
+        var learned = smooth((t - T_UPDATE) / UPDATE_MS);
+
+        // Weights: all alike at first, then changed in one step, everywhere at once.
+        ctx.lineCap = 'round';
+        edges.forEach(function (e) {
+          var a = nodes[e.a], b = nodes[e.b];
+          ctx.strokeStyle = rgb(mix(RULE, NAVY, learned * (0.12 + 0.7 * e.w)), 0.9);
+          ctx.lineWidth = (compact ? 0.7 : 0.9) + learned * (compact ? 1.25 : 2) * (e.w - 0.25);
+          ctx.beginPath(); ctx.moveTo(X(a), Y(a)); ctx.lineTo(X(b), Y(b)); ctx.stroke();
+        });
+        // The two forward passes, as fronts moving along the weights.
+        [[clean, NAVY, 0.5], [noisy, ORANGE, 0.8]].forEach(function (pass) {
+          edges.forEach(function (e) {
+            var f = pass[0] - e.l;
+            if (f <= 0 || f >= 1.3) return;
+            var a = nodes[e.a], b = nodes[e.b], f0 = clamp01(f - 0.3), f1 = clamp01(f);
+            ctx.strokeStyle = rgb(pass[1], pass[2]);
+            ctx.lineWidth = compact ? 1.1 : 1.6;
+            ctx.beginPath();
+            ctx.moveTo(X(a) + (X(b) - X(a)) * f0, Y(a) + (Y(b) - Y(a)) * f0);
+            ctx.lineTo(X(a) + (X(b) - X(a)) * f1, Y(a) + (Y(b) - Y(a)) * f1);
+            ctx.stroke();
+          });
+        });
+
+        nodes.forEach(function (n) {
+          var x = X(n), y = Y(n), hidden = n.l > 0 && n.l < GAPS;
+          var on = smooth((clean - n.l + 0.15) / 0.4);
+          var shaken = n.l === 0 ? 0 : smooth((noisy - n.l + 0.15) / 0.4) * (1 - smooth(learned * 2.5));
+          var tone = mix(mix(WHITE, NAVY, 0.3 + 0.62 * n.act), mix(WHITE, ORANGE, 0.55 + 0.4 * n.act), shaken * 0.85);
+          if (hidden) {                             // noise lands on the hidden units and stays marked
+            var q = (t - T_NOISE - n.lag * 260) / 420;
+            if (q > 0) {
+              if (q < 1) {
+                ctx.strokeStyle = rgb(ORANGE, 0.75 * (1 - q)); ctx.lineWidth = compact ? 1 : 1.4;
+                ctx.beginPath(); ctx.arc(x, y, R + 1.5 + (compact ? 5 : 8) * smooth(q), 0, 6.2832); ctx.stroke();
+              }
+              ctx.strokeStyle = rgb(ORANGE, 0.85 * smooth(q * 1.6)); ctx.lineWidth = compact ? 0.9 : 1.2;
+              ctx.beginPath(); ctx.arc(x, y, R + (compact ? 2 : 2.8), 0, 6.2832); ctx.stroke();
+            }
+          }
+          ctx.fillStyle = rgb(mix(EMPTY, tone, on));
+          ctx.strokeStyle = rgb(mix(RULE, mix(tone, INK, 0.25), on));
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.arc(x, y, R, 0, 6.2832); ctx.fill(); ctx.stroke();
+        });
+        if (compact) return;
+
+        // What each stage is, then the update it leads to.
+        var math = font('italic 500', fs + 1.5, SERIF), plain = font(500, fs, SANS);
+        var second = smooth((t - T_NOISE) / 350), third = smooth((t - T_UPDATE) / 450);
+        ctx.textBaseline = 'alphabetic';
+        if (second < 1) runs(ctx, 14, fs + 9, [['forward pass', plain, SOFT]], 1 - second);
+        if (second > 0 && third < 1)
+          runs(ctx, 14, fs + 9, [['+ noise ', plain, ORANGE], ['ξ', math, ORANGE]], second * (1 - third));
+        if (third > 0)
+          runs(ctx, 14, fs + 9, [['Δw = −η δL ', math, INK], ['ξ', math, ORANGE]], third);
+        runs(ctx, W - 14, fs + 8, [['0', font(600, fs, SANS), INK], [' backward passes', plain, SOFT]], 1, 'right');
+
+        // The loss read off the output, once clean and once with the noise in.
+        var lx = W - padR + R + 10, out = smooth(clean - GAPS + 0.2), out2 = smooth(noisy - GAPS + 0.2);
+        ctx.textBaseline = 'middle';
+        runs(ctx, lx, cy - 8, [['L', math, NAVY]], out);
+        runs(ctx, lx, cy + 9, [['L', math, ORANGE], [' + δL', math, ORANGE]], out2);
+      }
+    };
+  }
+
+  /* ── suite: five search methods scored on 25 benchmarks; a different one wins each time ── */
+  function suiteFigure() {
+    var r = makeRng(20220425);
+    var SIDE = 5, COUNT = SIDE * SIDE, METHODS = 5;
+    var COLOURS = [BLUE, ORANGE, GREEN, RED, [150, 96, 190]], skill = [0, 0.07, 0.04, 0.09, 0.08];
+    var scores = [], places = [], winner = [];
+    for (var b = 0; b < COUNT; b++) {
+      var s = skill.map(function (k) { return 0.42 + k + 0.46 * r.rand(); });
+      var best = Math.max.apply(null, s), order = [0, 1, 2, 3, 4].sort(function (x, y) { return s[y] - s[x]; }), place = [];
+      order.forEach(function (m, pos) { place[m] = pos; });
+      scores.push(s.map(function (v) { return v / best; })); places.push(place); winner.push(order[0]);
+    }
+    var REST = { score: [0.34, 0.34, 0.34, 0.34, 0.34], place: [0, 1, 2, 3, 4] };
+    // The first benchmarks are taken slowly enough to read; then the pace picks up.
+    var T0 = 350, starts = [], clock = T0;
+    for (var j0 = 0; j0 <= COUNT; j0++) { starts.push(clock); clock += 120 + 230 * Math.exp(-j0 / 5); }
+
+    return {
+      duration: starts[COUNT] + 250,
+      draw: function (ctx, W, H, t) {
+        var compact = W < 170, fs = W < 280 ? 11 : 12.5;
+        var padX = compact ? 13 : 14, top = compact ? 13 : fs + 24, bottom = compact ? 13 : 16;
+        var gap = compact ? 2.5 : 3.5, side = Math.min(H - top - bottom, W * 0.46), cell = (side - gap * (SIDE - 1)) / SIDE;
+        var gx = padX, gy = top + (H - top - bottom - side) / 2, radius = Math.min(2.5, cell * 0.2);
+
+        var now = -1;
+        while (now < COUNT && t >= starts[now + 1]) now++;
+        var cur = Math.min(COUNT - 1, now);
+        var ease = cur < 0 ? 0 : smooth((t - starts[cur]) / Math.min(240, (starts[cur + 1] - starts[cur]) * 0.8));
+
+        // The benchmarks: each takes the colour of the method that came first on it.
+        for (var j = 0; j < COUNT; j++) {
+          var x = gx + (j % SIDE) * (cell + gap), y = gy + Math.floor(j / SIDE) * (cell + gap);
+          var f = smooth((t - starts[j]) / 220);
+          ctx.fillStyle = rgb(mix(EMPTY, mix(WHITE, COLOURS[winner[j]], 0.74), f));
+          ctx.beginPath(); ctx.roundRect(x, y, cell, cell, radius); ctx.fill();
+          if (j === now) {                         // the benchmark being queried
+            ctx.strokeStyle = rgb(NAVY); ctx.lineWidth = compact ? 1 : 1.5;
+            ctx.beginPath(); ctx.roundRect(x, y, cell, cell, radius); ctx.stroke();
+          }
+        }
+
+        // The methods, ranked on the current benchmark.
+        var from = cur <= 0 ? REST : { score: scores[cur - 1], place: places[cur - 1] };
+        var to = cur < 0 ? REST : { score: scores[cur], place: places[cur] };
+        var bx = gx + side + (compact ? 12 : 18), room = W - padX - bx;
+        var bh = compact ? 7 : Math.min(13, side / 8), step = (side - bh) / (METHODS - 1);
+        for (var m = 0; m < METHODS; m++) {
+          var len = from.score[m] + (to.score[m] - from.score[m]) * ease;
+          var pos = from.place[m] + (to.place[m] - from.place[m]) * ease;
+          ctx.fillStyle = rgb(EMPTY);
+          ctx.beginPath(); ctx.roundRect(bx, gy + pos * step, room, bh, bh / 2); ctx.fill();
+          ctx.fillStyle = rgb(mix(WHITE, COLOURS[m], 0.74));
+          ctx.beginPath(); ctx.roundRect(bx, gy + pos * step, Math.max(bh, room * len), bh, bh / 2); ctx.fill();
+        }
+        if (compact) return;
+
+        ctx.textBaseline = 'alphabetic';
+        var bold = font(600, fs, SANS), plain = font(500, fs, SANS);
+        runs(ctx, padX, fs + 8, [['benchmark ', plain, SOFT], [String(Math.max(1, cur + 1)), bold, INK], [' of ' + COUNT, plain, SOFT]]);
+        runs(ctx, W - padX, fs + 8, [[String(METHODS), bold, INK], [' search methods', plain, SOFT]], 1, 'right');
+      }
+    };
+  }
+
+  var FIGURES = { kernel: kernelFigure, cloud: cloudFigure, rule: ruleFigure, perturb: perturbFigure, suite: suiteFigure };
+  var nextStart = 0;                             // figures that come into view together start in turn
+
+  // First play when a plate scrolls into view. Returns false where that cannot be watched.
+  function whenSeen(el, play) {
+    if (!('IntersectionObserver' in window)) return false;
+    var seen = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      seen.disconnect();
+      var now = performance.now(), at = Math.max(now + 250, nextStart + 450);
+      nextStart = at;
+      setTimeout(play, at - now);
+    }, { threshold: 0.45 });
+    seen.observe(el);
+    return true;
+  }
+
+  function mount(canvas, fig) {
+    var ctx = canvas.getContext('2d');
+    var W = 0, H = 0, raf = 0, startedAt = 0, playing = false, played = reduceMotion;
+
+    function paint(now, animating) {
+      if (!W) return;
+      var t = playing ? Math.max(0, Math.min(fig.duration, now - startedAt)) : (played ? fig.duration : 0);
+      ctx.clearRect(0, 0, W, H);
+      fig.draw(ctx, W, H, t, animating);
+    }
+    function loop(now) {
+      raf = 0;
+      if (playing && now - startedAt >= fig.duration) playing = false;
+      paint(now, true);
+      if (playing || (fig.live && fig.live())) raf = requestAnimationFrame(loop);
+    }
+    function kick() { if (!raf && !reduceMotion) raf = requestAnimationFrame(loop); }
+    function play() {
+      if (reduceMotion || playing || !W) return;
+      if (fig.begin) fig.begin(played);
+      played = true; playing = true; startedAt = performance.now();
+      kick();
+    }
+    function size() {
+      var rect = canvas.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      paint(performance.now(), false);
+    }
+
+    // The preview image underneath is the no-JS fallback; hide it once the drawing is live.
+    canvas.parentNode.classList.add('figure-live');
+    if (window.ResizeObserver) new ResizeObserver(size).observe(canvas);
+    else window.addEventListener('resize', size);
+    size();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { paint(performance.now(), false); });
+
+    // First play when the figure scrolls into view; replay on hover or tap.
+    if (!whenSeen(canvas, play)) { played = true; paint(performance.now(), false); }
+    var card = canvas.closest('.publication-item, .rep-item') || canvas;
+    card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') play(); });
+    canvas.addEventListener('click', play);
+    if ('pointer' in fig) {
+      canvas.addEventListener('pointermove', function (e) {
+        if (e.pointerType !== 'mouse') return;
+        var rect = canvas.getBoundingClientRect();
+        fig.pointer = (e.clientX - rect.left) / rect.width - 0.5;
+        kick();
+      });
+      canvas.addEventListener('pointerleave', function () { fig.pointer = null; kick(); });
+    }
+  }
+
+  /* A teaser clip: its poster is its first frame, so it starts where it was resting; it
+     plays once in view, again on hover or tap, and stops on its last frame. */
+  function mountClip(video) {
+    function play() {
+      if (!(video.paused || video.ended)) return;
+      try { video.currentTime = 0; } catch (e) {}
+      var started = video.play();
+      if (started && started.catch) started.catch(function () {});   // autoplay refused: the poster stays
+    }
+    video.muted = true;
+    video.parentNode.classList.add('figure-live');     // hides the preview image, as for a drawing
+    if (reduceMotion) {                                // no motion: rest on the last frame
+      var rest = function () { video.currentTime = Math.max(0, video.duration - 0.05); };
+      if (video.readyState >= 1) rest(); else video.addEventListener('loadedmetadata', rest, { once: true });
+      return;
+    }
+    whenSeen(video, play);
+    var card = video.closest('.publication-item, .rep-item') || video;
+    card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') play(); });
+    video.addEventListener('click', play);
+  }
+
+  if (canvases.length && canvases[0].getContext) {
+    canvases.forEach(function (canvas) {
+      var make = FIGURES[canvas.dataset.figure];
+      if (make) mount(canvas, make());
+    });
+  }
+  clips.forEach(mountClip);
+});
+</script>

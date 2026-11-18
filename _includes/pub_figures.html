@@ -2,7 +2,7 @@
 /* Live schematics for publication entries.
    A paper with a `figure` field in papers.bib gets a <canvas data-figure="…"> in its
    thumbnail slot on the publications page (_layouts/bib.html) and in its row on the
-   homepage (_layouts/bib_line.html, which also takes `home_figure` for a schematic
+   homepage (_layouts/bib_out.html, which also takes `home_figure` for a schematic
    shown on the homepage only). Each drawing below illustrates that paper's central
    idea with synthetic data.
      kernel   hand-written filters (interpretable weight-space programming)
@@ -12,7 +12,7 @@
      suite    five search methods ranked on 25 benchmarks, the winner changing (NAS-Bench-Suite)
    A figure plays once when it scrolls into view and again on hover or tap, then rests
    on its final frame. Under prefers-reduced-motion only that frame is drawn. Plates
-   narrower than 170px (the homepage rows, phones) get a label-free version of the same
+   narrower than 170px (phones) get a label-free version of the same
    drawing.
    A paper with a `teaser` field gets a short muted clip (assets/video/) in the same
    plate instead of a drawing, a <video data-teaser>, and it keeps the same manners. */
@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // First play when the figure scrolls into view; replay on hover or tap.
     if (!whenSeen(canvas, play)) { played = true; paint(performance.now(), false); }
-    var card = canvas.closest('.publication-item, .rep-item') || canvas;
+    var card = canvas.closest('.publication-item, .exp-paper') || canvas;
     card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') play(); });
     canvas.addEventListener('click', play);
     if ('pointer' in fig) {
@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     whenSeen(video, play);
-    var card = video.closest('.publication-item, .rep-item') || video;
+    var card = video.closest('.publication-item, .exp-paper') || video;
     card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') play(); });
     video.addEventListener('click', play);
   }

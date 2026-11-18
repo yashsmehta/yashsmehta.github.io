@@ -1,7 +1,9 @@
 ---
 ---
 {%- comment -%}
-  _layouts/bib_out.html: one paper inside an Experience card on the homepage.
+  _layouts/bib_out.html: one paper inside an Experience panel on the homepage:
+  the paper's teaser clip (or, without one, its live schematic from `figure` /
+  `home_figure`) and, beside it, title, venue and year, and icon links.
   Rendered by the bibliography tag in about.html (--template bib_out) for the
   entries whose `place` field names that position.
 {%- endcomment -%}
@@ -16,7 +18,36 @@
 {%- else -%}
   {%- assign paper_url = '/publications/' | relative_url -%}
 {%- endif -%}
-<a class="exp-paper" href="{{ paper_url }}">
-  <span class="exp-paper-title">{{ entry.title }}</span>
-  <span class="exp-paper-meta">{{ entry.abbr | default: entry.journal | default: entry.booktitle }} · {{ entry.year }}</span>
-</a>
+{%- assign fig = entry.figure | default: entry.home_figure -%}
+<article class="exp-paper">
+  {%- if entry.teaser or fig %}
+  <div class="rep-figure">
+    {%- if entry.teaser %}
+    {%- assign teaser_url = entry.teaser | prepend: '/assets/video/' | relative_url %}
+    <video data-teaser src="{{ teaser_url }}" poster="{{ teaser_url | replace: '.mp4', '.jpg' }}" muted playsinline preload="metadata" aria-label="{{ site.data.figures[entry.teaser] }}"></video>
+    {%- else %}
+    <canvas data-figure="{{ fig }}" role="img" aria-label="{{ site.data.figures[fig] }}"></canvas>
+    {%- endif %}
+    {%- if entry.preview %}
+    <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="" loading="lazy">
+    {%- endif %}
+  </div>
+  {%- endif %}
+  <div class="exp-paper-body">
+    <h4 class="exp-paper-title"><a href="{{ paper_url }}">{{ entry.title }}</a></h4>
+    <p class="exp-paper-meta">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}&nbsp;·&nbsp;{{ entry.year }}</p>
+    <p class="rep-links">
+      {%- if entry.arxiv %}
+      <a href="{{ paper_url }}"><i class="fas fa-file-alt" aria-hidden="true"></i>arXiv</a>
+      {%- elsif entry.pdf %}
+      <a href="{{ paper_url }}"><i class="fas fa-file-alt" aria-hidden="true"></i>Paper</a>
+      {%- endif %}
+      {%- if entry.code %}
+      <a href="{{ entry.code }}"><i class="fas fa-code" aria-hidden="true"></i>Code</a>
+      {%- endif %}
+      {%- if entry.website %}
+      <a href="{{ entry.website }}"><i class="fas fa-globe" aria-hidden="true"></i>Website</a>
+      {%- endif %}
+    </p>
+  </div>
+</article>

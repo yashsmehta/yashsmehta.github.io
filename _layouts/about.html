@@ -468,6 +468,7 @@ layout: default
   .rep-links a:hover { color: var(--navy); text-decoration: none; }
   .rep-links i { font-size: 0.9em; opacity: 0.85; }
   .rep-figure {                      /* the plate is the clips' own 10:7 */
+    display: block;
     position: relative;
     width: 100%;
     aspect-ratio: 10 / 7;
@@ -543,8 +544,10 @@ layout: default
       margin-top: 1.4rem;
       max-width: 30rem;
     }
-    .hero-links { margin: 0; grid-template-columns: 1fr 1fr; }
+    .hero-links { margin: 0; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+    .hero-links a { padding: 0.45rem 0; }                   /* rows a finger can pick apart */
     .intro-text { margin-top: 1.25rem; }
+    .section-more { padding: 0.5rem 0; margin-top: -0.5rem; margin-bottom: -0.5rem; }   /* the same line, a taller target */
 
     .exp-group { grid-template-columns: 1fr; row-gap: 0.35rem; }
     .exp-group .group-label { padding-top: 0; }
@@ -553,16 +556,19 @@ layout: default
     /* The panel in one column: where and when, the summary, the people, then the papers. */
     .exp-pop { margin-left: 0; }
     .exp-card { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; padding: 1.2rem 0 1.2rem; }
-    .exp-close { top: 1.2rem; }
+    .exp-close { top: 0.65rem; right: -1rem; padding: 0.85rem 1rem; }   /* the same faint mark in the same place, 40px to the finger */
     .exp-side { display: contents; }
     .exp-head { order: 1; padding-right: 1.75rem; }
     .exp-card .exp-summary { order: 2; grid-area: auto; margin-top: 0.8rem; padding-right: 0; max-width: 38rem; }
     .exp-people { order: 3; display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; margin-top: 1rem; }
     .exp-card .exp-papers { order: 4; grid-area: auto; margin-top: 1.4rem; }
     .exp-card-many ol.bibliography { grid-template-columns: minmax(0, 1fr); }
+    .exp-card .rep-links { margin: 0.1rem 0 -0.4rem; gap: 0 1rem; }
+    .rep-links a { padding: 0.4rem 0; }                     /* taller targets on the same lines */
+    .news-toggle { padding: 0.55rem 1.15rem; }
   }
   @media (max-width: 760px) {        /* the hint goes under the heading */
-    .section-note { order: 1; flex-basis: 100%; }
+    .section-note { order: 1; flex-basis: 100%; text-wrap: balance; }
   }
   @media (min-width: 561px) and (max-width: 860px) {
     /* Room for the position, unit and dates on one line. */
@@ -575,9 +581,21 @@ layout: default
     .home { --rail: 3rem; }
     .home-section { padding: 1.6rem 0 2rem; }
     .section-head { margin-bottom: 1rem; }
-    .logo-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .chip-trigger { padding: 0.6rem 0.35rem 0.65rem; margin-bottom: 0.25rem; }   /* the logos wrap: keep the rows apart */
-    .exp-card { --plate: clamp(6.5rem, 30vw, 7.5rem); --plate-gap: 0.9rem; }
+    /* Three logos to a row, on six tracks so that a last row of one or two can be
+       centred. Each row's panels come straight after it (by `order`), so a panel opens
+       under the row its logo is in, not under the whole group. */
+    .logo-row { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .chip-trigger { grid-column: span 2; padding: 0.6rem 0.35rem 0.65rem; margin-bottom: 0.25rem; }   /* the logos wrap: keep the rows apart */
+    .logo-chip:nth-child(n+4) > .chip-trigger { order: 3; }
+    .logo-chip:nth-child(n+4) > .exp-pop { order: 5; }
+    .logo-chip:nth-child(n+4).open > .exp-pop { order: 4; }
+    .logo-chip:nth-child(n+7) > .chip-trigger { order: 6; }
+    .logo-chip:nth-child(n+7) > .exp-pop { order: 8; }
+    .logo-chip:nth-child(n+7).open > .exp-pop { order: 7; }
+    .logo-chip:nth-child(3n+1):nth-last-child(2) > .chip-trigger { grid-column: 2 / span 2; }
+    .logo-chip:nth-child(3n+1):last-child > .chip-trigger { grid-column: 3 / span 2; }
+    .exp-card { --plate: clamp(6.5rem, 30vw, 7.5rem); --plate-gap: 0.9rem; padding-bottom: 1.6rem; }   /* clear of a row of logos that follows */
+    .exp-papers ol.bibliography { row-gap: 1.2rem; }
     .exp-paper .exp-paper-title { font-size: 0.95rem; }
     .hero-side { grid-template-columns: 96px minmax(0, 1fr); column-gap: 1rem; }
     .hero-links { font-size: 0.9rem; gap: 0.35rem 0.75rem; }
@@ -792,8 +810,28 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 700 + i * 450);
     });
   }
+  /* On phones the logos wrap, so the panel that gives way can be above the logo that
+     takes over. The page is scrolled by as much as that logo moves while the panel
+     folds, so it stays under the finger (or pointer) and its own panel opens in view.
+     A scroll by hand ends it. Where the logos are in one row this does nothing. */
+  function holdStill(el, top) {     /* `top`: where it was before anything changed */
+    var until = Date.now() + 750;
+    var held = true;
+    function release() { held = false; }
+    ['touchmove', 'wheel'].forEach(function (type) {
+      window.addEventListener(type, release, { passive: true, once: true });
+    });
+    (function step() {
+      if (!held) return;
+      var moved = el.getBoundingClientRect().top - top;
+      if (Math.abs(moved) > 0.5) window.scrollBy({ top: moved, left: 0, behavior: 'instant' });
+      if (Date.now() < until) requestAnimationFrame(step);
+    })();
+  }
   function openChip(chip) {
     var takeover = false;            /* is another panel in this row giving way? then both get `swap`, which times the exchange */
+    var trigger = chip.querySelector('.chip-trigger');
+    var top = trigger.getBoundingClientRect().top;
     chips.forEach(function (other) {
       if (other === chip || other.parentNode !== chip.parentNode) return;
       var wasOpen = other.classList.contains('open');
@@ -801,6 +839,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (wasOpen) { takeover = true; setOpen(other, false); }
     });
     chip.classList.toggle('swap', takeover);
+    if (takeover) holdStill(trigger, top);
     setOpen(chip, true);
   }
   function closeChip(chip) {

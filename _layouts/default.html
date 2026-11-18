@@ -185,23 +185,51 @@
     .footer-links a { color: var(--ink-faint); transition: color 0.15s ease; }
     .footer-links a:hover { color: var(--navy); text-decoration: none; }
 
-    /* ── Mobile ── */
+    /* ── Tablet and phone ── */
+    @media (max-width: 860px) {
+      /* The bar's own side padding goes, so the name and the links (or the menu button)
+         stand on the page's left and right edges. */
+      header .navbar { padding-left: 0; padding-right: 0; }
+      header .navbar > .container { padding-left: var(--gutter) !important; padding-right: var(--gutter) !important; }
+    }
     @media (max-width: 768px) {
-      :root { --gutter: 1.15rem; }
+      :root { --gutter: 1.5rem; }
       html, body { overflow-x: hidden; width: 100%; }
       body { font-size: 1rem; }
       .container.mt-5 { padding-top: 2rem; }
+      .post > .post-header .post-description { text-wrap: balance; }
+      footer .container { justify-content: center; text-align: center; row-gap: 0.5rem; }
+      .footer-quote { text-wrap: balance; }
+      .footer-links { gap: 0; }
+      .footer-links a { padding: 0.6rem 0.7rem; }   /* a finger-sized target for each icon */
+    }
+    /* Phones. Bootstrap folds the links into the menu below 576px, so the menu's rules
+       start there too. */
+    @media (max-width: 575.98px) {
+      :root { --gutter: 1.15rem; }
+      /* The button is 46 × 44px to the finger; the bar keeps its height and the three
+         lines end on the page's right edge. */
+      header .navbar .navbar-toggler {
+        padding: 13px 12px;
+        margin: -9px -12px -9px auto;
+        border: 0;
+      }
+      header .navbar .navbar-toggler .icon-bar:last-child { margin-bottom: 0; }
+      header .navbar > .container { min-height: 1.8125rem; }   /* the bar as tall on the homepage, which has no name in it, as elsewhere */
+      /* Open, the bar is solid: the page behind does not show through the links. */
+      header .navbar:has(.navbar-collapse.show),
+      header .navbar:has(.navbar-collapse.collapsing) { background: var(--paper) !important; opacity: 1; }
       header .navbar .navbar-collapse {
         border-top: 1px solid var(--line);
-        margin-top: 0.6rem;
-        padding: 0.4rem 0 0.2rem;
+        margin-top: 0.55rem;
+        padding: 0.3rem 0 0;
       }
       header .navbar .navbar-nav .nav-link {
         margin-left: 0;
-        padding: 0.5rem 0 !important;
+        padding: 0.65rem 0 !important;
+        font-size: 1rem;
         border-bottom: 0;
       }
-      footer .container { justify-content: center; text-align: center; }
     }
 
     @media (prefers-reduced-motion: reduce) {

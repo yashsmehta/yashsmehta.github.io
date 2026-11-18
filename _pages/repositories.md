@@ -331,6 +331,22 @@ nav_order: 3
     }
     .repo-row .repo-arrow { display: none; }
   }
+  /* Phones: the mark that repeats on every row goes, so the name, the description and
+     the counts share the card's left edge; the small grey text is a size up and darker. */
+  @media screen and (max-width: 640px) {
+    .gh-profile { padding: 1.25rem 1rem 1.15rem; }
+    .gh-profile-bio { font-size: 0.88rem; font-weight: 400; color: var(--ink-soft); }
+    .gh-profile-stats { gap: 1.5rem; margin-top: 0.2rem; }
+    .gh-stat-label { font-size: 0.68rem; font-weight: 400; color: var(--ink-faint); }
+    .repo-list { gap: 0.6rem; }
+    .repo-row { padding: 0.85rem 1rem 0.8rem; }
+    .repo-row .repo-icon { display: none; }
+    .repo-row .repo-name, .repo-row .repo-owner { font-size: 0.98rem; }
+    .repo-row .repo-name { white-space: normal; overflow-wrap: anywhere; }
+    .repo-row .repo-desc { margin-top: 0.15rem; font-size: 0.9rem; font-weight: 400; line-height: 1.45; color: var(--ink-soft); }
+    .repo-row-meta { margin-top: 0.4rem; gap: 0.9rem; }
+    .repo-lang, .repo-stat { font-size: 0.8rem; color: var(--ink-faint); }
+  }
 </style>
 
 <div class="repositories-page">

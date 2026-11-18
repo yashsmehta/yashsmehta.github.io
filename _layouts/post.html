@@ -377,6 +377,12 @@ layout: default
       font-size: 1.1rem;
     }
   }
+  /* Phones: the page's own gutter is enough, and the bar sits on the (shorter) navbar. */
+  @media screen and (max-width: 575.98px) {
+    .post { padding: 0.5rem 0; }
+    .post-content { line-height: 1.6; }
+    .reading-progress { top: 47px; }
+  }
 </style>
 
 <!-- Reading progress bar -->

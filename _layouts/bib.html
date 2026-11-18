@@ -1,8 +1,24 @@
 ---
 ---
 <!-- _layouts/bib.html -->
-<div class="publication-item {% if entry.topic %}topic-{{entry.topic}}{% endif %}">
+{%- assign notes = site.data.paper_notes[entry.key] %}
+    {%- capture topic_tag %}
+      {%- if entry.topic %}
+      <span class="topic-tag">
+        <span class="topic-dot"></span>
+        {%- if entry.topic == "neuro-ai" -%}
+        NeuroAI
+        {%- elsif entry.topic == "discovery" -%}
+        Automated discovery
+        {%- elsif entry.topic == "personality" -%}
+        Computational personality
+        {%- endif -%}
+      </span>
+      {%- endif -%}
+    {%- endcapture %}
+<div class="publication-item {% if entry.topic %}topic-{{entry.topic}}{% endif %}" id="{{ entry.key }}" data-year="{{ entry.year }}">
   {%- assign figure_alt = site.data.figures[entry.figure] | default: '' %}
+  <div class="pub-media">
   <div class="pub-image">
     {%- if entry.teaser %}
       {%- assign teaser_url = entry.teaser | prepend: '/assets/video/' | relative_url %}
@@ -20,9 +36,18 @@
       <div class="preview-placeholder"></div>
     {%- endif -%}
   </div>
+  {%- comment %} The venue's short name with the year sits under the clip (the list has no year headings). {% endcomment %}
+  {%- assign venue = entry.abbr | default: entry.journal | default: entry.booktitle %}
+  <p class="pub-under">
+    <span class="pub-venue">{{ venue | append: " " | append: entry.year | strip }}</span>
+  </p>
+  </div>
 
   <div class="pub-content">
-    <div class="title">{{entry.title}}</div>
+    <div class="pub-head">
+      <div class="title">{{entry.title}}</div>
+      {{ topic_tag }}
+    </div>
 
     <!-- Author -->
     <div class="author">
@@ -46,39 +71,8 @@
     {%- endfor -%}
     </div>
 
-    <!-- Venue, year and topic -->
-    <div class="periodical">
-      <span class="venue">
-      {%- if entry.type == "article" -%}
-        <em>{{entry.journal}}</em>
-      {%- elsif entry.type == "inproceedings" -%}
-        <em>{{entry.booktitle}}</em>
-      {%- endif -%}
-      </span>
-      <span class="year">{{entry.year}}</span>
-
-      {%- if entry.topic %}
-      <span class="topic-tag">
-        <span class="topic-dot"></span>
-        {%- if entry.topic == "neuro-ai" -%}
-        NeuroAI
-        {%- elsif entry.topic == "discovery" -%}
-        Automated discovery
-        {%- elsif entry.topic == "personality" -%}
-        Computational personality
-        {%- endif -%}
-      </span>
-      {%- endif -%}
-    </div>
-
     <!-- Links -->
     <div class="pub-links">
-      {%- if entry.abstract %}
-        <button type="button" class="abstract-toggle" aria-expanded="false">
-          <i class="fas fa-chevron-right"></i>Abstract
-        </button>
-      {%- endif %}
-
       {%- if entry.arxiv %}
         <a href="https://arxiv.org/abs/{{ entry.arxiv }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>arXiv</a>
       {%- endif %}
@@ -112,8 +106,13 @@
       {%- endif %}
     </div>
 
-    {%- if entry.abstract %}
-    <div class="abstract-content">{{entry.abstract}}</div>
+    {%- comment %} Short lines in place of an abstract (Question / My contribution / Findings), shown while the entry is hovered or focused (_data/paper_notes.yml). {% endcomment %}
+    {%- if notes %}
+    <dl class="pub-notes">
+      {%- if notes.question %}<div><dt>Question</dt><dd>{{ notes.question }}</dd></div>{% endif %}
+      {%- if notes.contribution %}<div><dt>My contribution</dt><dd>{{ notes.contribution }}</dd></div>{% endif %}
+      {%- if notes.findings %}<div><dt>Findings</dt><dd>{{ notes.findings }}</dd></div>{% endif %}
+    </dl>
     {%- endif %}
   </div>
 </div>

@@ -108,8 +108,10 @@ nav_order: 1
   <p class="areas-note">I also completed a short PhD rotation project at <em>Harvard Medical School</em> with <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>, focusing on knowledge graphs for automating radiology report generation.</p>
 </section>
 
+<p class="pubs-hint"><i class="far fa-hand-pointer" aria-hidden="true"></i>Tap a paper for the question, my contribution and findings</p>
+
 <div class="publications">
-{% bibliography --file papers --group_by year --group_order descending %}
+{% bibliography --file papers %}
 </div>
 
 <script>
@@ -117,14 +119,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Research areas filter the list. OR logic: a paper shows if it matches any selected area.
   const cards = document.querySelectorAll('.area-card');
   const papers = document.querySelectorAll('.publication-item');
-  const yearHeadings = document.querySelectorAll('.publications h2.bibliography');
   const active = new Set();
 
-  // Each card states how many papers it covers and over which years.
+  // Each card states how many papers it covers and over which years. An entry's year
+  // is its data-year attribute (the list has no year headings).
   cards.forEach(card => {
     const years = [];
     document.querySelectorAll('.publication-item.topic-' + card.dataset.topic).forEach(paper => {
-      const year = parseInt((paper.querySelector('.year') || {}).textContent, 10);
+      const year = parseInt(paper.dataset.year, 10);
       if (year) years.push(year);
     });
     if (!years.length) return;
@@ -144,12 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const show = active.size === 0 ||
           Array.from(active).some(t => paper.classList.contains('topic-' + t));
         paper.classList.toggle('hidden', !show);
-      });
-
-      // Hide a year heading when none of its papers are showing.
-      yearHeadings.forEach(h => {
-        const list = h.nextElementSibling;
-        h.classList.toggle('hidden', !(list && list.querySelector('.publication-item:not(.hidden)')));
       });
     });
   });

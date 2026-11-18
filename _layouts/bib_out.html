@@ -3,7 +3,8 @@
 {%- comment -%}
   _layouts/bib_out.html: one paper inside an Experience panel on the homepage:
   the paper's teaser clip (or, without one, its live schematic from `figure` /
-  `home_figure`) and, beside it, title, venue and year, and icon links.
+  `home_figure`) and, beside it, title, venue and year, and icon links. The
+  title and the clip link to the paper's entry on the publications page.
   Rendered by the bibliography tag in about.html (--template bib_out) for the
   entries whose `place` field names that position.
 {%- endcomment -%}
@@ -19,9 +20,11 @@
   {%- assign paper_url = '/publications/' | relative_url -%}
 {%- endif -%}
 {%- assign fig = entry.figure | default: entry.home_figure -%}
+{%- comment %} The title and the clip lead to the paper's entry on the publications page; the icon links go to the paper itself. {% endcomment -%}
+{%- assign entry_url = '/publications/' | relative_url | append: '#' | append: entry.key -%}
 <article class="exp-paper">
   {%- if entry.teaser or fig %}
-  <div class="rep-figure">
+  <a class="rep-figure" href="{{ entry_url }}" tabindex="-1" aria-hidden="true">
     {%- if entry.teaser %}
     {%- assign teaser_url = entry.teaser | prepend: '/assets/video/' | relative_url %}
     <video data-teaser src="{{ teaser_url }}" poster="{{ teaser_url | replace: '.mp4', '.jpg' }}" muted playsinline preload="metadata" aria-label="{{ site.data.figures[entry.teaser] }}"></video>
@@ -31,10 +34,10 @@
     {%- if entry.preview %}
     <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="" loading="lazy">
     {%- endif %}
-  </div>
+  </a>
   {%- endif %}
   <div class="exp-paper-body">
-    <h4 class="exp-paper-title"><a href="{{ paper_url }}">{{ entry.title }}</a></h4>
+    <h4 class="exp-paper-title"><a href="{{ entry_url }}">{{ entry.title }}</a></h4>
     <p class="exp-paper-meta">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}&nbsp;·&nbsp;{{ entry.year }}</p>
     <p class="rep-links">
       {%- if entry.arxiv %}

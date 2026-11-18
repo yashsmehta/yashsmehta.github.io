@@ -215,7 +215,7 @@ layout: default
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0.25rem;
   }
-  .logo-chip { position: relative; }
+  .logo-chip { display: contents; }   /* its button and its panel are both items of the row's grid */
   .chip-trigger {
     display: flex;
     flex-direction: column;
@@ -259,7 +259,7 @@ layout: default
     text-underline-offset: 0.3em;
     transition: color 0.15s ease, text-decoration-color 0.15s ease;
   }
-  /* Hover, an open card, or a hovered paper from this place: a tint of the paper, nothing more. */
+  /* Hover, an open panel, or a hovered paper from this place: a tint of the paper, nothing more. */
   .logo-chip:hover .chip-trigger,
   .logo-chip.open .chip-trigger,
   .logo-chip.linked .chip-trigger,
@@ -278,86 +278,100 @@ layout: default
     animation-delay: calc(var(--i, 0) * 75ms);
   }
 
-  /* The card that opens under a logo: position, dates, who the work was with, what came of it. */
+  /* What a logo opens: a few sentences on the work, who it was with, and the papers. Not a
+     card: it is set straight on the page under its row of logos (after every logo, across
+     all the columns) and unfolds slowly, the row's height animating from 0fr to 1fr. It
+     stays open until another logo in the row takes over or it is closed. */
   .exp-pop {
-    position: absolute;
-    z-index: 40;
-    top: 100%;
-    left: 50%;
-    width: 21rem;
-    margin-left: -10.5rem;           /* centred under the logo */
-    padding-top: 0.55rem;            /* bridges the gap so the pointer can travel into the card */
+    order: 1;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-rows: 0fr;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(6px);
-    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0s linear 0.16s;
+    transition: grid-template-rows 0.65s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.3s ease, visibility 0s linear 0.65s;
   }
-  .logo-chip:nth-child(5) .exp-pop { left: auto; right: 0; margin-left: 0; }   /* the last card stays on the page */
-  @media (hover: hover) {
-    .logo-chip:hover .exp-pop {
-      opacity: 1;
-      visibility: visible;
-      transform: none;
-      transition-delay: 0.08s, 0.08s, 0.08s;
-    }
-  }
-  .logo-chip.open .exp-pop,
-  .logo-chip:has(:focus-visible) .exp-pop {
+  .logo-chip.open .exp-pop {
+    grid-template-rows: 1fr;
     opacity: 1;
     visibility: visible;
-    transform: none;
-    transition-delay: 0s;
+    transition: grid-template-rows 0.65s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.6s ease 0.15s, visibility 0s;
   }
+  @media (prefers-reduced-motion: reduce) {
+    .exp-pop, .logo-chip.open .exp-pop { transition: none; }
+  }
+  .exp-clip { min-height: 0; overflow: hidden; }
   .exp-card {
     position: relative;
-    padding: 0.95rem 1.05rem 1rem;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: var(--surface);
-    box-shadow: 0 18px 38px -18px rgba(15, 28, 51, 0.38), 0 2px 6px rgba(15, 28, 51, 0.05);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 19rem);
+    column-gap: 3.5rem;
+    row-gap: 1.4rem;
+    align-items: start;
+    padding: 1.5rem 2rem 1.1rem 0.75rem;   /* text starts under the first logo's box */
   }
+  .exp-card:not(:has(.exp-papers)) { grid-template-columns: minmax(0, 1fr); }
   .exp-card p { margin: 0; font-family: var(--display); }
+  .exp-close {                       /* a faint mark in the corner; Escape or the logo also close */
+    position: absolute;
+    top: 1.35rem;
+    right: 0;
+    padding: 0.3rem;
+    border: 0;
+    background: transparent;
+    font-size: 0.72rem;
+    line-height: 1;
+    color: var(--ink-faint);
+    opacity: 0.45;
+    cursor: pointer;
+    transition: opacity 0.15s ease, color 0.15s ease;
+  }
+  .exp-close:hover, .exp-close:focus-visible { opacity: 1; color: var(--navy); }
+  .exp-main { min-width: 0; max-width: 35rem; }
   .exp-card .exp-org {
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 650;
+    font-size: 1.05rem;
     line-height: 1.25;
     letter-spacing: -0.015em;
     color: var(--navy);
   }
-  .exp-card .exp-unit { margin-top: 0.1rem; font-size: 0.82rem; color: var(--ink-faint); }
-  .exp-card .exp-role {
+  .exp-card .exp-when {
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-faint);
+  }
+  .exp-when span { color: inherit; }       /* _base.scss gives every span the text colour */
+  .exp-when span + span::before { content: "·"; margin: 0 0.45em; }
+  .exp-card .exp-summary {
+    margin-top: 0.8rem;
+    font-family: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .exp-people {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0 0.75rem;
-    margin-top: 0.45rem;
-    font-size: 0.85rem;
-    font-weight: 550;
-    line-height: 1.35;
-    color: var(--ink);
-  }
-  .exp-period { font-weight: 500; font-variant-numeric: tabular-nums; color: var(--ink-faint); white-space: nowrap; }
-  .exp-people {
-    display: grid;
-    gap: 0.65rem;
+    gap: 0.6rem 1.6rem;
     list-style: none;
-    margin: 0.8rem 0 0;
-    padding: 0.8rem 0 0;
-    border-top: 1px solid var(--line);
+    margin: 1rem 0 0;
+    padding: 0;
   }
-  .exp-person { display: flex; align-items: center; gap: 0.7rem; color: inherit; font-family: var(--display); }
+  .exp-person { display: flex; align-items: center; gap: 0.55rem; color: inherit; font-family: var(--display); }
   a.exp-person:hover { text-decoration: none; }
   .exp-avatar {
     display: grid;
     place-items: center;
     flex: none;
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     overflow: hidden;
     background: var(--wash);
-    box-shadow: 0 0 0 1px var(--line);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 650;
     letter-spacing: 0.01em;
     color: var(--navy);
@@ -365,32 +379,25 @@ layout: default
   .exp-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .exp-name {
     display: block;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     font-weight: 600;
     line-height: 1.25;
     color: var(--ink);
     transition: color 0.15s ease;
   }
   a.exp-person:hover .exp-name { color: var(--link); }
-  .exp-rel { display: block; font-size: 0.8rem; font-weight: 500; line-height: 1.3; color: var(--ink-faint); }
+  .exp-rel { display: block; font-size: 0.78rem; font-weight: 500; line-height: 1.3; color: var(--ink-faint); }
 
   /* Papers that came out of the position. */
-  .exp-papers { margin-top: 0.8rem; padding-top: 0.75rem; border-top: 1px solid var(--line); }
+  .exp-papers { min-width: 0; padding-top: 0.2rem; }
   .exp-card .exp-sub { font-size: 0.8rem; font-weight: 500; color: var(--ink-faint); }
-  .exp-papers ol.bibliography { display: grid; gap: 0.6rem; list-style: none; margin: 0.5rem 0 0; padding: 0; }
+  .exp-papers ol.bibliography { display: grid; gap: 0.75rem; list-style: none; margin: 0.55rem 0 0; padding: 0; }
   .exp-papers ol.bibliography > li { margin: 0; padding: 0; }
-  .exp-paper {
-    display: block;
-    padding-left: 0.7rem;
-    border-left: 2px solid var(--line);
-    font-family: var(--display);
-    color: inherit;
-    transition: border-color 0.15s ease;
-  }
-  .exp-paper:hover { border-left-color: var(--navy); color: inherit; text-decoration: none; }
+  .exp-paper { display: block; font-family: var(--display); color: inherit; }
+  .exp-paper:hover { color: inherit; text-decoration: none; }
   .exp-paper-title {
     display: block;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.005em;
@@ -399,109 +406,77 @@ layout: default
     transition: color 0.15s ease;
   }
   .exp-paper:hover .exp-paper-title { color: var(--link); }
-  .exp-paper-meta { display: block; margin-top: 0.1rem; font-size: 0.78rem; font-weight: 500; color: var(--ink-faint); }
+  .exp-paper-meta { display: block; margin-top: 0.12rem; font-size: 0.78rem; font-weight: 500; color: var(--ink-faint); }
 
   /* ── Representative work ── */
   .rep-list ol.bibliography { list-style: none; margin: 0; padding: 0; }
   .rep-list ol.bibliography > li { margin: 0; padding: 0; }
-  /* Year, title and links, live schematic, where it was done. The columns are the five
-     of the Experience rows above, so the schematics and the logos here stand under the
-     fourth and fifth logos there. */
+  /* The paper's clip on the left, on one edge down the list; title, venue and year, and the
+     links beside it, centred on the clip. Where the work was done is not repeated here:
+     hovering a row tints that position's logo under Experience. */
   .rep-item {
     display: grid;
-    grid-template-columns: calc(var(--rail) + 0.75rem) repeat(5, minmax(0, 1fr));
-    column-gap: 0.25rem;
-    align-items: start;
-    padding: 0.95rem 0;
+    grid-template-columns: 13rem minmax(0, 1fr);
+    column-gap: 1.75rem;
+    align-items: center;
+    padding: 1.15rem 0;
     border-top: 1px solid var(--line);
   }
   .rep-list li:first-child .rep-item { border-top: 0; padding-top: 0; }
-  .rep-year {
-    font-family: var(--display);
-    font-size: 0.85rem;
-    font-weight: 500;
-    font-variant-numeric: tabular-nums;
-    color: var(--ink-faint);
-    padding-top: 0.16rem;
-  }
-  .rep-body { grid-column: 2 / span 3; padding-right: 1.25rem; }
-  .rep-item .rep-title {             /* two classes: main.css sizes `.post h3` */
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 650;
-    line-height: 1.32;
-    letter-spacing: -0.012em;
-    text-wrap: pretty;
-  }
-  .rep-title a { color: var(--ink); transition: color 0.15s ease; }
-  .rep-title a:hover { color: var(--link); text-decoration: none; }
-  .rep-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 0.9rem;
-    margin: 0.2rem 0 0;
-    font-family: var(--display);
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--ink-soft);
-  }
-  /* The paper's idea, drawn live (_includes/pub_figures.html): plays as the row arrives and
-     again on hover. Under 170px wide the drawings drop their labels, which suits a row. */
+  .rep-item:not(:has(.rep-figure)) { grid-template-columns: minmax(0, 1fr); }
+  /* The clip (or, without one, the live schematic from _includes/pub_figures.html): plays
+     as the row arrives and again on hover. The plate is the clips' own 10:7. */
   .rep-figure {
-    grid-column: 5;
-    justify-self: center;
     position: relative;
-    width: 10rem;
-    aspect-ratio: 5 / 3;
-    margin-top: 0.15rem;
+    width: 100%;
+    aspect-ratio: 10 / 7;
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     background: var(--surface);
   }
   .rep-figure img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .rep-figure canvas,
   .rep-figure video { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
-  .rep-figure video { object-fit: cover; }           /* a `teaser` clip in place of a drawing */
+  .rep-figure video { object-fit: cover; }
   .rep-figure.figure-live canvas,
   .rep-figure.figure-live video { display: block; }
   .rep-figure.figure-live img { display: none; }   /* the preview image is the no-JS fallback */
-
-  /* Where the paper came from: a small copy of the chip under Experience, logo over position. */
-  .rep-origin {
-    grid-column: 6;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2rem;
-    padding: 0.4rem 0.6rem;
-    border-radius: 10px;
+  .rep-body { min-width: 0; max-width: 40rem; }
+  .rep-item .rep-title {             /* two classes: main.css sizes `.post h3` */
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 650;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    text-wrap: pretty;
+  }
+  .rep-title a { color: var(--ink); transition: color 0.15s ease; }
+  .rep-title a:hover,
+  .rep-item.linked .rep-title a { color: var(--link); text-decoration: none; }
+  .rep-meta {
+    margin: 0.3rem 0 0;
     font-family: var(--display);
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     font-weight: 500;
-    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
     color: var(--ink-faint);
-    white-space: nowrap;
-    transition: background-color 0.2s ease, color 0.15s ease;
   }
-  .rep-origin-role { color: inherit; }     /* _base.scss gives every span the text colour */
-  .rep-origin-logo { display: flex; align-items: center; justify-content: center; height: 28px; }
-  .rep-origin img {                  /* fitted to a box, so emblems stand taller than wordmarks */
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 4rem;
-    max-height: 28px;
-    mix-blend-mode: multiply;
+  .rep-meta span { color: inherit; }       /* _base.scss gives every span the text colour */
+  .rep-meta .rep-venue { color: var(--ink-soft); }
+  .rep-meta .rep-venue::after { content: "·"; margin: 0 0.45em; color: var(--ink-faint); }
+  .rep-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.15rem;
+    margin: 0.6rem 0 0;
+    font-family: var(--display);
+    font-size: 0.88rem;
+    font-weight: 550;
   }
-  .rep-origin:hover,
-  .rep-item.linked .rep-origin {
-    color: var(--navy);
-    text-decoration: none;
-    background: var(--wash);
-  }
+  .rep-links a { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--link); transition: color 0.15s ease; }
+  .rep-links a:hover { color: var(--navy); text-decoration: none; }
+  .rep-links i { font-size: 0.9em; opacity: 0.85; }
 
   /* ── News ── */
   .news-list { list-style: none; margin: 0; padding: 0; }
@@ -568,26 +543,11 @@ layout: default
     }
     .chip-logo, .chip-logo img { height: 32px; }
     .chip-logo img.logo-amazon { height: 21px; margin-bottom: 5px; }
-    /* Cards open under the whole row of logos, full width. */
-    .logo-chip { position: static; }
-    .exp-pop,
-    .logo-chip:nth-child(5) .exp-pop { left: 0; right: 0; width: auto; max-width: 23rem; margin: 0 auto; }
+    .exp-card { grid-template-columns: minmax(0, 1fr); padding: 1.2rem 1.75rem 0.9rem 0.25rem; }
+    .exp-close { top: 1.05rem; }
 
-    /* Paper rows: the schematic keeps the right edge; the origin goes under the links, on one line. */
-    .rep-item { grid-template-columns: var(--rail) minmax(0, 1fr) 10rem; column-gap: 1rem; row-gap: 0.4rem; }
-    .rep-body { grid-column: 2; padding-right: 0.5rem; }
-    .rep-figure { grid-column: 3; grid-row: 1 / span 2; width: 100%; }
-    .rep-origin {
-      grid-column: 2;
-      grid-row: 2;
-      justify-self: start;
-      align-self: start;
-      flex-direction: row;
-      gap: 0.55rem;
-      margin-left: -0.6rem;
-    }
-    .rep-origin-logo { height: 22px; }
-    .rep-origin img { max-width: 3.25rem; max-height: 22px; }
+    .rep-item { grid-template-columns: 10.5rem minmax(0, 1fr); column-gap: 1.25rem; }
+    .rep-item .rep-title { font-size: 1.02rem; }
   }
   @media (max-width: 560px) {
     .home { --rail: 3rem; }
@@ -599,24 +559,12 @@ layout: default
     .hero-links { font-size: 0.9rem; gap: 0.35rem 0.75rem; }
     .affiliations { gap: 0.8rem 1.5rem; }
     .featured-projects { grid-template-columns: 1fr; }
-    /* Paper rows: text first, then the schematic with the origin beside it. */
-    .rep-item { grid-template-columns: var(--rail) 9rem minmax(0, 1fr); row-gap: 0.75rem; }
-    .rep-body { grid-column: 2 / -1; padding-right: 0; }
-    .rep-figure { grid-column: 2; grid-row: 2; margin-top: 0; }
-    .rep-origin {
-      grid-column: 3;
-      justify-self: center;
-      align-self: center;
-      flex-direction: column;
-      gap: 0.2rem;
-      margin-left: 0;
-      white-space: normal;
-      text-align: center;
-      text-wrap: balance;
-    }
-    .rep-origin-logo { height: 28px; }
-    .rep-origin img { max-width: 4rem; max-height: 28px; }
-    .rep-item:not(:has(.rep-figure)) .rep-origin { grid-column: 2 / -1; justify-self: start; }
+    /* Paper rows: a smaller clip, level with the top of the title. */
+    .rep-item { grid-template-columns: 7.25rem minmax(0, 1fr); column-gap: 0.9rem; align-items: start; padding: 1rem 0; }
+    .rep-figure { margin-top: 0.2rem; border-radius: 8px; }
+    .rep-item .rep-title { font-size: 0.97rem; }
+    .rep-meta, .rep-links { font-size: 0.84rem; }
+    .rep-links { margin-top: 0.45rem; gap: 0.25rem 0.95rem; }
     .news-item { grid-template-columns: 1fr; row-gap: 0.05rem; }
     .news-toggle { margin-left: 0; }
   }
@@ -707,7 +655,7 @@ layout: default
   <section class="home-section" id="experience">
     <div class="section-head has-note reveal">
       <h2 class="section-heading">Experience</h2>
-      <p class="section-note"><i class="far fa-hand-pointer" aria-hidden="true"></i><span class="on-hover">Hover</span><span class="on-touch">Tap</span> a logo for the people and the papers</p>
+      <p class="section-note"><i class="far fa-hand-pointer" aria-hidden="true"></i><span class="on-hover">Hover or click</span><span class="on-touch">Tap</span> a logo for the people and the papers</p>
     </div>
     <div class="exp-groups">
       {%- assign exp_groups = "academia,industry" | split: "," -%}
@@ -724,35 +672,39 @@ layout: default
               <span class="chip-logo"><img src="{{ item.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ item.org }}"{% if item.logo_class %} class="{{ item.logo_class }}"{% endif %}></span>
               <span class="chip-label">{{ item.role }}</span>
             </button>
-            <div class="exp-pop" id="{{ pop_id }}">
+            <div class="exp-pop" id="{{ pop_id }}" role="region" aria-label="{{ item.org }}">
+              <div class="exp-clip">
               <div class="exp-card">
-                <p class="exp-org">{{ item.org }}</p>
-                {%- if item.unit %}
-                <p class="exp-unit">{{ item.unit }}</p>
-                {%- endif %}
-                <p class="exp-role"><span>{{ item.title | default: item.role }}</span> <span class="exp-period">{{ item.period }}</span></p>
-                {%- if item.people %}
-                <ul class="exp-people">
-                  {%- for person in item.people %}
-                  {%- assign name_parts = person.name | split: ' ' %}
-                  <li>
-                    {% if person.url %}<a class="exp-person" href="{{ person.url }}">{% else %}<div class="exp-person">{% endif %}
-                      <span class="exp-avatar">
-                        {%- if person.photo -%}
-                        <img src="{{ person.photo | prepend: '/assets/img/people/' | relative_url }}" alt="" loading="lazy">
-                        {%- else -%}
-                        {{ name_parts.first | slice: 0 }}{{ name_parts.last | slice: 0 }}
-                        {%- endif -%}
-                      </span>
-                      <span>
-                        <span class="exp-name">{{ person.name }}</span>
-                        <span class="exp-rel">{{ person.relation }}</span>
-                      </span>
-                    {% if person.url %}</a>{% else %}</div>{% endif %}
-                  </li>
-                  {%- endfor %}
-                </ul>
-                {%- endif %}
+                <button type="button" class="exp-close" aria-label="Close"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="exp-main">
+                  <p class="exp-org">{{ item.org }}</p>
+                  <p class="exp-when"><span>{{ item.title | default: item.role }}</span>{% if item.unit %}<span>{{ item.unit }}</span>{% endif %}<span>{{ item.period }}</span></p>
+                  {%- if item.summary %}
+                  <p class="exp-summary">{{ item.summary }}</p>
+                  {%- endif %}
+                  {%- if item.people %}
+                  <ul class="exp-people">
+                    {%- for person in item.people %}
+                    {%- assign name_parts = person.name | split: ' ' %}
+                    <li>
+                      {% if person.url %}<a class="exp-person" href="{{ person.url }}">{% else %}<div class="exp-person">{% endif %}
+                        <span class="exp-avatar">
+                          {%- if person.photo -%}
+                          <img src="{{ person.photo | prepend: '/assets/img/people/' | relative_url }}" alt="" loading="lazy">
+                          {%- else -%}
+                          {{ name_parts.first | slice: 0 }}{{ name_parts.last | slice: 0 }}
+                          {%- endif -%}
+                        </span>
+                        <span>
+                          <span class="exp-name">{{ person.name }}</span>
+                          <span class="exp-rel">{{ person.relation }}</span>
+                        </span>
+                      {% if person.url %}</a>{% else %}</div>{% endif %}
+                    </li>
+                    {%- endfor %}
+                  </ul>
+                  {%- endif %}
+                </div>
                 {%- comment %} Papers whose `place` field in papers.bib names this position. {% endcomment %}
                 {%- capture exp_papers %}{% bibliography --file papers --query @*[place={{ item.id }}] --template bib_out %}{% endcapture %}
                 {%- if exp_papers contains 'exp-paper' %}
@@ -761,6 +713,7 @@ layout: default
                   {{ exp_papers }}
                 </div>
                 {%- endif %}
+              </div>
               </div>
             </div>
           </div>
@@ -787,11 +740,17 @@ layout: default
 </div>
 
 <script>
-/* Experience: hover opens a card in CSS; this adds tap, click and Escape, ties each
-   logo to the papers that came out of that position, and nudges the logos once. */
+/* Experience: hovering, clicking or tapping a logo opens its panel under that row of
+   logos. The panel stays open when the pointer leaves; another logo in the same row
+   takes it over, and a click on the open logo, its close button or Escape closes it.
+   Each row keeps its own panel, so opening one never moves the logo under the pointer.
+   Also ties each logo to the papers from that position, and nudges the logos once. */
 document.addEventListener('DOMContentLoaded', function () {
   var chips = Array.prototype.slice.call(document.querySelectorAll('.logo-chip'));
   var papers = Array.prototype.slice.call(document.querySelectorAll('.rep-item[data-place]'));
+  var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+  var intent = null;                 /* a short wait, so sweeping across the row opens nothing */
+  var hoverOpened = null;            /* the logo this hover has just opened: its click keeps it open */
   function chipFor(place) {
     return chips.filter(function (chip) { return chip.dataset.place === place; })[0];
   }
@@ -799,8 +758,11 @@ document.addEventListener('DOMContentLoaded', function () {
     chip.classList.toggle('open', open);
     chip.querySelector('.chip-trigger').setAttribute('aria-expanded', open ? 'true' : 'false');
   }
-  function closeAll(except) {
-    chips.forEach(function (chip) { if (chip !== except) setOpen(chip, false); });
+  function openChip(chip) {
+    chips.forEach(function (other) {
+      if (other !== chip && other.parentNode === chip.parentNode) setOpen(other, false);
+    });
+    setOpen(chip, true);
   }
   function link(place, on) {
     papers.forEach(function (paper) {
@@ -809,14 +771,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   chips.forEach(function (chip) {
-    var place = chip.dataset.place;
-    chip.querySelector('.chip-trigger').addEventListener('click', function () {
-      setOpen(chip, !chip.classList.contains('open'));
-      closeAll(chip);
+    var place = chip.dataset.place, trigger = chip.querySelector('.chip-trigger');
+    trigger.addEventListener('mouseenter', function () {
+      link(place, true);               /* a logo marks its papers in the list below … */
+      if (!canHover || chip.classList.contains('open')) return;
+      clearTimeout(intent);
+      intent = setTimeout(function () { openChip(chip); hoverOpened = chip; }, 110);
     });
-    /* A logo marks its papers in the list below … */
-    chip.addEventListener('mouseenter', function () { link(place, true); });
-    chip.addEventListener('mouseleave', function () { link(place, false); });
+    trigger.addEventListener('mouseleave', function () {
+      link(place, false);
+      clearTimeout(intent);
+      if (hoverOpened === chip) hoverOpened = null;
+    });
+    trigger.addEventListener('click', function () {
+      clearTimeout(intent);
+      if (chip.classList.contains('open') && hoverOpened !== chip) setOpen(chip, false);
+      else openChip(chip);
+      hoverOpened = null;
+    });
+    chip.querySelector('.exp-close').addEventListener('click', function () {
+      setOpen(chip, false);
+      trigger.focus({ preventScroll: true });
+    });
   });
 
   papers.forEach(function (paper) {
@@ -825,18 +801,12 @@ document.addEventListener('DOMContentLoaded', function () {
     /* … and a paper marks the logo it came from. */
     paper.addEventListener('mouseenter', function () { chip.classList.add('linked'); });
     paper.addEventListener('mouseleave', function () { chip.classList.remove('linked'); });
-    var origin = paper.querySelector('.rep-origin');
-    if (origin) origin.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      closeAll(chip);
-      setOpen(chip, true);
-      chip.scrollIntoView({ block: 'center', behavior: 'smooth' });
-    });
   });
 
-  document.addEventListener('click', function (e) { if (!e.target.closest('.logo-chip')) closeAll(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') chips.forEach(function (chip) { setOpen(chip, false); });
+  });
+
 
   var groups = document.querySelector('.exp-groups');
   if (groups && 'IntersectionObserver' in window) {

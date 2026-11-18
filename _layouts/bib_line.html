@@ -3,11 +3,11 @@
 {%- comment -%}
   _layouts/bib_line.html: one "Representative work" row on the homepage.
   Rendered by the bibliography tag in about.html (--template bib_line) for
-  entries with selected={true}. A `place` field names the Experience entry
-  (_data/experience.yml) the paper came out of; that entry's logo and position
-  close the row, a small copy of its chip under Experience. A `figure` field (or
-  `home_figure`, for a schematic shown here but not on the publications page) puts
-  that paper's live schematic in the row; see _includes/pub_figures.html.
+  entries with selected={true}: the paper's teaser clip on the left (or, without
+  one, its live schematic from `figure` / `home_figure`; see
+  _includes/pub_figures.html), then title, venue and year, and icon links.
+  `data-place` carries the paper's `place`, which about.html uses to tint the
+  matching Experience logo while the row is hovered.
 {%- endcomment -%}
 {%- if entry.arxiv -%}
   {%- assign paper_url = entry.arxiv | prepend: 'https://arxiv.org/abs/' -%}
@@ -20,26 +20,8 @@
 {%- else -%}
   {%- assign paper_url = '/publications/' | relative_url -%}
 {%- endif -%}
-{%- assign origin = nil -%}
-{%- if entry.place -%}
-  {%- assign places = site.data.experience.academia | concat: site.data.experience.industry -%}
-  {%- assign origin = places | where: "id", entry.place | first -%}
-{%- endif -%}
 {%- assign fig = entry.figure | default: entry.home_figure -%}
-<article class="rep-item reveal"{% if origin %} data-place="{{ origin.id }}"{% endif %}>
-  <span class="rep-year">{{ entry.year }}</span>
-  <div class="rep-body">
-    <h3 class="rep-title"><a href="{{ paper_url }}">{{ entry.title }}</a></h3>
-    <p class="rep-meta">
-      <span class="rep-venue">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}</span>
-      {%- if entry.code %}
-      <a href="{{ entry.code }}">Code</a>
-      {%- endif %}
-      {%- if entry.website and entry.website != paper_url %}
-      <a href="{{ entry.website }}">Website</a>
-      {%- endif %}
-    </p>
-  </div>
+<article class="rep-item reveal"{% if entry.place %} data-place="{{ entry.place }}"{% endif %}>
   {%- if entry.teaser or fig %}
   <div class="rep-figure">
     {%- if entry.teaser %}
@@ -53,10 +35,21 @@
     {%- endif %}
   </div>
   {%- endif %}
-  {%- if origin %}
-  <a class="rep-origin" href="#experience" data-place="{{ origin.id }}" title="From my time at {{ origin.org }}">
-    <span class="rep-origin-logo"><img src="{{ origin.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ origin.org }}"{% if origin.logo_class %} class="{{ origin.logo_class }}"{% endif %}></span>
-    <span class="rep-origin-role">{{ origin.role }}</span>
-  </a>
-  {%- endif %}
+  <div class="rep-body">
+    <h3 class="rep-title"><a href="{{ paper_url }}">{{ entry.title }}</a></h3>
+    <p class="rep-meta"><span class="rep-venue">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}</span><span class="rep-year">{{ entry.year }}</span></p>
+    <p class="rep-links">
+      {%- if entry.arxiv %}
+      <a href="{{ paper_url }}"><i class="fas fa-file-alt" aria-hidden="true"></i>arXiv</a>
+      {%- elsif entry.pdf %}
+      <a href="{{ paper_url }}"><i class="fas fa-file-alt" aria-hidden="true"></i>Paper</a>
+      {%- endif %}
+      {%- if entry.code %}
+      <a href="{{ entry.code }}"><i class="fas fa-code" aria-hidden="true"></i>Code</a>
+      {%- endif %}
+      {%- if entry.website %}
+      <a href="{{ entry.website }}"><i class="fas fa-globe" aria-hidden="true"></i>Website</a>
+      {%- endif %}
+    </p>
+  </div>
 </article>

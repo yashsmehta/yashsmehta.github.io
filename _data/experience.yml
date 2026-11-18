@@ -1,5 +1,6 @@
 # Experience shown on the homepage: one logo per place, with the position under it
-# and a card on hover / tap that says who the work was with and what came out of it.
+# and a panel on hover / click / tap that says what the work was, who it was with and
+# what came out of it.
 #
 #   id       short key; a paper with `place={id}` in papers.bib is listed in this
 #            entry's card, and carries this entry's logo and role on the homepage
@@ -11,6 +12,7 @@
 #   role     position shown under the logo
 #   title    optional longer title for the card (defaults to role)
 #   period   dates shown in the card
+#   summary  about three sentences on the work, shown when the logo is opened
 #   people   optional list: name, relation, url, photo
 #            photo is a file in assets/img/people/ (square, ~160px);
 #            without it the card shows the person's initials.
@@ -22,6 +24,8 @@ academia:
     logo: jhu.png
     role: PhD student
     period: 2023 – present
+    summary: >-
+      I study how brains and deep networks come to represent visual information, with a focus on computational models of visual processing. One line of work shows that vision models trained on extremely coarse objectives, as few as eight classes, still learn representations aligned with human judgments and visual cortex. I also build closed-loop AI systems for neuroscientific discovery, in which models propose, evaluate and refine hypotheses on neural data.
     people:
       - name: Michael F. Bonner
         relation: PhD advisor
@@ -33,6 +37,8 @@ academia:
     logo: janelia.png
     role: Research Engineer 2
     period: Jan 2022 – Sep 2023
+    summary: >-
+      I worked directly with experimental neuroscientists to build connectome-constrained neural network models that can be fit end to end to recorded data. I used the framework to infer synaptic plasticity rules from learning dynamics. It recovered known rules and identified active forgetting in fly reward-learning data.
     people:
       - name: James Fitzgerald
         relation: Supervisor
@@ -50,6 +56,8 @@ academia:
     logo_class: logo-boost
     role: ML Research Engineer
     period: Aug 2020 – Dec 2021
+    summary: >-
+      I implemented and benchmarked neural architecture search algorithms across vision, NLP, speech and detection. I built a unified interface for evaluating new search methods across datasets and search spaces, released as NAS-Bench-Suite in the open-source NASLib. With it we showed that conclusions drawn from a few benchmarks often do not carry over to others.
     people:
       - name: Frank Hutter
         relation: Supervisor
@@ -63,6 +71,8 @@ academia:
     logo_class: logo-boost
     role: Research Resident
     period: Jan 2019 – Jun 2020
+    summary: >-
+      I was the first Research Resident at Gatsby, working with Peter Latham and Tim Lillicrap on learning rules a brain could plausibly use. I implemented node perturbation and other local learning rules directly from their weight-update equations. I built efficient training code for per-weight updates and scaled it across GPUs, which made large experiments with these rules practical.
     people:
       - name: Peter Latham
         relation: Supervisor
@@ -78,6 +88,8 @@ academia:
     logo: ntu.png
     role: Undergraduate thesis
     period: "2018"
+    summary: >-
+      For my undergraduate thesis I worked on predicting personality traits from text with language models. I combined psycholinguistic features with language-model embeddings to predict the Big Five traits. The work grew into a survey of deep learning for personality detection and several follow-up papers.
     people:
       - name: Erik Cambria
         relation: Thesis advisor
@@ -91,12 +103,16 @@ industry:
     logo: msr.jpeg
     role: Research Intern
     period: Apr 2026 – present
+    summary: >-
+      I led an open-ended search in which LLM agents write fixed, never-trained brain encoding models as code and improve them from held-out neural predictivity. The search ran across five datasets, two species and three recording modalities. The models it produces are readable programs, not black boxes.
 
   - id: sakana
     org: Sakana AI
     logo: sakana.png
     role: Research Intern
     period: Summer 2025
+    summary: >-
+      I led IdeaBreeder, a system for open-ended generation of scientific ideas by evolutionary search. It grows trees of research hypotheses through structured LLM mutations. Each idea is reviewed in parallel for novelty, feasibility, usefulness and clarity.
 
   - id: amazon
     org: Amazon
@@ -106,3 +122,5 @@ industry:
     role: Software Developer
     title: Software Development Engineer
     period: Jul 2018 – Dec 2018
+    summary: >-
+      I built backend software and data pipelines for Amazon Music on AWS. I also built an LSTM system for music emotion classification that placed second in Amazon’s global ML hackathon. I left after six months to pursue research.
